@@ -3,6 +3,12 @@ import Link from 'next/link';
 
 const articles = [
   {
+    label: 'OPERATIONS',
+    heading: 'The Coordination Tax: Why Mid-Market Companies Grow Revenue Without Growing Margin',
+    body: 'If your revenue is up and your margin is flat, the money is being paid out to an overhead layer nobody named. Here is what it is and how to fix it.',
+    href: '/insights/coordination-tax-mid-market',
+  },
+  {
     label: 'DIGITAL TRANSFORMATION',
     heading: 'Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)',
     body: '70% of digital transformations fail to deliver projected value. The reason is almost never the technology.',
