@@ -7,22 +7,16 @@ import { LwSymbol } from './Logo';
 import { useBriefing } from './BriefingProvider';
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
-  // Start with loading=false so SSR renders the real content
-  // The loading screen only shows after hydration on first client load
-  const [mounted, setMounted] = useState(false);
   const [loading, setLoading] = useState(false);
   const pathname = usePathname();
   const { openBriefing } = useBriefing();
 
   useEffect(() => {
-    if (!mounted) {
-      // First mount after hydration: show loading animation briefly
-      setMounted(true);
-      setLoading(true);
-      const timer = setTimeout(() => setLoading(false), 1200);
-      return () => clearTimeout(timer);
-    }
-  }, [mounted]);
+    setLoading(true);
+    const timer = setTimeout(() => setLoading(false), 1200);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
