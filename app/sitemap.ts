@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/coordination-tax-calculator', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/insights', priority: 0.7, changeFrequency: 'weekly' as const },
+    { path: '/insights/coordination-tax-mid-market', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/insights/why-digital-transformations-fail', priority: 0.6, changeFrequency: 'yearly' as const },
     { path: '/insights/what-does-a-fractional-cto-do', priority: 0.6, changeFrequency: 'yearly' as const },
     { path: '/insights/cost-of-manual-data-entry', priority: 0.6, changeFrequency: 'yearly' as const },
