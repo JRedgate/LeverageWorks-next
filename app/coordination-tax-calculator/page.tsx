@@ -19,6 +19,20 @@ const TOOL_OPTIONS = [
   'Industry-specific software (Procore, Yardi, AppFolio, etc.)',
 ];
 
+type TierName = 'Ignite' | 'Build' | 'Scale';
+
+type TierDefinition = {
+  name: TierName;
+  monthly: number;
+  annual: number;
+};
+
+const TIERS: Record<TierName, TierDefinition> = {
+  Ignite: { name: 'Ignite', monthly: 4500, annual: 54000 },
+  Build: { name: 'Build', monthly: 6500, annual: 78000 },
+  Scale: { name: 'Scale', monthly: 8500, annual: 102000 },
+};
+
 const COORDINATION_OVERHEAD_RATE = 0.30;
 const RECOVERABLE_RATE = 0.50;
 
@@ -51,18 +65,20 @@ export default function CalculatorPage() {
     const isCapped = rawAnnualTax > 2000000;
     const recoverableAmount = annualTax * RECOVERABLE_RATE;
 
-    // Tier recommendation keyed to recoverable margin.
-    // Public tiers only: Ignite, Build, Scale. No pricing stored or displayed.
-    let recommendedTier: 'Ignite' | 'Build' | 'Scale' = 'Ignite';
+    // Single source of truth. One tier object drives headline, pricing, and ROI math.
+    // Public tiers only: Ignite, Build, Scale.
+    let recommendedTier: TierDefinition;
     if (recoverableAmount >= 250000 || isCapped) {
-      recommendedTier = 'Scale';
+      recommendedTier = TIERS.Scale;
     } else if (recoverableAmount >= 150000) {
-      recommendedTier = 'Build';
+      recommendedTier = TIERS.Build;
     } else {
-      recommendedTier = 'Ignite';
+      recommendedTier = TIERS.Ignite;
     }
 
-    // Severity bands are independent of tier pricing.
+    const actualROI = recoverableAmount / recommendedTier.annual;
+
+    // Severity bands reflect problem scale, independent of tier pricing.
     let severity: 'Low' | 'Moderate' | 'High' | 'Severe' = 'Low';
     if (recoverableAmount >= 800000 || isCapped) severity = 'Severe';
     else if (recoverableAmount >= 400000) severity = 'High';
@@ -78,6 +94,7 @@ export default function CalculatorPage() {
       severity,
       isCapped,
       recommendedTier,
+      actualROI,
     };
   }, [officeStaff, selectedTools, hourlyCost]);
 
@@ -88,8 +105,17 @@ export default function CalculatorPage() {
       maximumFractionDigits: 0,
     }).format(value);
 
+  const formatROI = (multiplier: number): string => `${multiplier.toFixed(1)}x`;
+
   const getSeverityContent = () => {
-    const { severity, annualTax, recoverableAmount, recommendedTier, isCapped } = results;
+    const { severity, annualTax, recoverableAmount, recommendedTier, actualROI, isCapped } = results;
+
+    // Shared templates. Both lines pull from the same recommendedTier object
+    // so the tier name, monthly cost, and annual cost always match across
+    // the recommendation line and the ROI paragraph.
+    const tierRecommendation = `The ${recommendedTier.name} tier ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is sized for your situation.`;
+
+    const roiMath = `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year. Approximately ${formatCurrency(recoverableAmount)} is recoverable. A ${recommendedTier.name} tier engagement (${formatCurrency(recommendedTier.annual)} annually) delivers approximately ${formatROI(actualROI)} ROI in the first year.`;
 
     if (severity === 'Severe') {
       return {
@@ -98,10 +124,10 @@ export default function CalculatorPage() {
         body: isCapped
           ? 'Your calculated coordination tax exceeds $2,000,000 per year, and at that scale the problem is not something a calculator can size correctly. What you are experiencing is structural misalignment between how your business has scaled and how your systems are architected to support it. This is exactly the situation LVRGWRKS was built to fix.'
           : 'At this scale, the coordination tax is not just expensive. It is actively constraining your ability to grow. You cannot fix this with another software subscription or another admin hire. It requires structural redesign of how the work flows across your operation.',
-        tierRecommendation:
-          'Book the Leverage Audit directly. We will map your actual situation in 60 minutes and outline what structural remediation looks like for a business at your scale.',
-        roiMath:
-          'At this severity, the conversation is no longer about incremental efficiency. It is about what this is costing you every month you wait.',
+        tierRecommendation: `A ${recommendedTier.name} tier engagement ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is the baseline commitment, though at this severity the Leverage Audit is the right first step to size the real scope.`,
+        roiMath: isCapped
+          ? 'At this severity, the ROI conversation is no longer about retainer math. It is about what this is costing you every month you wait.'
+          : roiMath,
       };
     }
 
@@ -110,8 +136,8 @@ export default function CalculatorPage() {
         label: 'High',
         headline: 'The math is urgent now.',
         body: 'You are paying for the equivalent of multiple full-time employees whose entire job is holding your systems together with spreadsheets and email. Every month you absorb this is a month of margin you do not get back.',
-        tierRecommendation: `At your scale, a ${recommendedTier} tier engagement is sized for the problem.`,
-        roiMath: `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year. Approximately ${formatCurrency(recoverableAmount)} of that is recoverable through structured automation and process redesign.`,
+        tierRecommendation,
+        roiMath,
       };
     }
 
@@ -120,8 +146,8 @@ export default function CalculatorPage() {
         label: 'Moderate',
         headline: 'You are feeling it. Most operators start losing their best people here.',
         body: 'This is the range where your team starts burning out on manual work, and where growth starts costing margin instead of creating it.',
-        tierRecommendation: `A ${recommendedTier} tier engagement is the right fit for what you are describing.`,
-        roiMath: `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year. Approximately ${formatCurrency(recoverableAmount)} is recoverable through structured automation and process redesign.`,
+        tierRecommendation,
+        roiMath,
       };
     }
 
@@ -129,8 +155,11 @@ export default function CalculatorPage() {
       label: 'Low',
       headline: 'Manageable today. But coordination tax compounds.',
       body: 'Most operators at your stage are in this range. The question is not whether to act now. It is whether you want to get ahead of the curve before it compounds.',
-      tierRecommendation: 'An Ignite tier engagement is the right entry point to stop the problem from compounding.',
-      roiMath: `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year, with approximately ${formatCurrency(recoverableAmount)} recoverable. The real value at this stage is preventing the problem from compounding as you scale.`,
+      tierRecommendation,
+      roiMath:
+        actualROI >= 1
+          ? roiMath
+          : `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year, with approximately ${formatCurrency(recoverableAmount)} recoverable. At your current coordination tax, the direct ROI math on an ${recommendedTier.name} engagement is modest, but the real value is preventing the problem from compounding.`,
     };
   };
 
@@ -173,7 +202,9 @@ export default function CalculatorPage() {
           annual_coordination_tax: formatCurrency(results.annualTax),
           recoverable_amount: formatCurrency(results.recoverableAmount),
           severity: results.severity,
-          recommended_tier: results.recommendedTier,
+          recommended_tier: results.recommendedTier.name,
+          recommended_tier_annual: formatCurrency(results.recommendedTier.annual),
+          actual_roi: formatROI(results.actualROI),
           is_capped: results.isCapped,
         }),
       });
