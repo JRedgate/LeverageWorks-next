@@ -29,7 +29,7 @@ export default function CoordinationTaxArticle() {
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">The gap nobody can explain</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
-              A growing mid-market company closes its year with revenue up twenty-two percent. The owner pulls the financials expecting to see margin expand in the same direction. It does not. EBITDA holds flat. In some cases it compresses. Headcount is up twenty-eight percent. The team is working harder than ever. The business looks like it is winning on the top line and losing somewhere in the middle.
+              A growing mid-market company closes its year with revenue up twenty-two percent. The owner pulls the financials expecting to see margin expand in the same direction. It does not. EBITDA holds flat. In some cases it compresses. Headcount is up twenty-eight percent. The team is working harder than ever. The business looks like it is winning on the top line and losing somewhere in the middle. The pattern becomes visible when you stop looking at total revenue and start looking at what each new hire actually produces.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
               The CFO flags it. The leadership team debates it. The usual explanations get trotted out. Wage pressure. Input costs. Timing of a few large jobs. Some of that is real. Most of it is not the actual answer.
@@ -38,88 +38,79 @@ export default function CoordinationTaxArticle() {
               The actual answer is that the business is paying a tax it never agreed to and cannot see on any invoice. Every growing mid-market company pays it. The ones that figure out what it is get ahead. The ones that do not spend the next five years hiring to outrun it and wondering why the math never catches up.
             </p>
 
-            {/* Visual 1: Revenue vs Margin Divergence */}
+            {/* Visual 1: Revenue per Incremental Headcount */}
             <figure className="my-12 bg-brand-surface p-8 md:p-10 rounded-xl border border-gray-100">
               <figcaption className="text-brand-navy font-bold text-sm uppercase tracking-widest mb-2">Figure 1</figcaption>
-              <p className="text-brand-navy font-display font-bold text-lg mb-1">Revenue climbs. Margin does not.</p>
-              <p className="text-brand-slate text-sm mb-6">Typical pattern in a growing mid-market company, indexed to year one.</p>
-              <svg viewBox="0 0 680 340" role="img" aria-label="Line chart showing revenue and headcount climbing together year over year while EBITDA margin stays flat" className="w-full h-auto">
-                <g transform="translate(70, 30)">
-                  <line x1="0" y1="0" x2="560" y2="0" stroke="#E5E7EB" strokeWidth="0.5" />
-                  <line x1="0" y1="60" x2="560" y2="60" stroke="#E5E7EB" strokeWidth="0.5" />
-                  <line x1="0" y1="120" x2="560" y2="120" stroke="#E5E7EB" strokeWidth="0.5" />
-                  <line x1="0" y1="180" x2="560" y2="180" stroke="#E5E7EB" strokeWidth="0.5" />
-                  <line x1="0" y1="240" x2="560" y2="240" stroke="#E5E7EB" strokeWidth="0.5" />
+              <p className="text-brand-navy font-display font-bold text-lg mb-1">Each new hire produces less than the one before.</p>
+              <p className="text-brand-slate text-sm mb-6">Revenue per incremental headcount, mid-market company growing through the coordination tax.</p>
 
-                  <text x="-10" y="4" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">180</text>
-                  <text x="-10" y="64" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">160</text>
-                  <text x="-10" y="124" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">140</text>
-                  <text x="-10" y="184" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">120</text>
-                  <text x="-10" y="244" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">100</text>
+              <svg viewBox="0 0 680 340" role="img" aria-label="Line chart showing revenue per incremental headcount declining from $300,000 in Year 2 to $140,000 in Year 5." className="w-full h-auto">
+                {/* Y-axis title - vertical on left */}
+                <text x="18" y="150" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500" transform="rotate(-90, 18, 150)">Revenue per new FTE</text>
 
-                  <text x="570" y="4" fontSize="11" fill="#6B7280" fontFamily="sans-serif">20%</text>
-                  <text x="570" y="124" fontSize="11" fill="#6B7280" fontFamily="sans-serif">10%</text>
-                  <text x="570" y="244" fontSize="11" fill="#6B7280" fontFamily="sans-serif">0%</text>
+                <g transform="translate(90, 30)">
+                  {/* Gridlines: Y-axis $80k to $320k over 240px. $320k=0, $260k=60, $200k=120, $140k=180, $80k=240 */}
+                  <line x1="0" y1="0" x2="520" y2="0" stroke="#E5E7EB" strokeWidth="0.5" />
+                  <line x1="0" y1="60" x2="520" y2="60" stroke="#E5E7EB" strokeWidth="0.5" />
+                  <line x1="0" y1="120" x2="520" y2="120" stroke="#E5E7EB" strokeWidth="0.5" />
+                  <line x1="0" y1="180" x2="520" y2="180" stroke="#E5E7EB" strokeWidth="0.5" />
+                  <line x1="0" y1="240" x2="520" y2="240" stroke="#6B7280" strokeWidth="1" />
 
+                  {/* Y-axis tick labels */}
+                  <text x="-10" y="4" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$320k</text>
+                  <text x="-10" y="64" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$260k</text>
+                  <text x="-10" y="124" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$200k</text>
+                  <text x="-10" y="184" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$140k</text>
+                  <text x="-10" y="244" textAnchor="end" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$80k</text>
+
+                  {/* Data coordinates: scale is $80k to $320k over 240px. px per $k = 240/240 = 1
+                      Y2: $300k → y = 240 - (300-80) = 240 - 220 = 20
+                      Y3: $240k → y = 240 - 160 = 80
+                      Y4: $180k → y = 240 - 100 = 140
+                      Y5: $140k → y = 240 - 60 = 180
+                      X positions across 520 width with 4 points: Y2=65, Y3=215, Y4=365, Y5=515 */}
+
+                  {/* Data line - declining */}
                   <polyline
-                    points="0,240 140,195 280,144 420,90 560,30"
+                    points="65,20 215,80 365,140 515,180"
                     fill="none"
                     stroke="#0A2540"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  <circle cx="0" cy="240" r="4" fill="#0A2540" />
-                  <circle cx="140" cy="195" r="4" fill="#0A2540" />
-                  <circle cx="280" cy="144" r="4" fill="#0A2540" />
-                  <circle cx="420" cy="90" r="4" fill="#0A2540" />
-                  <circle cx="560" cy="30" r="4" fill="#0A2540" />
 
-                  <polyline
-                    points="0,240 140,186 280,126 420,69 560,15"
-                    fill="none"
-                    stroke="#C9A227"
-                    strokeWidth="2.5"
-                    strokeDasharray="6 4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <rect x="-3" y="237" width="6" height="6" fill="#C9A227" />
-                  <rect x="137" y="183" width="6" height="6" fill="#C9A227" />
-                  <rect x="277" y="123" width="6" height="6" fill="#C9A227" />
-                  <rect x="417" y="66" width="6" height="6" fill="#C9A227" />
-                  <rect x="557" y="12" width="6" height="6" fill="#C9A227" />
+                  {/* Data points */}
+                  <circle cx="65" cy="20" r="5" fill="#0A2540" />
+                  <circle cx="215" cy="80" r="5" fill="#0A2540" />
+                  <circle cx="365" cy="140" r="5" fill="#0A2540" />
+                  <circle cx="515" cy="180" r="5" fill="#0A2540" />
 
-                  <polyline
-                    points="0,96 140,102 280,106 420,108 560,104"
-                    fill="none"
-                    stroke="#6B7280"
-                    strokeWidth="2"
-                    strokeDasharray="2 3"
-                    strokeLinecap="round"
-                  />
-                  <polygon points="0,92 4,100 -4,100" fill="#6B7280" />
-                  <polygon points="140,98 144,106 136,106" fill="#6B7280" />
-                  <polygon points="280,102 284,110 276,110" fill="#6B7280" />
-                  <polygon points="420,104 424,112 416,112" fill="#6B7280" />
-                  <polygon points="560,100 564,108 556,108" fill="#6B7280" />
+                  {/* Data point value labels */}
+                  <text x="65" y="8" textAnchor="middle" fontSize="11" fontWeight="600" fill="#0A2540" fontFamily="sans-serif">$300k</text>
+                  <text x="215" y="68" textAnchor="middle" fontSize="11" fontWeight="600" fill="#0A2540" fontFamily="sans-serif">$240k</text>
+                  <text x="365" y="128" textAnchor="middle" fontSize="11" fontWeight="600" fill="#0A2540" fontFamily="sans-serif">$180k</text>
+                  <text x="515" y="168" textAnchor="middle" fontSize="11" fontWeight="600" fill="#0A2540" fontFamily="sans-serif">$140k</text>
 
-                  <text x="0" y="265" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">Year 1</text>
-                  <text x="140" y="265" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">Year 2</text>
-                  <text x="280" y="265" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">Year 3</text>
-                  <text x="420" y="265" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">Year 4</text>
-                  <text x="560" y="265" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">Year 5</text>
-                </g>
-
-                <g transform="translate(70, 305)">
-                  <rect x="0" y="0" width="14" height="3" fill="#0A2540" rx="1" />
-                  <text x="20" y="5" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Revenue</text>
-                  <rect x="110" y="0" width="14" height="3" fill="#C9A227" rx="1" />
-                  <text x="130" y="5" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Headcount</text>
-                  <line x1="230" y1="2" x2="244" y2="2" stroke="#6B7280" strokeWidth="2" strokeDasharray="2 2" />
-                  <text x="250" y="5" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">EBITDA margin</text>
+                  {/* X-axis tick labels */}
+                  <text x="65" y="262" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 2</text>
+                  <text x="215" y="262" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 3</text>
+                  <text x="365" y="262" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 4</text>
+                  <text x="515" y="262" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 5</text>
                 </g>
               </svg>
+
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                <p className="text-brand-slate text-sm leading-relaxed mb-3">
+                  <span className="font-bold text-brand-navy">Revenue per incremental headcount</span> is the dollars of new revenue the business earns for each additional person it adds in a given year. It is the clearest single indicator of whether your business is scaling with leverage or scaling through brute force.
+                </p>
+                <p className="text-brand-navy text-sm leading-relaxed mb-3 italic">
+                  (Revenue in Year N − Revenue in Year N-1) ÷ (Headcount in Year N − Headcount in Year N-1)
+                </p>
+                <p className="text-brand-slate text-sm leading-relaxed">
+                  A healthy business holds this number steady or grows it over time. Each new hire contributes at least as much as the one before. When the coordination tax takes hold, the number declines year over year, even as total revenue keeps climbing. The business is still getting bigger. It is just getting less out of every person it adds.
+                </p>
+              </div>
             </figure>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">What the coordination tax actually is</h2>
@@ -157,7 +148,7 @@ export default function CoordinationTaxArticle() {
                   <p className="text-brand-gold text-xs uppercase tracking-widest font-bold mb-2">Stage 3</p>
                   <p className="font-display font-bold text-2xl text-white mb-1">150 people</p>
                   <p className="text-brand-gold text-sm font-bold mb-4">Tax is a department</p>
-                  <p className="text-gray-300 text-sm leading-relaxed">Coordinators, admins, ops managers. A layer that moves information instead of producing.</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">Coordinators, admins, operations managers. A layer that moves information instead of producing.</p>
                 </div>
               </div>
             </figure>
@@ -169,6 +160,7 @@ export default function CoordinationTaxArticle() {
 
             {/* Visual 3: Four Forms - 2x2 grid of colored cards */}
             <figure className="my-10">
+              <figcaption className="text-brand-navy font-bold text-sm uppercase tracking-widest mb-4">Figure 3</figcaption>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div className="bg-[#FAECE7] border border-[#D85A30]/30 p-6 rounded-lg">
                   <p className="text-[#712B13] text-xs uppercase tracking-widest font-bold mb-2">Form 1</p>
@@ -194,35 +186,30 @@ export default function CoordinationTaxArticle() {
             </figure>
 
             <div className="space-y-6 mb-10">
-
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Manual handoffs between systems</h3>
                 <p className="text-brand-slate leading-relaxed">
                   A construction estimator finishes a bid in one tool. The PM picks it up and rebuilds the budget inside a project management platform. Procurement pulls the same materials list into a third system to issue POs. Accounting eventually imports the whole thing for invoicing. Four people touch the same information four times because the tools do not talk. That is not workflow. That is the business paying four people to keep four systems in sync, and calling it operations.
                 </p>
               </div>
-
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Status updates and meeting overhead</h3>
                 <p className="text-brand-slate leading-relaxed">
-                  Standing meetings exist because nobody trusts the data to reflect the truth. Weekly ops reviews get scheduled to confirm what the system was supposed to show automatically. Senior people spend four hours a week answering variations of the same question: where are we on this. Time that should be going toward decisions gets spent manufacturing the inputs to the decisions. The calendar fills up and nothing gets built.
+                  Standing meetings exist because nobody trusts the data to reflect the truth. Weekly operations reviews get scheduled to confirm what the system was supposed to show automatically. Senior people spend four hours a week answering variations of the same question: where are we on this. Time that should be going toward decisions gets spent manufacturing the inputs to the decisions. The calendar fills up and nothing gets built.
                 </p>
               </div>
-
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Rework from miscommunication</h3>
                 <p className="text-brand-slate leading-relaxed">
                   A detail gets missed in a handoff. Wrong size ordered. Wrong scope priced. Wrong crew dispatched. The work gets redone. The cost of the rework itself is visible. The cost of the follow-up, the damage control, the trust erosion between functions is not. Over twelve months, the quiet cost of rework is often double the visible cost, and the root cause is almost always the same: information that was supposed to move did not, or moved incompletely.
                 </p>
               </div>
-
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Single-person knowledge bottlenecks</h3>
                 <p className="text-brand-slate leading-relaxed">
                   Every mid-market operation has one. The dispatcher who knows which crews work well together. The scheduler who knows which clients need a heads-up before invoicing. The long-tenured admin who is the only person who understands the old ERP. When that person takes a week off, the operation slows. When that person leaves, a visible portion of the business falls over. That is not institutional knowledge. That is key-person risk disguised as reliability, and every year it goes unaddressed the exposure grows.
                 </p>
               </div>
-
             </div>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">Why the default fixes make it worse</h2>
@@ -274,8 +261,8 @@ export default function CoordinationTaxArticle() {
               <figcaption className="text-brand-navy font-bold text-sm uppercase tracking-widest mb-2">Figure 4</figcaption>
               <p className="text-brand-navy font-display font-bold text-lg mb-1">Two companies. Same starting point. Different decisions.</p>
               <p className="text-brand-slate text-sm mb-6">Illustrative EBITDA trajectory over three years for a $50M mid-market operation.</p>
-              <svg viewBox="0 0 680 460" role="img" aria-label="Line chart comparing EBITDA over three years for two companies starting at the same $6M point. Both grow revenue identically from $50M to $65M. Company A stays the course and reaches $6.17M EBITDA at 9.5% margin by Year 3. Company B rebuilds its coordination layer and reaches $10.4M EBITDA at 16% margin. The annual gap widens from zero to $2.01M to $4.23M." className="w-full h-auto">
 
+              <svg viewBox="0 0 680 460" role="img" aria-label="Line chart comparing EBITDA over three years for two companies starting at the same $6M point. Both grow revenue identically from $50M to $65M. Company A stays the course and reaches $6.17M EBITDA at 9.5% margin by Year 3. Company B rebuilds its coordination layer and reaches $10.4M EBITDA at 16% margin. The annual gap widens from zero to $2.01M to $4.23M." className="w-full h-auto">
                 {/* Y-axis title - vertical on left */}
                 <text x="18" y="210" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500" transform="rotate(-90, 18, 210)">EBITDA ($M)</text>
 
@@ -305,21 +292,10 @@ export default function CoordinationTaxArticle() {
                       X positions: Y1=0, Y2=225, Y3=450 */}
 
                   {/* Shaded compounding gap area between the two lines */}
-                  <path
-                    d="M 0,160 L 225,159 L 450,155.5 L 450,42.7 L 225,105.3 L 0,160 Z"
-                    fill="#C9A227"
-                    fillOpacity="0.14"
-                  />
+                  <path d="M 0,160 L 225,159 L 450,155.5 L 450,42.7 L 225,105.3 L 0,160 Z" fill="#C9A227" fillOpacity="0.14" />
 
                   {/* Company A line (stays the course) - gray, solid */}
-                  <polyline
-                    points="0,160 225,159 450,155.5"
-                    fill="none"
-                    stroke="#6B7280"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                  <polyline points="0,160 225,159 450,155.5" fill="none" stroke="#6B7280" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   <circle cx="0" cy="160" r="5" fill="#6B7280" />
                   <circle cx="225" cy="159" r="5" fill="#6B7280" />
                   <circle cx="450" cy="155.5" r="5" fill="#6B7280" />
@@ -329,14 +305,7 @@ export default function CoordinationTaxArticle() {
                   <text x="458" y="168" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$6.17M · 9.5%</text>
 
                   {/* Company B line (rebuilt coordination layer) - brand navy, solid thick */}
-                  <polyline
-                    points="0,160 225,105.3 450,42.7"
-                    fill="none"
-                    stroke="#0A2540"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
+                  <polyline points="0,160 225,105.3 450,42.7" fill="none" stroke="#0A2540" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                   <circle cx="0" cy="160" r="5" fill="#0A2540" />
                   <circle cx="225" cy="105.3" r="5" fill="#0A2540" />
                   <circle cx="450" cy="42.7" r="5" fill="#0A2540" />
@@ -351,10 +320,8 @@ export default function CoordinationTaxArticle() {
                   {/* X-axis tick labels */}
                   <text x="0" y="344" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 1</text>
                   <text x="0" y="360" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$50M revenue</text>
-
                   <text x="225" y="344" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 2</text>
                   <text x="225" y="360" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$57.5M revenue</text>
-
                   <text x="450" y="344" textAnchor="middle" fontSize="12" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Year 3</text>
                   <text x="450" y="360" textAnchor="middle" fontSize="11" fill="#6B7280" fontFamily="sans-serif">$65M revenue</text>
                 </g>
@@ -373,6 +340,7 @@ export default function CoordinationTaxArticle() {
                   <text x="471" y="6" fontSize="11" fill="#0A2540" fontFamily="sans-serif" fontWeight="500">Compounding gap</text>
                 </g>
               </svg>
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
                 <div className="bg-white p-5 rounded-lg border border-gray-100">
                   <p className="text-brand-slate text-xs uppercase tracking-widest font-bold mb-2">Year 1</p>
@@ -390,6 +358,7 @@ export default function CoordinationTaxArticle() {
                   <p className="text-brand-slate text-sm leading-relaxed">Company A: 9.5% margin. Company B: 16.0% margin. The gap is <span className="text-brand-gold font-bold">$4.23M annually</span>.</p>
                 </div>
               </div>
+
               <p className="text-brand-slate text-sm mt-6 leading-relaxed">
                 Both businesses grow revenue at the same rate. Same sector, same size, same team composition on paper. The difference is not in what they do. It is in how information moves between the people doing it. By year three, Company B is keeping an additional $4.23M of EBITDA every year on identical revenue. That gap is what the coordination layer is worth in real dollars, and it widens every year the decision is deferred.
               </p>
