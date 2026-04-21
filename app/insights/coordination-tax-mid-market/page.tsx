@@ -100,6 +100,10 @@ export default function CoordinationTaxArticle() {
                 </g>
               </svg>
 
+              <p className="text-brand-slate text-xs leading-relaxed mt-4 italic">
+                Illustrative pattern for a mid-market company growing revenue around 15% annually without redesigning its coordination layer. The curve steepens earlier in higher-complexity sectors such as construction, manufacturing, and field services, and later in lower-complexity ones.
+              </p>
+
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <p className="text-brand-slate text-sm leading-relaxed mb-3">
                   <span className="font-bold text-brand-navy">Revenue per incremental headcount</span> is the dollars of new revenue the business earns for each additional person it adds in a given year. It is the clearest single indicator of whether your business is scaling with leverage or scaling through brute force.
