@@ -29,13 +29,13 @@ export default function CoordinationTaxArticle() {
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">The gap nobody can explain</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
-              A growing mid-market company closes its year with revenue up twenty-two percent. The owner pulls the financials expecting to see margin expand in the same direction. It does not. EBITDA holds flat. In some cases it compresses. Headcount is up twenty-eight percent. The team is working harder than ever. The business looks like it is winning on the top line and losing somewhere in the middle. The pattern becomes visible when you stop looking at total revenue and start looking at what each new hire actually produces.
+              A growing mid-market company closes its year with revenue up twenty-two percent. The owner pulls the financials expecting to see margin expand in the same direction. It does not. EBITDA holds flat. In some cases it compresses. Headcount is up twenty-eight percent. The team is working harder than ever. The business looks like it is winning on the top line and losing somewhere in the middle.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
               The CFO flags it. The leadership team debates it. The usual explanations get trotted out. Wage pressure. Input costs. Timing of a few large jobs. Some of that is real. Most of it is not the actual answer.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              The actual answer is that the business is paying a tax it never agreed to and cannot see on any invoice. Every growing mid-market company pays it. The ones that figure out what it is get ahead. The ones that do not spend the next five years hiring to outrun it and wondering why the math never catches up.
+              The actual answer is that the business is paying a tax it never agreed to and cannot see on any invoice. Every growing mid-market company pays it. The ones that figure out what it is get ahead. The ones that do not spend the next five years hiring to outrun it and wondering why the math never catches up. The pattern becomes visible the moment you stop looking at total revenue and start looking at what each new hire actually produces.
             </p>
 
             {/* Visual 1: Revenue per Incremental Headcount */}
