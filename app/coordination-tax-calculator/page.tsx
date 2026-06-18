@@ -38,10 +38,10 @@ const RECOVERABLE_RATE = 0.50;
 
 export default function CalculatorPage() {
   const { openBriefing } = useBriefing();
-  const [officeStaff, setOfficeStaff] = useState<number>(25);
+  const [officeStaff, setOfficeStaff] = useState<number | ''>(25);
   const [industry, setIndustry] = useState<Industry>('Construction');
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
-  const [hourlyCost, setHourlyCost] = useState<number>(75);
+  const [hourlyCost, setHourlyCost] = useState<number | ''>(75);
   const [name, setName] = useState<string>('');
   const [company, setCompany] = useState<string>('');
   const [email, setEmail] = useState<string>('');
@@ -56,10 +56,12 @@ export default function CalculatorPage() {
   };
 
   const results = useMemo(() => {
+    const staff = typeof officeStaff === 'number' ? officeStaff : 0;
+    const cost = typeof hourlyCost === 'number' ? hourlyCost : 0;
     const toolsCount = selectedTools.length;
     const frictionMultiplier = 1 + Math.max(0, toolsCount - 3) * 0.08;
-    const weeklyCoordinationHours = officeStaff * 40 * COORDINATION_OVERHEAD_RATE * frictionMultiplier;
-    const weeklyTax = weeklyCoordinationHours * hourlyCost;
+    const weeklyCoordinationHours = staff * 40 * COORDINATION_OVERHEAD_RATE * frictionMultiplier;
+    const weeklyTax = weeklyCoordinationHours * cost;
     const rawAnnualTax = weeklyTax * 50;
     const annualTax = Math.min(rawAnnualTax, 2000000);
     const isCapped = rawAnnualTax > 2000000;
@@ -251,10 +253,18 @@ export default function CalculatorPage() {
                 <div className="flex items-center gap-3">
                   <input
                     type="number"
+                    inputMode="numeric"
                     min="5"
                     max="50"
                     value={officeStaff}
-                    onChange={(e) => setOfficeStaff(Math.max(5, Math.min(50, Number(e.target.value) || 25)))}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setOfficeStaff(v === '' ? '' : Number(v));
+                    }}
+                    onBlur={() => {
+                      const n = Number(officeStaff);
+                      setOfficeStaff(!n || Number.isNaN(n) ? 25 : Math.max(5, Math.min(50, n)));
+                    }}
                     className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-brand-navy font-bold text-xl focus:border-brand-navy focus:outline-none transition-all"
                   />
                   <span className="text-brand-slate font-medium">office staff</span>
@@ -304,10 +314,18 @@ export default function CalculatorPage() {
                   <span className="text-2xl font-display font-bold text-brand-navy">$</span>
                   <input
                     type="number"
+                    inputMode="numeric"
                     min="30"
                     max="200"
                     value={hourlyCost}
-                    onChange={(e) => setHourlyCost(Math.max(30, Math.min(200, Number(e.target.value) || 75)))}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      setHourlyCost(v === '' ? '' : Number(v));
+                    }}
+                    onBlur={() => {
+                      const n = Number(hourlyCost);
+                      setHourlyCost(!n || Number.isNaN(n) ? 75 : Math.max(30, Math.min(200, n)));
+                    }}
                     className="flex-1 px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-brand-navy font-bold text-xl focus:border-brand-navy focus:outline-none transition-all"
                   />
                   <span className="text-brand-slate font-medium">per hour</span>
