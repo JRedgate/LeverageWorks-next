@@ -16,14 +16,14 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick, onSecondCtaClick }) => (
       <div className="max-w-4xl">
         <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">
           <div className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
-          <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Fractional CTO + AI Operations Partner</span>
+          <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Fractional CTO and Operating Partner</span>
         </div>
         <h1 className="font-display font-semibold text-5xl md:text-7xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
-          Your business is growing.<br />
-          <span className="text-brand-slate italic">Your operations are not keeping up.</span>
+          You added the revenue.<br />
+          <span className="text-brand-slate italic">The margin did not follow.</span>
         </h1>
         <p className="text-brand-slate text-xl leading-relaxed mb-10 max-w-2xl font-light">
-          Your platforms do not talk to each other. Your best people are manually moving data between them. You are paying the coordination tax every day, and it is quietly eroding your margin. LVRGWRKS embeds inside your business as your fractional CTO and AI operations partner, rebuilds how the work flows, and proves the ROI every 30 days. Built for mid-market operators in Alberta and Western Canada (20-250 employees, $5M-$150M revenue).
+          Revenue grew. Margin did not move with it, and headcount climbed to hold the operation together. That gap is the coordination tax: the labour your team burns every day moving work and information between systems and people that do not line up. It is the biggest single reason a growing company adds revenue without adding margin, and it never shows up on a report. LVRGWRKS comes in as your operating partner, finds exactly where the margin is leaking, rebuilds how the work flows, and stays to prove the return every 30 days. Built for owner-led mid-market operators in Alberta and Western Canada, 20 to 250 people and $5M to $150M in revenue.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button onClick={onCtaClick} className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-slate transition-all shadow-lg hover:shadow-brand-navy/20 group">
