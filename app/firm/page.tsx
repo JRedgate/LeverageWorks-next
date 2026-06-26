@@ -119,13 +119,16 @@ export default function FirmPage() {
               The Alberta mid-market operates differently. <span className="text-brand-slate italic">We built LVRGWRKS for that.</span>
             </h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">
-              Most AI and automation firms were built inside the tech ecosystem. They know SaaS, they know software, and they know how to sell enterprise dashboards. They don't know what it feels like to run a 40-truck energy services company at 6am, or coordinate six subcontractors across a multi-site construction project, or reconcile maintenance requests across a growing property management portfolio. They don't know the operations. They know the tools.
+              Most AI and automation firms were built inside the tech ecosystem. They know software, they know dashboards, and they know how to sell enterprise tools. They don't know what it feels like to run a 40-truck energy services company at 6am, or coordinate six subcontractors across a multi-site construction project, or reconcile maintenance requests across a growing property management portfolio. They don't know the operations. They know the tools.
             </p>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">
               LVRGWRKS is built the other way around. Operations first, tools second. We work with founders, owners, and COOs of mid-market companies (20 to 250 employees, $5M to $150M in revenue) across Alberta and Western Canada, because that's where the operational realities and the operational opportunities are the clearest. When you engage LVRGWRKS, you're not hiring a vendor who's going to learn your industry on your dime. You're adding a partner who already speaks the language.
             </p>
-            <p className="text-brand-slate text-lg leading-relaxed">
+            <p className="text-brand-slate text-lg leading-relaxed mb-6">
               Every workflow, automation, and AI agent we build belongs to you from day one. No vendor lock-in. No dependency on us. The engagement can end at any time and your operation keeps running. That's not a risk reversal tactic. It's the only honest way to build what we build.
+            </p>
+            <p className="text-brand-slate text-lg leading-relaxed">
+              There is a second payoff most owners do not price in. A business that runs cleaner is worth more. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. Buyers discount a company that runs on tribal knowledge and spreadsheets, and pay up for one where the work flows without the owner in the middle of it. We turn coordination cost into margin, and margin into a stronger position at sale.
             </p>
           </div>
         </div>
@@ -139,7 +142,7 @@ export default function FirmPage() {
             <span className="text-gray-400 italic">between intent and execution?</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
-            Start with a free 60-minute Leverage Audit. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline a conceptual automation architecture before the call ends. No cost. No commitment. No generic presentation.
+            Start with a free 60-minute Leverage Audit. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends. No cost. No commitment. No generic presentation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
             <button

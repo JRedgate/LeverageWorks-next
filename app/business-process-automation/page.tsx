@@ -26,7 +26,7 @@ export default function BusinessProcessAutomationPage() {
               Every time a member of your team copies data from one system to another, builds a report by hand, or chases a status update through email and phone calls, that is money leaving your business through the least visible exit on your P&L. The work looks productive. It is not.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              LVRGWRKS maps, redesigns, and automates these processes so your people can focus on the work that actually requires human judgment -- and the systems handle everything else.
+              LVRGWRKS maps, redesigns, and automates these processes so your people can focus on the work that actually requires human judgment, and the systems handle everything else.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
@@ -49,7 +49,7 @@ export default function BusinessProcessAutomationPage() {
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">The Problem</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Manual processes hide in plain sight</h2>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-6">
-                Business process automation is not about replacing people. It is about identifying the specific work your people are doing that should not require a person -- and building systems that handle that work automatically so your team can do the higher-value work only they can do.
+                Business process automation is not about replacing people. It is about identifying the specific work your people are doing that should not require a person, and building systems that handle that work automatically so your team can do the higher-value work only they can do.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
                 The challenge is that manual processes are almost invisible until you look for them. They are embedded in job descriptions, normalized as "just how things work," and distributed across multiple people so no single person carries an obviously excessive burden. The labour cost is real. It just does not appear anywhere on your financial statements.
@@ -79,10 +79,10 @@ export default function BusinessProcessAutomationPage() {
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">What the cost actually looks like</h3>
                 <p className="text-brand-slate text-sm leading-relaxed mb-4">
-                  The direct labour cost is the starting point -- hours spent on manual tasks multiplied by the fully loaded cost of the people doing them. For most mid-market companies, this number is larger than expected when you add it up across all processes and all people.
+                  The direct labour cost is the starting point, hours spent on manual tasks multiplied by the fully loaded cost of the people doing them. For most mid-market companies, this number is larger than expected when you add it up across all processes and all people.
                 </p>
                 <p className="text-brand-slate text-sm leading-relaxed mb-4">
-                  The error cost sits on top of that. Every manual data entry process has an error rate. Incorrect invoices, missed orders, planning decisions based on wrong numbers -- each incident has a direct cost to correct and sometimes a downstream cost that multiplies it.
+                  The error cost sits on top of that. Every manual data entry process has an error rate. Incorrect invoices, missed orders, planning decisions based on wrong numbers. Each incident has a direct cost to correct and sometimes a downstream cost that multiplies it.
                 </p>
                 <p className="text-brand-slate text-sm leading-relaxed">
                   The opportunity cost is often the largest category and the hardest to see. Every hour your best operators spend on manual coordination is an hour they are not managing, deciding, or executing on the work the business actually needs from them.
@@ -107,11 +107,11 @@ export default function BusinessProcessAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Data integration and synchronization</h3>
-                <p className="text-gray-300 leading-relaxed">Connecting platforms that do not talk to each other -- ERP, CRM, project management, accounting, field management, scheduling -- so data flows automatically between them without manual export, import, or re-entry. One source of truth. Updated in real time.</p>
+                <p className="text-gray-300 leading-relaxed">Connecting platforms that do not talk to each other, ERP, CRM, project management, accounting, field management, scheduling, so data flows automatically between them without manual export, import, or re-entry. One source of truth. Updated in real time.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Reporting and dashboard automation</h3>
-                <p className="text-gray-300 leading-relaxed">Converting manual report-building into automated delivery. Operational dashboards, financial summaries, project status reports, and performance metrics generated automatically from data already in your systems -- without anyone spending hours compiling them.</p>
+                <p className="text-gray-300 leading-relaxed">Converting manual report-building into automated delivery. Operational dashboards, financial summaries, project status reports, and performance metrics generated automatically from data already in your systems, without anyone spending hours compiling them.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Workflow and approval automation</h3>
@@ -160,7 +160,7 @@ export default function BusinessProcessAutomationPage() {
                   <svg className="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                 </div>
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-3">Monthly Value Creation Reports</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Every 30 days -- labour hours recovered, automation performance, and rolling ROI against your retainer. Documented, not estimated.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Every 30 days: labour hours recovered, automation performance, and rolling ROI against your retainer. Documented, not estimated.</p>
               </div>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function BusinessProcessAutomationPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Find out what your manual work is actually costing you.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit maps your current manual workflows and quantifies the exact labour cost in 60 minutes. You leave with the baseline number -- and a clear picture of where automation investment makes sense.
+            The Leverage Audit maps your current manual workflows and quantifies the exact labour cost in 60 minutes. You leave with the baseline number, and a clear picture of where automation investment makes sense.
           </p>
           <p className="text-gray-500 max-w-xl mx-auto mb-12 text-base leading-relaxed">
             No cost. No commitment. No generic presentation.

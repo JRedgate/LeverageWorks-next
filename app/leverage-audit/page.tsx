@@ -15,10 +15,10 @@ export default function LeverageAuditPage() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 shadow-sm px-4 py-1.5 rounded-full mb-8">
               <div className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
-              <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Free -- No Commitment</span>
+              <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Free. No Commitment</span>
             </div>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">The Leverage Audit.</h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">A free 60-minute working session where we map your highest-friction workflows, put a real dollar figure on the labour cost, and outline a conceptual automation architecture before the call ends.</p>
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">A free 60-minute working session where we map your highest-friction workflows, put a real dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You leave with a written summary of where your operations are bleeding capacity and what it is costing you. No pitch. No generic presentation. No commitment required.</p>
             <button onClick={() => openBriefing()} className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
               Book Your Leverage Audit
@@ -40,17 +40,17 @@ export default function LeverageAuditPage() {
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6"><span className="text-brand-gold font-display font-bold text-xl">01</span></div>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Workflow map</h3>
-                <p className="text-brand-slate leading-relaxed text-sm">We work through your current workflows together -- where data moves manually, where your systems are not connected, and where your team is filling the gaps. This is specific to your business, not a generic template. The map becomes the foundation for everything that follows.</p>
+                <p className="text-brand-slate leading-relaxed text-sm">We work through your current workflows together, where data moves manually, where your systems are not connected, and where your team is filling the gaps. This is specific to your business, not a generic template. The map becomes the foundation for everything that follows.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6"><span className="text-brand-gold font-display font-bold text-xl">02</span></div>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Labour cost quantification</h3>
-                <p className="text-brand-slate leading-relaxed text-sm">We translate every manual workflow into an annual dollar cost using your actual headcount and fully loaded labour rates. For most mid-market companies this number is larger than expected -- and it becomes the baseline against which any automation investment gets measured. You leave knowing what the current state is actually costing you.</p>
+                <p className="text-brand-slate leading-relaxed text-sm">We translate every manual workflow into an annual dollar cost using your actual headcount and fully loaded labour rates. For most mid-market companies this number is larger than expected, and it becomes the baseline against which any automation investment gets measured. You leave knowing what the current state is actually costing you.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6"><span className="text-brand-gold font-display font-bold text-xl">03</span></div>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Automation architecture outline</h3>
-                <p className="text-brand-slate leading-relaxed text-sm">Before the call ends, we outline what an automation architecture would look like for your highest-cost workflows -- which integrations to build, which processes to automate first, and what the ROI case looks like before any work begins. You leave with a conceptual blueprint, not a promise to send a proposal.</p>
+                <p className="text-brand-slate leading-relaxed text-sm">Before the call ends, we outline what an automation architecture would look like for your highest-cost workflows, which integrations to build, which processes to automate first, and what the ROI case looks like before any work begins. You leave with a conceptual blueprint, not a promise to send a proposal.</p>
               </div>
             </div>
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
@@ -68,7 +68,7 @@ export default function LeverageAuditPage() {
               <div>
                 <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Who This Is For</span>
                 <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Founders, owners, and COOs who know something is costing them but cannot see exactly where</h2>
-                <p className="text-brand-slate text-lg leading-relaxed mb-6">The Leverage Audit is designed for operators running mid-market companies in Alberta who are experiencing the specific pain of coordination drag, headcount pressure, or margin erosion -- and want a clear picture of what is actually driving it before committing to any solution.</p>
+                <p className="text-brand-slate text-lg leading-relaxed mb-6">The Leverage Audit is designed for operators running mid-market companies in Alberta who are feeling the specific pain of coordination drag, headcount pressure, or margin leaking out, and want a clear picture of what is actually driving it before committing to anything.</p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">You do not need to know anything about AI or automation before the session. You need to know your business and be willing to walk through how work actually gets done day to day. We handle the diagnostic framework.</p>
                 <p className="text-brand-slate text-lg leading-relaxed">LVRGWRKS works with companies in construction, energy services, manufacturing, and property management across Calgary, Alberta, and Western Canada. Typically 20 to 250 employees, $5M to $150M in revenue.</p>
               </div>
@@ -76,7 +76,7 @@ export default function LeverageAuditPage() {
                 <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                   <h3 className="font-display font-bold text-lg text-brand-navy mb-3">Good fit for the Audit if:</h3>
                   <div className="space-y-3">
-                    {['Your team is spending meaningful time on manual reporting, data entry, or status tracking','Your platforms do not connect to each other and your people bridge the gap','You have grown the business but headcount has grown faster than revenue','You are ready to use AI seriously but are not sure where to start','You have tried automation before and it did not stick -- and you want to understand why'].map((item, i) => (
+                    {['Your team is spending meaningful time on manual reporting, data entry, or status tracking','Your platforms do not connect to each other and your people bridge the gap','You have grown the business but headcount has grown faster than revenue','You are ready to use AI seriously but are not sure where to start','You have tried automation before and it did not stick, and you want to understand why'].map((item, i) => (
                       <div key={i} className="flex items-start gap-3">
                         <svg className="w-4 h-4 text-brand-gold mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
                         <span className="text-brand-slate text-sm">{item}</span>
@@ -116,7 +116,7 @@ export default function LeverageAuditPage() {
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Monthly Value Creation Reports</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Every 30 days you receive a Value Creation Report showing exactly what was recovered -- labour hours, automation performance, and rolling ROI against the engagement cost. We do not estimate whether the system is working. We document it, every month.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Every 30 days you receive a Value Creation Report showing exactly what was recovered: labour hours, automation performance, and rolling ROI against the engagement cost. We do not estimate whether the system is working. We document it, every month.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">You own everything we build</h3>
@@ -124,7 +124,7 @@ export default function LeverageAuditPage() {
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Embedded, not advisory</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">LVRGWRKS operates as your fractional CTO and AI operations partner, not a consulting firm that delivers a report. We attend leadership meetings, sit inside operational decisions, and stay accountable to outcomes -- not just deliverables.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">LVRGWRKS operates as your fractional CTO and operating partner, not a consulting firm that delivers a report. We attend leadership meetings, sit inside operational decisions, and stay accountable to outcomes, not just reports.</p>
               </div>
             </div>
           </div>

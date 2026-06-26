@@ -43,7 +43,7 @@ export default function WhyTransformationsFailArticle() {
               When you layer new technology onto a broken or misaligned workflow, you do not fix the workflow. You accelerate it, in whichever direction it was already going. If your team was manually reconciling data between two systems before the transformation, they are now doing the same thing with a more expensive system in the middle.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              The villain in most digital transformation failures is not bad software. It is coordination inflation -- the structural overhead that accumulates as organizations scale and decisions get made at the wrong levels, by the wrong people, on incomplete information. Technology investments made on top of that structure do not reduce the overhead. They add to it.
+              The villain in most digital transformation failures is not bad software. It is the coordination tax, the overhead that piles up as a company scales and decisions get made at the wrong levels, by the wrong people, on incomplete information. Technology investments made on top of that structure do not reduce the overhead. They add to it.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">The three gaps that kill transformations</h2>
@@ -85,7 +85,7 @@ export default function WhyTransformationsFailArticle() {
               The most valuable first step is a clear-eyed assessment of your current operating model. Not a technology audit. An operational one. Where is data moving manually? Where are decisions slowing down because information is not available or not trusted? Where is your team spending time on coordination instead of execution? What is the actual labour cost of your current friction?
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              Only once you have answers to those questions does the technology conversation make sense. The platform selection, the integration architecture, the AI strategy -- all of that becomes straightforward once the operational problem is defined clearly. The companies that skip this step and go straight to platform selection are the ones who call it a failure eighteen months later.
+              Only once you have answers to those questions does the technology conversation make sense. The platform selection, the integration architecture, the AI strategy, all of that becomes straightforward once the operational problem is defined clearly. The companies that skip this step and go straight to platform selection are the ones who call it a failure eighteen months later.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
               That operational assessment is what the LVRGWRKS Leverage Audit does in 60 minutes. No platform recommendations. No sales pitch. A diagnostic that gives you the picture of where your operations are actually costing you capacity and margin, so that any technology investment you make after has a clear problem to solve.

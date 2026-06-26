@@ -24,24 +24,24 @@ export default function HomePage() {
               <span className="text-gray-400">The math never catches up.</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              Most mid-market operators hit the same wall. As the business scales, the cost of holding it together compounds faster than the systems can keep up. We call it the coordination tax: the hidden labour your team burns every day moving data between platforms that do not talk to each other, chasing approvals that should take hours, and manually gluing together the workflows your software was supposed to automate. It is the single largest driver of margin erosion in growing mid-market businesses, and it almost never shows up on a report.
+              Most mid-market operators hit the same wall. As the business scales, the cost of holding it together compounds faster than the systems can keep up. We call it the coordination tax: the hidden labour your team burns every day moving data between platforms that do not talk to each other, chasing approvals that should take hours, and manually gluing together the workflows your software was supposed to automate. It is the single biggest reason a growing business adds revenue without adding margin, and it almost never shows up on a report.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Decision Latency</div>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Decisions That Drag</div>
                 <p className="text-gray-400 leading-relaxed">Decisions that should take hours take weeks. Approvals stack. Context gets lost between handoffs.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">The Coordination Tax</div>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Meeting and Reporting Overhead</div>
                 <p className="text-gray-400 leading-relaxed">Meetings multiply. Reporting layers expand. Your best people burn capacity on manual work instead of driving growth.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Disproportionate Scaling</div>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Headcount Outrunning Revenue</div>
                 <p className="text-gray-400 leading-relaxed">You hire people to manage the overhead instead of drive the growth. Fixed costs rise faster than revenue.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Margin Erosion</div>
-                <p className="text-gray-400 leading-relaxed">EBITDA stagnates or compresses despite topline growth. The problem is structural, not operational.</p>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Margin That Leaks</div>
+                <p className="text-gray-400 leading-relaxed">Profit stalls or slips even as the topline grows. The problem is in how the work flows, not how hard the team works.</p>
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -81,20 +81,20 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Solution</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-8 leading-tight">
-              You are not hiring a vendor.<br />
-              <span className="text-brand-slate italic">You are adding a fractional CTO to your team.</span>
+              We do not bolt tools onto a broken process.<br />
+              <span className="text-brand-slate italic">We rebuild how the work flows, and we stay.</span>
             </h2>
             <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-10">
-              LVRGWRKS embeds inside your business as a fractional CTO and AI operations partner. We identify where your business is spending effort without getting faster, fix how the work flows, build the automation and AI infrastructure to hold the result, and stay embedded to manage it as you grow. A full-time CTO costs $200,000 or more per year before benefits, ramp time, and attrition risk. Every LVRGWRKS retainer gives you that strategic capability at a fraction of the cost, operational from day one.
+              LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it and prove the return. The retainer is set against the value the work creates, not the hours it takes or the tools it uses. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. You own everything from day one.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="border-l-4 border-brand-gold pl-6">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">We do not optimize broken structures</h3>
-                <p className="text-brand-slate leading-relaxed">Most consultants make your existing system faster. We evaluate whether the structure itself is economically misaligned under growth. If it is, we redesign it. AI is deployed only where it materially improves throughput.</p>
+                <p className="text-brand-slate leading-relaxed">Most consultants make your existing system faster. We evaluate whether the structure itself is economically misaligned under growth. If it is, we redesign it. Automation or AI is used only where the diagnosis calls for it, never as the default.</p>
               </div>
               <div className="border-l-4 border-brand-gold pl-6">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">We build what competitors cannot replicate</h3>
-                <p className="text-brand-slate leading-relaxed">Single-platform automation gets absorbed by SaaS vendors. We build cross-platform orchestration that sits above your existing tools and connects them into one seamless operation.</p>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">The moat is the operating model</h3>
+                <p className="text-brand-slate leading-relaxed">Single-platform features get absorbed by your software vendors. What they cannot copy is the way your work flows across the whole operation. That is what we rebuild, and it is the part that holds.</p>
               </div>
               <div className="border-l-4 border-brand-gold pl-6">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">You own everything from day one</h3>
@@ -120,12 +120,12 @@ export default function HomePage() {
               <div className="bg-white p-10 rounded-xl border border-gray-100">
                 <div className="text-brand-gold font-display font-bold text-5xl mb-4">01</div>
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Diagnose</h3>
-                <p className="text-brand-slate leading-relaxed">The 60-Minute Leverage Audit. We map every manual workflow in your operation, quantify the exact labour cost, and rank automation opportunities by ROI. You leave the call with a written summary of where your operations are bleeding capacity and what it is costing you. No cost. No commitment.</p>
+                <p className="text-brand-slate leading-relaxed">The 60-Minute Leverage Audit. We map every manual workflow in your operation, quantify the exact labour cost, and rank the fixes by return. You leave the call with a written summary of where your operations are bleeding capacity and what it is costing you. No cost. No commitment.</p>
               </div>
               <div className="bg-white p-10 rounded-xl border border-gray-100">
                 <div className="text-brand-gold font-display font-bold text-5xl mb-4">02</div>
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Design</h3>
-                <p className="text-brand-slate leading-relaxed">We architect the cross-platform automation layer that sits above your existing tools. No ripping out systems. No forcing a new platform on your team. Everything is designed around your existing tools and your actual operational constraints. You see the blueprint before any building begins.</p>
+                <p className="text-brand-slate leading-relaxed">We design the fix around how your operation actually runs. Sometimes that is automation or AI. Sometimes it is removing a handoff or moving a decision so it stops routing through you. Nothing gets ripped out and no new platform is forced on your team. You see the blueprint before any building begins.</p>
               </div>
               <div className="bg-white p-10 rounded-xl border border-gray-100">
                 <div className="text-brand-gold font-display font-bold text-5xl mb-4">03</div>
@@ -146,31 +146,31 @@ export default function HomePage() {
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
-            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Proven Execution</span>
-            <h2 className="font-display font-bold text-3xl md:text-5xl mb-10 leading-tight">Unlocking capacity without adding headcount.</h2>
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Return</span>
+            <h2 className="font-display font-bold text-3xl md:text-5xl mb-10 leading-tight">Priced against the value, not the hours.</h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              A multi-site North American industrial manufacturer faced margin compression driven by input volatility and inconsistent production scheduling. We deployed a predictive scheduling engine that integrated real-time machine telemetry with sales forecasts and autonomically rebalanced production lines to optimize for throughput. The result was a hidden factory unlocked within their existing footprint.
+              We set the retainer at roughly one third of the value an engagement is calculated to create. That builds the work to return two to three times what it costs, and we prove it every 30 days in a Value Creation Report. Above the Scale tier the share tapers, so the largest engagements are not charged a flat third. The figures below are illustrative. The Leverage Audit replaces them with your own number.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-4xl mb-2">7.5x</div>
-                <p className="text-gray-400 text-sm leading-relaxed">Verified ROI</p>
+                <div className="text-brand-gold font-display font-bold text-4xl mb-2">~3x</div>
+                <p className="text-gray-400 text-sm leading-relaxed">Return the work is built to deliver, value against retainer</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-4xl mb-2">14%</div>
-                <p className="text-gray-400 text-sm leading-relaxed">Capacity increase, zero headcount added</p>
+                <div className="text-brand-gold font-display font-bold text-4xl mb-2">1/3</div>
+                <p className="text-gray-400 text-sm leading-relaxed">Of the value created, where the retainer is set</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-4xl mb-2">22%</div>
-                <p className="text-gray-400 text-sm leading-relaxed">Reduction in planning effort</p>
+                <div className="text-brand-gold font-display font-bold text-4xl mb-2">30 days</div>
+                <p className="text-gray-400 text-sm leading-relaxed">How often we prove the value, in writing</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-4xl mb-2">9%</div>
-                <p className="text-gray-400 text-sm leading-relaxed">Inventory reduction</p>
+                <div className="text-brand-gold font-display font-bold text-4xl mb-2">Day 1</div>
+                <p className="text-gray-400 text-sm leading-relaxed">When you own everything we build</p>
               </div>
             </div>
-            <Link href="/impact" className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-white transition-all group">
-              View All Case Studies
+            <Link href="/coordination-tax-calculator" className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-white transition-all group">
+              Try the Coordination Tax Calculator
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -183,28 +183,45 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Investment</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-6 leading-tight">
-              Less than your next admin hire.<br />
-              <span className="text-brand-slate italic">Without the attrition risk.</span>
+              Priced to the value it creates.<br />
+              <span className="text-brand-slate italic">Not the hours. Not the tools.</span>
             </h2>
             <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-16">
-              A full-time CTO costs $200,000 or more per year before benefits, ramp time, and attrition risk. LVRGWRKS delivers that capability at a fraction of the cost, operational from day one. Three engagement tiers, matched to where your operational constraints actually live.
+              The retainer is set against the value an engagement is calculated to create, not the time it takes or the technology it uses. Three tiers, matched to where your constraints actually sit. You see the number that fits your operation in the audit, before anything is built.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              <div className="bg-brand-surface border border-gray-100 rounded-xl p-6">
+                <div className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">Step 1</div>
+                <h4 className="font-display font-bold text-lg text-brand-navy mb-2">Leverage Audit</h4>
+                <p className="text-brand-slate text-sm leading-relaxed">A free 60-minute working session. We map your highest-coordination workflows and show you where the margin is leaking. No cost, no commitment, a written summary to keep.</p>
+              </div>
+              <div className="bg-brand-surface border border-gray-100 rounded-xl p-6">
+                <div className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">Step 2</div>
+                <h4 className="font-display font-bold text-lg text-brand-navy mb-2">Leverage Diagnostic</h4>
+                <p className="text-brand-slate text-sm leading-relaxed">A focused engagement that turns the audit into your own number. We quantify the coordination tax in your operation and design the fix, so you decide with the value in front of you.</p>
+              </div>
+              <div className="bg-brand-surface border border-gray-100 rounded-xl p-6">
+                <div className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">Step 3</div>
+                <h4 className="font-display font-bold text-lg text-brand-navy mb-2">Build and Operate</h4>
+                <p className="text-brand-slate text-sm leading-relaxed">The monthly retainer below. We build the fix inside your operation, run it, and prove the value every 30 days. You own everything from day one.</p>
+              </div>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-brand-surface p-10 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Ignite</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">Your operational proof point</p>
-                <p className="text-brand-slate leading-relaxed mb-6">Get more out of the team you already have, starting with your biggest bottleneck. Your LVRGWRKS Fractional CTO, your first automation live within 60 days, and your Monthly Value Creation Report showing ROI every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed mb-6">Get more out of the team you already have, starting with your biggest bottleneck. Your LVRGWRKS operating partner, your first build live within 60 days, and your Monthly Value Creation Report showing the return every 30 days.</p>
               </div>
               <div className="bg-brand-navy p-10 rounded-xl border-2 border-brand-gold relative">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[10px] font-bold tracking-widest uppercase px-4 py-1 rounded-full">Most Chosen</div>
                 <h3 className="font-display font-bold text-2xl text-white mb-2">Build</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">An embedded operator</p>
-                <p className="text-gray-300 leading-relaxed mb-6">Build the operational foundation that lets your business grow without your costs growing with it. Your LVRGWRKS Fractional CTO embedded across departments, multiple automations built and managed as a unified system, and cross-department ROI tracking monthly.</p>
+                <p className="text-gray-300 leading-relaxed mb-6">Build the operational foundation that lets your business grow without your costs growing with it. Your LVRGWRKS operating partner embedded across departments, multiple builds run and managed as one system, and the return tracked across departments every month.</p>
               </div>
               <div className="bg-brand-surface p-10 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Scale</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">A named operating partner</p>
-                <p className="text-brand-slate leading-relaxed mb-6">A permanent operating partner inside your business, managing your systems as you grow. Your LVRGWRKS Fractional CTO alongside your leadership, unlimited automation scope, and executive-level Monthly Value Creation Report every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed mb-6">A permanent operating partner inside your business, running your systems as you grow. Your LVRGWRKS operating partner alongside your leadership, unlimited build scope, and an executive-level Monthly Value Creation Report every 30 days.</p>
               </div>
             </div>
             <div className="mt-12 text-center">
@@ -225,7 +242,7 @@ export default function HomePage() {
             <span className="text-brand-slate italic">coordination tax.</span>
           </h2>
           <p className="text-brand-slate max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline a conceptual automation architecture before the call ends. You leave with a clear picture of where your operations are costing you more than they should, regardless of whether we work together.
+            60 minutes. No cost. No commitment. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends. You leave with a clear picture of where your operations are costing you more than they should, regardless of whether we work together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
             <button onClick={() => openBriefing()} className="bg-brand-navy text-white px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all shadow-xl hover:shadow-brand-gold/20">

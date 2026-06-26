@@ -7,18 +7,18 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'LVRGWRKS (LeverageWorks) | Fractional CTO & AI Operations Partner | Calgary, AB',
+    default: 'LVRGWRKS (LeverageWorks) | Fractional CTO & Operating Partner | Calgary, AB',
     template: '%s | LVRGWRKS',
   },
-  description: 'LVRGWRKS (LeverageWorks) is a fractional CTO and AI operations partner serving mid-market companies (20-250 employees) in Alberta and Western Canada. First bottleneck solved in 60 days.',
-  keywords: ['Fractional CTO Calgary', 'AI Operations Partner', 'Operating Model Architecture', 'AI Consulting Calgary', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
+  description: 'LVRGWRKS (LeverageWorks) is the fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We find where coordination is costing you margin, rebuild how the work flows, and prove the return every 30 days.',
+  keywords: ['Fractional CTO Calgary', 'Operating Partner', 'Operating Model Architecture', 'AI Consulting Calgary', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
   metadataBase: new URL('https://www.lvrgwrks.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'LVRGWRKS (LeverageWorks) | Fractional CTO & AI Operations Partner | Calgary, AB',
-    description: 'Your fractional CTO and AI operations partner. Serving mid-market companies in Alberta and Western Canada. First bottleneck solved in 60 days.',
+    title: 'LVRGWRKS (LeverageWorks) | Fractional CTO & Operating Partner | Calgary, AB',
+    description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin coordination is quietly costing you.',
     type: 'website',
     url: 'https://www.lvrgwrks.com',
     images: [{ url: '/og-image.jpg' }],
@@ -39,7 +39,7 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'LVRGWRKS (LeverageWorks)',
   alternateName: 'LeverageWorks',
-  description: 'Enterprise AI strategy and operating model architecture consultancy. Fractional CTO and AI operations partner for mid-market companies.',
+  description: 'Fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin lost to coordination overhead by rebuilding how the work flows.',
   image: 'https://www.lvrgwrks.com/og-image.jpg',
   '@id': 'https://www.lvrgwrks.com',
   url: 'https://www.lvrgwrks.com',
@@ -64,7 +64,7 @@ const jsonLd = {
   ],
   serviceType: [
     'Fractional CTO Services',
-    'AI Operations Partner',
+    'Operating Partner',
     'Operating Model Architecture',
     'Workflow Automation',
     'Property Management Consulting',

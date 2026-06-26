@@ -23,7 +23,7 @@ export default function ManufacturingPage() {
               <span className="text-brand-slate italic">Your systems just do not share it with each other.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
-              Manufacturing companies generate more operational data than almost any other industry. Production output, quality results, equipment status, labour hours, material consumption, and supplier lead times -- all being captured somewhere. The problem is that somewhere is usually a collection of disconnected systems, manual logs, and spreadsheets that require human effort to reconcile.
+              Manufacturing companies generate more operational data than almost any other industry. Production output, quality results, equipment status, labour hours, material consumption, and supplier lead times, all being captured somewhere. The problem is that somewhere is usually a collection of disconnected systems, manual logs, and spreadsheets that require human effort to reconcile.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
               When your production team is spending time on reporting instead of production, and your leadership is making decisions on last week's numbers, the operational drag compounds. LVRGWRKS builds the integration and automation layer that connects your manufacturing systems and eliminates the manual work in between.
@@ -49,7 +49,7 @@ export default function ManufacturingPage() {
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">The Problem</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Where manufacturing companies lose capacity they cannot get back</h2>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-6">
-                The most common pattern we see in mid-market manufacturing is this: the production floor is running, the quality system is capturing data, the ERP is tracking inventory and orders -- and none of them are talking to each other in real time. The integration layer between systems is a person. Usually several people.
+                The most common pattern we see in mid-market manufacturing is this: the production floor is running, the quality system is capturing data, the ERP is tracking inventory and orders, and none of them are talking to each other in real time. The integration layer between systems is a person. Usually several people.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
                 When you add headcount to growing operations but the processes stay manual, you scale complexity rather than capacity. Revenue grows. Headcount grows faster. Margin compresses. The answer is not more people to manage the coordination. It is systems that eliminate the coordination overhead entirely.
@@ -71,7 +71,7 @@ export default function ManufacturingPage() {
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Reporting that consumes production management time</h3>
                 <p className="text-brand-slate text-sm leading-relaxed">
-                  Shift reports, daily production summaries, quality scorecards, and KPI dashboards are assembled manually from multiple data sources. The people doing the assembling -- supervisors, production managers, quality leads -- are the same people whose job is to run the operation. Every hour spent on reporting is an hour not spent managing.
+                  Shift reports, daily production summaries, quality scorecards, and KPI dashboards are assembled manually from multiple data sources. The people doing the assembling, supervisors, production managers, quality leads, are the same people whose job is to run the operation. Every hour spent on reporting is an hour not spent managing.
                 </p>
               </div>
             </div>
@@ -85,10 +85,10 @@ export default function ManufacturingPage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">What We Build</span>
             <h2 className="font-display font-bold text-4xl mb-6 leading-tight">
-              Systems that connect your production floor to your business systems -- without manual entry.
+              Systems that connect your production floor to your business systems, without manual entry.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for manufacturing companies across Alberta and Western Canada. We connect your existing tools -- your ERP, your MES or production management system, your quality system, your maintenance management platform -- into a unified operating layer. No rip-and-replace. We build around what you have and eliminate the manual work between systems.
+              LVRGWRKS builds custom automation and integration systems for manufacturing companies across Alberta and Western Canada. We connect your existing tools, your ERP, your MES or production management system, your quality system, your maintenance management platform, into a unified operating layer. No rip-and-replace. We build around what you have and eliminate the manual work between systems.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -100,7 +100,7 @@ export default function ManufacturingPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Quality and production data integration</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Quality results automatically correlated with production conditions -- shift, line, operator, material lot, equipment settings. When a quality issue emerges, the relevant production context is already attached. Root cause analysis that used to take days takes hours. Corrections happen before the condition repeats.
+                  Quality results automatically correlated with production conditions: shift, line, operator, material lot, equipment settings. When a quality issue emerges, the relevant production context is already attached. Root cause analysis that used to take days takes hours. Corrections happen before the condition repeats.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -112,7 +112,7 @@ export default function ManufacturingPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">AI at production constraint points</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We identify the specific points in your production system where AI can materially improve throughput -- scheduling optimization, predictive quality, demand-driven material replenishment, maintenance prediction -- and build targeted AI systems at those specific constraints. Not AI for the sake of it. AI where it changes the economics of your operation.
+                  We identify the specific points in your production system where AI can materially improve throughput, scheduling optimization, predictive quality, demand-driven material replenishment, maintenance prediction, and build targeted AI systems at those specific constraints. Not AI for the sake of it. AI where it changes the economics of your operation.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function ManufacturingPage() {
                   Labour availability, input cost volatility, and the demands of customers in resource-intensive industries mean Alberta manufacturers operate with tighter margins and less tolerance for operational waste than manufacturers in other markets. Getting more out of your current capacity is not a nice-to-have. It is a competitive requirement.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with manufacturing companies across Alberta and Western Canada. We understand the operational constraints of this market -- the labour pressure, the input cost exposure, the customer requirements -- because it is the context our clients navigate every day.
+                  LVRGWRKS was founded in Calgary and works with manufacturing companies across Alberta and Western Canada. We understand the operational constraints of this market, the labour pressure, the input cost exposure, the customer requirements, because it is the context our clients navigate every day.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
                   We work with discrete manufacturers, process manufacturers, and industrial fabricators ranging from 20 to 250 employees. If your team is running hard but the operation is not performing at the level the business needs, that gap is where we work.

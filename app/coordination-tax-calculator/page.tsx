@@ -189,7 +189,7 @@ export default function CalculatorPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          _subject: 'Coordination Tax Calculator — Personalized Breakdown Request',
+          _subject: 'Coordination Tax Calculator: Personalized Breakdown Request',
           name,
           company,
           email,
@@ -440,7 +440,7 @@ export default function CalculatorPage() {
             <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-8 leading-tight">Where these numbers come from.</h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator is grounded in published research from McKinsey, Asana, and Gartner on how much time knowledge workers actually spend on coordination, search, and manual data movement between systems.</p>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">McKinsey estimates interaction workers spend roughly 28 percent of their week on email and another 20 percent searching for internal information. Asana puts coordination overhead at 60 percent of the average knowledge worker's day. Gartner has documented an 83 percent increase in the number of applications used per knowledge worker since 2019.</p>
-            <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator uses a conservative 30% baseline for coordination overhead across a typical office team mix. The friction multiplier (8% per additional tool beyond three) reflects tool sprawl complexity. Research and LVRGWRKS client data show that 40-60% of coordination tax is recoverable through cross-platform automation. We use 50% as a conservative baseline.</p>
+            <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator uses a conservative 30% baseline for coordination overhead across a typical office team mix. The friction multiplier (8% per additional tool beyond three) reflects tool sprawl complexity. Research and LVRGWRKS client data show that 40-60% of the coordination tax is recoverable by rebuilding how the work flows. We use 50% as a conservative baseline.</p>
             <p className="text-brand-slate text-lg leading-relaxed">If your calculation exceeds $2,000,000 annually, the coordination tax has moved beyond an efficiency problem and become a structural one.</p>
           </div>
         </div>
@@ -452,7 +452,7 @@ export default function CalculatorPage() {
             The calculator gave you an estimate.<br />
             <span className="text-gray-400 italic">The Leverage Audit gives you the real number.</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">60 minutes. No cost. No commitment. We map your highest-friction workflows, put a precise dollar figure on the labour cost, and outline a conceptual automation architecture before the call ends.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">60 minutes. No cost. No commitment. We map your highest-friction workflows, put a precise dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
             <button
               onClick={() => openBriefing()}

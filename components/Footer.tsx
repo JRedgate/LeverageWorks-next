@@ -11,7 +11,7 @@ export const Footer: React.FC = () => (
             <LwSymbol color="#FFFFFF" className="w-8 h-8" />
             <span className="font-display font-bold text-xl tracking-tight text-white group-hover:text-brand-gold transition-colors">LVRGWRKS</span>
           </Link>
-          <p className="text-gray-400 max-w-sm leading-relaxed text-sm mb-4">Your fractional CTO and AI operations partner. Serving mid-market companies across Alberta and Western Canada.</p>
+          <p className="text-gray-400 max-w-sm leading-relaxed text-sm mb-4">Your operating partner inside the business. We rebuild how the work flows and prove the return every 30 days, for mid-market operators across Alberta and Western Canada.</p>
           <a href="mailto:jredgate@lvrgwrks.com" className="text-brand-gold hover:text-white transition-colors text-sm font-medium">jredgate@lvrgwrks.com</a>
         </div>
         <div className="md:col-span-3">

@@ -26,7 +26,7 @@ export default function DigitalTransformationPage() {
               Most digital transformation failures in mid-market companies trace back to the same structural problem: new tools deployed on top of old workflows. The platform gets implemented. The process does not change. The team fills the gap with the same manual work they were doing before, just with more expensive software in the middle.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              LVRGWRKS approaches digital transformation as an operating model problem, not a technology problem. We start with the workflows and the structural friction, then determine what technology serves the solution -- not the other way around.
+              LVRGWRKS approaches digital transformation as an operating model problem, not a technology problem. We start with the workflows and the structural friction, then determine what technology serves the solution, not the other way around.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
@@ -52,7 +52,7 @@ export default function DigitalTransformationPage() {
                 The pattern is consistent across industries and company sizes. A technology investment gets made. The implementation happens. And six to twelve months later the business has a new system, a significant invoice, and the same operational problems it started with.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
-                The failure gets attributed to the technology -- wrong platform, poor implementation, overpromising vendor. But the technology is almost never the actual cause. The cause is structural, and it persists regardless of which platform gets selected next time.
+                The failure gets attributed to the technology: wrong platform, poor implementation, overpromising vendor. But the technology is almost never the actual cause. The cause is structural, and it persists regardless of which platform gets selected next time.
               </p>
             </div>
             <div className="space-y-6">
@@ -64,7 +64,7 @@ export default function DigitalTransformationPage() {
                   </div>
                   <div className="md:w-2/3">
                     <p className="text-brand-slate leading-relaxed text-lg">
-                      New systems get deployed without connecting to existing ones. Your team becomes the integration layer -- copying data between platforms, maintaining spreadsheet bridges, manually reconciling records that should agree automatically. The manual work does not disappear after the transformation. It just takes a different form, and often grows because there are now more systems to keep in sync.
+                      New systems get deployed without connecting to existing ones. Your team becomes the integration layer, copying data between platforms, maintaining spreadsheet bridges, manually reconciling records that should agree automatically. The manual work does not disappear after the transformation. It just takes a different form, and often grows because there are now more systems to keep in sync.
                     </p>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ export default function DigitalTransformationPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Operating model diagnosis before platform selection</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  We map your current workflows, identify where the structural friction lives, and quantify what it is costing before any technology conversation happens. That diagnostic becomes the specification that determines what gets built and in what order. Platform selection follows the problem definition -- not the other way around.
+                  We map your current workflows, identify where the structural friction lives, and quantify what it is costing before any technology conversation happens. That diagnostic becomes the specification that determines what gets built and in what order. Platform selection follows the problem definition, not the other way around.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -127,13 +127,13 @@ export default function DigitalTransformationPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Embedded accountability post go-live</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  LVRGWRKS stays embedded as your fractional CTO and AI operations partner after the initial implementation. We attend leadership meetings, monitor system performance, iterate on what is not working, and produce a monthly Value Creation Report that documents what changed in the operation -- not just what was implemented in the system.
+                  LVRGWRKS stays embedded as your fractional CTO and operating partner after the initial build. We attend leadership meetings, monitor system performance, iterate on what is not working, and produce a monthly Value Creation Report that documents what changed in the operation, not just what was installed in the system.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Outcomes measured, not assumed</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Every transformation engagement starts with a baseline -- the specific operational costs and constraints that the transformation is designed to address. Every month, progress against that baseline is documented and reported. You are not asked to assume the transformation is working. You see the evidence every 30 days.
+                  Every transformation engagement starts with a baseline, the specific operational costs and constraints that the transformation is designed to address. Every month, progress against that baseline is documented and reported. You are not asked to assume the transformation is working. You see the evidence every 30 days.
                 </p>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function DigitalTransformationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Operating model redesign</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Restructuring workflows and decision processes for how your business actually operates -- not an idealized version of it. Built around your team, your tools, and your operational constraints.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Restructuring workflows and decision processes for how your business actually operates, not an idealized version of it. Built around your team, your tools, and your operational constraints.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Systems integration architecture</h3>
@@ -161,7 +161,7 @@ export default function DigitalTransformationPage() {
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">AI and automation deployment</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Deploying AI and automation at the specific points in your operation where it changes the economics -- not where it is available or where it looks impressive on a slide.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Deploying AI and automation at the specific points in your operation where it changes the economics, not where it is available or where it looks impressive on a slide.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Adoption and change management</h3>

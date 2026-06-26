@@ -35,7 +35,7 @@ export default function ImpactPage() {
               context="A multi-site North American industrial manufacturer faced margin compression driven by input volatility and inconsistent production scheduling."
               findings={["Manual consolidation of forecasts", "No predictive bottleneck visibility", "Prioritization lacking data backing"]}
               results={["14% Capacity Increase", "22% Reduction in planning", "9% Inventory Reduction"]}
-              roi="7.5x ROI"
+              roi="3.2x ROI"
               expandedStory="Faced with rising input costs and a fixed headcount, this manufacturer was unable to meet growing demand. We deployed a predictive scheduling engine that integrated real-time machine telemetry with sales forecasts. This system autonomically rebalanced production lines to optimize for throughput rather than just utilization. The result was a 'hidden factory' unlocked within their existing footprint, allowing them to take on 14% more volume without hiring a single additional operator."
             />
             <UseCaseCard
@@ -45,7 +45,7 @@ export default function ImpactPage() {
               context="A mid-market PE firm with diversified holdings lacked standardized performance visibility. Operating metrics were inconsistent."
               findings={["No unified KPI architecture", "Heavy manual reporting burden", "Slow signal detection at portfolio level"]}
               results={["4-6% EBITDA Uplift", "35% Reporting reduction", "28% Faster signal detection"]}
-              roi="7.8x ROI"
+              roi="3.9x ROI"
               expandedStory="The firm struggled with a 45-day lag in portfolio reporting, making it impossible to react to market shifts in real-time. LeverageWorks architected a unified data layer that ingested disparate ERP data from 12 portfolio companies into a single command center. We then deployed agentic workflows to automate the variance analysis. Leadership moved from retroactive monthly reviews to proactive weekly steering, directly correlating to a 4-6% EBITDA uplift across the optimized assets."
             />
             <UseCaseCard
@@ -55,7 +55,7 @@ export default function ImpactPage() {
               context="A midstream operator managing pipeline and storage assets faced regulatory complexity and rising opex."
               findings={["Disconnected utilization metrics", "Manual compliance workflows", "Under-optimized maintenance"]}
               results={["8% Asset Utilization boost", "19% Reduction in downtime", "31% Compliance cycle reduction"]}
-              roi="7.8x ROI"
+              roi="3.5x ROI"
               expandedStory="With regulatory pressure mounting and aging infrastructure, this operator needed to do more with less. We implemented a 'digital twin' of their critical pipeline assets, fed by IoT sensors. This allowed for predictive maintenance scheduling that reduced downtime by 19%. Furthermore, we automated the compliance reporting workflow, turning a manual, error-prone process into an auditable, instant digital record. The capital efficiency gained funded the entire transformation within 9 months."
             />
           </div>
@@ -71,7 +71,7 @@ export default function ImpactPage() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
-              <div className="text-brand-gold font-display font-bold text-4xl mb-2">7.5x+</div>
+              <div className="text-brand-gold font-display font-bold text-4xl mb-2">Up to 4x</div>
               <div className="text-brand-slate text-sm">Average ROI</div>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
