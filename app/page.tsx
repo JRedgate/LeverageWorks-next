@@ -24,11 +24,11 @@ export default function HomePage() {
               <span className="text-gray-400">The math never catches up.</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              Most mid-market operators hit the same wall. As the business scales, the cost of holding it together compounds faster than the systems can keep up. We call it the coordination tax: the hidden labour your team burns every day moving data between platforms that do not talk to each other, chasing approvals that should take hours, and manually gluing together the workflows your software was supposed to automate. It is the single largest driver of margin erosion in growing mid-market businesses, and it almost never shows up on a report.
+              Most mid-market operators hit the same wall. As the business scales, the cost of holding it together compounds faster than the systems can keep up. We call it the coordination tax: the hidden labour your team burns every day moving data between platforms that do not talk to each other, chasing approvals that should take hours, and manually gluing together the workflows your software was supposed to automate. It is the single biggest reason a growing business adds revenue without adding margin, and it almost never shows up on a report.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Decision Latency</div>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Decisions That Drag</div>
                 <p className="text-gray-400 leading-relaxed">Decisions that should take hours take weeks. Approvals stack. Context gets lost between handoffs.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -36,12 +36,12 @@ export default function HomePage() {
                 <p className="text-gray-400 leading-relaxed">Meetings multiply. Reporting layers expand. Your best people burn capacity on manual work instead of driving growth.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Disproportionate Scaling</div>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Headcount Outrunning Revenue</div>
                 <p className="text-gray-400 leading-relaxed">You hire people to manage the overhead instead of drive the growth. Fixed costs rise faster than revenue.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Margin Erosion</div>
-                <p className="text-gray-400 leading-relaxed">EBITDA stagnates or compresses despite topline growth. The problem is structural, not operational.</p>
+                <div className="text-brand-gold font-display font-bold text-2xl mb-3">Margin That Leaks</div>
+                <p className="text-gray-400 leading-relaxed">Profit stalls or slips even as the topline grows. The problem is in how the work flows, not how hard the team works.</p>
               </div>
             </div>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
@@ -149,7 +149,7 @@ export default function HomePage() {
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Return</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl mb-10 leading-tight">Priced against the value, not the hours.</h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              We set the retainer at roughly one third of the value an engagement is calculated to create. That builds the work to return on the order of three times what it costs, and we prove it every 30 days in a Value Creation Report. Above the Scale tier the share tapers, so the largest engagements are not charged a flat third. The figures below are illustrative. The Leverage Audit replaces them with your own number.
+              We set the retainer at roughly one third of the value an engagement is calculated to create. That builds the work to return two to three times what it costs, and we prove it every 30 days in a Value Creation Report. Above the Scale tier the share tapers, so the largest engagements are not charged a flat third. The figures below are illustrative. The Leverage Audit replaces them with your own number.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
@@ -210,18 +210,18 @@ export default function HomePage() {
               <div className="bg-brand-surface p-10 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Ignite</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">Your operational proof point</p>
-                <p className="text-brand-slate leading-relaxed mb-6">Get more out of the team you already have, starting with your biggest bottleneck. Your LVRGWRKS Fractional CTO, your first automation live within 60 days, and your Monthly Value Creation Report showing ROI every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed mb-6">Get more out of the team you already have, starting with your biggest bottleneck. Your LVRGWRKS operating partner, your first build live within 60 days, and your Monthly Value Creation Report showing the return every 30 days.</p>
               </div>
               <div className="bg-brand-navy p-10 rounded-xl border-2 border-brand-gold relative">
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[10px] font-bold tracking-widest uppercase px-4 py-1 rounded-full">Most Chosen</div>
                 <h3 className="font-display font-bold text-2xl text-white mb-2">Build</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">An embedded operator</p>
-                <p className="text-gray-300 leading-relaxed mb-6">Build the operational foundation that lets your business grow without your costs growing with it. Your LVRGWRKS Fractional CTO embedded across departments, multiple automations built and managed as a unified system, and cross-department ROI tracking monthly.</p>
+                <p className="text-gray-300 leading-relaxed mb-6">Build the operational foundation that lets your business grow without your costs growing with it. Your LVRGWRKS operating partner embedded across departments, multiple builds run and managed as one system, and the return tracked across departments every month.</p>
               </div>
               <div className="bg-brand-surface p-10 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Scale</h3>
                 <p className="text-brand-gold font-bold text-sm uppercase tracking-wider mb-6">A named operating partner</p>
-                <p className="text-brand-slate leading-relaxed mb-6">A permanent operating partner inside your business, managing your systems as you grow. Your LVRGWRKS Fractional CTO alongside your leadership, unlimited automation scope, and executive-level Monthly Value Creation Report every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed mb-6">A permanent operating partner inside your business, running your systems as you grow. Your LVRGWRKS operating partner alongside your leadership, unlimited build scope, and an executive-level Monthly Value Creation Report every 30 days.</p>
               </div>
             </div>
             <div className="mt-12 text-center">

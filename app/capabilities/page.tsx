@@ -23,7 +23,7 @@ export default function CapabilitiesPage() {
               <span className="text-brand-slate italic">operation scale without scaling headcount.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
-              LVRGWRKS is a fractional CTO and AI operations partner for mid-market companies in Alberta and Western Canada. We diagnose where your operation is losing capacity to manual work and coordination overhead, design the automation architecture that addresses it, build and deploy the systems, and stay embedded to prove the ROI every 30 days.
+              LVRGWRKS is a fractional CTO and operating partner for mid-market companies in Alberta and Western Canada. We find where your operation is losing capacity to manual work and coordination, design the fix around how the work actually runs, build and run the systems, and stay embedded to prove the return every 30 days.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
               Everything we build belongs to you from day one. No vendor lock-in. No dependency on us to keep the systems running. The engagement can end at any time and the operation continues.
@@ -79,7 +79,7 @@ export default function CapabilitiesPage() {
                 </div>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Business process automation</h3>
                 <p className="text-brand-slate leading-relaxed text-sm mb-4">
-                  End-to-end redesign and automation of specific operational processes -- reporting, data reconciliation, scheduling, dispatch, compliance documentation, billing, and any other workflow where manual effort is the integration layer between your systems.
+                  End-to-end redesign and automation of specific operational processes, reporting, data reconciliation, scheduling, dispatch, compliance documentation, billing, and any other workflow where manual effort is the integration layer between your systems.
                 </p>
                 <Link href="/business-process-automation" className="text-brand-navy font-bold text-sm underline underline-offset-2">Learn more</Link>
               </div>
@@ -89,7 +89,7 @@ export default function CapabilitiesPage() {
                 </div>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Digital transformation and operating model design</h3>
                 <p className="text-brand-slate leading-relaxed text-sm mb-4">
-                  Structural redesign of how your business operates -- not just what tools it uses. For companies that have tried technology transformations before and found the value did not materialize, or are planning one and want to avoid the common failure patterns.
+                  Structural redesign of how your business operates, not just what tools it uses. For companies that have tried technology transformations before and found the value did not materialize, or are planning one and want to avoid the common failure patterns.
                 </p>
                 <Link href="/digital-transformation-consulting" className="text-brand-navy font-bold text-sm underline underline-offset-2">Learn more</Link>
               </div>
@@ -130,7 +130,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Design</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">We architect the automation layer -- integrations, logic, triggers, data flows, and AI deployment points. Everything is designed around your existing tools and your actual operational constraints. No ripping out systems. No forcing a new platform on your team. You see the blueprint before any building begins.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">We architect the automation layer, integrations, logic, triggers, data flows, and AI deployment points. Everything is designed around your existing tools and your actual operational constraints. No ripping out systems. No forcing a new platform on your team. You see the blueprint before any building begins.</p>
                   </div>
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Stay</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">This is not a project with an end date. We monitor, evolve, and expand the system as your business grows. Every month you receive a Value Creation Report showing exactly what was recovered -- labour hours, automation performance, and rolling ROI against your retainer. We do not guess whether the system is working. We document it, every 30 days.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">This is not a project with an end date. We monitor, evolve, and expand the system as your business grows. Every month you receive a Value Creation Report showing exactly what was recovered: labour hours, automation performance, and rolling ROI against your retainer. We do not guess whether the system is working. We document it, every 30 days.</p>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function CapabilitiesPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with the Leverage Audit.</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment. You leave with a clear picture of where your operations are costing you more than they should -- and what it would take to fix it.
+            60 minutes. No cost. No commitment. You leave with a clear picture of where your operations are costing you more than they should, and what it would take to fix it.
           </p>
           <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
             Book Your Leverage Audit

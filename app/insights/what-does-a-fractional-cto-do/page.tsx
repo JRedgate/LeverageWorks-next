@@ -29,7 +29,7 @@ export default function WhatFractionalCTODoesArticle() {
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">The problem that brings most people to this question</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
-              Your business is growing. The operations that worked at $10M are starting to creak at $30M. Platforms that used to be adequate are now disconnected from each other, and your team is manually bridging the gaps. Decisions are taking longer because no single tool has the full picture. You are feeling the pain of not having senior technical leadership, but a full-time CTO at $200,000 or more per year is not a hire you are ready to make.
+              Your business is growing. The operations that worked at $10M are starting to creak at $30M. Platforms that used to be adequate are now disconnected from each other, and your team is manually bridging the gaps. Decisions are taking longer because no single tool has the full picture. You are feeling the pain of not having senior technical leadership, but a full-time CTO at $200,000 or more per year is not a hire you are ready to make, and it may not be the fix the problem actually calls for.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
               That gap is exactly where a fractional CTO operates. But the title means different things to different people, and before you engage anyone in that capacity you need to understand what the role actually looks like day to day.

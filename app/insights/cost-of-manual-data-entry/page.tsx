@@ -35,7 +35,7 @@ export default function CostOfManualDataEntryArticle() {
               The people doing the manual work are not idle. They are busy. That is part of why the cost stays invisible. When your operations manager is spending three hours a day assembling reports from four different systems, those three hours look like productive work. They are accounted for in her salary. What does not show up anywhere is what she could have been doing instead, and what decisions got made more slowly because the information was not ready.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              This is what we call the hidden cost of coordination inflation: the structural overhead that accumulates when your platforms do not talk to each other and your team fills the gap. It compounds as you grow. Every new system you add without integrating properly creates more manual work, not less.
+              This is what we call the hidden cost of the coordination tax: the overhead that piles up when your platforms do not talk to each other and your team fills the gap. It compounds as you grow. Every new system you add without integrating properly creates more manual work, not less.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">Where the cost actually lives</h2>
@@ -94,7 +94,7 @@ export default function CostOfManualDataEntryArticle() {
                 </div>
                 <div className="flex gap-4">
                   <span className="text-brand-gold font-bold flex-shrink-0">Step 4</span>
-                  <span className="text-gray-300">Add 25% to account for error correction -- the time spent finding mistakes, fixing them, and communicating the corrections downstream.</span>
+                  <span className="text-gray-300">Add 25% to account for error correction, the time spent finding mistakes, fixing them, and communicating the corrections downstream.</span>
                 </div>
                 <div className="flex gap-4">
                   <span className="text-brand-gold font-bold flex-shrink-0">Step 5</span>
@@ -114,7 +114,7 @@ export default function CostOfManualDataEntryArticle() {
               The second thing the number does is prioritize. Once you have quantified the cost of every manual process, you can rank automation opportunities by annual labour recovery, build complexity, and operational risk. The highest-value, lowest-risk opportunities get built first. Every subsequent build has a clear business case before work begins.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
-              This is the diagnostic work we do in the first 30 minutes of every Leverage Audit. We run the manual work calculation with you, across your actual processes, using your actual people and costs. You leave the conversation with a number you can act on -- and a clear picture of where automation investment makes the most sense for your business specifically.
+              This is the diagnostic work we do in the first 30 minutes of every Leverage Audit. We run the manual work calculation with you, across your actual processes, using your actual people and costs. You leave the conversation with a number you can act on, and a clear picture of where automation investment makes the most sense for your business specifically.
             </p>
 
           </article>

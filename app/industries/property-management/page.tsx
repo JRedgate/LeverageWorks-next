@@ -65,7 +65,7 @@ export default function PropertyManagementPage() {
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Owner reports assembled manually every month</h3>
                 <p className="text-brand-slate text-sm leading-relaxed">
-                  Owner reporting requires pulling data from your property management platform, your accounting system, and your maintenance records, then formatting it into a report that looks professional and tells a coherent story. Multiply that by the number of owners you report to and you have a significant monthly administrative burden that produces no incremental value -- just information transfer that should be automatic.
+                  Owner reporting requires pulling data from your property management platform, your accounting system, and your maintenance records, then formatting it into a report that looks professional and tells a coherent story. Multiply that by the number of owners you report to and you have a significant monthly administrative burden that produces no incremental value, just information transfer that should be automatic.
                 </p>
               </div>
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
@@ -88,7 +88,7 @@ export default function PropertyManagementPage() {
               One operating layer that connects your property management systems and eliminates the manual coordination between them.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for property management companies across Alberta and Western Canada. We connect your existing platforms -- your property management software, your accounting system, your maintenance management tools, your communication channels -- into a unified operating layer. Every workflow we build belongs to you from day one.
+              LVRGWRKS builds custom automation and integration systems for property management companies across Alberta and Western Canada. We connect your existing platforms, your property management software, your accounting system, your maintenance management tools, your communication channels, into a unified operating layer. Every workflow we build belongs to you from day one.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -100,7 +100,7 @@ export default function PropertyManagementPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Automated owner reporting</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Owner reports generated automatically from data already in your systems -- rent collected, maintenance completed, expenses incurred, vacancies, and portfolio performance -- formatted consistently and delivered on schedule. No manual assembly. No pulling data from three places. Owners receive professional, accurate reports without anyone spending hours building them.
+                  Owner reports generated automatically from data already in your systems, rent collected, maintenance completed, expenses incurred, vacancies, and portfolio performance, formatted consistently and delivered on schedule. No manual assembly. No pulling data from three places. Owners receive professional, accurate reports without anyone spending hours building them.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">

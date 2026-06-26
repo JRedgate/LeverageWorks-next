@@ -23,7 +23,7 @@ export default function ConstructionPage() {
               <span className="text-brand-slate italic">and assembling reports at the same time.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
-              Construction is a margin-thin, schedule-critical business. The difference between a profitable project and an overrun is often the quality of information reaching your team -- and how quickly it gets there. When your PMs are spending hours each week pulling data from disconnected systems, they are not managing the job. They are managing the reporting.
+              Construction is a margin-thin, schedule-critical business. The difference between a profitable project and an overrun is often the quality of information reaching your team, and how quickly it gets there. When your PMs are spending hours each week pulling data from disconnected systems, they are not managing the job. They are managing the reporting.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
               LVRGWRKS builds the automation and integration layer that connects your field, finance, and operations data so the right information reaches the right people without anyone having to compile it manually.
@@ -52,20 +52,20 @@ export default function ConstructionPage() {
                 Most construction companies in Alberta are running their projects on a combination of project management software, accounting software, spreadsheets, and email chains that do not talk to each other. The field team captures data in one place. Finance lives somewhere else. Subcontractor communications happen in a third system. And your PM is manually bridging all of it.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
-                The cost of that manual bridging is not just labour hours. It is decision latency. By the time a cost overrun surfaces through the manual reporting cycle, the window to correct it has often closed. The damage is already done.
+                The cost of that manual bridging is not just labour hours. It is the delay. By the time a cost overrun surfaces through the manual reporting cycle, the window to correct it has often closed. The damage is already done.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Cost overruns discovered too late</h3>
                 <p className="text-brand-slate text-sm leading-relaxed">
-                  When job cost data lives in disconnected systems, overruns appear at month-end reporting rather than when they can still be managed. The job is over before the numbers tell the story. Real-time cost tracking against estimate changes this completely -- your PMs know where they stand on every active project, every day.
+                  When job cost data lives in disconnected systems, overruns appear at month-end reporting rather than when they can still be managed. The job is over before the numbers tell the story. Real-time cost tracking against estimate changes this completely. Your PMs know where they stand on every active project, every day.
                 </p>
               </div>
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-brand-navy mb-4">Subcontractor coordination overhead</h3>
                 <p className="text-brand-slate text-sm leading-relaxed">
-                  Scheduling, dispatch, compliance documentation, and communication with subcontractors happens across phone calls, texts, and email. At small project volumes this is manageable. As you scale, it becomes a full-time coordination job that produces no value -- just status updates that should be automatic.
+                  Scheduling, dispatch, compliance documentation, and communication with subcontractors happens across phone calls, texts, and email. At small project volumes this is manageable. As you scale, it becomes a full-time coordination job that produces no value, just status updates that should be automatic.
                 </p>
               </div>
               <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
@@ -88,7 +88,7 @@ export default function ConstructionPage() {
               Systems that give your team the information they need without asking them to compile it.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for construction and general contracting companies across Alberta and Western Canada. We connect your existing tools -- your project management platform, your accounting system, your field reporting tools -- into a unified operating layer. No rip-and-replace. No new platform your team has to learn. We build the connections between what you already have.
+              LVRGWRKS builds custom automation and integration systems for construction and general contracting companies across Alberta and Western Canada. We connect your existing tools, your project management platform, your accounting system, your field reporting tools, into a unified operating layer. No rip-and-replace. No new platform your team has to learn. We build the connections between what you already have.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -100,7 +100,7 @@ export default function ConstructionPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Subcontractor coordination automation</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Scheduling, dispatch notifications, document collection, compliance tracking, and communication logs -- automated and centralized. Your office team stops chasing subs for certificates and updates. The system handles the coordination and surfaces exceptions that need human attention.
+                  Scheduling, dispatch notifications, document collection, compliance tracking, and communication logs, automated and centralized. Your office team stops chasing subs for certificates and updates. The system handles the coordination and surfaces exceptions that need human attention.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -112,7 +112,7 @@ export default function ConstructionPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Project leadership dashboards</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  One view of every active project -- schedule performance, cost performance, resource utilization, and critical issues -- updated automatically and available without anyone having to build a report. Leadership sees the full picture. PMs get to manage instead of report.
+                  One view of every active project, schedule performance, cost performance, resource utilization, and critical issues, updated automatically and available without anyone having to build a report. Leadership sees the full picture. PMs get to manage instead of report.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function ConstructionPage() {
                   Alberta construction operates across extreme weather conditions, complex labour agreements, demanding procurement environments, and regulatory requirements that differ from every other Canadian market. Your operating system needs to reflect that reality, not a generic playbook built for a different context.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with construction companies across Alberta and Western Canada. We understand the operational pressures of this market -- the margin compression, the labour availability challenges, the documentation requirements from owners and regulators -- because it is the environment our clients operate in every day.
+                  LVRGWRKS was founded in Calgary and works with construction companies across Alberta and Western Canada. We understand the operational pressures of this market, the margin compression, the labour availability challenges, the documentation requirements from owners and regulators, because it is the environment our clients operate in every day.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
                   We work with general contractors, specialty contractors, and civil construction companies ranging from 20 to 250 employees. If your team is busy but the business is not moving as fast as you need it to, that gap is where we work.

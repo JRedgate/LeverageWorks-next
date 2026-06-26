@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Fractional CTO Calgary | LVRGWRKS - AI Operations Partner for Mid-Market Alberta Companies' },
-  description: 'LVRGWRKS embeds as your fractional CTO and AI operations partner in Calgary and across Alberta. We identify coordination drag, build the systems to fix it, and prove ROI every 30 days.',
+  title: { absolute: 'Fractional CTO Calgary | LVRGWRKS - Operating Partner for Mid-Market Alberta Companies' },
+  description: 'LVRGWRKS embeds as your fractional CTO and operating partner in Calgary and across Alberta. We find where coordination is costing you margin, rebuild how the work flows, and prove the return every 30 days.',
   alternates: { canonical: '/fractional-cto-calgary' },
 };
 

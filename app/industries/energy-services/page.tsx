@@ -49,7 +49,7 @@ export default function EnergyServicesPage() {
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">The Problem</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Where energy services companies lose margin they cannot afford to lose</h2>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-6">
-                Commodity price cycles compress margins. Labour availability limits capacity. Regulatory requirements add compliance overhead. In this environment, every avoidable cost matters -- and most avoidable costs in energy services companies trace back to the same root cause: operational data that does not flow where it needs to go.
+                Commodity price cycles compress margins. Labour availability limits capacity. Regulatory requirements add compliance overhead. In this environment, every avoidable cost matters, and most avoidable costs in energy services companies trace back to the same root cause: operational data that does not flow where it needs to go.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
                 When dispatch happens over phone and text, when field tickets get reconciled manually against the job cost system, when equipment utilization lives in a spreadsheet no one has time to maintain, the coordination overhead compounds. Your best people spend their time managing information instead of managing operations.
@@ -88,7 +88,7 @@ export default function EnergyServicesPage() {
               One operating layer that connects field, dispatch, compliance, and back office.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for energy services companies across Alberta and Western Canada. We do not replace your existing tools. We connect them -- building the automation layer that sits above your current systems and makes them work together. Every workflow we build belongs to you from day one.
+              LVRGWRKS builds custom automation and integration systems for energy services companies across Alberta and Western Canada. We do not replace your existing tools. We connect them, building the automation layer that sits above your current systems and makes them work together. Every workflow we build belongs to you from day one.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -112,7 +112,7 @@ export default function EnergyServicesPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Operational reporting and cost intelligence</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Real-time job cost tracking, equipment utilization reporting, crew productivity metrics, and project margin visibility -- all updated automatically from data already flowing through your systems. Leadership gets current information without anyone building a report.
+                  Real-time job cost tracking, equipment utilization reporting, crew productivity metrics, and project margin visibility, all updated automatically from data already flowing through your systems. Leadership gets current information without anyone building a report.
                 </p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function EnergyServicesPage() {
                   Commodity price cycles, remote operations, complex regulatory environments, and demanding client requirements make Alberta energy services one of the most operationally challenging industries in the country. A technical partner who has not worked in this context cannot build systems that reflect its realities.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with energy services companies across Alberta and Western Canada. We understand the operational pressures of this market -- the margin compression, the compliance requirements, the workforce management challenges in remote locations -- because it is the context our clients navigate every day.
+                  LVRGWRKS was founded in Calgary and works with energy services companies across Alberta and Western Canada. We understand the operational pressures of this market, the margin compression, the compliance requirements, the workforce management challenges in remote locations, because it is the context our clients navigate every day.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
                   We work with oilfield services companies, industrial maintenance contractors, pipeline services providers, and environmental services firms ranging from 20 to 250 employees. If your team is busy but the business is not running as efficiently as it needs to, that gap is where we work.

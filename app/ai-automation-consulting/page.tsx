@@ -108,7 +108,7 @@ export default function AIAutomationConsultingPage() {
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">AI deployed at constraint points</h3>
-                <p className="text-gray-300 leading-relaxed">We do not deploy AI because it is on-trend. We identify the specific bottlenecks in your operation where AI materially improves throughput, then build and embed it precisely there. Forecasting, exception detection, document processing, scheduling optimization -- wherever the constraint actually lives.</p>
+                <p className="text-gray-300 leading-relaxed">We do not deploy AI because it is on-trend. We identify the specific bottlenecks in your operation where AI materially improves throughput, then build and embed it precisely there. Forecasting, exception detection, document processing, scheduling optimization, wherever the constraint actually lives.</p>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export default function AIAutomationConsultingPage() {
                     <h3 className="font-display font-bold text-xl text-brand-navy">Design</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-brand-slate leading-relaxed text-lg">We architect the automation layer -- integrations, logic, triggers, data flows, and AI deployment points. Everything is designed around your existing tools and your actual operational constraints. No ripping out systems. No forcing a new platform on your team. We build around what you already have and connect what should already be talking.</p>
+                    <p className="text-brand-slate leading-relaxed text-lg">We architect the automation layer, integrations, logic, triggers, data flows, and AI deployment points. Everything is designed around your existing tools and your actual operational constraints. No ripping out systems. No forcing a new platform on your team. We build around what you already have and connect what should already be talking.</p>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function AIAutomationConsultingPage() {
                 <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Why LVRGWRKS</span>
                 <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">We compete on capability and outcome accountability. Not on price.</h2>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  Most automation vendors build what you ask for and leave. LVRGWRKS embeds as your fractional CTO and AI operations partner. We are accountable to outcomes, not deliverables. The difference matters when your business is growing and the automation needs to grow with it.
+                  Most automation vendors build what you ask for and leave. LVRGWRKS embeds as your fractional CTO and operating partner. We are accountable to outcomes, not reports. The difference matters when your business is growing and the work needs to grow with it.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
                   We do not deploy AI tools and call it transformation. We evaluate the structural design of your operation first, identify where the real constraints live, and build automation that changes the economics of running your business. The goal is not efficiency. It is durable operating leverage as you scale.
@@ -207,7 +207,7 @@ export default function AIAutomationConsultingPage() {
                 </div>
                 <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                   <h3 className="font-display font-bold text-lg text-brand-navy mb-3">We build where SaaS vendors cannot follow</h3>
-                  <p className="text-brand-slate text-sm leading-relaxed">Single-platform automation gets absorbed by SaaS vendors within 18 months. We build cross-platform orchestration that sits above your tools and connects them in ways that cannot be replicated by any single vendor.</p>
+                  <p className="text-brand-slate text-sm leading-relaxed">Single-platform features get absorbed by your software vendors. What they cannot copy is the way your work flows across the whole operation. That is what we rebuild, and it is the part that holds.</p>
                 </div>
                 <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                   <h3 className="font-display font-bold text-lg text-brand-navy mb-3">ROI is documented, not estimated</h3>
@@ -231,7 +231,7 @@ export default function AIAutomationConsultingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Construction and General Contracting</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Project coordination across subcontractors, cost tracking against estimate, RFI and submittal workflows, and field-to-office data sync -- all automated so your PMs spend time on the job, not on the admin.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Project coordination across subcontractors, cost tracking against estimate, RFI and submittal workflows, and field-to-office data sync, all automated so your PMs spend time on the job, not on the admin.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Property Management</h3>
@@ -255,7 +255,7 @@ export default function AIAutomationConsultingPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">What is your manual work actually costing you?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit quantifies it in 60 minutes. We map your highest-friction workflows, put a real dollar figure on the labour cost, and outline a conceptual automation architecture before the call ends.
+            The Leverage Audit quantifies it in 60 minutes. We map your highest-friction workflows, put a real dollar figure on the labour cost, and outline where the fix sits before the call ends.
           </p>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
             No cost. No commitment. You leave with a clear picture of where your operations are costing you more than they should.

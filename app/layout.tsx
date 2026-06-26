@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | LVRGWRKS',
   },
   description: 'LVRGWRKS (LeverageWorks) is the fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We find where coordination is costing you margin, rebuild how the work flows, and prove the return every 30 days.',
-  keywords: ['Fractional CTO Calgary', 'AI Operations Partner', 'Operating Model Architecture', 'AI Consulting Calgary', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
+  keywords: ['Fractional CTO Calgary', 'Operating Partner', 'Operating Model Architecture', 'AI Consulting Calgary', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
   metadataBase: new URL('https://www.lvrgwrks.com'),
   alternates: {
     canonical: '/',
@@ -64,7 +64,7 @@ const jsonLd = {
   ],
   serviceType: [
     'Fractional CTO Services',
-    'AI Operations Partner',
+    'Operating Partner',
     'Operating Model Architecture',
     'Workflow Automation',
     'Property Management Consulting',
