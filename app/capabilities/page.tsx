@@ -26,7 +26,7 @@ export default function CapabilitiesPage() {
               LVRGWRKS is a fractional CTO and operating partner for mid-market companies in Alberta and Western Canada. We find where your operation is losing capacity to manual work and coordination, design the fix around how the work actually runs, build and run the systems, and stay embedded to prove the return every 30 days.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              Everything we build belongs to you from day one. No vendor lock-in. No dependency on us to keep the systems running. The engagement can end at any time and the operation continues.
+              Everything we build for your operation belongs to you from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us to keep the systems running. The engagement can end at any time and the operation continues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
@@ -143,7 +143,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Build</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">Our team builds and deploys the system. You review outputs, not code. Every workflow, automation, and AI agent built belongs to you from day one. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days of engagement start.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">Our team builds and deploys the system. You review outputs, not code. Everything we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days of engagement start.</p>
                   </div>
                 </div>
               </div>

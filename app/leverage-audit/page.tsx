@@ -119,8 +119,8 @@ export default function LeverageAuditPage() {
                 <p className="text-brand-slate text-sm leading-relaxed">Every 30 days you receive a Value Creation Report showing exactly what was recovered: labour hours, automation performance, and rolling ROI against the engagement cost. We do not estimate whether the system is working. We document it, every month.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">You own everything we build</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Every workflow, automation, agent, and integration is client-owned from day one. No lock-in. No dependency on LVRGWRKS to keep the systems running. The engagement can end at any time and the systems continue operating on your infrastructure.</p>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">It keeps running without us</h3>
+                <p className="text-brand-slate text-sm leading-relaxed">Everything we build for your operation is client-owned from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No lock-in. No dependency on LVRGWRKS to keep the systems running. The engagement can end at any time and the systems continue operating on your infrastructure.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-100">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Embedded, not advisory</h3>

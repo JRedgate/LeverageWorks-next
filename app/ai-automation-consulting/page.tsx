@@ -26,7 +26,7 @@ export default function AIAutomationConsultingPage() {
               Spreadsheets are being used as databases. Data is being moved by hand between platforms every day. Decisions are being made on incomplete information because no single tool sees the whole picture. Every one of those workarounds costs real labour hours that do not show up on any report.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              LVRGWRKS builds the AI and automation layer that eliminates this friction permanently. Not a software subscription. Not a dashboard. A system built around how your business actually operates, owned by you from day one.
+              LVRGWRKS builds the AI and automation layer that eliminates this friction permanently. Not a software subscription. Not a dashboard. A system built around how your business actually operates, yours from day one, with a permanent licence to any LVRGWRKS module it uses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
@@ -91,7 +91,7 @@ export default function AIAutomationConsultingPage() {
               We build the back-end systems that let your people focus on the work that actually makes you money.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS does not sell software. We build custom AI and automation infrastructure on top of the tools you already use. No rip-and-replace. No new platform your team has to learn. We architect the layer that connects everything and automates the work between systems. You own it from day one. It runs whether we are there or not.
+              LVRGWRKS does not sell you a platform to rent. We build custom AI and automation infrastructure on top of the tools you already use. No rip-and-replace. No new platform your team has to learn. We architect the layer that connects everything and automates the work between systems. What we build for your operation is yours from day one, and where we deploy a LVRGWRKS product module you hold a permanent licence to keep running it. It runs whether we are there or not.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -160,7 +160,7 @@ export default function AIAutomationConsultingPage() {
                     <h3 className="font-display font-bold text-xl text-brand-navy">Build</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-brand-slate leading-relaxed text-lg">Our team builds and deploys the system. You review outputs, not code. Every workflow, automation, and AI agent built belongs to you from day one. No vendor lock-in. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days of engagement start.</p>
+                    <p className="text-brand-slate leading-relaxed text-lg">Our team builds and deploys the system. You review outputs, not code. Everything we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days of engagement start.</p>
                   </div>
                 </div>
               </div>
@@ -202,8 +202,8 @@ export default function AIAutomationConsultingPage() {
               </div>
               <div className="space-y-6">
                 <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
-                  <h3 className="font-display font-bold text-lg text-brand-navy mb-3">You own everything we build</h3>
-                  <p className="text-brand-slate text-sm leading-relaxed">Every workflow, automation, agent, and integration is client-owned from day one. No lock-in. No dependency on LVRGWRKS to keep the systems running.</p>
+                  <h3 className="font-display font-bold text-lg text-brand-navy mb-3">It keeps running without us</h3>
+                  <p className="text-brand-slate text-sm leading-relaxed">Everything we build for your operation is client-owned from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No lock-in. No dependency on LVRGWRKS to keep the systems running.</p>
                 </div>
                 <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
                   <h3 className="font-display font-bold text-lg text-brand-navy mb-3">We build where SaaS vendors cannot follow</h3>

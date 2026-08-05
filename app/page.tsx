@@ -97,7 +97,7 @@ export default function HomePage() {
                 <p className="text-brand-slate leading-relaxed">Single-platform features get absorbed by your software vendors. What they cannot copy is the way your work flows across the whole operation. That is what we rebuild, and it is the part that holds.</p>
               </div>
               <div className="border-l-4 border-brand-gold pl-6">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">You own everything from day one</h3>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">It keeps running without us</h3>
                 <p className="text-brand-slate leading-relaxed">No vendor lock-in. No dependency on us to keep the systems running. The engagement can end at any time and the operation keeps running.</p>
               </div>
               <div className="border-l-4 border-brand-gold pl-6">
@@ -130,7 +130,7 @@ export default function HomePage() {
               <div className="bg-white p-10 rounded-xl border border-gray-100">
                 <div className="text-brand-gold font-display font-bold text-5xl mb-4">03</div>
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Build</h3>
-                <p className="text-brand-slate leading-relaxed">Our team builds and deploys the system. You review outputs, not code. Every workflow, automation, and AI agent built belongs to you from day one. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days.</p>
+                <p className="text-brand-slate leading-relaxed">Our team builds and deploys the system. You review outputs, not code. Everything we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days.</p>
               </div>
               <div className="bg-white p-10 rounded-xl border border-gray-100">
                 <div className="text-brand-gold font-display font-bold text-5xl mb-4">04</div>
@@ -166,7 +166,7 @@ export default function HomePage() {
               </div>
               <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
                 <div className="text-brand-gold font-display font-bold text-4xl mb-2">Day 1</div>
-                <p className="text-gray-400 text-sm leading-relaxed">When you own everything we build</p>
+                <p className="text-gray-400 text-sm leading-relaxed">When your data and your builds become yours</p>
               </div>
             </div>
             <Link href="/coordination-tax-calculator" className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-white transition-all group">
@@ -203,7 +203,7 @@ export default function HomePage() {
               <div className="bg-brand-surface border border-gray-100 rounded-xl p-6">
                 <div className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">Step 3</div>
                 <h4 className="font-display font-bold text-lg text-brand-navy mb-2">Build and Operate</h4>
-                <p className="text-brand-slate text-sm leading-relaxed">The monthly retainer below. We build the fix inside your operation, run it, and prove the value every 30 days. You own everything from day one.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">The monthly retainer below. We build the fix inside your operation, run it, and prove the value every 30 days. Your data and your builds are yours from day one.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -131,7 +131,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">03</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Build</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">Our team executes the builds. You review outputs, not code. Every process change, automation, and agent we build belongs to you from day one. No vendor lock-in. No dependency on LVRGWRKS to keep the lights on.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">Our team executes the builds. You review outputs, not code. Every process change and automation we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on LVRGWRKS to keep the lights on.</p></div>
                 </div>
               </div>
               <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white">
