@@ -193,6 +193,9 @@ export default function BusinessProcessAutomationPage() {
                 <p className="text-brand-slate leading-relaxed">Your first build is live within 60 days of engagement start. You review outputs, not code.</p>
               </div>
             </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what a process has to look like before it is worth automating, who maintains the build, and how the return is measured.
+            </p>
           </div>
         </div>
       </section>

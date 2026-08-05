@@ -198,6 +198,9 @@ export default function DigitalTransformationPage() {
                 <p className="text-brand-slate leading-relaxed">Usually not. We connect what you already run. Where new tooling is genuinely required it is scoped and presented separately, and it is never the default recommendation.</p>
               </div>
             </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including why transformation programs stall, what the 30-day proof cycle looks like in practice, and what we do not take on.
+            </p>
           </div>
         </div>
       </section>

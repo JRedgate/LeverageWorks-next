@@ -276,6 +276,9 @@ export default function AIAutomationConsultingPage() {
                 <p className="text-brand-slate leading-relaxed">It keeps running. Your data and configuration are yours, anything built specifically for your operation is yours, and any LVRGWRKS product module comes with a permanent licence to keep running the version in place.</p>
               </div>
             </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including where your data goes, what happens if an AI system gets something wrong, and how long a first build actually takes.
+            </p>
           </div>
         </div>
       </section>

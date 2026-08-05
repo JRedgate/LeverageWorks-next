@@ -43,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) setIsMobileOpen(false);
+      if (window.innerWidth >= 1024) setIsMobileOpen(false);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -91,7 +91,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => handleMouseEnter('services')} onMouseLeave={handleMouseLeave}>
             <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(servicesItems) ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
@@ -148,6 +148,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             Insights
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
+          <Link href="/faq" className={`text-sm font-medium transition-colors relative group ${isActive('/faq') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+            FAQ
+            <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/faq') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+          </Link>
 
           <div className="h-6 w-[1px] bg-gray-200 mx-2"></div>
 
@@ -161,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
         </div>
 
         {/* Mobile Hamburger */}
-        <button className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onClick={() => setIsMobileOpen(!isMobileOpen)} aria-label={isMobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMobileOpen}>
+        <button className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onClick={() => setIsMobileOpen(!isMobileOpen)} aria-label={isMobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMobileOpen}>
           <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`} />
           <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
@@ -169,7 +173,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMobileOpen ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMobileOpen ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-white border-t border-gray-100 shadow-lg px-6 py-6 flex flex-col gap-2">
           <div className="border-b border-gray-50 pb-3">
             <button onClick={() => setOpenDropdown(openDropdown === 'mobile-services' ? null : 'mobile-services')} className="w-full flex items-center justify-between text-left text-base font-medium text-brand-slate py-2">
@@ -202,6 +206,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
           <Link href="/impact" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/impact') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Impact</Link>
           <Link href="/coordination-tax-calculator" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/coordination-tax-calculator') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Calculator</Link>
           <Link href="/insights" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Insights</Link>
+          <Link href="/faq" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/faq') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>FAQ</Link>
           <div className="flex items-center gap-4 pt-4">
             <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="text-brand-slate hover:text-brand-navy transition-all" aria-label="LinkedIn Profile">
               <LinkedInIcon className="w-5 h-5" />

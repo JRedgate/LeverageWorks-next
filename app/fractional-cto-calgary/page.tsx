@@ -260,6 +260,9 @@ export default function FractionalCTOCalgaryPage() {
                 <p className="text-brand-slate leading-relaxed">Your data, your configuration and anything built specifically for your operation are yours from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it even if the relationship ends.</p>
               </div>
             </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including how the retainer is set, what happens at the end of an engagement, and how a fractional CTO differs from an agency or a full-time hire.
+            </p>
           </div>
         </div>
       </section>
