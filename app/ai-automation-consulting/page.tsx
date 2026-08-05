@@ -251,6 +251,35 @@ export default function AIAutomationConsultingPage() {
       </section>
 
       {/* Final CTA */}
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-brand-surface border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">AI Automation Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does AI automation consulting cost?</h3>
+                <p className="text-brand-slate leading-relaxed">LVRGWRKS prices against the value created, not the hours worked. Engagements run $4,500 to $8,500 per month with no upfront fee and no hardware cost. If the identified value does not support roughly a three to one return, we say so in writing rather than proceed.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How long before AI automation shows a return?</h3>
+                <p className="text-brand-slate leading-relaxed">The first build is live within 60 days. From month one you receive a Value Creation Report every 30 days documenting labour hours recovered, automation performance, and rolling return against the retainer.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we have to replace our existing software?</h3>
+                <p className="text-brand-slate leading-relaxed">No. We build the automation layer that sits above your current systems and makes them work together. No rip and replace, and no new platform your team has to learn.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What happens to the automation if we stop working with LVRGWRKS?</h3>
+                <p className="text-brand-slate leading-relaxed">It keeps running. Your data and configuration are yours, anything built specifically for your operation is yours, and any LVRGWRKS product module comes with a permanent licence to keep running the version in place.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">What is your manual work actually costing you?</h2>

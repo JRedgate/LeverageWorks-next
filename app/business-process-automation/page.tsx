@@ -168,6 +168,35 @@ export default function BusinessProcessAutomationPage() {
       </section>
 
       {/* CTA */}
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-brand-surface border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Process Automation Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What is business process automation?</h3>
+                <p className="text-brand-slate leading-relaxed">It is removing the manual work that happens between your systems. The re-keying, the chasing, the copying of data from one platform into another. We call that the coordination tax, and in most mid-market operations it is one of the largest controllable costs on the books.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Which processes should we automate first?</h3>
+                <p className="text-brand-slate leading-relaxed">The one costing you the most, which is rarely the one that feels worst. The free 60-minute Leverage Audit maps your highest-coordination workflows, quantifies the labour cost of each, and ranks the fixes by return before anything is built.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Does automation mean reducing headcount?</h3>
+                <p className="text-brand-slate leading-relaxed">Not in the engagements we run. The goal is getting more out of the team you already have. Most clients use the recovered capacity to avoid a hire they were about to make, or to move experienced people onto work that actually earns.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How long does the first automation take to build?</h3>
+                <p className="text-brand-slate leading-relaxed">Your first build is live within 60 days of engagement start. You review outputs, not code.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Find out what your manual work is actually costing you.</h2>

@@ -173,6 +173,35 @@ export default function DigitalTransformationPage() {
       </section>
 
       {/* CTA */}
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-brand-surface border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Digital Transformation Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Why do most digital transformations fail?</h3>
+                <p className="text-brand-slate leading-relaxed">Because they replace tools without changing how the work flows. New software laid over an operating model that was already misaligned produces the same coordination cost with a better interface. The bottleneck is never the technology, it is the operating model that governs it.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does digital transformation cost for a mid-market company?</h3>
+                <p className="text-brand-slate leading-relaxed">LVRGWRKS runs as a monthly partnership from $4,500 to $8,500, priced against the value created rather than the hours worked, with no upfront fee. The retainer is capped, so a system that produces far more value does not cost you more.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do you measure the return?</h3>
+                <p className="text-brand-slate leading-relaxed">Every 30 days you receive a Value Creation Report documenting labour hours recovered against the pre-implementation baseline, in hours and in dollars, tracked against the business case agreed at the start.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we need to buy new software?</h3>
+                <p className="text-brand-slate leading-relaxed">Usually not. We connect what you already run. Where new tooling is genuinely required it is scoped and presented separately, and it is never the default recommendation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with the operational assessment.</h2>

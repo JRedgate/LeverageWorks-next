@@ -235,6 +235,35 @@ export default function FractionalCTOCalgaryPage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-brand-surface border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Fractional CTO Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does a fractional CTO cost in Calgary?</h3>
+                <p className="text-brand-slate leading-relaxed">LVRGWRKS engagements run from $4,500 to $8,500 per month. The retainer is set against roughly one third of the value the work creates rather than against hours, and it is capped at $8,500 regardless of how much value the system produces. Above that cap, every further dollar of value is yours.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What is the difference between a fractional CTO and an IT consultant?</h3>
+                <p className="text-brand-slate leading-relaxed">An IT consultant delivers a project and leaves. A fractional CTO is an operating partner inside the business. We diagnose where the work is costing you, redesign how it flows, build the fix, and stay to run it and prove the return every 30 days.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How long is a fractional CTO engagement?</h3>
+                <p className="text-brand-slate leading-relaxed">The minimum term is three months from go-live, not from signature. After that it continues month to month at the same rate, with no renegotiation required.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we own what a fractional CTO builds for us?</h3>
+                <p className="text-brand-slate leading-relaxed">Your data, your configuration and anything built specifically for your operation are yours from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it even if the relationship ends.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a free Leverage Audit.</h2>

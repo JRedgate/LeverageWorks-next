@@ -9,9 +9,15 @@ const articles = [
     href: '/insights/coordination-tax-mid-market',
   },
   {
+    label: 'ESTIMATING',
+    heading: 'The Hidden Cost of Estimating: What We Found Inside Three Project Files',
+    body: 'We opened three completed estimate files from an engineering contractor and compared them line by line. Almost nothing was reused between jobs.',
+    href: '/insights/hidden-cost-of-estimating',
+  },
+  {
     label: 'DIGITAL TRANSFORMATION',
     heading: 'Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)',
-    body: '70% of digital transformations fail to deliver projected value. The reason is almost never the technology.',
+    body: 'Most digital transformations in mid-market companies fail for the same reason, and it is almost never the technology.',
     href: '/insights/why-digital-transformations-fail',
   },
   {
