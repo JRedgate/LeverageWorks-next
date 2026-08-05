@@ -21,7 +21,7 @@ export default function LeverageAuditPage() {
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">A free 60-minute working session where we map your highest-friction workflows, put a real dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You leave with a written summary of where your operations are bleeding capacity and what it is costing you. No pitch. No generic presentation. No commitment required.</p>
             <button onClick={() => openBriefing()} className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-              Book Your Leverage Audit
+              Request Free Leverage Audit
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </button>
           </div>
@@ -137,7 +137,7 @@ export default function LeverageAuditPage() {
           <p className="text-gray-400 max-w-xl mx-auto mb-4 text-lg leading-relaxed">60 minutes. No cost. No commitment. You leave with a clear picture of where your operations are costing you more than they should.</p>
           <p className="text-gray-500 max-w-xl mx-auto mb-12 text-base leading-relaxed">Sessions available for founders, owners, and COOs of mid-market companies in Calgary, Alberta, and Western Canada.</p>
           <button onClick={() => openBriefing()} className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Book Your Leverage Audit
+            Request Free Leverage Audit
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </button>
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>

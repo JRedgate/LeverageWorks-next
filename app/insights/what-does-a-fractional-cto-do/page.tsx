@@ -15,6 +15,9 @@ export default function WhatFractionalCTODoesArticle() {
             <h1 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-6 leading-tight">
               What Does a Fractional CTO Actually Do Inside Your Business?
             </h1>
+                <p className="text-brand-slate text-sm mb-6">
+                  By Jeremy Redgate, Founder, LVRGWRKS &nbsp;&middot;&nbsp; Published April 2026
+                </p>
             <p className="text-brand-slate text-lg leading-relaxed">
               For founders and COOs running mid-market companies in Alberta, this is one of the most practical questions in the room right now. The answer matters because getting it wrong is expensive in both directions.
             </p>
@@ -104,7 +107,7 @@ export default function WhatFractionalCTODoesArticle() {
                 href="/leverage-audit"
                 className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
               >
-                Book Your Leverage Audit
+                Request Free Leverage Audit
               </Link>
             </div>
           </div>

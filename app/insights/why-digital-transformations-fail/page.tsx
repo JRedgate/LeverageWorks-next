@@ -15,6 +15,9 @@ export default function WhyTransformationsFailArticle() {
             <h1 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-6 leading-tight">
               Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)
             </h1>
+                <p className="text-brand-slate text-sm mb-6">
+                  By Jeremy Redgate, Founder, LVRGWRKS &nbsp;&middot;&nbsp; Published April 2026
+                </p>
             <p className="text-brand-slate text-lg leading-relaxed">
               If your business has been through a technology implementation that did not deliver what was promised, you are not alone. And the reason it failed is almost certainly not what you were told.
             </p>
@@ -104,7 +107,7 @@ export default function WhyTransformationsFailArticle() {
                 href="/leverage-audit"
                 className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
               >
-                Book Your Leverage Audit
+                Request Free Leverage Audit
               </Link>
             </div>
           </div>

@@ -15,6 +15,9 @@ export default function CoordinationTaxArticle() {
             <h1 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-6 leading-tight">
               The Coordination Tax: Why Mid-Market Companies Grow Revenue Without Growing Margin
             </h1>
+                <p className="text-brand-slate text-sm mb-6">
+                  By Jeremy Redgate, Founder, LVRGWRKS &nbsp;&middot;&nbsp; Published April 2026
+                </p>
             <p className="text-brand-slate text-lg leading-relaxed">
               If your revenue is up and your margin is flat, the money is not disappearing. It is being paid out, quietly, to an overhead layer nobody named. Here is what that layer is, how it compounds, and why adding people almost never fixes it.
             </p>
@@ -393,7 +396,7 @@ export default function CoordinationTaxArticle() {
                   href="/leverage-audit"
                   className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
                 >
-                  Book Your Leverage Audit
+                  Request Free Leverage Audit
                 </Link>
                 <Link
                   href="/coordination-tax-calculator"

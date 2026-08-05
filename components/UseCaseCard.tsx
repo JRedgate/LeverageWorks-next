@@ -47,7 +47,7 @@ export const UseCaseCard: React.FC<UseCaseProps> = ({ id, industry, title, conte
                 </div>
             </div>
             <div className="mt-8 pt-6 border-t border-gray-50 flex justify-between items-center relative z-10">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">ROI Verified</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Modelled Return</span>
                 <span className="font-display font-bold text-2xl bg-brand-gold/10 px-3 py-1 rounded text-brand-gold">{roi}</span>
             </div>
             <div className={`mt-6 text-center transition-opacity duration-300 ${isExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>

@@ -12,7 +12,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero onCtaClick={() => openBriefing()} onSecondCtaClick={() => router.push('/capabilities')} />
+      <Hero onCtaClick={() => openBriefing()} onSecondCtaClick={() => router.push('/coordination-tax-calculator')} />
 
       {/* The Problem */}
       <section className="py-20 md:py-32 bg-brand-navy text-white">
@@ -64,7 +64,7 @@ export default function HomePage() {
               </p>
               <div className="md:pl-16">
                 <Link href="/coordination-tax-calculator" className="inline-flex items-center gap-2 bg-brand-gold text-brand-navy px-8 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-lg group">
-                  Try the Calculator
+                  Try the Coordination Tax Calculator
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

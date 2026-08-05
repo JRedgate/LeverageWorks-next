@@ -47,20 +47,12 @@ const jsonLd = {
   image: 'https://www.lvrgwrks.com/og-image.jpg',
   '@id': 'https://www.lvrgwrks.com',
   url: 'https://www.lvrgwrks.com',
-  telephone: '',
   priceRange: '$$$$',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Haskayne School of Business',
     addressLocality: 'Calgary',
     addressRegion: 'AB',
-    postalCode: 'T2N 1N4',
     addressCountry: 'CA',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 51.0772,
-    longitude: -114.1311,
   },
   areaServed: [
     { '@type': 'State', name: 'Alberta' },

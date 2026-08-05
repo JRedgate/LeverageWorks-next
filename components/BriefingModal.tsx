@@ -71,7 +71,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({ isOpen, onClose, i
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Request Leverage Audit">
+    <div className="fixed inset-0 z-[999] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Request Free Leverage Audit">
       <div className="absolute inset-0 bg-brand-navy/80 backdrop-blur-sm" onClick={onClose} />
       <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto animate-fade-in">
         <button onClick={onClose} className="absolute top-4 right-4 text-brand-slate hover:text-brand-navy transition-colors p-1" aria-label="Close modal">
@@ -99,7 +99,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({ isOpen, onClose, i
             <>
               <div className="mb-8">
                 <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2 block">Free 60-Minute Call</span>
-                <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Request a Leverage Audit</h3>
+                <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Request Free Leverage Audit</h3>
                 <p className="text-brand-slate text-sm leading-relaxed">
                   Share your organizational context and a senior LVRGWRKS strategist will schedule a free 60-minute Leverage Audit to assess your opportunities.
                 </p>
@@ -137,7 +137,7 @@ export const BriefingModal: React.FC<BriefingModalProps> = ({ isOpen, onClose, i
                   <p className="text-red-600 text-sm">Something went wrong. Please try again or email us directly.</p>
                 )}
                 <button type="submit" disabled={status === 'submitting'} className="w-full bg-brand-navy text-white py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all shadow-lg disabled:opacity-60 disabled:cursor-not-allowed">
-                  {status === 'submitting' ? 'Submitting...' : 'Request Leverage Audit'}
+                  {status === 'submitting' ? 'Submitting...' : 'Request Free Leverage Audit'}
                 </button>
                 <p className="text-gray-400 text-xs text-center">Your information is handled with strict confidentiality.</p>
               </form>

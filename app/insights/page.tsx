@@ -16,13 +16,13 @@ const articles = [
   },
   {
     label: 'FRACTIONAL CTO',
-    heading: 'What Does a Fractional CTO Actually Do? A Guide for Alberta Business Owners',
+    heading: 'What Does a Fractional CTO Actually Do Inside Your Business?',
     body: 'Thinking about hiring a fractional CTO? Here is exactly what they do, what they cost, and whether it is right for you.',
     href: '/insights/what-does-a-fractional-cto-do',
   },
   {
     label: 'BUSINESS PROCESS AUTOMATION',
-    heading: 'How to Calculate the Real Cost of Manual Data Entry in Your Business',
+    heading: 'The Real Cost of Manual Data Entry in Your Business',
     body: 'Most business owners underestimate what manual data movement is costing them. Here is a simple framework to find out.',
     href: '/insights/cost-of-manual-data-entry',
   },
@@ -80,7 +80,7 @@ export default function InsightsPage() {
             The Leverage Audit puts these frameworks to work on your actual business in 60 minutes.
           </p>
           <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-lg group">
-            Request Leverage Audit
+            Request Free Leverage Audit
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

@@ -16,10 +16,10 @@ export default function ImpactPage() {
           <div className="max-w-4xl">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Impact</span>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
-              Proven <span className="text-brand-slate italic">Execution.</span>
+              What operational leverage <span className="text-brand-slate italic">actually looks like.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl">
-              Representative scenarios based on operating patterns observed across execution-critical industries where LeverageWorks closed the gap between potential and performance.
+              These are modelled scenarios, not client case studies. They are built from operating patterns we see repeatedly in execution-critical industries, and the numbers are what the model produces, not what a named client reported. We would rather show you the shape of the problem honestly than dress up a reference we cannot put you in touch with.
             </p>
           </div>
         </div>
@@ -66,25 +66,25 @@ export default function ImpactPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">By The Numbers</span>
-            <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Consistent Results Across Industries</h2>
+            <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">The Pattern Is Always the Same</h2>
             <p className="text-brand-slate text-lg leading-relaxed">The pattern is consistent: the bottleneck is never the technology, it is the operating model that governs it.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
-              <div className="text-brand-gold font-display font-bold text-4xl mb-2">Up to 4x</div>
-              <div className="text-brand-slate text-sm">Average ROI</div>
+              <div className="text-brand-gold font-display font-bold text-4xl mb-2">3x</div>
+              <div className="text-brand-slate text-sm">The return we price against</div>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
-              <div className="text-brand-gold font-display font-bold text-4xl mb-2">14%</div>
-              <div className="text-brand-slate text-sm">Capacity Unlocked</div>
+              <div className="text-brand-gold font-display font-bold text-4xl mb-2">30 days</div>
+              <div className="text-brand-slate text-sm">How often we prove it</div>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
-              <div className="text-brand-gold font-display font-bold text-4xl mb-2">35%</div>
-              <div className="text-brand-slate text-sm">Reporting Reduction</div>
+              <div className="text-brand-gold font-display font-bold text-4xl mb-2">60 days</div>
+              <div className="text-brand-slate text-sm">Until your first build is live</div>
             </div>
             <div className="bg-white p-8 rounded-xl border border-gray-100 text-center">
-              <div className="text-brand-gold font-display font-bold text-4xl mb-2">9mo</div>
-              <div className="text-brand-slate text-sm">Avg. Payback Period</div>
+              <div className="text-brand-gold font-display font-bold text-4xl mb-2">60 min</div>
+              <div className="text-brand-slate text-sm">To see what it is costing you</div>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ImpactPage() {
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">Every organization has hidden capacity waiting to be unlocked. Let us help you find it.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
             <button onClick={() => openBriefing()} className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl">
-              Request Leverage Audit
+              Request Free Leverage Audit
             </button>
             <Link href="/capabilities" className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
               View Capabilities

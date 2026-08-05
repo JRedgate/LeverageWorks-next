@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onCtaClick, onSecondCtaClick }) => (
-  <header className="relative pt-40 pb-32 md:pt-56 md:pb-48 overflow-hidden bg-brand-surface animate-fade-in">
+  <header className="relative pt-40 pb-32 md:pt-56 md:pb-48 overflow-hidden bg-brand-surface">
     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
     <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -31,7 +31,7 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick, onSecondCtaClick }) => (
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </button>
           <button onClick={onSecondCtaClick} className="bg-white border border-gray-200 text-brand-navy px-10 py-4 rounded-lg font-bold text-sm hover:border-brand-navy/30 hover:bg-gray-50 transition-all text-center">
-            See How We Work
+            See What It Is Costing You
           </button>
         </div>
         <div className="mt-16 flex flex-col md:flex-row md:items-center gap-4 md:gap-8 opacity-60 hover:opacity-100 transition-all duration-500">

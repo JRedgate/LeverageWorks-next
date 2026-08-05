@@ -81,7 +81,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
-                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Request a Leverage Audit</h2>
+                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Request Free Leverage Audit</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>

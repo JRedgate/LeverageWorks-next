@@ -30,7 +30,7 @@ export default function ConstructionPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Book a Free Leverage Audit
+                Request Free Leverage Audit
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </Link>
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
@@ -168,7 +168,7 @@ export default function ConstructionPage() {
             60 minutes. No cost. No commitment.
           </p>
           <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Book Your Leverage Audit
+            Request Free Leverage Audit
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
           </Link>
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>

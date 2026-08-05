@@ -70,9 +70,9 @@ export default function CalculatorPage() {
     // Single source of truth. One tier object drives headline, pricing, and ROI math.
     // Public tiers only: Ignite, Build, Scale.
     let recommendedTier: TierDefinition;
-    if (recoverableAmount >= 250000 || isCapped) {
+    if (recoverableAmount >= 306000 || isCapped) {
       recommendedTier = TIERS.Scale;
-    } else if (recoverableAmount >= 150000) {
+    } else if (recoverableAmount >= 234000) {
       recommendedTier = TIERS.Build;
     } else {
       recommendedTier = TIERS.Ignite;
@@ -115,7 +115,9 @@ export default function CalculatorPage() {
     // Shared templates. Both lines pull from the same recommendedTier object
     // so the tier name, monthly cost, and annual cost always match across
     // the recommendation line and the ROI paragraph.
-    const tierRecommendation = `The ${recommendedTier.name} tier ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is sized for your situation.`;
+    const tierRecommendation = recoverableAmount < 162000
+      ? `At this scale the recoverable value does not yet clear the three to one return we hold ourselves to. The Leverage Audit is still free and still worth an hour, but we would tell you the same thing in the room: the number is not there yet.`
+      : `The ${recommendedTier.name} tier ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is sized for your situation.`;
 
     const roiMath = `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year. Approximately ${formatCurrency(recoverableAmount)} is recoverable. A ${recommendedTier.name} tier engagement (${formatCurrency(recommendedTier.annual)} annually) delivers approximately ${formatROI(actualROI)} ROI in the first year.`;
 
@@ -371,7 +373,7 @@ export default function CalculatorPage() {
                       onClick={() => openBriefing()}
                       className="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
                     >
-                      Book Your Free Leverage Audit
+                      Request Free Leverage Audit
                     </button>
                   </div>
                 </div>

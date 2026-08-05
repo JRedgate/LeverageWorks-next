@@ -15,6 +15,9 @@ export default function CostOfManualDataEntryArticle() {
             <h1 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-6 leading-tight">
               The Real Cost of Manual Data Entry in Your Business
             </h1>
+                <p className="text-brand-slate text-sm mb-6">
+                  By Jeremy Redgate, Founder, LVRGWRKS &nbsp;&middot;&nbsp; Published April 2026
+                </p>
             <p className="text-brand-slate text-lg leading-relaxed">
               It does not appear as a line item on your P&L. But for most mid-market companies in Alberta, the cost of manual data entry is one of the largest controllable expenses in the business. Most owners have never tried to calculate it.
             </p>
@@ -130,7 +133,7 @@ export default function CostOfManualDataEntryArticle() {
                 href="/leverage-audit"
                 className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
               >
-                Book Your Leverage Audit
+                Request Free Leverage Audit
               </Link>
             </div>
           </div>
