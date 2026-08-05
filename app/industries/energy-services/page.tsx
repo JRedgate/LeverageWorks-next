@@ -88,7 +88,7 @@ export default function EnergyServicesPage() {
               One operating layer that connects field, dispatch, compliance, and back office.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for energy services companies across Alberta and Western Canada. We do not replace your existing tools. We connect them, building the automation layer that sits above your current systems and makes them work together. Every workflow we build belongs to you from day one.
+              LVRGWRKS builds custom automation and integration systems for energy services companies across Alberta and Western Canada. We do not replace your existing tools. We connect them, building the automation layer that sits above your current systems and makes them work together. Every workflow we build for your operation belongs to you from day one, with a permanent licence to any LVRGWRKS module it uses.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">

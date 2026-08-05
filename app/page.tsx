@@ -85,7 +85,7 @@ export default function HomePage() {
               <span className="text-brand-slate italic">We rebuild how the work flows, and we stay.</span>
             </h2>
             <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-10">
-              LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it and prove the return. The retainer is set against the value the work creates, not the hours it takes or the tools it uses. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. You own everything from day one.
+              LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it and prove the return. The retainer is set against the value the work creates, not the hours it takes or the tools it uses. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. Your data and your builds are yours from day one, with a permanent licence to any LVRGWRKS module the system uses.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="border-l-4 border-brand-gold pl-6">

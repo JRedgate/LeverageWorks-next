@@ -102,7 +102,7 @@ export default function BusinessProcessAutomationPage() {
               We build around your existing systems, not on top of them.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS does not require you to adopt a new platform, retire your existing tools, or retrain your team on unfamiliar software. We build the automation layer that connects your existing systems and handles the work that currently happens between them. Every system we build is owned by you from day one and runs on your infrastructure.
+              LVRGWRKS does not require you to adopt a new platform, retire your existing tools, or retrain your team on unfamiliar software. We build the automation layer that connects your existing systems and handles the work that currently happens between them. Every system we build for your operation is yours from day one, with a permanent licence to any LVRGWRKS module it uses, and it runs on your infrastructure.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
