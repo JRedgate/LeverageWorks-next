@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function WhyTransformationsFailArticle() {
   return (
@@ -113,6 +114,12 @@ export default function WhyTransformationsFailArticle() {
           </div>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/digital-transformation-consulting', title: 'Digital transformation consulting', blurb: 'How we approach transformation when the operating model is the real constraint.' },
+          { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+        ]}
+      />
     </>
   );
 }

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 const TITLE = 'The Coordination Tax: Why Mid-Market Companies Grow Revenue Without Growing Margin';
-const DESCRIPTION = 'Most mid-market operators scale revenue faster than margin. The reason is coordination tax, the hidden overhead that compounds as companies grow. Here is what it is, what it costs, and how to fix it.';
+const DESCRIPTION = 'Mid-market companies add revenue and headcount without adding margin. Here is where the money actually goes, and what it costs an Alberta operation.';
+const SEO_TITLE = 'Why Revenue Grows But Margin Does Not | LVRGWRKS';
 const SLUG = '/insights/coordination-tax-mid-market';
 const PUBLISHED = '2026-04-17';
 const MODIFIED  = '2026-04-20';
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | LVRGWRKS` },
+  title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
 };

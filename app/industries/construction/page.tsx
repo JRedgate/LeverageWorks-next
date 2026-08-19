@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useBriefing } from '@/components/BriefingProvider';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function ConstructionPage() {
   const { openBriefing } = useBriefing();
@@ -174,6 +175,12 @@ export default function ConstructionPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/hidden-cost-of-estimating', title: 'The hidden cost of estimating', blurb: 'What three project files revealed about where estimating time actually goes.' },
+          { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
+        ]}
+      />
     </>
   );
 }

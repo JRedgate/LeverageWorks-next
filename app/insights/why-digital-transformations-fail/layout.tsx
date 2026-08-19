@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 const TITLE = 'Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)';
-const DESCRIPTION = 'Most digital transformations in mid-market companies fail for the same reason. It is not the technology. Here is what actually goes wrong and how Alberta operators are solving it differently.';
+const DESCRIPTION = 'Most transformations fail on process and ownership, not technology. What mid-market companies in Alberta do instead, and where to start.';
+const SEO_TITLE = 'Why Digital Transformations Fail | Mid-Market | LVRGWRKS';
 const SLUG = '/insights/why-digital-transformations-fail';
 const PUBLISHED = '2026-04-16';
 const MODIFIED  = '2026-06-26';
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | LVRGWRKS` },
+  title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
 };

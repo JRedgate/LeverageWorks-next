@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function WhatFractionalCTODoesArticle() {
   return (
@@ -113,6 +114,12 @@ export default function WhatFractionalCTODoesArticle() {
           </div>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/fractional-cto-calgary', title: 'Fractional CTO in Calgary', blurb: 'Senior technology leadership for owner-led mid-market companies, without a full-time hire.' },
+          { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+        ]}
+      />
     </>
   );
 }

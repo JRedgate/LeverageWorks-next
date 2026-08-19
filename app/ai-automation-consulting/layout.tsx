@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'AI Automation Consulting Alberta | LVRGWRKS - Operational AI for Mid-Market Companies' },
-  description: 'LVRGWRKS builds AI automation systems for mid-market companies in Alberta and Western Canada. We connect your platforms, eliminate manual workflows, and prove ROI every 30 days.',
+  title: { absolute: 'AI Automation Consulting Alberta | LVRGWRKS' },
+  description: 'AI automation consulting for mid-market companies in Alberta and Western Canada. Stop paying people to move data between systems that should talk.',
   alternates: { canonical: '/ai-automation-consulting' },
 };
 

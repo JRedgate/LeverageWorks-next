@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'The Firm | LVRGWRKS (LeverageWorks) - Fractional CTO Calgary' },
-  description: 'LVRGWRKS is a fractional CTO and operating partner founded in Calgary. 20 years of operational experience across manufacturing, industrial services, and capital programs. Architected during the Haskayne EMBA to fix the gap between leadership intent and execution.',
+  title: { absolute: 'The Firm | Fractional CTO Calgary | LVRGWRKS' },
+  description: 'Built by operators, for operators. The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada.',
   alternates: { canonical: '/firm' },
 };
 

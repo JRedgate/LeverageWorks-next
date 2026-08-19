@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 const TITLE = 'What Does a Fractional CTO Actually Do Inside Your Business?';
-const DESCRIPTION = 'Most mid-market companies in Alberta are feeling the pain of not having a CTO without being ready to hire one full-time. Here is what a fractional CTO actually does inside your business.';
+const DESCRIPTION = 'A plain explanation of what a fractional CTO does inside a mid-market business week to week, and when hiring one makes sense in Alberta.';
+const SEO_TITLE = 'What Does a Fractional CTO Actually Do? | LVRGWRKS';
 const SLUG = '/insights/what-does-a-fractional-cto-do';
 const PUBLISHED = '2026-04-16';
 const MODIFIED  = '2026-06-26';
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | LVRGWRKS` },
+  title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
 };

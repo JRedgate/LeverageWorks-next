@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Frequently Asked Questions | LVRGWRKS (LeverageWorks) Fractional CTO, Calgary' },
-  description: 'Straight answers on fractional CTO pricing, why we price against value instead of hours, Canadian data residency for AI tools, whether technology adoption grants still exist, and what happens to your team. For Alberta and Western Canadian mid-market operators.',
+  title: { absolute: 'Fractional CTO FAQ | Calgary & Alberta | LVRGWRKS' },
+  description: 'The questions owners actually ask about fractional CTO engagements, pricing basis, timelines, and scope in Calgary and across Alberta.',
   alternates: { canonical: '/faq' },
 };
 

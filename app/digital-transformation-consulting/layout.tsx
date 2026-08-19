@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Digital Transformation Consulting Calgary Alberta | LVRGWRKS' },
-  description: 'Digital transformation consulting for mid-market companies in Calgary and Alberta. LVRGWRKS identifies why transformations fail and builds operating model changes that actually stick.',
+  title: { absolute: 'Digital Transformation Consulting Calgary | LVRGWRKS' },
+  description: 'Digital transformation consulting for owner-led mid-market companies in Calgary and Alberta. Most transformations fail on process, not technology.',
   alternates: { canonical: '/digital-transformation-consulting' },
 };
 

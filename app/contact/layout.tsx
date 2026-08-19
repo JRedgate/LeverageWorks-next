@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact | LVRGWRKS (LeverageWorks) - Request a Free Leverage Audit' },
-  description: 'Connect with LVRGWRKS (LeverageWorks) strategists. Request a free 60-minute Leverage Audit to discuss your AI implementation challenges and explore engagement pathways.',
+  title: { absolute: 'Contact LVRGWRKS | Fractional CTO Calgary, Alberta' },
+  description: 'Start the conversation. Request a free Leverage Audit for your owner-led mid-market company in Calgary, Alberta, or Western Canada.',
   alternates: { canonical: '/contact' },
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function HiddenCostOfEstimatingPage() {
   return (
@@ -76,6 +77,12 @@ export default function HiddenCostOfEstimatingPage() {
           </Link>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/industries/construction', title: 'Construction operations', blurb: 'How we work with Alberta construction and contracting companies.' },
+          { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
+        ]}
+      />
     </>
   );
 }

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 const TITLE = 'The Hidden Cost of Estimating: What We Found Inside Three Project Files';
-const DESCRIPTION = 'We opened three completed estimate files from a mid-market engineering contractor and compared them line by line. Almost nothing was reused between jobs. Here is what that costs, and why speed is not the prize most firms think it is.';
+const DESCRIPTION = 'What three project files revealed about estimating overhead, and why the cost hides inside work your team already considers normal.';
+const SEO_TITLE = 'The Hidden Cost of Estimating | LVRGWRKS';
 const SLUG = '/insights/hidden-cost-of-estimating';
 const PUBLISHED = '2026-08-05';
 const MODIFIED  = '2026-08-05';
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | LVRGWRKS` },
+  title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
 };

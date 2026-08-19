@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function CoordinationTaxArticle() {
   return (
@@ -410,6 +411,12 @@ export default function CoordinationTaxArticle() {
 
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
+          { href: '/insights/why-digital-transformations-fail', title: 'Why digital transformations fail', blurb: 'They fail on process and ownership, not technology. What to do instead.' },
+        ]}
+      />
     </>
   );
 }

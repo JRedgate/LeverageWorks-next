@@ -11,17 +11,17 @@ const GA_MEASUREMENT_ID = 'G-E0H5REX2XK';
 
 export const metadata: Metadata = {
   title: {
-    default: 'LVRGWRKS (LeverageWorks) | Fractional CTO & Operating Partner | Calgary, AB',
+    default: 'Fractional CTO & Operating Partner Calgary | LVRGWRKS',
     template: '%s | LVRGWRKS',
   },
-  description: 'LVRGWRKS (LeverageWorks) is the fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We find where coordination is costing you margin, rebuild how the work flows, and prove the return every 30 days.',
-  keywords: ['Fractional CTO Calgary', 'Operating Partner', 'Operating Model Architecture', 'AI Consulting Calgary', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
+  description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta. We recover the margin coordination is quietly costing you.',
+  keywords: ['Fractional CTO Calgary', 'Operating Partner', 'Operating Model Architecture', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
   metadataBase: new URL('https://www.lvrgwrks.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'LVRGWRKS (LeverageWorks) | Fractional CTO & Operating Partner | Calgary, AB',
+    title: 'Fractional CTO & Operating Partner Calgary | LVRGWRKS',
     description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin coordination is quietly costing you.',
     type: 'website',
     url: 'https://www.lvrgwrks.com',
@@ -43,7 +43,7 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'LVRGWRKS (LeverageWorks)',
   alternateName: 'LeverageWorks',
-  description: 'Fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin lost to coordination overhead by rebuilding how the work flows.',
+  description: 'Fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin lost to the coordination tax by rebuilding how the work flows.',
   image: 'https://www.lvrgwrks.com/og-image.jpg',
   '@id': 'https://www.lvrgwrks.com',
   url: 'https://www.lvrgwrks.com',

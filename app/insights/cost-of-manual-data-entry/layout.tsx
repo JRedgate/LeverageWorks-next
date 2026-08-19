@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 
 const TITLE = 'The Real Cost of Manual Data Entry in Your Business';
-const DESCRIPTION = 'Manual data entry does not appear on your P&L. But it is one of the largest controllable costs in most Alberta mid-market companies. Here is how to find it and what to do about it.';
+const DESCRIPTION = 'Manual data entry costs more than the hours it consumes. Where the cost compounds in a growing Alberta business, and how to size it.';
+const SEO_TITLE = 'The Real Cost of Manual Data Entry | LVRGWRKS';
 const SLUG = '/insights/cost-of-manual-data-entry';
 const PUBLISHED = '2026-04-16';
 const MODIFIED  = '2026-06-26';
 
 export const metadata: Metadata = {
-  title: { absolute: `${TITLE} | LVRGWRKS` },
+  title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
 };
