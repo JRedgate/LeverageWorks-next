@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function CostOfManualDataEntryArticle() {
   return (
@@ -139,6 +140,12 @@ export default function CostOfManualDataEntryArticle() {
           </div>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
+          { href: '/coordination-tax-calculator', title: 'Coordination Tax Calculator', blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.' },
+        ]}
+      />
     </>
   );
 }

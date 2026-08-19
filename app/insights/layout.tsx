@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: "Insights | LVRGWRKS (LeverageWorks) - AI Strategy & Operations for Alberta's Mid-Market" },
-  description: 'Practical insights on AI strategy, fractional CTO services, digital transformation, and business process automation for mid-market companies in Alberta and Western Canada.',
+  title: { absolute: 'Insights | Operations & AI for Alberta Mid-Market | LVRGWRKS' },
+  description: 'Thinking on operations, automation, and margin for owner-led mid-market companies in Alberta and Western Canada. Written for operators, not vendors.',
   alternates: { canonical: '/insights' },
 };
 

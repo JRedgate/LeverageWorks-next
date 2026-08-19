@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useBriefing } from '@/components/BriefingProvider';
 import type { Metadata } from 'next';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function FractionalCTOCalgaryPage() {
   const { openBriefing } = useBriefing();
@@ -279,6 +280,12 @@ export default function FractionalCTOCalgaryPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/what-does-a-fractional-cto-do', title: 'What does a fractional CTO actually do?', blurb: 'What the role covers week to week, and when hiring one makes sense.' },
+          { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+        ]}
+      />
     </>
   );
 }

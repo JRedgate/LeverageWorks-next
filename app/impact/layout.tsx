@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Impact | LVRGWRKS (LeverageWorks) - What Operational Leverage Looks Like' },
-  description: 'Modelled scenarios showing where coordination cost hides in manufacturing, energy and asset-heavy operations, and what recovering it is worth. LVRGWRKS (LeverageWorks) is a fractional CTO and operating partner in Alberta and Western Canada.',
+  title: { absolute: 'Impact | What Operational Leverage Looks Like | LVRGWRKS' },
+  description: 'Modelled scenarios showing what operational leverage looks like inside an owner-led mid-market company. Figures are illustrative, not client results.',
   alternates: { canonical: '/impact' },
 };
 

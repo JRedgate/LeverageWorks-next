@@ -252,6 +252,17 @@ export default function HomePage() {
               Read The Firm Thesis
             </Link>
           </div>
+          <p className="text-brand-slate max-w-2xl mx-auto mt-10 text-base leading-relaxed">
+            Want the detail before you book? See{' '}
+            <Link href="/leverage-audit" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">
+              what the Leverage Audit covers
+            </Link>
+            , or{' '}
+            <Link href="/coordination-tax-calculator" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">
+              run the Coordination Tax Calculator
+            </Link>{' '}
+            first.
+          </p>
         </div>
       </section>
     </>

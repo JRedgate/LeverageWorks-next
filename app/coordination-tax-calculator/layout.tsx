@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Coordination Tax Calculator | LVRGWRKS - Quantify What Manual Work Is Costing You' },
-  description: 'How much is the coordination tax costing your business? Calculate the hidden labour cost of moving data between disconnected systems in under 60 seconds. Free tool by LVRGWRKS.',
+  title: { absolute: 'Coordination Tax Calculator | Alberta Mid-Market | LVRGWRKS' },
+  description: 'Quantify what manual coordination is costing your Alberta business each year. A short calculator built for owner-led mid-market operations.',
   alternates: { canonical: '/coordination-tax-calculator' },
 };
 

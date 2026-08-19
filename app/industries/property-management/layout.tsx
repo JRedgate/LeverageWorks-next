@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'AI and Automation for Alberta Property Management Companies | LVRGWRKS' },
-  description: 'LVRGWRKS helps Alberta property management companies connect billing, maintenance, tenant, and owner reporting systems into one automated operating layer.',
+  title: { absolute: 'Property Management Automation Alberta | LVRGWRKS' },
+  description: 'Your portfolio is growing and administrative overhead is growing faster. Operations and automation help for Alberta property management firms.',
   alternates: { canonical: '/industries/property-management' },
 };
 

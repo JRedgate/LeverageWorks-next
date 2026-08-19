@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Request Free Leverage Audit | LVRGWRKS - 60-Minute Operational Diagnostic' },
-  description: 'The LVRGWRKS Leverage Audit is a free 60-minute working session where we map your manual workflows, quantify the labour cost, and outline where the fix sits. No commitment.',
+  title: { absolute: 'Free Leverage Audit Calgary | 60-Minute Diagnostic' },
+  description: 'A 60-minute operational diagnostic for owner-led mid-market companies in Alberta. Find where coordination is costing you margin. No cost, no obligation.',
   alternates: { canonical: '/leverage-audit' },
 };
 

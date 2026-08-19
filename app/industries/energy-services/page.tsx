@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useBriefing } from '@/components/BriefingProvider';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function EnergyServicesPage() {
   const { openBriefing } = useBriefing();
@@ -174,6 +175,12 @@ export default function EnergyServicesPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
+          { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
+        ]}
+      />
     </>
   );
 }

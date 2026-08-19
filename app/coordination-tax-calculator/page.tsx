@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useBriefing } from '@/components/BriefingProvider';
+import { RelatedReading } from '@/components/RelatedReading';
 
 type Industry = 'Construction' | 'Energy Services' | 'Manufacturing' | 'Property Management' | 'Other';
 
@@ -471,6 +472,12 @@ export default function CalculatorPage() {
           </div>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+          { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
+        ]}
+      />
     </>
   );
 }

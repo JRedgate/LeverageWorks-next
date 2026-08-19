@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useBriefing } from '@/components/BriefingProvider';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function DigitalTransformationPage() {
   const { openBriefing } = useBriefing();
@@ -221,6 +222,12 @@ export default function DigitalTransformationPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/insights/why-digital-transformations-fail', title: 'Why digital transformations fail', blurb: 'They fail on process and ownership, not technology. What to do instead.' },
+          { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+        ]}
+      />
     </>
   );
 }

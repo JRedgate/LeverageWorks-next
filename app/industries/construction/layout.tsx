@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: { absolute: 'AI and Automation for Alberta Construction Companies | LVRGWRKS' },
-  description: 'LVRGWRKS helps Alberta construction and general contracting companies eliminate manual reporting, automate subcontractor coordination, and get real-time project cost visibility.',
+  title: { absolute: 'Construction Operations Automation Alberta | LVRGWRKS' },
+  description: 'Project managers should not run jobs and assemble reports at the same time. Operations and automation help for Alberta construction companies.',
   alternates: { canonical: '/industries/construction' },
 };
 
