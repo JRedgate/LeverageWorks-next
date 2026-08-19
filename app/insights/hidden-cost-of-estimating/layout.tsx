@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   title: { absolute: SEO_TITLE },
   description: DESCRIPTION,
   alternates: { canonical: SLUG },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SLUG,
+    siteName: 'LVRGWRKS',
+    locale: 'en_CA',
+    type: 'article',
+    publishedTime: PUBLISHED,
+    modifiedTime: MODIFIED,
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
 };
 
 const articleSchema = {
