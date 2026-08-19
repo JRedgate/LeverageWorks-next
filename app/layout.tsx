@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     type: 'website',
     url: 'https://www.lvrgwrks.com',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -46,7 +46,7 @@ const jsonLd = {
   name: 'LVRGWRKS (LeverageWorks)',
   alternateName: 'LeverageWorks',
   description: 'Fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin lost to the coordination tax by rebuilding how the work flows.',
-  image: 'https://www.lvrgwrks.com/og-image.jpg',
+  image: 'https://www.lvrgwrks.com/og-card-v2.jpg',
   '@id': 'https://www.lvrgwrks.com',
   url: 'https://www.lvrgwrks.com',
   priceRange: '$$$$',
