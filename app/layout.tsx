@@ -21,11 +21,13 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Fractional CTO & Operating Partner Calgary | LVRGWRKS',
+    title: 'You added the revenue. The margin did not follow.',
     description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin coordination is quietly costing you.',
+    siteName: 'LVRGWRKS',
+    locale: 'en_CA',
     type: 'website',
     url: 'https://www.lvrgwrks.com',
-    images: [{ url: '/og-image.jpg' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',

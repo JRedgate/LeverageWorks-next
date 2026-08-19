@@ -4,6 +4,15 @@ export const metadata: Metadata = {
   title: { absolute: 'The Firm | Fractional CTO Calgary | LVRGWRKS' },
   description: 'Built by operators, for operators. The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada.',
   alternates: { canonical: '/firm' },
+  openGraph: {
+    title: 'Built by operators, for operators',
+    description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. You are adding a partner who already speaks the language.',
+    url: '/firm',
+    siteName: 'LVRGWRKS',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
 };
 
 export default function FirmLayout({ children }: { children: React.ReactNode }) {

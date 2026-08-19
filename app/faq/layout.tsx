@@ -4,6 +4,15 @@ export const metadata: Metadata = {
   title: { absolute: 'Fractional CTO FAQ | Calgary & Alberta | LVRGWRKS' },
   description: 'The questions owners actually ask about fractional CTO engagements, pricing basis, timelines, and scope in Calgary and across Alberta.',
   alternates: { canonical: '/faq' },
+  openGraph: {
+    title: 'The questions owners actually ask about fractional CTO engagements',
+    description: 'Straight answers on pricing basis, why we price against value instead of hours, Canadian data residency, grants, timelines, and what happens to your team.',
+    url: '/faq',
+    siteName: 'LVRGWRKS',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630 }],
+  },
 };
 
 const faqSchema = {
