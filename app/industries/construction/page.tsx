@@ -158,6 +158,41 @@ export default function ConstructionPage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Construction Operations Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Can we integrate Procore and our accounting system instead of replacing them?</h3>
+                <p className="text-brand-slate leading-relaxed">Usually yes, and that is almost always the cheaper answer. Most construction companies in this band run a project management system, an accounting system and a set of spreadsheets that were never designed to talk to each other. The cost is not the software. It is the hours your project managers spend reconciling them. We build the layer that connects what you already have. Rip and replace is the most expensive answer to this problem and it is rarely the right one.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Why do our project management and accounting systems show different job costs?</h3>
+                <p className="text-brand-slate leading-relaxed">Because they were built to answer different questions and nobody decided which one is right. A project system tracks committed cost and percent complete. An accounting system tracks what has been invoiced and paid. Change orders are where the two usually part company, because profit gets calculated differently on each side. The fix is not picking a winner. It is deciding which system owns which number, then making the handoff between them automatic so the answer stops depending on who you ask.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What is a proper invoice under Alberta's prompt payment rules?</h3>
+                <p className="text-brand-slate leading-relaxed">It is a defined list of contents, and getting it wrong means the payment clock never starts. Under the Prompt Payment and Construction Lien Act a proper invoice carries your name and business address, the invoice date, the period the work covers, a description of the work, the amount, the payment terms, the payee's name, title and contact, and a statement declaring it a proper invoice. Proper invoices are due at least every 31 days. Once an owner receives one they have 28 calendar days to pay, and 14 calendar days to give notice if they dispute it. Downstream is where most systems come apart. You pay each subcontractor within 7 days of being paid, but if the owner pays nothing and gives no notice you still owe your subcontractors within 35 days of that invoice going in, whether you were paid or not. Every one of those is a date a system can track from the moment an invoice is created. Most companies this size are tracking them by eye.</p>
+                <p className="text-brand-slate text-sm leading-relaxed mt-4">
+                  Source: Government of Alberta, <a href="https://www.alberta.ca/prompt-payment-rules-for-construction-industry" target="_blank" rel="noopener noreferrer" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">prompt payment rules for the construction industry</a>. Summarised as at August 2026. The Act was further amended effective 1 April 2025. General information only, not legal advice, and not a substitute for it. Confirm the current requirements and get advice on your own contracts before relying on this.
+                </p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does construction process automation cost?</h3>
+                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost. The retainer is set at roughly a third of the annual value the work creates, so the starting point is what reporting and coordination overhead is costing you across your active projects. The Leverage Audit puts a number on that in 60 minutes, before you commit to anything.</p>
+              </div>
+            </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including how we price against value rather than hours, what happens to what we build if you stop working with us, and what the first 60 days actually look like.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
