@@ -157,6 +157,41 @@ export default function PropertyManagementPage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Property Management Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How many doors can one property manager handle?</h3>
+                <p className="text-brand-slate leading-relaxed">It depends far less on the number of doors than on how much coordination sits between your systems. The published ranges are wide because they are measuring two different things at once: the work that genuinely needs a property manager, and the work of moving information between a property management platform, an accounting system, a maintenance workflow and an inbox. The first grows slowly with the portfolio. The second compounds, because every new door adds relationships rather than just units. Companies that automate the routing find the ceiling moves, and the honest version of the answer is that any benchmark quoted without naming the systems behind it is not telling you much.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Can Yardi be integrated with QuickBooks and our other systems?</h3>
+                <p className="text-brand-slate leading-relaxed">Yes, and it is one of the more common requests we see. Most published guidance on this covers Yardi Kube rather than Voyager or Breeze, which is why it rarely matches what a mid-market operator is actually running. The work is the same in principle: decide which system owns each number, then make the handoff between them automatic so nobody is re-keying vendor invoices or rebuilding owner statements by hand each month. The platform is rarely the problem. Everything happening around it usually is.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we make sure we never miss an Alberta deposit or rent increase deadline?</h3>
+                <p className="text-brand-slate leading-relaxed">By making the dates a system obligation rather than a person's memory, because Alberta gives you several and they are unforgiving. A security deposit has to be in an interest-bearing trust account at an Alberta institution within two banking days of the time you collect it. When a tenant gives up possession you have 10 days to return the deposit, or provide a statement of account, or give an estimate of the deductions, and a final statement with any money owing is due within 30 days of the tenancy ending. Rent cannot rise until 365 days after the tenancy started or the last increase, whichever is later, never during a fixed term, and a month-to-month tenancy needs three full tenancy months of written notice, which is not the same thing as 90 days. Condominium management brokerages file fiscal year-end reports with the Real Estate Council of Alberta within three months of their year end, including a declaration when there were no trust transactions at all. Every one of those is date-triggered with defined inputs, which is precisely what a system holds better than a spreadsheet and a reminder.</p>
+                <p className="text-brand-slate text-sm leading-relaxed mt-4">
+                  Sources: Government of Alberta, <a href="https://www.alberta.ca/information-for-landlords-and-tenants" target="_blank" rel="noopener noreferrer" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">information for landlords and tenants</a>, and the Real Estate Council of Alberta. Summarised as at August 2026. General information only, not legal advice, and not a substitute for it. Confirm the current requirements and get advice on your own situation before relying on this.
+                </p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does property management automation cost?</h3>
+                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost. The retainer is set at roughly a third of the annual value the work creates. The first build is live within 60 days, and you get a report every 30 days documenting hours recovered and return against the retainer, so the payback is visible from month one rather than argued about at renewal.</p>
+              </div>
+            </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including how we work across multiple platforms, who owns what we build, and what the first 60 days involve.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">

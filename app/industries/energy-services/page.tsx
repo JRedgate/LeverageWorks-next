@@ -158,6 +158,38 @@ export default function EnergyServicesPage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Energy Services Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we stop re-keying field tickets into OpenInvoice, Ariba and Fieldglass?</h3>
+                <p className="text-brand-slate leading-relaxed">By building the translation once instead of doing it by hand every time. The major operators each mandate their own supplier portal and they are not the same one. OpenInvoice, Ariba and SAP Fieldglass all turn up in this market, each with its own coding rules and its own attachment standard. Serve three customers and you are satisfying three sets of requirements from one field ticket signed at a lease. No software removes that, because the requirement belongs to your customer rather than to you. What can change is how many times a person retypes the same information to meet three formats, and in most energy services back offices that is the single largest piece of recoverable work.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Why do our field tickets get rejected, and what does that cost?</h3>
+                <p className="text-brand-slate leading-relaxed">Usually because the customer's AFE, cost centre or contract number was not captured correctly at the moment the ticket was signed, or the signed backup did not travel with it. The cost is rarely the correction. It is the delay, because a rejected invoice does not restart a clock, it means the clock never started. Capture is the fixable part, including offline in the field where there is no signal, but it has to happen at the wellsite with the customer's own coding attached. That is why office-side automation on its own does not fix this.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we get paid faster on oilfield service work?</h3>
+                <p className="text-brand-slate leading-relaxed">Shorten the distance between a signed ticket and an accepted invoice, because that is where the time actually goes. Payment terms in this market typically start from the date an invoice is submitted successfully, not from the date the work was done. Every day a ticket sits unsigned, or bounces back for a missing AFE, is a day before that clock even starts. The two answers this market usually offers are to factor your receivables at a discount or to buy a bigger platform. Fixing the ticket-to-invoice path is the cheaper one, and going into a quarter thinned by breakup, that timing is what matters.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does field ticket to invoice automation cost?</h3>
+                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost, and the minimum term is three months from go-live. The retainer is set at roughly a third of the annual value the work creates. For most energy services companies the value is not only labour. It is the hours spent re-entering tickets, chasing approvals and correcting rejected invoices, plus what the payment delay costs in working capital. The Leverage Audit puts a figure on both.</p>
+              </div>
+            </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including who owns what we build, how we price against value rather than hours, and what happens after the first 60 days.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">

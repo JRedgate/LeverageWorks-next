@@ -157,6 +157,38 @@ export default function ManufacturingPage() {
         </div>
       </section>
 
+
+      {/* FAQ */}
+      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Common Questions</span>
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Manufacturing Operations Questions, Answered</h2>
+            <div className="space-y-8">
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Why does our ERP not do what we bought it for?</h3>
+                <p className="text-brand-slate leading-relaxed">Because an ERP records what happened. It rarely reaches the place the data starts. Production output, quality results, equipment status and labour hours are captured on the floor across terminals, paper logs and spreadsheets, then re-entered by someone into the system of record. The gap between the floor and the ERP is where the manual work lives, and it is usually invisible in the business case because nobody counted it. Adding modules to the ERP does not close that gap. Connecting the systems on either side of it does.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Should we replace our ERP or integrate what we already have?</h3>
+                <p className="text-brand-slate leading-relaxed">Integrate first, and prove the constraint before you spend. The question is usually framed as replace or upgrade, which quietly assumes the ERP is the problem. Often it is not. Whether you run Business Central, SYSPRO, Epicor or something older and heavily customised, the real question is whether information moving between that system and the plant floor still requires a person. A replacement that does not close that gap moves the same problem into a newer system, on a longer timeline and a larger budget.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does it cost to connect our ERP to the plant floor?</h3>
+                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost. The retainer is set at roughly a third of the annual value the work creates rather than against a licence count or an implementation estimate, which is what makes the number predictable. Most integration quotes you will see are scoped against the number of connections. Ours is scoped against what the manual work between those systems is costing you now, and the Leverage Audit produces that figure before anything is committed.</p>
+              </div>
+              <div className="border-b border-gray-100 pb-8">
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we know the automation actually paid for itself?</h3>
+                <p className="text-brand-slate leading-relaxed">You get a report every 30 days documenting labour hours recovered, how the automation is performing, and rolling return against what you are paying. That is a deliberate choice rather than a courtesy. Most automation return is argued after the fact from a model built before the work started, which is why so few of these projects can prove anything at renewal. Measuring monthly from month one means the number is either there or it is not, and you see it either way.</p>
+              </div>
+            </div>
+            <p className="text-brand-slate leading-relaxed mt-10">
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what happens to your team when the work is rebuilt, where your data goes, and why the first build is scoped to 60 days.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
