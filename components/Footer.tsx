@@ -8,7 +8,7 @@ export const Footer: React.FC = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         <div className="md:col-span-3">
           <Link href="/" className="flex items-center gap-3 mb-6 group">
-            <LwSymbol color="#FFFFFF" className="w-8 h-8" />
+            <LwSymbol color="#FFFFFF" dotColor="#94A3B8" className="w-8 h-8" />
             <span className="font-display font-bold text-xl tracking-tight text-white group-hover:text-brand-gold transition-colors">LVRGWRKS</span>
           </Link>
           <p className="text-gray-400 max-w-sm leading-relaxed text-sm mb-4">Your operating partner inside the business. We rebuild how the work flows and prove the return every 30 days, for mid-market operators across Alberta and Western Canada.</p>
