@@ -24,6 +24,8 @@ interface DropdownItem {
   href: string;
 }
 
+const DARK_HERO_ROUTES = ['/contact'];
+
 interface NavbarProps {
   onContactClick: () => void;
 }
@@ -80,12 +82,24 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150);
   };
 
+  // Routes whose hero is dark and therefore sits behind the transparent navbar.
+  // Everything in this bar is styled for a light background, so on these routes
+  // the logo renders navy on navy and the links sit at 1.72 to 1. Add a route
+  // here whenever a new page gets a dark hero.
+  const onDark = !isScrolled && DARK_HERO_ROUTES.includes(pathname);
+
+  const linkIdle = onDark
+    ? 'text-gray-300 hover:text-white'
+    : 'text-brand-slate hover:text-brand-navy';
+  const linkOn = onDark ? 'text-white' : 'text-brand-navy';
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'bg-white/95 border-b border-gray-200 py-4 backdrop-blur-sm shadow-sm' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-6 md:px-16 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-4 group" aria-label="LeverageWorks Home">
-          <LwSymbol className="w-10 h-10 transition-transform group-hover:scale-105" />
-          <span className={`font-display font-bold text-xl tracking-tight transition-opacity duration-300 ${isScrolled ? 'opacity-100 text-brand-navy' : 'opacity-0'}`}>
+          <LwSymbol className="w-10 h-10 transition-transform group-hover:scale-105"
+            color={onDark ? '#FFFFFF' : undefined} dotColor={onDark ? '#94A3B8' : undefined} />
+          <span className={`font-display font-bold text-xl tracking-tight transition-opacity duration-300 ${isScrolled ? 'opacity-100 text-brand-navy' : onDark ? 'opacity-100 text-white' : 'opacity-0'}`}>
             LVRGWRKS
           </span>
         </Link>
@@ -94,7 +108,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
         <div className="hidden lg:flex items-center gap-6">
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => handleMouseEnter('services')} onMouseLeave={handleMouseLeave}>
-            <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(servicesItems) ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+            <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(servicesItems) ? linkOn : linkIdle}`}>
               Services
               <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''}`} />
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isDropdownActive(servicesItems) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -112,7 +126,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
           {/* Industries Dropdown */}
           <div className="relative" onMouseEnter={() => handleMouseEnter('industries')} onMouseLeave={handleMouseLeave}>
-            <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(industriesItems) ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+            <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(industriesItems) ? linkOn : linkIdle}`}>
               Industries
               <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'industries' ? 'rotate-180' : ''}`} />
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isDropdownActive(industriesItems) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
@@ -128,47 +142,47 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             </div>
           </div>
 
-          <Link href="/firm" className={`text-sm font-medium transition-colors relative group ${isActive('/firm') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/firm" className={`text-sm font-medium transition-colors relative group ${isActive('/firm') ? linkOn : linkIdle}`}>
             Firm
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/firm') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/capabilities" className={`text-sm font-medium transition-colors relative group ${isActive('/capabilities') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/capabilities" className={`text-sm font-medium transition-colors relative group ${isActive('/capabilities') ? linkOn : linkIdle}`}>
             Capabilities
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/capabilities') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/impact" className={`text-sm font-medium transition-colors relative group ${isActive('/impact') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/impact" className={`text-sm font-medium transition-colors relative group ${isActive('/impact') ? linkOn : linkIdle}`}>
             Impact
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/impact') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/coordination-tax-calculator" className={`text-sm font-medium transition-colors relative group ${isActive('/coordination-tax-calculator') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/coordination-tax-calculator" className={`text-sm font-medium transition-colors relative group ${isActive('/coordination-tax-calculator') ? linkOn : linkIdle}`}>
             Calculator
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/coordination-tax-calculator') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/insights" className={`text-sm font-medium transition-colors relative group ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/insights" className={`text-sm font-medium transition-colors relative group ${isActive('/insights') || pathname.startsWith('/insights/') ? linkOn : linkIdle}`}>
             Insights
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
-          <Link href="/faq" className={`text-sm font-medium transition-colors relative group ${isActive('/faq') ? 'text-brand-navy' : 'text-brand-slate hover:text-brand-navy'}`}>
+          <Link href="/faq" className={`text-sm font-medium transition-colors relative group ${isActive('/faq') ? linkOn : linkIdle}`}>
             FAQ
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/faq') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
 
-          <div className="h-6 w-[1px] bg-gray-200 mx-2"></div>
+          <div className={`h-6 w-[1px] mx-2 ${onDark ? 'bg-white/25' : 'bg-gray-200'}`}></div>
 
-          <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="text-brand-slate hover:text-brand-navy transition-all transform hover:scale-110" aria-label="LinkedIn Profile">
+          <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className={`transition-all transform hover:scale-110 ${linkIdle}`} aria-label="LinkedIn Profile">
             <LinkedInIcon className="w-5 h-5" />
           </a>
 
-          <Link href="/contact" className={`ml-2 px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wide transition-all shadow-md hover:shadow-lg ${isActive('/contact') ? 'bg-brand-gold text-brand-navy' : 'bg-brand-navy text-white hover:bg-brand-slate'}`}>
+          <Link href="/contact" className={`ml-2 px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wide transition-all shadow-md hover:shadow-lg ${isActive('/contact') ? 'bg-brand-gold text-brand-navy' : onDark ? 'bg-white text-brand-navy hover:bg-brand-gold' : 'bg-brand-navy text-white hover:bg-brand-slate'}`}>
             Contact
           </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <button className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5" onClick={() => setIsMobileOpen(!isMobileOpen)} aria-label={isMobileOpen ? 'Close menu' : 'Open menu'} aria-expanded={isMobileOpen}>
-          <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? 'opacity-0' : ''}`} />
-          <span className={`block w-6 h-0.5 bg-brand-navy transition-all duration-300 ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${onDark ? 'bg-white' : 'bg-brand-navy'} ${isMobileOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${onDark ? 'bg-white' : 'bg-brand-navy'} ${isMobileOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-0.5 transition-all duration-300 ${onDark ? 'bg-white' : 'bg-brand-navy'} ${isMobileOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
