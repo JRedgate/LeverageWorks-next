@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { LwSymbol } from './Logo';
+import { publishedSystemsDecisions } from '@/content/systems-decisions/registry';
+
+const systemsDecisions = publishedSystemsDecisions();
 
 export const Footer: React.FC = () => (
   <footer className="bg-brand-navy text-white pt-20 pb-10">
@@ -22,6 +25,16 @@ export const Footer: React.FC = () => (
             <li><Link href="/digital-transformation-consulting" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Digital Transformation</Link></li>
             <li><Link href="/business-process-automation" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Business Process Automation</Link></li>
           </ul>
+          {systemsDecisions.length > 0 && (
+            <>
+              <h4 className="text-[10px] tracking-[0.3em] uppercase mt-10 mb-6 text-brand-gold font-bold">Systems decisions</h4>
+              <ul className="space-y-3 text-sm text-gray-400">
+                {systemsDecisions.map((entry) => (
+                  <li key={entry.slug}><Link href={`/${entry.slug}`} className="hover:text-white transition-colors hover:translate-x-1 inline-block">{entry.footerLabel}</Link></li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
         <div className="md:col-span-2">
           <h4 className="text-[10px] tracking-[0.3em] uppercase mb-6 text-brand-gold font-bold">Industries</h4>
