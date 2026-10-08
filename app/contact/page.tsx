@@ -73,7 +73,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Leverage Audit Requested</h3>
                   <p className="text-brand-slate leading-relaxed mb-8">
-                    Thank you for reaching out. A LVRGWRKS strategist will be in touch within 24 hours to schedule your free 60-minute Leverage Audit.
+                    Thanks for reaching out. We&apos;ll reply within one business day to set up your free 60-minute Leverage Audit.
                   </p>
                   <Link href="/" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
                     Return Home

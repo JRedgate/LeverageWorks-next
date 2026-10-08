@@ -2,13 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useBriefing } from '@/components/BriefingProvider';
 import type { Metadata } from 'next';
 import { RelatedReading } from '@/components/RelatedReading';
 
 export default function FractionalCTOCalgaryPage() {
-  const { openBriefing } = useBriefing();
-
   return (
     <>
       <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-surface">

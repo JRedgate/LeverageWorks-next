@@ -2,7 +2,6 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { useBriefing } from '@/components/BriefingProvider';
 import { RelatedReading } from '@/components/RelatedReading';
 
 type Industry = 'Construction' | 'Energy Services' | 'Manufacturing' | 'Property Management' | 'Other';
@@ -38,7 +37,6 @@ const COORDINATION_OVERHEAD_RATE = 0.30;
 const RECOVERABLE_RATE = 0.50;
 
 export default function CalculatorPage() {
-  const { openBriefing } = useBriefing();
   const [officeStaff, setOfficeStaff] = useState<number | ''>(25);
   const [industry, setIndustry] = useState<Industry>('Construction');
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
@@ -370,12 +368,12 @@ export default function CalculatorPage() {
                       <p className="text-gray-400 text-sm leading-relaxed italic">{currentSeverity.roiMath}</p>
                     </div>
 
-                    <button
-                      onClick={() => openBriefing()}
+                    <Link
+                      href="/leverage-audit"
                       className="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
                     >
                       Request Free Leverage Audit
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
@@ -457,12 +455,12 @@ export default function CalculatorPage() {
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">60 minutes. No cost. No commitment. We map your highest-friction workflows, put a precise dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <button
-              onClick={() => openBriefing()}
+            <Link
+              href="/leverage-audit"
               className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
             >
               Request Free Leverage Audit
-            </button>
+            </Link>
             <Link
               href="/fractional-cto-calgary"
               className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"

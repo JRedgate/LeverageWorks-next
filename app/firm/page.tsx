@@ -2,11 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useBriefing } from '@/components/BriefingProvider';
 
 export default function FirmPage() {
-  const { openBriefing } = useBriefing();
-
   return (
     <>
       {/* Hero */}
@@ -145,12 +142,12 @@ export default function FirmPage() {
             Start with a free 60-minute Leverage Audit. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends. No cost. No commitment. No generic presentation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <button
-              onClick={() => openBriefing()}
+            <Link
+              href="/leverage-audit"
               className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
             >
               Request Free Leverage Audit
-            </button>
+            </Link>
             <Link
               href="/capabilities"
               className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"

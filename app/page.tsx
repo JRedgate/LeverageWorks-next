@@ -4,15 +4,13 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Hero } from '@/components/Hero';
-import { useBriefing } from '@/components/BriefingProvider';
 
 export default function HomePage() {
-  const { openBriefing } = useBriefing();
   const router = useRouter();
 
   return (
     <>
-      <Hero onCtaClick={() => openBriefing()} onSecondCtaClick={() => router.push('/coordination-tax-calculator')} />
+      <Hero onSecondCtaClick={() => router.push('/coordination-tax-calculator')} />
 
       {/* The Problem */}
       <section className="py-20 md:py-32 bg-brand-navy text-white">
@@ -245,9 +243,9 @@ export default function HomePage() {
             60 minutes. No cost. No commitment. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends. You leave with a clear picture of where your operations are costing you more than they should, regardless of whether we work together.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <button onClick={() => openBriefing()} className="bg-brand-navy text-white px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all shadow-xl hover:shadow-brand-gold/20">
+            <Link href="/leverage-audit" className="bg-brand-navy text-white px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all shadow-xl hover:shadow-brand-gold/20">
               Request Free Leverage Audit
-            </button>
+            </Link>
             <Link href="/firm" className="text-brand-navy text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
               Read The Firm Thesis
             </Link>

@@ -26,11 +26,7 @@ interface DropdownItem {
 
 const DARK_HERO_ROUTES = ['/contact'];
 
-interface NavbarProps {
-  onContactClick: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
+export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);

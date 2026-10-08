@@ -4,11 +4,10 @@ import React from 'react';
 import Link from 'next/link';
 
 interface HeroProps {
-  onCtaClick: () => void;
   onSecondCtaClick: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onCtaClick, onSecondCtaClick }) => (
+export const Hero: React.FC<HeroProps> = ({ onSecondCtaClick }) => (
   <header className="relative pt-40 pb-32 md:pt-56 md:pb-48 overflow-hidden bg-brand-surface">
     <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
     <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
@@ -26,10 +25,10 @@ export const Hero: React.FC<HeroProps> = ({ onCtaClick, onSecondCtaClick }) => (
           Revenue grew. Margin did not move with it, and headcount climbed to hold the operation together. That gap is the coordination tax: the labour your team burns every day moving work and information between systems and people that do not line up. It is the biggest single reason a growing company adds revenue without adding margin, and it never shows up on a report. LVRGWRKS comes in as your operating partner, finds exactly where the margin is leaking, rebuilds how the work flows, and stays to prove the return every 30 days. Built for owner-led mid-market operators in Alberta and Western Canada, 20 to 250 people and $5M to $150M in revenue.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button onClick={onCtaClick} className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-slate transition-all shadow-lg hover:shadow-brand-navy/20 group">
+          <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-slate transition-all shadow-lg hover:shadow-brand-navy/20 group">
             Request Free Leverage Audit
             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </button>
+          </Link>
           <button onClick={onSecondCtaClick} className="bg-white border border-gray-200 text-brand-navy px-10 py-4 rounded-lg font-bold text-sm hover:border-brand-navy/30 hover:bg-gray-50 transition-all text-center">
             See What It Is Costing You
           </button>

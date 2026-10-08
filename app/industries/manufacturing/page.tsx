@@ -2,11 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useBriefing } from '@/components/BriefingProvider';
 
 export default function ManufacturingPage() {
-  const { openBriefing } = useBriefing();
-
   return (
     <>
       {/* Hero */}
