@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
 import { AnalyticsEvents } from '@/components/AnalyticsEvents';
-import { BriefingProvider } from '@/components/BriefingProvider';
 import { ClientLayout } from '@/components/ClientLayout';
 import { Footer } from '@/components/Footer';
 import './globals.css';
@@ -95,12 +94,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-brand-navy font-sans antialiased selection:bg-brand-gold selection:text-white">
-        <BriefingProvider>
-          <ClientLayout>
-            {children}
-          </ClientLayout>
-          <Footer />
-        </BriefingProvider>
+        <ClientLayout>
+          {children}
+        </ClientLayout>
+        <Footer />
         <Analytics />
         <AnalyticsEvents />
         <Script

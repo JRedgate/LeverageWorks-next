@@ -2,12 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useBriefing } from '@/components/BriefingProvider';
 import { RelatedReading } from '@/components/RelatedReading';
 
 export default function EnergyServicesPage() {
-  const { openBriefing } = useBriefing();
-
   return (
     <>
       {/* Hero */}
