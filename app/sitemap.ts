@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { publishedSystemsDecisions } from '@/content/systems-decisions/registry';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.lvrgwrks.com';
@@ -27,6 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/industries/energy-services', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/property-management', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/construction', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Systems-decision pages appear here only once their registry entry is
+    // published. See content/systems-decisions/registry.ts.
+    ...publishedSystemsDecisions().map((entry) => ({
+      path: `/${entry.slug}`,
+      priority: entry.priority,
+      changeFrequency: entry.changeFrequency,
+    })),
   ];
 
   return routes.map((route) => ({
