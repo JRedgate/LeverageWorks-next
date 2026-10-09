@@ -118,6 +118,7 @@ export default function WhyTransformationsFailArticle() {
         items={[
           { href: '/digital-transformation-consulting', title: 'Digital transformation consulting', blurb: 'How we approach transformation when the operating model is the real constraint.' },
           { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+          { href: '/system-went-live-nothing-got-faster', title: 'The system went live and nothing got faster', blurb: 'How to find out why, and fix it without starting over.' },
         ]}
       />
     </>

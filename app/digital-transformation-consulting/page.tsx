@@ -223,6 +223,7 @@ export default function DigitalTransformationPage() {
         items={[
           { href: '/insights/why-digital-transformations-fail', title: 'Why digital transformations fail', blurb: 'They fail on process and ownership, not technology. What to do instead.' },
           { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
+          { href: '/system-went-live-nothing-got-faster', title: 'The system went live and nothing got faster', blurb: 'How to find out why, and fix it without starting over.' },
         ]}
       />
     </>

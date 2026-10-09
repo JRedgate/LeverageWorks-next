@@ -26,16 +26,18 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 |---|---|---|---|---|
 | 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
 | 2 | `job-costing-change-orders-contractors` | approved 8 Oct | yes | **live 9 Oct** |
-| 3 | `system-went-live-nothing-got-faster` | written, **not approved** | no | no |
+| 3 | `system-went-live-nothing-got-faster` | approved 9 Oct | yes | **live 9 Oct** |
 | 4 | `business-central-acumatica-netsuite` | not written | no | no |
 | 5 | `property-management-systems-alberta` | not written | no | no |
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
 
-Pages 1 and 2 each shipped on their own deploy, per the brief's
+Pages 1, 2 and 3 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console
-without the other confounding it.
+without the others confounding it.
 
-Page 3's copy exists but is not approved. Do not build it until it is.
+Page 3 carries no sources block. Its copy file's `## Sources` section reads
+"None", so the optional `sources` field is omitted rather than set to an empty
+list.
 
 Page 4 is the one that needs the comparison table. See the known gap at the
 foot of this file.
