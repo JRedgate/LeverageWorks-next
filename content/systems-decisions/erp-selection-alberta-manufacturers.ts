@@ -3,7 +3,10 @@ import type { SystemsDecisionContent } from './types';
 /**
  * Transcribed verbatim from
  * C:\LVRGWRKS-marketing\site-copy-2026-10\erp-selection-alberta-manufacturers.md
- * status: APPROVED BY FOUNDER 8 Oct 2026.
+ * status: APPROVED BY FOUNDER 8 Oct 2026, ready to publish.
+ *
+ * Built but not yet published: its registry entry is still { published: false }.
+ * Publishing is a Phase 3 step and each page ships on its own deploy.
  *
  * Do not edit the copy here. Edits go in the copy file and are transcribed back.
  * The copy file's closing "Internal links to add pointing at this page" and

@@ -79,12 +79,14 @@ One edit, in `registry.ts`. Flip the slug's entry from `{ published: false }` to
 ```ts
 'erp-selection-alberta-manufacturers': {
   published: true,
-  footerLabel: 'ERP selection',
+  footerLabel: 'ERP for Manufacturers',
   priority: 0.8,
   changeFrequency: 'monthly',
   copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/erp-selection-alberta-manufacturers.md',
 },
 ```
+
+**The footer label is not a free choice.** All six are set in the Phase 3 table of `CLAUDE-CODE-BRIEF-SEARCH-2026-10-08.md` (set 9 Oct 2026): title case, two to four words, matching the existing Expertise and Industries columns. Take the label from there, not from the page's h1. Labels for the unwritten pages stand unless their copy file says otherwise.
 
 That single change drops the `noindex` meta tag, adds the footer link under "Systems decisions", and adds the sitemap entry. The discriminated union means TypeScript refuses `published: true` without a footer label and the approved copy file's path, so a publish cannot half-apply.
 
