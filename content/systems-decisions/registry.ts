@@ -67,7 +67,13 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/system-went-live-nothing-got-faster.md',
   },
-  'business-central-acumatica-netsuite': { published: false },
+  'business-central-acumatica-netsuite': {
+    published: true,
+    footerLabel: 'Comparing ERP Systems',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-central-acumatica-netsuite.md',
+  },
   'property-management-systems-alberta': { published: false },
   'funding-systems-automation-alberta-2026': { published: false },
 };

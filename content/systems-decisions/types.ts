@@ -41,6 +41,54 @@ export interface QuestionAndAnswer {
   answer: AnswerBlock[];
 }
 
+/**
+ * One body row of the comparison table: the copy file's first-column text,
+ * then one cell per product column.
+ *
+ * `cells` is a homomorphic mapped type over the column tuple, so it has exactly
+ * as many entries as there are column headings. Transcribing a seven-row table
+ * by hand is the one place in this format where a single dropped cell would
+ * shift a whole row one column to the left and still compile, so the arity is
+ * the compiler's job rather than the reviewer's. Same reasoning as the
+ * discriminated union in registry.ts.
+ */
+export interface ComparisonRow<C extends readonly string[] = readonly string[]> {
+  /** Rendered as a th with scope="row". Plain text, no markdown. */
+  label: string;
+  /** One cell per column heading, in column order. */
+  cells: { [K in keyof C]: InlineText };
+}
+
+/** Section 4. Present only on pages whose copy file carries a table. */
+export interface ComparisonTable<C extends readonly string[] = readonly string[]> {
+  /** The copy file's own section heading, transcribed. */
+  heading: string;
+  /**
+   * The copy file's "Table caption:" line, rendered above the table.
+   * It sits outside the table's scroll container on purpose, so it stays
+   * readable at a phone width without scrolling sideways to finish a sentence.
+   */
+  caption: InlineText;
+  /**
+   * The product column headings. The copy file's leading corner cell is empty
+   * and stays empty, because the row headings below it name themselves.
+   */
+  columns: C;
+  rows: ComparisonRow<C>[];
+}
+
+/**
+ * Declares a page's comparison table, inferring the column tuple so every row
+ * is counted against the column headings at compile time. Call this in the
+ * content file rather than annotating the field by hand, which would widen the
+ * tuple to string[] and lose the count.
+ */
+export function comparisonTable<const C extends readonly string[]>(
+  table: ComparisonTable<C>
+): ComparisonTable {
+  return table;
+}
+
 export interface SourceItem {
   /** Source name as the copy file writes it, for example "BDC, LIFT program page". */
   name: string;
@@ -116,11 +164,11 @@ export interface SystemsDecisionContent {
   questions: QuestionAndAnswer[];
 
   /**
-   * Section 4, the optional comparison table, is not implemented. Deferred on
-   * founder instruction 8 Oct 2026 until the copy for
-   * business-central-acumatica-netsuite arrives, which is the only page that
-   * needs it. See README.md.
+   * Section 4, optional. Built 9 Oct 2026 with the copy for
+   * business-central-acumatica-netsuite, the only one of the six pages whose
+   * copy file carries a table. Declare it with comparisonTable() above.
    */
+  comparison?: ComparisonTable;
 
   /** Section 5. */
   firstStep: {

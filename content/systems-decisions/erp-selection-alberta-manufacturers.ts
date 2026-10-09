@@ -206,5 +206,17 @@ export const content: SystemsDecisionContent = {
       title: 'Coordination Tax Calculator',
       blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
     },
+    // Added 9 Oct 2026 on the instruction in the "Internal links to add
+    // pointing at this page" section of
+    // C:\LVRGWRKS-marketing\site-copy-2026-10\business-central-acumatica-netsuite.md,
+    // with the anchor text and blurb that file gives. The only change this page
+    // has had since its own copy was approved, and it is a link, not a word of
+    // its prose. This page's own copy file is unamended, so the provenance for
+    // this one item lives in page 4's file.
+    {
+      href: '/business-central-acumatica-netsuite',
+      title: 'Business Central, Acumatica or NetSuite',
+      blurb: 'How each one is priced, sold and supported, side by side.',
+    },
   ],
 };
