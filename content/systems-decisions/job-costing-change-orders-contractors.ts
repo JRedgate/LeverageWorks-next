@@ -17,9 +17,13 @@ export const content: SystemsDecisionContent = {
     'Change order money is lost on site, not in billing. How Alberta contractors stop losing margin they already earned on extra work.',
 
   hero: {
+    // Derived from this page's own frontmatter title, in the site's existing
+    // pill format. Not new copy. Change the words here if you want different ones.
+    eyebrow: 'Job Costing and Change Orders - Alberta Contractors',
     h1: 'Job costing and change orders for Alberta contractors',
-    subhead:
+    subhead: [
       'Most contractors try to fix change orders in the office: better billing, better software, a stricter project manager. But the money is rarely lost in the office. It is lost in the first ten minutes, on site, when someone says yes to extra work and no record gets made. Everything after that is the office trying to rebuild a record that never existed.',
+    ],
     ctaLabel: 'Request Free Leverage Audit',
   },
 

@@ -82,8 +82,13 @@ export interface SystemsDecisionContent {
   hero: {
     /** The page's only h1. Copy file frontmatter `h1`. */
     h1: string;
-    /** One paragraph, per the brief. */
-    subhead: InlineText;
+    /**
+     * Lead paragraphs under the h1. The brief specifies one. The site's own
+     * hero convention across the four service pages and the four industry
+     * pages is two, which is why this is an array: a second paragraph is a
+     * one-line copy edit, not a template change.
+     */
+    subhead: InlineText[];
     /** The locked CTA string. The href is fixed by the component, not by content. */
     ctaLabel: string;
     /** Pill above the h1. Omit unless the copy file supplies the words. */

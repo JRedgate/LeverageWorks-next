@@ -29,6 +29,15 @@ import type { SystemsDecisionContent } from '@/content/systems-decisions/types';
  */
 const AUDIT_HREF = '/leverage-audit';
 
+/**
+ * The secondary hero CTA. Every service and industry page runs a two-button
+ * hero row, and seven of the nine point the outlined button at /capabilities
+ * with this exact label. Both strings are existing site copy, not new words,
+ * which is why they are consts here rather than content fields.
+ */
+const SECONDARY_CTA_HREF = '/capabilities';
+const SECONDARY_CTA_LABEL = 'View Capabilities';
+
 const INLINE_LINK =
   'text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors';
 
@@ -70,16 +79,31 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               {hero.h1}
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-3xl mb-10">
-              {renderInline(hero.subhead, 'hero-sub')}
-            </p>
-            <Link
-              href={AUDIT_HREF}
-              className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm inline-flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group"
-            >
-              {hero.ctaLabel}
-              <ArrowIcon />
-            </Link>
+            {hero.subhead.map((para, i) => (
+              <p
+                key={i}
+                className={`text-brand-slate text-xl leading-relaxed max-w-2xl ${
+                  i === hero.subhead.length - 1 ? 'mb-10' : 'mb-6'
+                }`}
+              >
+                {renderInline(para, `hero-sub-${i}`)}
+              </p>
+            ))}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href={AUDIT_HREF}
+                className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group"
+              >
+                {hero.ctaLabel}
+                <ArrowIcon />
+              </Link>
+              <Link
+                href={SECONDARY_CTA_HREF}
+                className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all"
+              >
+                {SECONDARY_CTA_LABEL}
+              </Link>
+            </div>
           </div>
         </div>
       </header>

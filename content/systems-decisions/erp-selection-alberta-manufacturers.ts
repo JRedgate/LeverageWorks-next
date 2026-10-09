@@ -17,9 +17,13 @@ export const content: SystemsDecisionContent = {
     'Before you sign an ERP contract, settle how a job moves from quote to invoice. Vendor-neutral help for owner-led Alberta manufacturers.',
 
   hero: {
+    // Derived from this page's own frontmatter title, in the site's existing
+    // pill format. Not new copy. Change the words here if you want different ones.
+    eyebrow: 'ERP Selection - Alberta Manufacturers',
     h1: 'Choosing an ERP for an Alberta manufacturer',
-    subhead:
+    subhead: [
       'Most ERP decisions start with a vendor demo. The ones that work start with how a job actually moves through your shop, from the first quote to the final invoice. Settle that first and the software choice gets much easier, and much cheaper to get right.',
+    ],
     ctaLabel: 'Request Free Leverage Audit',
   },
 
