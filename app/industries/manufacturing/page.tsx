@@ -208,6 +208,7 @@ export default function ManufacturingPage() {
       <RelatedReading
         items={[
           { href: '/erp-selection-alberta-manufacturers', title: 'Choosing an ERP for an Alberta manufacturer', blurb: 'What to settle before you sit through a vendor demo.' },
+          { href: '/business-central-acumatica-netsuite', title: 'Business Central, Acumatica or NetSuite', blurb: 'How each one is priced, sold and supported, side by side.' },
         ]}
       />
     </>

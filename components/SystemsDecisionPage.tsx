@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from './RelatedReading';
 import { AnswerBody, renderInline } from './RichText';
-import type { SystemsDecisionContent } from '@/content/systems-decisions/types';
+import type { ComparisonTable, SystemsDecisionContent } from '@/content/systems-decisions/types';
 
 /**
  * The shared template for the systems-decision pages.
@@ -17,9 +17,8 @@ import type { SystemsDecisionContent } from '@/content/systems-decisions/types';
  * from an approved copy file. The only strings in this file are structural
  * punctuation and the connective "accessed" in the sources list.
  *
- * Section 4 of the brief, the optional comparison table, is not implemented.
- * Deferred on founder instruction 8 Oct 2026. See
- * content/systems-decisions/README.md.
+ * Section 4, the optional comparison table, is built as of 9 Oct 2026 and
+ * renders only for a page whose content object carries one.
  */
 
 /**
@@ -60,8 +59,91 @@ function displayUrl(url: string): string {
   return url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 }
 
+/**
+ * Section 4. A real HTML table, with the copy file's first column as row
+ * headings and its product columns as column headings, so the relationship
+ * between a cell and the two things it describes survives a screen reader.
+ *
+ * Mobile behaviour, per the copy file's build note: the table keeps a minimum
+ * width and scrolls inside its own container. The container is the only thing
+ * that scrolls sideways, never the page, which is why the caption sits outside
+ * it and the min-width lives on the table rather than on any ancestor.
+ *
+ * The scroll container is a focusable labelled region, so a keyboard user can
+ * reach and scroll it. It borrows the section heading and the caption for its
+ * accessible name and description rather than carrying any invented words.
+ */
+function ComparisonSection({ table }: { table: ComparisonTable }) {
+  const headingId = 'comparison-heading';
+  const captionId = 'comparison-caption';
+
+  return (
+    <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+      <div className="container mx-auto px-6 md:px-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 id={headingId} className="font-display font-bold text-4xl text-brand-navy mb-4">
+            {table.heading}
+          </h2>
+          <p id={captionId} className="text-brand-slate text-sm leading-relaxed mb-8 max-w-2xl">
+            {renderInline(table.caption, 'cmp-caption')}
+          </p>
+          <div
+            role="region"
+            aria-labelledby={headingId}
+            tabIndex={0}
+            className="overflow-x-auto rounded-lg border border-gray-200"
+          >
+            <table
+              aria-labelledby={headingId}
+              aria-describedby={captionId}
+              className="w-full min-w-[44rem] border-collapse text-left align-top"
+            >
+              <thead>
+                <tr className="bg-brand-surface">
+                  {/* The copy file's corner cell is empty, so it stays a plain cell
+                      rather than a th that would claim to head something. */}
+                  <td className="border-b border-gray-200 p-4" />
+                  {table.columns.map((column, i) => (
+                    <th
+                      key={`cmp-col-${i}`}
+                      scope="col"
+                      className="border-b border-l border-gray-200 p-4 font-display font-bold text-brand-navy text-base"
+                    >
+                      {column}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {table.rows.map((row, i) => (
+                  <tr key={`cmp-row-${i}`} className="align-top">
+                    <th
+                      scope="row"
+                      className="border-b border-gray-200 p-4 font-semibold text-brand-navy text-sm w-48 last:border-b-0"
+                    >
+                      {row.label}
+                    </th>
+                    {row.cells.map((cell, j) => (
+                      <td
+                        key={`cmp-cell-${i}-${j}`}
+                        className="border-b border-l border-gray-200 p-4 text-brand-slate text-sm leading-relaxed"
+                      >
+                        {renderInline(cell, `cmp-${i}-${j}`)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function SystemsDecisionPage({ content }: { content: SystemsDecisionContent }) {
-  const { hero, whoThisIsFor, questions, firstStep, sources } = content;
+  const { hero, whoThisIsFor, questions, comparison, firstStep, sources } = content;
 
   return (
     <>
@@ -169,6 +251,9 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
           </div>
         </div>
       </section>
+
+      {/* Section 4. Comparison table, optional */}
+      {comparison && <ComparisonSection table={comparison} />}
 
       {/* Section 5. What the first step looks like */}
       <section className="py-20 md:py-32 bg-brand-navy text-white">

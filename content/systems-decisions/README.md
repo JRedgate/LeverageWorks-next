@@ -27,7 +27,7 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 | 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
 | 2 | `job-costing-change-orders-contractors` | approved 8 Oct | yes | **live 9 Oct** |
 | 3 | `system-went-live-nothing-got-faster` | approved 9 Oct | yes | **live 9 Oct** |
-| 4 | `business-central-acumatica-netsuite` | not written | no | no |
+| 4 | `business-central-acumatica-netsuite` | approved 9 Oct | yes | **live 9 Oct** |
 | 5 | `property-management-systems-alberta` | not written | no | no |
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
 
@@ -39,8 +39,9 @@ Page 3 carries no sources block. Its copy file's `## Sources` section reads
 "None", so the optional `sources` field is omitted rather than set to an empty
 list.
 
-Page 4 is the one that needs the comparison table. See the known gap at the
-foot of this file.
+Page 4 is the page the comparison table was deferred for. It is built, and the
+table is section 4 of the template. See "The comparison table" at the foot of
+this file.
 
 ## Copy file to TS mapping
 
@@ -58,9 +59,11 @@ Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
 | `## Questions and answers` heading | `questionsEyebrow` |
 | each `### Question` | one `questions[]` entry: `question` plus `answer` blocks |
 | `## What the first step looks like` | `firstStep.heading`, `.body` paragraphs, `.ctaLabel` |
+| `## Comparison table` section | `comparison`, declared with `comparisonTable()`. Its `Table caption:` line is `caption`, its header row is `columns` (the empty corner cell is dropped), and each body row is one `rows[]` entry |
 | `## Sources` items | `sources.items`, one `SourceItem` each |
 | `## Related reading` pipe lines, `href \| title \| blurb` | `relatedReading[]` |
 | `## Internal links to add pointing at this page` | **Not page copy.** Phase 3 instructions, applied to other pages |
+| `## Build notes for Claude Code` | **Not page copy.** Build instructions, for example which words carry a link |
 | `## Notes for founder review` | **Not page copy.** Never transcribed |
 
 ### Answer blocks
@@ -116,8 +119,54 @@ That single change drops the `noindex` meta tag, adds the footer link under "Sys
 
 Still manual per the brief, after flipping the registry: the editorial internal links from existing pages that the copy file lists, using the anchor text given.
 
-## Known gap: the comparison table
+## The comparison table
 
-Section 4 of the brief, the optional comparison table, is **not implemented.** Deferred on founder instruction, 8 October 2026, until the copy for `business-central-acumatica-netsuite` arrives. That is the only one of the six pages that needs it, and building it against no real copy would have meant either inventing a comparison or shipping placeholder text, both of which the brief forbids.
+Section 4 of the brief. **Built 9 October 2026** with the copy for
+`business-central-acumatica-netsuite`, which is the only one of the six copy
+files that carries a table. It had been deferred since 8 October on founder
+instruction, because building it against no copy meant either inventing a
+comparison or shipping placeholder text, both of which the brief forbids.
 
-**Do not build it from page 2's software paragraph.** `job-costing-change-orders-contractors.md` names Procore, Jonas, Sage 300 CRE, Viewpoint Vista and Business Central, but its own founder note says they are "named neutrally, with no claims about what any one of them does". Turning that into a feature matrix would manufacture product claims nobody approved.
+Declare one with `comparisonTable()` from `types.ts` rather than annotating the
+field by hand:
+
+```ts
+comparison: comparisonTable({
+  heading: 'Comparison table',
+  caption: 'How the three are priced, sold and packaged, ...',
+  columns: ['Business Central', 'Acumatica', 'NetSuite'],
+  rows: [
+    { label: 'Made by', cells: ['Microsoft', 'Acumatica', 'Oracle'] },
+  ],
+}),
+```
+
+`comparisonTable()` infers the column tuple, so **every row is counted against
+the column headings at compile time.** A row transcribed with a cell missing is
+a type error naming that row, not a table whose cells have silently shifted one
+column left. That is the one place in this format where a hand-transcription
+slip would otherwise compile and still be wrong, which is why the count is the
+compiler's job. Annotating the field as `ComparisonTable` by hand widens the
+tuple to `string[]` and loses the check, so do not.
+
+How it renders, per the build note in page 4's copy file:
+
+- The caption sits **outside** the table's scroll container, so it stays
+  readable at a phone width instead of needing a sideways scroll to finish a
+  sentence. Do not move it into a `<caption>` element for that reason.
+- The first column renders as `<th scope="row">` and the product columns as
+  `<th scope="col">`. The copy file's empty corner cell stays an empty `<td>`.
+- The table keeps `min-w-[44rem]` and scrolls inside its own `overflow-x-auto`
+  container. **The container scrolls sideways, never the page.** Keep the
+  minimum width on the table itself, never on an ancestor, or the page starts
+  scrolling with it.
+- The container is a focusable region labelled by the section heading and
+  described by the caption, so a keyboard user can reach and scroll it. It
+  borrows those two for its accessible name rather than carrying any invented
+  words, which the brief does not supply.
+
+**Do not build a table from page 2.** `job-costing-change-orders-contractors.md`
+names Procore, Jonas, Sage 300 CRE, Viewpoint Vista and Business Central, but
+its own founder note says they are "named neutrally, with no claims about what
+any one of them does". Turning that into a feature matrix would manufacture
+product claims nobody approved.
