@@ -46,7 +46,13 @@ export type PublishedSystemsDecision = Extract<RegistryEntry, { published: true 
 };
 
 export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntry> = {
-  'erp-selection-alberta-manufacturers': { published: false },
+  'erp-selection-alberta-manufacturers': {
+    published: true,
+    footerLabel: 'ERP for Manufacturers',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/erp-selection-alberta-manufacturers.md',
+  },
   'job-costing-change-orders-contractors': { published: false },
   'system-went-live-nothing-got-faster': { published: false },
   'business-central-acumatica-netsuite': { published: false },

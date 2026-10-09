@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function ManufacturingPage() {
   return (
@@ -203,6 +204,12 @@ export default function ManufacturingPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+
+      <RelatedReading
+        items={[
+          { href: '/erp-selection-alberta-manufacturers', title: 'Choosing an ERP for an Alberta manufacturer', blurb: 'What to settle before you sit through a vendor demo.' },
+        ]}
+      />
     </>
   );
 }
