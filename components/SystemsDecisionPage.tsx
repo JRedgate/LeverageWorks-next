@@ -76,8 +76,27 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
                 <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">{hero.eyebrow}</span>
               </div>
             )}
+            {/*
+              Two-line h1, matching every other service and industry hero: a
+              navy first line, then an italic slate second line under a break.
+              The break is presentational, the h1's text content is still the
+              whole phrase.
+            */}
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
-              {hero.h1}
+              {hero.h1Lines.map((line, i) =>
+                i === 0 ? (
+                  // The trailing space is deliberate and invisible. These h1s
+                  // split a keyword phrase across the break ("Choosing an ERP"
+                  // / "for an Alberta manufacturer"), and without it a text
+                  // extractor that ignores <br> reads "ERPfor".
+                  <React.Fragment key={i}>{line}{' '}</React.Fragment>
+                ) : (
+                  <React.Fragment key={i}>
+                    <br />
+                    <span className="text-brand-slate italic">{line}</span>
+                  </React.Fragment>
+                )
+              )}
             </h1>
             {hero.subhead.map((para, i) => (
               <p

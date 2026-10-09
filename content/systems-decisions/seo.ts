@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { SystemsDecisionContent } from './types';
+import { heroH1Text, type SystemsDecisionContent } from './types';
 import { isPublished } from './registry';
 
 /**
@@ -19,7 +19,7 @@ export function buildSystemsDecisionMetadata(content: SystemsDecisionContent): M
     description: content.metaDescription,
     alternates: { canonical: path },
     openGraph: {
-      title: content.ogTitle ?? content.hero.h1,
+      title: content.ogTitle ?? heroH1Text(content),
       description: content.ogDescription ?? content.metaDescription,
       url: path,
       siteName: 'LVRGWRKS',

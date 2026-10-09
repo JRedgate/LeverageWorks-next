@@ -1,4 +1,4 @@
-import type { SystemsDecisionContent } from './types';
+import { heroH1Text, type SystemsDecisionContent } from './types';
 
 const SITE = 'https://www.lvrgwrks.com';
 
@@ -27,7 +27,7 @@ export function buildSystemsDecisionGraph(content: SystemsDecisionContent) {
       {
         '@type': 'Service',
         '@id': `${url}#service`,
-        name: content.serviceName ?? content.hero.h1,
+        name: content.serviceName ?? heroH1Text(content),
         description: content.serviceDescription ?? content.metaDescription,
         url,
         areaServed: { '@type': 'State', name: 'Alberta' },
@@ -48,7 +48,7 @@ export function buildSystemsDecisionGraph(content: SystemsDecisionContent) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: content.breadcrumbLabel ?? content.hero.h1,
+            name: content.breadcrumbLabel ?? heroH1Text(content),
             item: url,
           },
         ],

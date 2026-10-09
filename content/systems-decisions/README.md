@@ -27,8 +27,8 @@ Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
 | frontmatter `slug` | `slug` |
 | frontmatter `title` | `seoTitle`, used verbatim as the absolute page title |
 | frontmatter `meta_description` | `metaDescription` |
-| frontmatter `h1` | `hero.h1` |
-| `## Hero subhead` paragraph | `hero.subhead` |
+| frontmatter `h1_line_1`, `h1_line_2` | `hero.h1Lines`. Line 1 navy, line 2 in a `text-brand-slate italic` span under a break, with a space kept before the break so the heading reads as one sentence |
+| `## Hero subhead` paragraphs | `hero.subhead`, an array. The site's hero convention is two paragraphs |
 | `Primary CTA label: ...` line | `hero.ctaLabel`. The href is fixed in the component, not here |
 | `## Who this is for` heading and bullets | `whoThisIsFor.heading` and `.items` |
 | `## Questions and answers` heading | `questionsEyebrow` |

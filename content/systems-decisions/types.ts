@@ -80,8 +80,13 @@ export interface SystemsDecisionContent {
 
   /** Section 1. */
   hero: {
-    /** The page's only h1. Copy file frontmatter `h1`. */
-    h1: string;
+    /**
+     * The page's only h1, as one or two lines. The site's hero convention is
+     * two: a navy first line, then an italic slate second line under a break.
+     * The lines are joined with a space for og:title, Service.name and the
+     * breadcrumb label, so the full phrase is what machines read.
+     */
+    h1Lines: string[];
     /**
      * Lead paragraphs under the h1. The brief specifies one. The site's own
      * hero convention across the four service pages and the four industry
@@ -138,4 +143,12 @@ export interface SystemsDecisionContent {
   relatedReading: RelatedLink[];
   /** Override for RelatedReading's own default heading. */
   relatedReadingHeading?: string;
+}
+
+/**
+ * The full h1 as one string. Used wherever a machine reads the heading rather
+ * than a person: og:title, schema.org Service.name, the breadcrumb leaf.
+ */
+export function heroH1Text(content: SystemsDecisionContent): string {
+  return content.hero.h1Lines.join(' ');
 }
