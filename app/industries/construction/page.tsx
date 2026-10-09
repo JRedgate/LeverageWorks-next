@@ -211,6 +211,7 @@ export default function ConstructionPage() {
         items={[
           { href: '/insights/hidden-cost-of-estimating', title: 'The hidden cost of estimating', blurb: 'What three project files revealed about where estimating time actually goes.' },
           { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
+          { href: '/job-costing-change-orders-contractors', title: 'Job costing and change orders', blurb: 'Why extra work goes unbilled and job cost runs a month behind.' },
         ]}
       />
     </>
