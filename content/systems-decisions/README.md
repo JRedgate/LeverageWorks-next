@@ -18,6 +18,26 @@ Chosen over MDX because the repo has no markdown files, no MDX dependencies and 
 
 Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx` and `components/JsonLd.tsx`.
 
+## Build status, 9 October 2026
+
+`registry.ts` is the authority. This table is a convenience and can go stale.
+
+| # | Slug | Copy file | Page built | Published |
+|---|---|---|---|---|
+| 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
+| 2 | `job-costing-change-orders-contractors` | approved 8 Oct | yes | no |
+| 3 | `system-went-live-nothing-got-faster` | not written | no | no |
+| 4 | `business-central-acumatica-netsuite` | not written | no | no |
+| 5 | `property-management-systems-alberta` | not written | no | no |
+| 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
+
+Page 2 is built, approved and one registry line from going live. It is held
+back only by the brief's one-page-per-deploy rule, so each page's effect can
+be read in Search Console on its own.
+
+Page 4 is the one that needs the comparison table. See the known gap at the
+foot of this file.
+
 ## Copy file to TS mapping
 
 Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
