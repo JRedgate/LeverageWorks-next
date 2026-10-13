@@ -114,6 +114,17 @@ export function AnswerBody({ blocks, keyPrefix }: { blocks: AnswerBlock[]; keyPr
           );
         }
 
+        if (block.kind === 'quote') {
+          return (
+            <blockquote
+              key={key}
+              className="border-l-2 border-brand-gold pl-6 my-6 text-brand-navy text-lg md:text-xl font-display italic leading-relaxed"
+            >
+              {renderInline(block.text, key)}
+            </blockquote>
+          );
+        }
+
         return (
           <ol
             key={key}

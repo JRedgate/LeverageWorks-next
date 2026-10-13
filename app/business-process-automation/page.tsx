@@ -219,6 +219,7 @@ export default function BusinessProcessAutomationPage() {
           { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
           { href: '/coordination-tax-calculator', title: 'Coordination Tax Calculator', blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.' },
           { href: '/erp-selection-alberta-manufacturers', title: 'Choosing an ERP for an Alberta manufacturer', blurb: 'What to settle before you sit through a vendor demo.' },
+          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
         ]}
       />
     </>

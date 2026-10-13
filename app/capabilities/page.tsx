@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function CapabilitiesPage() {
   return (
@@ -182,6 +183,12 @@ export default function CapabilitiesPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        items={[
+          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
