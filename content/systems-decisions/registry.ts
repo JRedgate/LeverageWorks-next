@@ -74,7 +74,13 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-central-acumatica-netsuite.md',
   },
-  'property-management-systems-alberta': { published: false },
+  'property-management-systems-alberta': {
+    published: true,
+    footerLabel: 'Property Management Systems',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/property-management-systems-alberta.md',
+  },
   'funding-systems-automation-alberta-2026': { published: false },
 };
 

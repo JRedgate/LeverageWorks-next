@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { RelatedReading } from '@/components/RelatedReading';
 
 export default function PropertyManagementPage() {
   return (
@@ -206,6 +207,11 @@ export default function PropertyManagementPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+      <RelatedReading
+        items={[
+          { href: '/property-management-systems-alberta', title: 'Property management systems', blurb: 'Where the work breaks before you switch software, and what to check in Alberta.' },
+        ]}
+      />
     </>
   );
 }
