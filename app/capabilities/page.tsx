@@ -184,12 +184,6 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
-      <RelatedReading
-        items={[
-          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
-        ]}
-      />
-
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
@@ -204,6 +198,18 @@ export default function CapabilitiesPage() {
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
+
+      {/*
+        Moved below the closing CTA on 13 Oct 2026, a ride-along with Phase
+        4.2b, per the SETTLED 13 Oct note that every page carrying both a
+        related-reading block and a closing CTA puts the block last. The item
+        and its wording are unchanged.
+      */}
+      <RelatedReading
+        items={[
+          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
+        ]}
+      />
     </>
   );
 }
