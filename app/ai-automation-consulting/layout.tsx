@@ -1,20 +1,22 @@
 import type { Metadata } from 'next';
+import { JsonLd } from '@/components/JsonLd';
+import { buildSystemsDecisionMetadata } from '@/content/systems-decisions/seo';
+import { buildSystemsDecisionGraph } from '@/content/systems-decisions/schema';
+import { content } from '@/content/systems-decisions/ai-automation-consulting';
 
-export const metadata: Metadata = {
-  title: { absolute: 'AI Automation Consulting Alberta | LVRGWRKS' },
-  description: 'AI automation consulting for mid-market companies in Alberta and Western Canada. Stop paying people to move data between systems that should talk.',
-  alternates: { canonical: '/ai-automation-consulting' },
-  openGraph: {
-    title: 'Stop paying people to move data between systems that should talk',
-    description: 'AI automation for mid-market companies in Alberta and Western Canada. Operations first, tools second. Automation is used where the diagnosis calls for it, never as the default.',
-    url: '/ai-automation-consulting',
-    siteName: 'LVRGWRKS',
-    locale: 'en_CA',
-    type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
-  },
-};
+/**
+ * The title, the meta description, the canonical and both openGraph strings
+ * are the same strings this file carried before the Phase 4.2b rebuild. They
+ * now come from the content object so the copy file stays the single source.
+ * The page gains the Service and BreadcrumbList nodes it had never carried.
+ */
+export const metadata: Metadata = buildSystemsDecisionMetadata(content);
 
 export default function AIAutomationConsultingLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={buildSystemsDecisionGraph(content)} />
+      {children}
+    </>
+  );
 }

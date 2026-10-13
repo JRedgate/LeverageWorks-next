@@ -28,6 +28,10 @@ export const SYSTEMS_DECISION_SLUGS = [
   // Expertise column renders in its existing order: Business Process
   // Automation, then Process Improvement.
   'business-process-automation',
+  // Phase 4.2b, the second already-live rebuild. Its footer link stays
+  // hand-written, so unlike 4.2a its position in this list has no effect on
+  // the footer. See FooterGroup below.
+  'ai-automation-consulting',
   'operations-process-improvement-alberta',
 ] as const;
 
@@ -43,7 +47,22 @@ export type SitemapFrequency = 'weekly' | 'monthly' | 'yearly';
  * sit under Expertise: it is a core service, not a systems decision, and its
  * copy file says so.
  */
-export type FooterGroup = 'expertise' | 'systems-decisions';
+/**
+ * 'hand-written' is the third case, added 13 Oct 2026 for Phase 4.2b: the
+ * ledger renders no footer link for the page, because the footer already
+ * carries one that predates the ledger and sits in a position the ledger
+ * cannot reproduce. `/ai-automation-consulting` is the second item in the
+ * hand-written Expertise list in components/Footer.tsx, between two pages that
+ * are not in this ledger at all, and its copy file says footer placement is
+ * unchanged. Phase 4.2a's link was the last of the hand-written ones, so it
+ * could simply move here. This one cannot.
+ *
+ * `footerLabel` is still required for it, and still records the text of that
+ * hand-written link, so the two cannot drift apart unnoticed. Do not reach for
+ * this value for a new page: a page the ledger publishes should be a page the
+ * ledger links.
+ */
+export type FooterGroup = 'expertise' | 'systems-decisions' | 'hand-written';
 
 /**
  * Setting published: true requires the footer label, the sitemap values and
@@ -122,6 +141,19 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     priority: 0.8,
     changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-process-automation.md',
+  },
+  // Already live before it entered this ledger, like 4.2a, so publishing it
+  // changes nothing about its indexability. Its footer link is the
+  // hand-written one in the Expertise column, which this entry does not
+  // render and does not move. Its sitemap entry does come from here, and the
+  // hand-written one was removed in the same commit.
+  'ai-automation-consulting': {
+    published: true,
+    footerLabel: 'AI Automation Consulting',
+    footerGroup: 'hand-written',
+    priority: 0.8,
+    changeFrequency: 'monthly',
+    copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/ai-automation-consulting.md',
   },
   'operations-process-improvement-alberta': {
     published: true,

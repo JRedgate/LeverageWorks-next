@@ -9,7 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/leverage-audit', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/fractional-cto-calgary', priority: 0.9, changeFrequency: 'monthly' as const },
-    { path: '/ai-automation-consulting', priority: 0.8, changeFrequency: 'monthly' as const },
+    // /ai-automation-consulting was listed here by hand until 13 Oct 2026.
+    // Phase 4.2b moved it into the registry below, at the same priority and
+    // change frequency, so it appears exactly once. Its footer link, unlike
+    // its sitemap entry, is still the hand-written one.
     { path: '/digital-transformation-consulting', priority: 0.8, changeFrequency: 'monthly' as const },
     // /business-process-automation was listed here by hand until 13 Oct 2026.
     // Phase 4.2a moved it into the registry below, at the same priority and

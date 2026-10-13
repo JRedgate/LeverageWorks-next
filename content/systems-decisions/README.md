@@ -55,6 +55,30 @@ the body instead, was followed. Giving this one page a single-button hero would
 mean changing the shared template, which does not belong in a deploy that ships
 one page. One founder call away either direction.
 
+**Phase 4.2b is the second already-live rebuild**, and it is where `FooterGroup`
+gained a third value. 4.2a's hand-written footer link was the last of the four
+in the Expertise column, so moving it into the ledger reproduced the column
+exactly. `/ai-automation-consulting` is the **second** of the four, between two
+pages that are not in this ledger at all, and the ledger renders its links
+after the hand-written block. There is no declaration order that puts it back
+in row two. Its copy file says footer placement is unchanged, so the link stays
+hand-written and its registry entry carries `footerGroup: 'hand-written'`,
+which renders nothing. Its **sitemap** entry does come from the ledger, and the
+hand-written one was removed in the same commit, so each of the two still
+appears exactly once. `footerLabel` is still required and still records the
+hand-written link text, so the two cannot drift apart unnoticed.
+
+Its hero needed no decision. Its copy file carries the same "the template hero
+has one CTA" note as 4.2a, but the button it asks to drop **is** the template's
+fixed View Capabilities button, so the rebuilt hero carries the same two buttons
+the live page already had.
+
+It is also the first page here to ship with a **ride-along**: `/capabilities`
+had its related-reading block moved below its closing CTA in the same commit,
+per the SETTLED 13 Oct note, with no wording change. That move was going to
+travel with page 6, which is dropped. Verified as a pure reorder: the same 114
+lines of visible text, and the metadata and JSON-LD unchanged.
+
 | # | Slug | Copy file | Page built | Published |
 |---|---|---|---|---|
 | 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
@@ -65,6 +89,7 @@ one page. One founder call away either direction.
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
 | 4.1 | `operations-process-improvement-alberta` | approved 13 Oct | yes | **live 13 Oct** |
 | 4.2a | `business-process-automation` | approved 13 Oct | yes | **rebuilt 13 Oct**, live since before this ledger |
+| 4.2b | `ai-automation-consulting` | approved 13 Oct | yes | **rebuilt 13 Oct**, live since before this ledger |
 
 Pages 1 to 5 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console
