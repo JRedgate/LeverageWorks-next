@@ -18,7 +18,7 @@ Chosen over MDX because the repo has no markdown files, no MDX dependencies and 
 
 Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx` and `components/JsonLd.tsx`.
 
-## Build status, 9 October 2026
+## Build status, 13 October 2026
 
 `registry.ts` is the authority. This table is a convenience and can go stale.
 
@@ -28,12 +28,13 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 | 2 | `job-costing-change-orders-contractors` | approved 8 Oct | yes | **live 9 Oct** |
 | 3 | `system-went-live-nothing-got-faster` | approved 9 Oct | yes | **live 9 Oct** |
 | 4 | `business-central-acumatica-netsuite` | approved 9 Oct | yes | **live 9 Oct** |
-| 5 | `property-management-systems-alberta` | not written | no | no |
+| 5 | `property-management-systems-alberta` | **drafted 9 Oct, not approved** | no | no |
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
 
-Pages 1, 2 and 3 each shipped on their own deploy, per the brief's
+Pages 1 to 4 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console
-without the others confounding it.
+without the others confounding it. All four were submitted for indexing on
+13 October 2026.
 
 Page 3 carries no sources block. Its copy file's `## Sources` section reads
 "None", so the optional `sources` field is omitted rather than set to an empty
@@ -42,6 +43,17 @@ list.
 Page 4 is the page the comparison table was deferred for. It is built, and the
 table is section 4 of the template. See "The comparison table" at the foot of
 this file.
+
+**Page 5's copy file exists but is a draft.** Its `status:` line reads
+"DRAFT FOR FOUNDER REVIEW 9 Oct 2026. NOT APPROVED. Do not build or publish."
+Build it only once that line says approved. One thing to know before you do:
+its internal-link instruction is a different shape from every page so far.
+`/industries/property-management` has **no related-reading block at all**, so
+that link needs a new `<RelatedReading>` added, placed after the existing
+content and before the closing CTA, rather than one item appended to an
+existing list.
+
+Page 6 has no copy file yet.
 
 ## Copy file to TS mapping
 
