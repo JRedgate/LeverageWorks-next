@@ -31,8 +31,18 @@ export interface NumberedList {
   items: InlineText[];
 }
 
+export interface BlockQuote {
+  kind: 'quote';
+  /**
+   * A verbatim quotation, rendered as a blockquote. Transcribe it exactly as
+   * the copy file writes it, quotation marks and all, including any punctuation
+   * that would be wrong in our own prose. It is someone else's sentence.
+   */
+  text: InlineText;
+}
+
 /** The only block shapes an answer body may contain. */
-export type AnswerBlock = Paragraph | BulletList | NumberedList;
+export type AnswerBlock = Paragraph | BulletList | NumberedList | BlockQuote;
 
 export interface QuestionAndAnswer {
   /** Rendered as an h2. Plain text, no markdown. */

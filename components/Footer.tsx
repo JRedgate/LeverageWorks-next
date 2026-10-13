@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { LwSymbol } from './Logo';
-import { publishedSystemsDecisions } from '@/content/systems-decisions/registry';
+import { publishedInFooterGroup } from '@/content/systems-decisions/registry';
 
-const systemsDecisions = publishedSystemsDecisions();
+const expertisePages = publishedInFooterGroup('expertise');
+const systemsDecisions = publishedInFooterGroup('systems-decisions');
 
 export const Footer: React.FC = () => (
   <footer className="bg-brand-navy text-white pt-20 pb-10">
@@ -24,6 +25,9 @@ export const Footer: React.FC = () => (
             <li><Link href="/ai-automation-consulting" className="hover:text-white transition-colors hover:translate-x-1 inline-block">AI Automation Consulting</Link></li>
             <li><Link href="/digital-transformation-consulting" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Digital Transformation</Link></li>
             <li><Link href="/business-process-automation" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Business Process Automation</Link></li>
+            {expertisePages.map((entry) => (
+              <li key={entry.slug}><Link href={`/${entry.slug}`} className="hover:text-white transition-colors hover:translate-x-1 inline-block">{entry.footerLabel}</Link></li>
+            ))}
           </ul>
           {systemsDecisions.length > 0 && (
             <>
