@@ -232,7 +232,7 @@ export default function AIAutomationConsultingPage() {
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Property Management</h3>
-                <p className="text-brand-slate text-sm leading-relaxed">Billing, maintenance requests, tenant communications, inspection workflows, and owner reporting connected into a single operating layer. We have helped property management firms eliminate multiple planned administrative hires by automating the coordination overhead.</p>
+                <p className="text-brand-slate text-sm leading-relaxed">Billing, maintenance requests, tenant communications, inspection workflows, and owner reporting connected into a single operating layer.</p>
               </div>
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Manufacturing</h3>
