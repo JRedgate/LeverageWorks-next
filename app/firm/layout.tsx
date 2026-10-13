@@ -15,6 +15,26 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://www.lvrgwrks.com/firm#jeremy-redgate',
+  name: 'Jeremy Redgate',
+  jobTitle: 'Founder',
+  image: 'https://www.lvrgwrks.com/jeremy-redgate.jpg',
+  url: 'https://www.lvrgwrks.com/firm',
+  sameAs: ['https://www.linkedin.com/in/jeremyredgate'],
+  worksFor: { '@type': 'Organization', name: 'LVRGWRKS Inc.', url: 'https://www.lvrgwrks.com' },
+};
+
 export default function FirmLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      {children}
+    </>
+  );
 }

@@ -16,7 +16,7 @@ export default function FirmPage() {
               Built by operators, <span className="text-brand-slate italic">for operators.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl font-light">
-              LVRGWRKS was founded in Calgary by someone who spent 20 years watching smart, growing businesses get strangled by the same problem. Revenue grows, headcount grows faster, and the coordination tax quietly eats the margin that growth was supposed to deliver. We built LVRGWRKS to fix it.
+              LVRGWRKS was founded in Calgary by Jeremy Redgate, who spent 20 years watching smart, growing businesses get strangled by the same problem. Revenue grows, headcount grows faster, and the coordination tax quietly eats the margin that growth was supposed to deliver. We built LVRGWRKS to fix it.
             </p>
           </div>
         </div>
@@ -56,6 +56,51 @@ export default function FirmPage() {
                 <p className="text-brand-slate leading-relaxed">
                   If it doesn't move the numbers, we don't build it.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who You Work With */}
+      <section className="py-20 md:py-32 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16 items-start">
+              <div className="md:col-span-2">
+                <img
+                  src="/jeremy-redgate.jpg"
+                  alt="Jeremy Redgate, founder of LVRGWRKS"
+                  width={1024}
+                  height={1004}
+                  className="w-full max-w-[320px] md:max-w-none h-auto rounded-xl"
+                />
+              </div>
+              <div className="md:col-span-3">
+                <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Who You Work With</span>
+                <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-6 leading-tight">
+                  Jeremy Redgate, Founder.
+                </h2>
+                <p className="text-brand-slate leading-relaxed mb-6">
+                  Jeremy leads every LVRGWRKS engagement. He is the person in your Leverage Audit, and the person in the room when the work gets built.
+                </p>
+                <p className="text-brand-slate leading-relaxed mb-6">
+                  Before LVRGWRKS he spent nine years owning an electrical contracting business serving oil and gas facilities across Alberta, carrying the payroll and the P&L, and running projects with crews of up to 125. He has directed a project management office on a $100M+ capital portfolio and delivered $10M+ a year in capital work.
+                </p>
+                <p className="text-brand-slate leading-relaxed mb-6">
+                  He is a Red Seal electrician, a PMP and a 4th Class Power Engineer, and holds an Executive MBA in finance from the Haskayne School of Business. The trades and the finance sit together on purpose. Most of what we fix lives in the gap between the people doing the work and the numbers that measure it.
+                </p>
+                <p className="text-brand-slate leading-relaxed mb-8">
+                  When a project needs a specialist, such as a CRM or ERP implementation partner, we bring one in and tell you who and why before they start.
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/jeremyredgate"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-navy text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"
+                >
+                  Connect on LinkedIn
+                </a>
               </div>
             </div>
           </div>
