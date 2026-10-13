@@ -22,6 +22,13 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 
 `registry.ts` is the authority. This table is a convenience and can go stale.
 
+**This directory is no longer only systems-decision pages.** Phase 4.1 publishes
+`operations-process-improvement-alberta` through the same template and the same
+ledger, and it is a core service page, not a systems decision. The
+`SYSTEMS_DECISION_` names are historical and were deliberately left alone:
+renaming seven identifiers across five files does not belong in a deploy that
+ships one page. Rename them when something else brings you into these files.
+
 | # | Slug | Copy file | Page built | Published |
 |---|---|---|---|---|
 | 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
@@ -30,6 +37,7 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 | 4 | `business-central-acumatica-netsuite` | approved 9 Oct | yes | **live 9 Oct** |
 | 5 | `property-management-systems-alberta` | approved 13 Oct | yes | **live 13 Oct** |
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
+| 4.1 | `operations-process-improvement-alberta` | approved 13 Oct | yes | **live 13 Oct** |
 
 Pages 1 to 5 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console
@@ -59,6 +67,9 @@ one-line change if the founder prefers the literal placement.
 
 Page 6 has no copy file yet.
 
+Phase 4.1 is the first page here that is not a systems decision, the first to
+use the blockquote block, and the first listed under Expertise in the footer.
+
 ## Copy file to TS mapping
 
 Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
@@ -77,6 +88,7 @@ Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
 | `## What the first step looks like` | `firstStep.heading`, `.body` paragraphs, `.ctaLabel` |
 | `## Comparison table` section | `comparison`, declared with `comparisonTable()`. Its `Table caption:` line is `caption`, its header row is `columns` (the empty corner cell is dropped), and each body row is one `rows[]` entry |
 | `## Sources` items | `sources.items`, one `SourceItem` each |
+| a quoted sentence a build note marks as a blockquote | one `{ kind: 'quote' }` answer block |
 | `## Related reading` pipe lines, `href \| title \| blurb` | `relatedReading[]` |
 | `## Internal links to add pointing at this page` | **Not page copy.** Phase 3 instructions, applied to other pages |
 | `## Build notes for Claude Code` | **Not page copy.** Build instructions, for example which words carry a link |
@@ -87,10 +99,19 @@ Copy files live in `C:\LVRGWRKS-marketing\site-copy-2026-10\`, one per page.
 An answer is an array of blocks, in copy-file order:
 
 ```ts
-{ kind: 'p',  text: 'A paragraph.' }
-{ kind: 'ul', items: ['First bullet.', 'Second bullet.'] }
-{ kind: 'ol', items: ['First step.', 'Second step.'] }
+{ kind: 'p',     text: 'A paragraph.' }
+{ kind: 'ul',    items: ['First bullet.', 'Second bullet.'] }
+{ kind: 'ol',    items: ['First step.', 'Second step.'] }
+{ kind: 'quote', text: '"A verbatim quotation."' }
 ```
+
+`quote` renders a `<blockquote>`. Use it only where a copy file's build note
+asks for one. **Transcribe the quotation exactly**, quotation marks and all,
+including punctuation that would be wrong in our own prose. It is someone
+else's sentence, and tidying it makes it a paraphrase. Where a quotation
+carries both a double quote and an apostrophe, hold it in a backtick template
+literal rather than escaping either, as `operations-process-improvement-alberta.ts`
+does: a verbatim quotation is the worst place to hide a backslash.
 
 A copy file's `###` question renders as an **`<h2>`** on the page, per the brief. The "Questions and answers" heading renders as the gold eyebrow rather than an `<h2>`, because an `<h2>` section title sitting directly above sibling `<h2>` questions is a broken heading outline.
 
@@ -134,6 +155,20 @@ One edit, in `registry.ts`. Flip the slug's entry from `{ published: false }` to
 That single change drops the `noindex` meta tag, adds the footer link under "Systems decisions", and adds the sitemap entry. The discriminated union means TypeScript refuses `published: true` without a footer label and the approved copy file's path, so a publish cannot half-apply.
 
 Still manual per the brief, after flipping the registry: the editorial internal links from existing pages that the copy file lists, using the anchor text given.
+
+### Which footer column
+
+`footerGroup` is required on every published entry, not defaulted, because the
+column is a positioning decision per page rather than a property of this
+template:
+
+- `'systems-decisions'` lists the page under the **Systems decisions** heading,
+  which the footer renders only when at least one page is in it
+- `'expertise'` appends the page to the existing hand-written **Expertise**
+  column, after Business Process Automation
+
+Phase 4.1 is the first `'expertise'` page. Take the column from the copy file's
+build notes, the same way you take the label from the brief.
 
 ## The comparison table
 
