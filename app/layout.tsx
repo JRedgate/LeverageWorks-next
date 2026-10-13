@@ -75,6 +75,7 @@ const jsonLd = {
     closes: '17:00',
   },
   sameAs: ['https://www.linkedin.com/company/lvrgwrks/'],
+  founder: { '@id': 'https://www.lvrgwrks.com/firm#jeremy-redgate', '@type': 'Person', name: 'Jeremy Redgate' },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

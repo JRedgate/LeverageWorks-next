@@ -76,7 +76,21 @@ export default function LeverageAuditPage() {
               </div>
               <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">The Leverage Audit.</h1>
               <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">A free 60-minute working session where we map your highest-friction workflows, put a real dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
-              <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You leave with a written summary of where your operations are bleeding capacity and what it is costing you. No pitch. No generic presentation. No commitment required.</p>
+              <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-8">You leave with a written summary of where your operations are bleeding capacity and what it is costing you. No pitch. No generic presentation. No commitment required.</p>
+              <div className="flex items-center gap-4 mb-10">
+                <img
+                  src="/jeremy-redgate-square.jpg"
+                  alt="Jeremy Redgate"
+                  width={480}
+                  height={480}
+                  loading="eager"
+                  className="w-16 h-16 shrink-0 rounded-full"
+                />
+                <div>
+                  <p className="text-brand-navy font-semibold">You&apos;ll be meeting Jeremy Redgate</p>
+                  <p className="text-brand-slate text-sm">Founder. Twenty years running operations and capital projects in Alberta.</p>
+                </div>
+              </div>
               <a href="#book" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
                 Request Free Leverage Audit
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
