@@ -88,7 +88,7 @@ export default function FirmPage() {
                   Before LVRGWRKS he spent nine years owning an electrical contracting business serving oil and gas facilities across Alberta, carrying the payroll and the P&L, and running projects with crews of up to 125. He has directed a project management office on a $100M+ capital portfolio and delivered $10M+ a year in capital work.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  He is a Red Seal electrician, a PMP and a 4th Class Power Engineer, and holds an Executive MBA in finance from the Haskayne School of Business. The trades and the finance sit together on purpose. Most of what we fix lives in the gap between the people doing the work and the numbers that measure it.
+                  He is a Red Seal electrician and a PMP, and holds an Executive MBA in finance from the Haskayne School of Business. The trades and the finance sit together on purpose. Most of what we fix lives in the gap between the people doing the work and the numbers that measure it.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-8">
                   When a project needs a specialist, such as a CRM or ERP implementation partner, we bring one in and tell you who and why before they start.
