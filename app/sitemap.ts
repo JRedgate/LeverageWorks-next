@@ -11,7 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/fractional-cto-calgary', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/ai-automation-consulting', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/digital-transformation-consulting', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/business-process-automation', priority: 0.8, changeFrequency: 'monthly' as const },
+    // /business-process-automation was listed here by hand until 13 Oct 2026.
+    // Phase 4.2a moved it into the registry below, at the same priority and
+    // change frequency, so it appears exactly once.
     { path: '/capabilities', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/firm', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/impact', priority: 0.6, changeFrequency: 'monthly' as const },

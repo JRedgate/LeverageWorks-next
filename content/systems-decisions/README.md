@@ -29,6 +29,32 @@ ledger, and it is a core service page, not a systems decision. The
 renaming seven identifiers across five files does not belong in a deploy that
 ships one page. Rename them when something else brings you into these files.
 
+**Phase 4.2a is the first entry for a page that was already live.** It is a
+rebuild of `/business-process-automation` at the same URL, with the same title
+and meta description, so publishing it changes nothing about its indexability.
+What the registry entry does change is where its footer link and its sitemap
+entry come from: both were hand-written, in `components/Footer.tsx` and
+`app/sitemap.ts`, and **both hand-written entries were removed in the same
+commit** so the page keeps exactly one of each. Its slug is declared before
+Phase 4.1 in `SYSTEMS_DECISION_SLUGS` for one reason: the Expertise column then
+renders in the order it already had, Business Process Automation before Process
+Improvement.
+
+The rebuild kept two strings the copy file does not cover, both already live:
+the hero eyebrow pill, and `ogTitle` plus `ogDescription`. They are set
+explicitly in the content file rather than left to the template defaults, which
+would have taken og:title from the new h1 and og:description from the meta
+description. Its copy file says only the h1 and the body change.
+
+It is also the first page here whose hero carries a secondary CTA its copy file
+did not ask for. That file's build note reads "The template hero has one CTA",
+which is not so: the template has always rendered a fixed **View Capabilities**
+button beside the audit CTA, as all six sibling pages do. The note's
+instruction, to drop the old **AI Automation** button and link the AI page from
+the body instead, was followed. Giving this one page a single-button hero would
+mean changing the shared template, which does not belong in a deploy that ships
+one page. One founder call away either direction.
+
 | # | Slug | Copy file | Page built | Published |
 |---|---|---|---|---|
 | 1 | `erp-selection-alberta-manufacturers` | approved 8 Oct | yes | **live 9 Oct** |
@@ -38,6 +64,7 @@ ships one page. Rename them when something else brings you into these files.
 | 5 | `property-management-systems-alberta` | approved 13 Oct | yes | **live 13 Oct** |
 | 6 | `funding-systems-automation-alberta-2026` | not written | no | no |
 | 4.1 | `operations-process-improvement-alberta` | approved 13 Oct | yes | **live 13 Oct** |
+| 4.2a | `business-process-automation` | approved 13 Oct | yes | **rebuilt 13 Oct**, live since before this ledger |
 
 Pages 1 to 5 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console

@@ -24,7 +24,10 @@ export const Footer: React.FC = () => (
             <li><Link href="/fractional-cto-calgary" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Fractional CTO Calgary</Link></li>
             <li><Link href="/ai-automation-consulting" className="hover:text-white transition-colors hover:translate-x-1 inline-block">AI Automation Consulting</Link></li>
             <li><Link href="/digital-transformation-consulting" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Digital Transformation</Link></li>
-            <li><Link href="/business-process-automation" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Business Process Automation</Link></li>
+            {/* Business Process Automation was hand-written here until 13 Oct
+                2026. Phase 4.2a moved it into the registry, which renders it
+                first in the list below, in the same position with the same
+                label. Two sources for one link is how a duplicate ships. */}
             {expertisePages.map((entry) => (
               <li key={entry.slug}><Link href={`/${entry.slug}`} className="hover:text-white transition-colors hover:translate-x-1 inline-block">{entry.footerLabel}</Link></li>
             ))}
