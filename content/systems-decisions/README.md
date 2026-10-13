@@ -33,8 +33,8 @@ Rendered by `components/SystemsDecisionPage.tsx`, with `components/RichText.tsx`
 
 Pages 1 to 5 each shipped on their own deploy, per the brief's
 one-page-per-deploy rule, so each page's effect can be read in Search Console
-without the others confounding it. The first four were submitted for indexing
-on 13 October 2026.
+without the others confounding it. All five were submitted for indexing on
+13 October 2026.
 
 Page 3 carries no sources block. Its copy file's `## Sources` section reads
 "None", so the optional `sources` field is omitted rather than set to an empty
