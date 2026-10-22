@@ -5,7 +5,7 @@ const DESCRIPTION = 'Most transformations fail on process and ownership, not tec
 const SEO_TITLE = 'Why Digital Transformations Fail | Mid-Market | LVRGWRKS';
 const SLUG = '/insights/why-digital-transformations-fail';
 const PUBLISHED = '2026-04-16';
-const MODIFIED  = '2026-06-26';
+const MODIFIED  = '2026-10-22';
 
 export const metadata: Metadata = {
   title: { absolute: SEO_TITLE },

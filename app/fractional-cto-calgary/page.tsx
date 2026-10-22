@@ -247,7 +247,7 @@ export default function FractionalCTOCalgaryPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What is the difference between a fractional CTO and an IT consultant?</h3>
-                <p className="text-brand-slate leading-relaxed">An IT consultant delivers a project and leaves. A fractional CTO is an operating partner inside the business. We diagnose where the work is costing you, redesign how it flows, build the fix, and stay to run it and prove the return every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed">An IT consultant delivers a project and leaves. A fractional CTO is <Link href="/insights/what-does-a-fractional-cto-do" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">an operating partner inside the business</Link>. We diagnose where the work is costing you, redesign how it flows, build the fix, and stay to run it and prove the return every 30 days.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How long is a fractional CTO engagement?</h3>

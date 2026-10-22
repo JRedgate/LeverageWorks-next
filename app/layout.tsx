@@ -99,16 +99,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </ClientLayout>
         <Footer />
         <AnalyticsEvents />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
+        {/* GA4 loads only on the production hostname, so Vercel previews, the
+            *.vercel.app alias and localhost send nothing. Off production
+            window.gtag never exists and every event call is a no-op. */}
         <Script id="ga4-init" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
+            (function () {
+              var host = window.location.hostname;
+              if (host !== 'www.lvrgwrks.com' && host !== 'lvrgwrks.com') return;
+              window.dataLayer = window.dataLayer || [];
+              window.gtag = function () { window.dataLayer.push(arguments); };
+              window.gtag('js', new Date());
+              window.gtag('config', '${GA_MEASUREMENT_ID}');
+              var s = document.createElement('script');
+              s.async = true;
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+              document.head.appendChild(s);
+            })();
           `}
         </Script>
       </body>

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { LwSymbol } from '@/components/Logo';
+import { sendWhenReady } from '@/components/AnalyticsEvents';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgvjrrod';
 
@@ -29,6 +30,7 @@ export default function ContactPage() {
       if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', company: '', role: '', message: '', referredBy: '' });
+        sendWhenReady('contact_form_submit', { page_path: '/contact' });
       } else {
         setStatus('error');
       }
@@ -71,9 +73,9 @@ export default function ContactPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Leverage Audit Requested</h3>
+                  <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Message Received</h3>
                   <p className="text-brand-slate leading-relaxed mb-8">
-                    Thanks for reaching out. We&apos;ll reply within one business day to set up your free 60-minute Leverage Audit.
+                    Thanks for writing. We read every message and reply personally. If a Leverage Audit is the right next step, we will suggest a time.
                   </p>
                   <Link href="/" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
                     Return Home

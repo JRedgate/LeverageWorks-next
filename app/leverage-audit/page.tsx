@@ -1,33 +1,20 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import { sendWhenReady } from '@/components/AnalyticsEvents';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgvjrrod';
 const BOOKING_EMBED_URL =
   'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0rGF_hvzXqPgSzVwcMgSlONFZ6qQFEFvOP38w8DPFBVYWFmTOLTXFac4kwtTbvLj3LTiNCN3Yq?gv=true';
 const BOOKING_SHORT_URL = 'https://calendar.app.google/A4H4KiH9CHsWfSM36';
 
-// GA4 loads afterInteractive, so window.gtag can still be undefined when the
-// calendar iframe finishes loading. audit_booking_view is the denominator for
-// reading this page, so wait for gtag rather than dropping the event.
-function sendWhenReady(event: string, params: Record<string, unknown>) {
-  let tries = 0;
-  const attempt = () => {
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', event, params);
-      return;
-    }
-    tries += 1;
-    if (tries < 20) window.setTimeout(attempt, 300);
-  };
-  attempt();
-}
-
 export default function LeverageAuditPage() {
   const [formData, setFormData] = useState({ name: '', email: '', company: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const bookingViewSent = useRef(false);
 
+  // audit_booking_view is the denominator for reading this page, so it waits
+  // for gtag rather than dropping the event.
   const handleEmbedLoad = () => {
     if (bookingViewSent.current) return;
     bookingViewSent.current = true;

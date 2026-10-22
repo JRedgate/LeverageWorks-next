@@ -50,28 +50,10 @@ export default function WhyTransformationsFailArticle() {
               The villain in most digital transformation failures is not bad software. It is the coordination tax, the overhead that piles up as a company scales and decisions get made at the wrong levels, by the wrong people, on incomplete information. Technology investments made on top of that structure do not reduce the overhead. They add to it.
             </p>
 
-            <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">The three gaps that kill transformations</h2>
-
-            <div className="space-y-6 mb-10">
-              <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">The integration gap</h3>
-                <p className="text-brand-slate leading-relaxed">
-                  When new systems do not connect to existing ones, your team becomes the integration layer. They copy data between platforms. They build spreadsheet bridges. They manually reconcile reports that should agree automatically. The manual work does not disappear after the transformation. It just takes a different form. In many cases it grows, because now there are more systems to keep in sync.
-                </p>
-              </div>
-              <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">The adoption gap</h3>
-                <p className="text-brand-slate leading-relaxed">
-                  Tools bought for features that the team does not use consistently are tools that are not delivering value. Training happens once during implementation and is never reinforced. The system gets used for the basics while the old workarounds quietly persist in parallel. Within a year, the organization has two operational layers running simultaneously: the official one in the new system, and the real one in the spreadsheets and email chains where things actually get decided.
-                </p>
-              </div>
-              <div className="bg-brand-surface p-8 rounded-xl border border-gray-100">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">The accountability gap</h3>
-                <p className="text-brand-slate leading-relaxed">
-                  The consultant who sold the transformation is gone. The implementation partner has moved to the next project. Nobody inside the organization owns the outcome. When the system does not perform as expected, there is no one accountable for closing the gap between what was promised and what was delivered. The organization absorbs the cost and moves on, usually more skeptical of the next technology investment than they were before.
-                </p>
-              </div>
-            </div>
+            <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">Where the value leaks out after go-live</h2>
+            <p className="text-brand-slate leading-relaxed mb-6">
+              Once the new system is live, the value tends to leak out in three places. Systems that do not talk to each other turn your staff into the link between them, the old workarounds carry on beside the new tool, and nobody inside the business owns the result once the implementer moves on. Our page on <Link href="/digital-transformation-consulting" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">digital transformation consulting</Link> sets out each of those gaps and how we close them.
+            </p>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">What the companies getting ROI are doing differently</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
