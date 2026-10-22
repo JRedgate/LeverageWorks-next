@@ -3,9 +3,15 @@ import { publishedSystemsDecisions } from '@/content/systems-decisions/registry'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.lvrgwrks.com';
-  const now = new Date();
-
-  const routes = [
+  // lastModified is set only where a real edit date exists (the insights
+  // layouts' MODIFIED values). Until 22 Oct 2026 every URL carried the build
+  // time, which told Google nothing. Keep these in step with the layouts.
+  const routes: {
+    path: string;
+    priority: number;
+    changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+    lastModified?: string;
+  }[] = [
     { path: '/', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/leverage-audit', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/fractional-cto-calgary', priority: 0.9, changeFrequency: 'monthly' as const },
@@ -24,11 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/coordination-tax-calculator', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/faq', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/insights', priority: 0.7, changeFrequency: 'weekly' as const },
-    { path: '/insights/coordination-tax-mid-market', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/insights/hidden-cost-of-estimating', priority: 0.8, changeFrequency: 'monthly' as const },
-    { path: '/insights/why-digital-transformations-fail', priority: 0.6, changeFrequency: 'yearly' as const },
-    { path: '/insights/what-does-a-fractional-cto-do', priority: 0.6, changeFrequency: 'yearly' as const },
-    { path: '/insights/cost-of-manual-data-entry', priority: 0.6, changeFrequency: 'yearly' as const },
+    { path: '/insights/coordination-tax-mid-market', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-04-20' },
+    { path: '/insights/hidden-cost-of-estimating', priority: 0.8, changeFrequency: 'monthly' as const, lastModified: '2026-08-05' },
+    { path: '/insights/why-digital-transformations-fail', priority: 0.6, changeFrequency: 'yearly' as const, lastModified: '2026-10-22' },
+    { path: '/insights/what-does-a-fractional-cto-do', priority: 0.6, changeFrequency: 'yearly' as const, lastModified: '2026-06-26' },
+    { path: '/insights/cost-of-manual-data-entry', priority: 0.6, changeFrequency: 'yearly' as const, lastModified: '2026-06-26' },
     { path: '/industries/manufacturing', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/energy-services', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/property-management', priority: 0.7, changeFrequency: 'monthly' as const },
@@ -44,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route.path}`,
-    lastModified: now,
+    ...(route.lastModified ? { lastModified: route.lastModified } : {}),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
