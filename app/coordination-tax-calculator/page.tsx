@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
+import { sendWhenReady } from '@/components/AnalyticsEvents';
 
 type Industry = 'Construction' | 'Energy Services' | 'Manufacturing' | 'Property Management' | 'Other';
 
@@ -213,6 +214,12 @@ export default function CalculatorPage() {
       });
       if (response.ok) {
         setEmailSubmitted(true);
+        // No name, company or email goes to GA4.
+        sendWhenReady('calculator_email_submit', {
+          page_path: '/coordination-tax-calculator',
+          industry,
+          severity: results.severity,
+        });
       } else {
         setEmailError('Something went wrong. Please try again or email us directly at jredgate@lvrgwrks.com.');
       }
