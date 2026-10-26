@@ -83,7 +83,8 @@ export const content: SystemsDecisionContent = {
           kind: 'ul',
           items: [
             '**Reading and sorting what comes in.** Purchase orders, invoices, field tickets, change requests and work orders arriving by email, pulled into the right system instead of retyped.',
-            '**Drafting a first version a person checks.** A quote or estimate built from your own past jobs, a weekly report written from the numbers already in your systems.',
+            // The link is from the 26 Oct 2026 indexing brief. The words are the bullet's own.
+            '**Drafting a first version a person checks.** [A quote or estimate built from your own past jobs](/insights/hidden-cost-of-estimating), a weekly report written from the numbers already in your systems.',
             '**Flagging what needs attention.** A job running over budget, a work order nobody has picked up, an invoice that does not match the purchase order.',
             '**Answering routine questions from your own documents**, so your most experienced people stop being the search engine for everyone else.',
           ],
