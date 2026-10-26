@@ -51,7 +51,8 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'Usually both, in that order. A new system records the way work moves through your business. If a job gets re-quoted because estimating and production use different numbers, or a change waits two days for someone to approve it, the new system will record that faithfully and at much higher cost.',
+          // The link is from the 26 Oct 2026 indexing brief. The words are the paragraph's own.
+          text: 'Usually both, in that order. A new system records the way work moves through your business. If a job gets re-quoted because [estimating and production use different numbers](/insights/hidden-cost-of-estimating), or a change waits two days for someone to approve it, the new system will record that faithfully and at much higher cost.',
         },
         {
           kind: 'p',
