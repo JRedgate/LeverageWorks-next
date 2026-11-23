@@ -261,10 +261,5 @@ export const content: SystemsDecisionContent = {
       title: 'Choosing an ERP for an Alberta manufacturer',
       blurb: 'What to settle before you sit through a vendor demo.',
     },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
-    },
   ],
 };

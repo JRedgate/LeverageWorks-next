@@ -139,7 +139,6 @@ export default function CostOfManualDataEntryArticle() {
       <RelatedReading
         items={[
           { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
-          { href: '/coordination-tax-calculator', title: 'Coordination Tax Calculator', blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.' },
         ]}
       />
     </>

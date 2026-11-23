@@ -27,7 +27,7 @@ export const Footer: React.FC = () => (
           <h4 className={headingClass}>How we work</h4>
           <ul className="space-y-3 text-sm text-gray-400">
             <li><Link href={CALL_PAGE} className={linkClass}>The 30-minute call</Link></li>
-            <li><Link href="/coordination-tax-calculator" className={linkClass}>Coordination Tax Calculator</Link></li>
+            <li><Link href="/60-day-test" className={linkClass}>The 60-Day Test</Link></li>
             <li><Link href="/capabilities" className={linkClass}>Capabilities</Link></li>
           </ul>
           {systemsDecisions.length > 0 && (

@@ -252,10 +252,5 @@ export const content: SystemsDecisionContent = {
       title: 'Common questions',
       blurb: 'Data residency, system access, and what happens to your team.',
     },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
-    },
   ],
 };

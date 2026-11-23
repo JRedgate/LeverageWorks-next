@@ -395,12 +395,6 @@ export default function CoordinationTaxArticle() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
                 <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
-                <Link
-                  href="/coordination-tax-calculator"
-                  className="inline-block text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"
-                >
-                  Try the Coordination Tax Calculator
-                </Link>
               </div>
             </div>
           </div>

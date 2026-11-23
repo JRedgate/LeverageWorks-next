@@ -210,10 +210,5 @@ export const content: SystemsDecisionContent = {
       title: 'The hidden cost of estimating',
       blurb: 'What three project files revealed about where estimating time actually goes.',
     },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
-    },
   ],
 };

@@ -202,11 +202,6 @@ export const content: SystemsDecisionContent = {
       title: 'Manufacturing',
       blurb: 'Where mid-market manufacturers lose capacity they cannot get back.',
     },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
-    },
     // Added 9 Oct 2026 on the instruction in the "Internal links to add
     // pointing at this page" section of
     // C:\LVRGWRKS-marketing\site-copy-2026-10\business-central-acumatica-netsuite.md,

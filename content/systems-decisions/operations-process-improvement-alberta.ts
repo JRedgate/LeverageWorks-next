@@ -235,10 +235,5 @@ export const content: SystemsDecisionContent = {
       title: 'The system went live and nothing got faster',
       blurb: 'How to find out why, and fix it without starting over.',
     },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
-    },
   ],
 };

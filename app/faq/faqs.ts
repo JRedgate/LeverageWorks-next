@@ -15,7 +15,7 @@ export const FAQS: Faq[] = [
     q: 'What is the coordination tax?',
     a: [
       'It is the margin and time lost when work and decisions wait on a few people and move badly between departments.',
-      'As a business grows, more decisions, approvals and problems find their way back to the top. Each one that waits on you or a senior leader slows the work. It rarely appears on a report, and it tends to grow with the business. The Coordination Tax Calculator gives you a first estimate in about a minute, with no email needed.',
+      'As a business grows, more decisions, approvals and problems find their way back to the top. Each one that waits on you or a senior leader slows the work. It rarely appears on a report, and it tends to grow with the business.',
     ],
   },
   {

@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: { absolute: 'Coordination Tax Calculator | Alberta Mid-Market | LVRGWRKS' },
   description: 'Quantify what manual coordination is costing your Alberta business each year. A short calculator built for owner-led mid-market operations.',
   alternates: { canonical: '/coordination-tax-calculator' },
+  // Unlisted in Release 0: off every menu, page and the sitemap, and noindex.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'What is coordination costing you? Four inputs, sixty seconds.',
     description: 'Quantify the hidden labour cost your team absorbs every week moving work between systems that do not line up. No email required to see your result.',
@@ -11,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

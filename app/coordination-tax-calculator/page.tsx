@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
-import { sendWhenReady } from '@/components/AnalyticsEvents';
+import { BookCallButton } from '@/components/BookCallButton';
 
 type Industry = 'Construction' | 'Energy Services' | 'Manufacturing' | 'Property Management' | 'Other';
 
@@ -20,20 +20,6 @@ const TOOL_OPTIONS = [
   'Industry-specific software (Procore, Yardi, AppFolio, etc.)',
 ];
 
-type TierName = 'Ignite' | 'Build' | 'Scale';
-
-type TierDefinition = {
-  name: TierName;
-  monthly: number;
-  annual: number;
-};
-
-const TIERS: Record<TierName, TierDefinition> = {
-  Ignite: { name: 'Ignite', monthly: 4500, annual: 54000 },
-  Build: { name: 'Build', monthly: 6500, annual: 78000 },
-  Scale: { name: 'Scale', monthly: 8500, annual: 102000 },
-};
-
 const COORDINATION_OVERHEAD_RATE = 0.30;
 const RECOVERABLE_RATE = 0.50;
 
@@ -42,12 +28,6 @@ export default function CalculatorPage() {
   const [industry, setIndustry] = useState<Industry>('Construction');
   const [selectedTools, setSelectedTools] = useState<string[]>([]);
   const [hourlyCost, setHourlyCost] = useState<number | ''>(75);
-  const [name, setName] = useState<string>('');
-  const [company, setCompany] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [emailSubmitted, setEmailSubmitted] = useState<boolean>(false);
-  const [emailSubmitting, setEmailSubmitting] = useState<boolean>(false);
-  const [emailError, setEmailError] = useState<string>('');
 
   const toggleTool = (tool: string) => {
     setSelectedTools((prev) =>
@@ -67,20 +47,7 @@ export default function CalculatorPage() {
     const isCapped = rawAnnualTax > 2000000;
     const recoverableAmount = annualTax * RECOVERABLE_RATE;
 
-    // Single source of truth. One tier object drives headline, pricing, and ROI math.
-    // Public tiers only: Ignite, Build, Scale.
-    let recommendedTier: TierDefinition;
-    if (recoverableAmount >= 306000 || isCapped) {
-      recommendedTier = TIERS.Scale;
-    } else if (recoverableAmount >= 234000) {
-      recommendedTier = TIERS.Build;
-    } else {
-      recommendedTier = TIERS.Ignite;
-    }
-
-    const actualROI = recoverableAmount / recommendedTier.annual;
-
-    // Severity bands reflect problem scale, independent of tier pricing.
+    // Severity bands reflect problem scale.
     let severity: 'Low' | 'Moderate' | 'High' | 'Severe' = 'Low';
     if (recoverableAmount >= 800000 || isCapped) severity = 'Severe';
     else if (recoverableAmount >= 400000) severity = 'High';
@@ -95,8 +62,6 @@ export default function CalculatorPage() {
       recoverableAmount,
       severity,
       isCapped,
-      recommendedTier,
-      actualROI,
     };
   }, [officeStaff, selectedTools, hourlyCost]);
 
@@ -107,19 +72,8 @@ export default function CalculatorPage() {
       maximumFractionDigits: 0,
     }).format(value);
 
-  const formatROI = (multiplier: number): string => `${multiplier.toFixed(1)}x`;
-
   const getSeverityContent = () => {
-    const { severity, annualTax, recoverableAmount, recommendedTier, actualROI, isCapped } = results;
-
-    // Shared templates. Both lines pull from the same recommendedTier object
-    // so the tier name, monthly cost, and annual cost always match across
-    // the recommendation line and the ROI paragraph.
-    const tierRecommendation = recoverableAmount < 162000
-      ? `At this scale the recoverable value does not yet clear the three to one return we hold ourselves to. The Leverage Audit is still free and still worth an hour, but we would tell you the same thing in the room: the number is not there yet.`
-      : `The ${recommendedTier.name} tier ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is sized for your situation.`;
-
-    const roiMath = `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year. Approximately ${formatCurrency(recoverableAmount)} is recoverable. A ${recommendedTier.name} tier engagement (${formatCurrency(recommendedTier.annual)} annually) delivers approximately ${formatROI(actualROI)} ROI in the first year.`;
+    const { severity, isCapped } = results;
 
     if (severity === 'Severe') {
       return {
@@ -128,10 +82,6 @@ export default function CalculatorPage() {
         body: isCapped
           ? 'Your calculated coordination tax exceeds $2,000,000 per year, and at that scale the problem is not something a calculator can size correctly. What you are experiencing is structural misalignment between how your business has scaled and how your systems are architected to support it. This is exactly the situation LVRGWRKS was built to fix.'
           : 'At this scale, the coordination tax is not just expensive. It is actively constraining your ability to grow. You cannot fix this with another software subscription or another admin hire. It requires structural redesign of how the work flows across your operation.',
-        tierRecommendation: `A ${recommendedTier.name} tier engagement ($${recommendedTier.monthly.toLocaleString('en-CA')}/month, ${formatCurrency(recommendedTier.annual)} annually) is the baseline commitment, though at this severity the Leverage Audit is the right first step to size the real scope.`,
-        roiMath: isCapped
-          ? 'At this severity, the ROI conversation is no longer about retainer math. It is about what this is costing you every month you wait.'
-          : roiMath,
       };
     }
 
@@ -140,8 +90,6 @@ export default function CalculatorPage() {
         label: 'High',
         headline: 'The math is urgent now.',
         body: 'You are paying for the equivalent of multiple full-time employees whose entire job is holding your systems together with spreadsheets and email. Every month you absorb this is a month of margin you do not get back.',
-        tierRecommendation,
-        roiMath,
       };
     }
 
@@ -150,8 +98,6 @@ export default function CalculatorPage() {
         label: 'Moderate',
         headline: 'You are feeling it. Most operators start losing their best people here.',
         body: 'This is the range where your team starts burning out on manual work, and where growth starts costing margin instead of creating it.',
-        tierRecommendation,
-        roiMath,
       };
     }
 
@@ -159,76 +105,12 @@ export default function CalculatorPage() {
       label: 'Low',
       headline: 'Manageable today. But coordination tax compounds.',
       body: 'Most operators at your stage are in this range. The question is not whether to act now. It is whether you want to get ahead of the curve before it compounds.',
-      tierRecommendation,
-      roiMath:
-        actualROI >= 1
-          ? roiMath
-          : `Your total coordination tax is approximately ${formatCurrency(annualTax)} per year, with approximately ${formatCurrency(recoverableAmount)} recoverable. At your current coordination tax, the direct ROI math on an ${recommendedTier.name} engagement is modest, but the real value is preventing the problem from compounding.`,
     };
   };
 
   const currentSeverity = getSeverityContent();
   const showResults = selectedTools.length > 0;
 
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim()) {
-      setEmailError('Please enter your name.');
-      return;
-    }
-    if (!company.trim()) {
-      setEmailError('Please enter your company name.');
-      return;
-    }
-    if (!email || !email.includes('@')) {
-      setEmailError('Please enter a valid email address.');
-      return;
-    }
-    setEmailError('');
-    setEmailSubmitting(true);
-    try {
-      const response = await fetch('https://formspree.io/f/xvzdzrlr', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          _subject: 'Coordination Tax Calculator: Personalized Breakdown Request',
-          name,
-          company,
-          email,
-          source: 'Coordination Tax Calculator',
-          office_staff: officeStaff,
-          industry,
-          tools_used: selectedTools.join(', '),
-          tools_count: results.toolsCount,
-          hourly_cost: hourlyCost,
-          weekly_coordination_hours: results.weeklyCoordinationHours.toFixed(1),
-          weekly_coordination_tax: formatCurrency(results.weeklyTax),
-          annual_coordination_tax: formatCurrency(results.annualTax),
-          recoverable_amount: formatCurrency(results.recoverableAmount),
-          severity: results.severity,
-          recommended_tier: results.recommendedTier.name,
-          recommended_tier_annual: formatCurrency(results.recommendedTier.annual),
-          actual_roi: formatROI(results.actualROI),
-          is_capped: results.isCapped,
-        }),
-      });
-      if (response.ok) {
-        setEmailSubmitted(true);
-        // No name, company or email goes to GA4.
-        sendWhenReady('calculator_email_submit', {
-          page_path: '/coordination-tax-calculator',
-          industry,
-          severity: results.severity,
-        });
-      } else {
-        setEmailError('Something went wrong. Please try again or email us directly at jredgate@lvrgwrks.com.');
-      }
-    } catch {
-      setEmailError('Something went wrong. Please try again or email us directly at jredgate@lvrgwrks.com.');
-    } finally {
-      setEmailSubmitting(false);
-    }
-  };
 
   return (
     <>
@@ -355,10 +237,6 @@ export default function CalculatorPage() {
                       <p className="text-gray-400 text-sm leading-relaxed mb-3">per year in hidden labour cost</p>
                       <p className="text-gray-500 text-xs italic">Based on {officeStaff} staff x 40 hrs/wk x 30% coordination overhead x {results.frictionMultiplier.toFixed(2)} tool friction x ${hourlyCost}/hr</p>
                     </div>
-                    <div className="bg-white/5 border border-white/10 p-6 rounded-xl">
-                      <div className="text-brand-gold font-display font-bold text-3xl md:text-4xl mb-2">{formatCurrency(results.recoverableAmount)}</div>
-                      <p className="text-gray-400 text-sm leading-relaxed">recoverable through automation (conservative 50% of total)</p>
-                    </div>
                   </div>
 
                   <div className="border-t border-white/10 pt-8">
@@ -368,68 +246,8 @@ export default function CalculatorPage() {
                     </div>
                     <h3 className="font-display font-bold text-2xl md:text-3xl mb-4 leading-tight">{currentSeverity.headline}</h3>
                     <p className="text-gray-300 text-base leading-relaxed mb-6">{currentSeverity.body}</p>
-
-                    <div className="bg-white/5 border border-white/10 p-6 rounded-xl mb-6">
-                      <p className="text-sm text-brand-gold font-bold uppercase tracking-widest mb-2">Recommended Engagement</p>
-                      <p className="text-white leading-relaxed mb-3">{currentSeverity.tierRecommendation}</p>
-                      <p className="text-gray-400 text-sm leading-relaxed italic">{currentSeverity.roiMath}</p>
-                    </div>
-
-                    <Link
-                      href="/leverage-audit"
-                      className="w-full sm:w-auto bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
-                    >
-                      Request Free Leverage Audit
-                    </Link>
+                    <BookCallButton variant="gold" />
                   </div>
-                </div>
-
-                <div className="bg-brand-surface p-8 md:p-10 rounded-xl border border-gray-100">
-                  {emailSubmitted ? (
-                    <>
-                      <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Got it. Check your inbox.</h3>
-                      <p className="text-brand-slate leading-relaxed">We will send you a personalized one-page breakdown for {industry} operators within 24 hours.</p>
-                    </>
-                  ) : (
-                    <>
-                      <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Want this as a personalized one-page breakdown?</h3>
-                      <p className="text-brand-slate leading-relaxed mb-6">Enter your details and we will send you a breakdown specific to {industry} operators. No sales pitch. No automated drip sequence.</p>
-                      <form onSubmit={handleEmailSubmit} className="space-y-4">
-                        <input
-                          type="text"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          placeholder="Your full name"
-                          required
-                          className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-brand-navy font-medium focus:border-brand-navy focus:outline-none transition-all"
-                        />
-                        <input
-                          type="text"
-                          value={company}
-                          onChange={(e) => setCompany(e.target.value)}
-                          placeholder="Company name"
-                          required
-                          className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-brand-navy font-medium focus:border-brand-navy focus:outline-none transition-all"
-                        />
-                        <input
-                          type="email"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                          placeholder="your@email.com"
-                          required
-                          className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 bg-white text-brand-navy font-medium focus:border-brand-navy focus:outline-none transition-all"
-                        />
-                        <button
-                          type="submit"
-                          disabled={emailSubmitting}
-                          className="w-full bg-brand-navy text-white px-8 py-3 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-slate transition-all shadow-lg disabled:opacity-60"
-                        >
-                          {emailSubmitting ? 'Sending...' : 'Send Me The Breakdown'}
-                        </button>
-                      </form>
-                      {emailError && <p className="text-red-600 text-sm mt-3">{emailError}</p>}
-                    </>
-                  )}
                 </div>
               </>
             ) : (
@@ -448,7 +266,7 @@ export default function CalculatorPage() {
             <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-8 leading-tight">Where these numbers come from.</h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator is grounded in published research from McKinsey, Asana, and Gartner on how much time knowledge workers actually spend on coordination, search, and manual data movement between systems.</p>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">McKinsey estimates interaction workers spend roughly 28 percent of their week on email and another 20 percent searching for internal information. Asana puts coordination overhead at 60 percent of the average knowledge worker's day. Gartner has documented an 83 percent increase in the number of applications used per knowledge worker since 2019.</p>
-            <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator uses a conservative 30% baseline for coordination overhead across a typical office team mix. The friction multiplier (8% per additional tool beyond three) reflects tool sprawl complexity. Research and LVRGWRKS client data show that 40-60% of the coordination tax is recoverable by rebuilding how the work flows. We use 50% as a conservative baseline.</p>
+            <p className="text-brand-slate text-lg leading-relaxed mb-6">This calculator uses a conservative 30% baseline for coordination overhead across a typical office team mix. The friction multiplier (8% per additional tool beyond three) reflects tool sprawl complexity.</p>
             <p className="text-brand-slate text-lg leading-relaxed">If your calculation exceeds $2,000,000 annually, the coordination tax has moved beyond an efficiency problem and become a structural one.</p>
           </div>
         </div>
@@ -458,22 +276,11 @@ export default function CalculatorPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-8 leading-tight">
             The calculator gave you an estimate.<br />
-            <span className="text-gray-400 italic">The Leverage Audit gives you the real number.</span>
+            <span className="text-gray-400 italic">A 30-minute call tells you what to do with it.</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">60 minutes. No cost. No commitment. We map your highest-friction workflows, put a precise dollar figure on the labour cost, and outline where the fix sits before the call ends.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <Link
-              href="/leverage-audit"
-              className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
-            >
-              Request Free Leverage Audit
-            </Link>
-            <Link
-              href="/fractional-cto-calgary"
-              className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"
-            >
-              Explore Fractional CTO Services
-            </Link>
+            <BookCallButton variant="gold" />
           </div>
         </div>
       </section>

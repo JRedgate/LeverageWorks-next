@@ -30,7 +30,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/contact', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
     { path: '/60-day-test', priority: 0.7, changeFrequency: 'monthly' as const },
-    { path: '/coordination-tax-calculator', priority: 0.7, changeFrequency: 'monthly' as const },
+    // /coordination-tax-calculator left the sitemap in Release 0. The page stays
+    // live and noindex. The 60-Day Test replaced it as the secondary CTA.
     { path: '/faq', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/insights', priority: 0.7, changeFrequency: 'weekly' as const },
     { path: '/insights/coordination-tax-mid-market', priority: 0.7, changeFrequency: 'monthly' as const, lastModified: '2026-04-20' },
