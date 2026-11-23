@@ -239,7 +239,7 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the report someone on your team builds by hand every week, and one recent job from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the report that still gets built by hand every week, and one recent job from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
       'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
     ctaLabel: 'Book a 30-minute call',

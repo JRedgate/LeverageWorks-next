@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Coordination Tax Calculator | Alberta Mid-Market | LVRGWRKS' },
+  title: { absolute: 'Coordination Tax Calculator | LVRGWRKS' },
   description: 'Quantify what manual coordination is costing your Alberta business each year. A short calculator built for owner-led mid-market operations.',
   alternates: { canonical: '/coordination-tax-calculator' },
   // Unlisted in Release 0: off every menu, page and the sitemap, and noindex.

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/fractional-cto-calgary' },
   openGraph: {
     title: 'Technology leadership for industrial businesses in Calgary',
-    description: 'Senior technology leadership without a full-time hire. We find where coordination is costing you margin, rebuild how the work flows, and prove the return every 30 days.',
+    description: 'Senior technology leadership without a full-time hire. We find where coordination is costing you margin, rebuild how the work flows, and report what changed each month.',
     url: '/fractional-cto-calgary',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
