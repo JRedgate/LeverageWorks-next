@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { BOOKING_LABEL, BOOKING_URL, isExternalBooking } from '@/lib/booking';
 
-type Variant = 'navy' | 'gold' | 'white' | 'nav' | 'link' | 'linkOnDark';
+type Variant = 'navy' | 'gold' | 'white' | 'nav' | 'link' | 'linkOnDark' | 'custom';
 
 const VARIANTS: Record<Variant, string> = {
   navy: 'inline-flex items-center justify-center gap-3 bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-slate transition-all shadow-lg group',
@@ -11,6 +11,8 @@ const VARIANTS: Record<Variant, string> = {
   nav: 'px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wide transition-all shadow-md hover:shadow-lg',
   link: 'text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors',
   linkOnDark: 'text-brand-gold hover:text-white transition-colors',
+  // Keeps a page's existing button classes, passed in through className.
+  custom: '',
 };
 
 const Arrow = () => (

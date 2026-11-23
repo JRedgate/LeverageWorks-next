@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function CapabilitiesPage() {
   return (
     <>
@@ -21,19 +22,13 @@ export default function CapabilitiesPage() {
               <span className="text-brand-slate italic">operation scale without scaling headcount.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
-              LVRGWRKS is a fractional CTO and operating partner for mid-market companies in Alberta and Western Canada. We find where your operation is losing capacity to manual work and coordination, design the fix around how the work actually runs, build and run the systems, and stay embedded to prove the return every 30 days.
+              LVRGWRKS is an operating partner for industrial businesses. We find where your operation is losing capacity to manual work and coordination, design the fix around how the work actually runs, build and run the systems, and stay to report what changed each month.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
               Everything we build for your operation belongs to you from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us to keep the systems running. The engagement can end at any time and the operation continues.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
-              <Link href="/fractional-cto-calgary" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
-                Fractional CTO
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
             </div>
           </div>
         </div>
@@ -47,7 +42,7 @@ export default function CapabilitiesPage() {
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">What We Build</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Four capability areas. One operating outcome.</h2>
               <p className="text-brand-slate text-lg leading-relaxed max-w-3xl">
-                Every engagement draws on some combination of these four areas depending on where your operational constraints actually live. The Leverage Audit determines which apply to your business and in what order.
+                Every engagement draws on some combination of these four areas depending on where your operational constraints actually live. The diagnostic determines which apply to your business and in what order.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -55,9 +50,9 @@ export default function CapabilitiesPage() {
                 <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6">
                   <svg className="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" /></svg>
                 </div>
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Fractional CTO and AI strategy</h3>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Technology leadership</h3>
                 <p className="text-brand-slate leading-relaxed text-sm mb-4">
-                  Senior technology leadership on a fractional basis. We own your technology roadmap, evaluate vendors, lead AI and automation initiatives, and attend leadership meetings as a full participant in operational decisions. For companies that need CTO-level thinking without a full-time hire.
+                  Technology is one of the tools we use, never the starting point. Where your operation needs it, we own the technology roadmap, evaluate vendors and lead automation work, and bring it in only where it earns its place.
                 </p>
                 <Link href="/fractional-cto-calgary" className="text-brand-navy font-bold text-sm underline underline-offset-2">Learn more</Link>
               </div>
@@ -103,7 +98,7 @@ export default function CapabilitiesPage() {
             <div className="mb-16">
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">How It Works</span>
               <h2 className="font-display font-bold text-4xl mb-4">Every engagement follows the same four-move sequence.</h2>
-              <p className="text-gray-300 text-lg max-w-2xl">Your first automation is live within 60 days. The system compounds from there.</p>
+              <p className="text-gray-300 text-lg max-w-2xl">Every engagement starts with a 30-minute call.</p>
             </div>
             <div className="space-y-6">
               <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-xl">
@@ -115,7 +110,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Diagnose</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">The 60-Minute Leverage Audit. We map every manual workflow in your operation, quantify the exact labour cost, and rank automation opportunities by ROI. You leave the call with a written summary of where your operations are bleeding capacity and what it is costing you. No cost. No commitment. This is how every engagement starts.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">It starts with a 30-minute call, and you get a short written note of what we heard and whether a diagnostic is worth doing. The diagnostic is a fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.</p>
                   </div>
                 </div>
               </div>
@@ -141,7 +136,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Build</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">Our team builds and deploys the system. You review outputs, not code. Everything we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture. Your first bottleneck is solved within 60 days of engagement start.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">We build and deploy the system with your people. You review outputs, not code. Everything we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. The system runs on your infrastructure and keeps running whether or not LVRGWRKS is in the picture.</p>
                   </div>
                 </div>
               </div>
@@ -154,7 +149,7 @@ export default function CapabilitiesPage() {
                     <h3 className="font-display font-bold text-xl text-white">Stay</h3>
                   </div>
                   <div className="md:w-3/4">
-                    <p className="text-gray-300 leading-relaxed text-lg">This is not a project with an end date. We monitor, evolve, and expand the system as your business grows. Every month you receive a Value Creation Report showing exactly what was recovered: labour hours, automation performance, and rolling ROI against your retainer. We do not guess whether the system is working. We document it, every 30 days.</p>
+                    <p className="text-gray-300 leading-relaxed text-lg">This is not a project with an end date. We monitor, evolve, and expand the system as your business grows, and each month we report what changed against the baseline agreed up front.</p>
                   </div>
                 </div>
               </div>
@@ -173,7 +168,6 @@ export default function CapabilitiesPage() {
                 { label: 'Construction', href: '/industries/construction' },
                 { label: 'Energy Services', href: '/industries/energy-services' },
                 { label: 'Manufacturing', href: '/industries/manufacturing' },
-                { label: 'Property Management', href: '/industries/property-management' },
               ].map((item) => (
                 <Link key={item.label} href={item.href} className="text-sm font-bold text-gray-400 hover:text-brand-navy transition-colors">
                   {item.label.toUpperCase()}
@@ -187,14 +181,11 @@ export default function CapabilitiesPage() {
       {/* CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with the Leverage Audit.</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a 30-minute call.</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment. You leave with a clear picture of where your operations are costing you more than they should, and what it would take to fix it.
+            Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>

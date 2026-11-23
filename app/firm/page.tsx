@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function FirmPage() {
   return (
     <>
@@ -16,7 +17,7 @@ export default function FirmPage() {
               Built by operators, <span className="text-brand-slate italic">for operators.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl font-light">
-              LVRGWRKS was founded in Calgary by Jeremy Redgate, who spent 20 years watching smart, growing businesses get strangled by the same problem. Revenue grows, headcount grows faster, and the coordination tax quietly eats the margin that growth was supposed to deliver. We built LVRGWRKS to fix it.
+              LVRGWRKS is an operating partner for industrial businesses, founded in Calgary by Jeremy Redgate, who spent more than 20 years watching smart, growing businesses get strangled by the same problem. Revenue grows, headcount grows faster, and the coordination tax quietly eats the margin that growth was supposed to deliver. We built LVRGWRKS to fix it.
             </p>
           </div>
         </div>
@@ -33,7 +34,7 @@ export default function FirmPage() {
                   Twenty years inside the operations that actually run Alberta.
                 </h2>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  LVRGWRKS was founded on 20 years of hands-on operational experience across manufacturing, industrial services, and capital programs. Not a software startup. Not a management consultancy. Real operations, in real industries, with real margin pressure and real consequences when the math stops working.
+                  LVRGWRKS was founded on more than 20 years of hands-on operational experience across manufacturing, industrial services, and capital programs. Not a software startup. Not a management consultancy. Real operations, in real industries, with real margin pressure and real consequences when the math stops working.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-6">
                   That experience taught us one thing above everything else: most technology transformations fail not because the technology is wrong, but because the operating model around the technology is wrong. You can buy the best software on the market and still end up with your team manually moving data between systems at 9pm on a Tuesday. The tools exist. The talent exists. What's missing is the layer that connects what leadership wants to what the operation can actually execute.
@@ -51,7 +52,7 @@ export default function FirmPage() {
                   LVRGWRKS was architected during the Haskayne School of Business EMBA at the University of Calgary, grounded in the executive and financial frameworks the program is known for. EBITDA discipline, capital efficiency, structural thinking about how businesses actually create value.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  The Haskayne training matters because it's where the operational experience and the financial rigor come together. A Leverage Audit isn't a process-improvement exercise. It's a structural diagnosis of where your business is losing capacity and what that capacity is worth in P&L terms. Every recommendation we make ties back to one question: does this move the numbers, or doesn't it?
+                  The Haskayne training matters because it's where the operational experience and the financial rigor come together. The diagnostic isn't a process-improvement exercise. It's a structural diagnosis of where your business is losing capacity and what that capacity is worth in P&L terms. Every recommendation we make ties back to one question: does this move the numbers, or doesn't it?
                 </p>
                 <p className="text-brand-slate leading-relaxed">
                   If it doesn't move the numbers, we don't build it.
@@ -79,19 +80,22 @@ export default function FirmPage() {
               <div className="md:col-span-3">
                 <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Who You Work With</span>
                 <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-6 leading-tight">
-                  Jeremy Redgate, Founder.
+                  Meet Jeremy Redgate, founder and operating partner
                 </h2>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  Jeremy leads every LVRGWRKS engagement. He is the person in your Leverage Audit, and the person in the room when the work gets built.
+                  Jeremy has sat on both sides of the table. For nine years he owned an electrical contracting business serving Alberta&apos;s oil and gas industry. He carried the payroll, priced the work and ran projects with crews of up to 125. Before that, he was a Red Seal journeyman electrician on the tools.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  Before LVRGWRKS he spent nine years owning an electrical contracting business serving oil and gas facilities across Alberta, carrying the payroll and the P&L, and running projects with crews of up to 125. He has directed a project management office on a $100M+ capital portfolio and delivered $10M+ a year in capital work.
+                  He has also led a project management office responsible for a $100M+ capital portfolio, and has spent more than 20 years in industrial operations and capital projects across energy, construction and manufacturing.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-6">
-                  He is a Red Seal electrician and a PMP, and holds an Executive MBA in finance from the Haskayne School of Business. The trades and the finance sit together on purpose. Most of what we fix lives in the gap between the people doing the work and the numbers that measure it.
+                  He holds an Executive MBA in finance from the Haskayne School of Business, where he was inducted into Beta Gamma Sigma.
+                </p>
+                <p className="text-brand-slate leading-relaxed mb-6">
+                  What he learned running his own business is the reason LVRGWRKS exists. The answer to a business that has outgrown its owner is rarely more people or more software. It&apos;s a better way to operate, built with the people already there.
                 </p>
                 <p className="text-brand-slate leading-relaxed mb-8">
-                  When a project needs a specialist, such as a CRM or ERP implementation partner, we bring one in and tell you who and why before they start.
+                  Jeremy leads every LVRGWRKS engagement personally.
                 </p>
                 <a
                   href="https://www.linkedin.com/in/jeremyredgate"
@@ -134,9 +138,9 @@ export default function FirmPage() {
               <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6">
                 <span className="text-brand-gold font-display font-bold text-xl">02</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Human judgment first</h3>
+              <h3 className="font-display font-bold text-xl text-brand-navy mb-4">Operations first, tools second</h3>
               <p className="text-brand-slate leading-relaxed">
-                AI augments human decision-making. It does not replace it. Our implementations keep your leadership team accountable for the decisions that matter and remove the friction from the decisions that shouldn't require a human at all.
+                We don't sell software and we don't start with AI. We fix how work and decisions move, and bring in technology only where it earns its place. Your leadership team stays accountable for the decisions that matter.
               </p>
             </div>
             <div className="bg-white p-10 rounded-xl border border-gray-100">
@@ -145,7 +149,7 @@ export default function FirmPage() {
               </div>
               <h3 className="font-display font-bold text-xl text-brand-navy mb-4">If it doesn't move the P&L, it doesn't ship</h3>
               <p className="text-brand-slate leading-relaxed">
-                We don't measure success in demos, dashboards, or pilot programs. We measure it in EBITDA uplift, labour hours recovered, and rolling ROI against the retainer. Every month. Documented in a Value Creation Report. No guessing.
+                We don't measure success in demos, dashboards, or pilot programs. We agree a baseline up front and report what changed against it, every month. No guessing.
               </p>
             </div>
           </div>
@@ -158,19 +162,16 @@ export default function FirmPage() {
           <div className="max-w-4xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Why It Matters</span>
             <h2 className="font-display font-bold text-3xl md:text-5xl text-brand-navy mb-8 leading-tight">
-              The Alberta mid-market operates differently. <span className="text-brand-slate italic">We built LVRGWRKS for that.</span>
+              Industrial businesses operate differently. <span className="text-brand-slate italic">We built LVRGWRKS for that.</span>
             </h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">
-              Most AI and automation firms were built inside the tech ecosystem. They know software, they know dashboards, and they know how to sell enterprise tools. They don't know what it feels like to run a 40-truck energy services company at 6am, or coordinate six subcontractors across a multi-site construction project, or reconcile maintenance requests across a growing property management portfolio. They don't know the operations. They know the tools.
+              Most AI and automation firms were built inside the tech ecosystem. They know software, they know dashboards, and they know how to sell enterprise tools. They don't know what it feels like to run a 40-truck energy services company at 6am, or coordinate six subcontractors across a multi-site construction project. They don't know the operations. They know the tools.
             </p>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">
-              LVRGWRKS is built the other way around. Operations first, tools second. We work with founders, owners, and COOs of mid-market companies (20 to 250 employees, $5M to $150M in revenue) across Alberta and Western Canada, because that's where the operational realities and the operational opportunities are the clearest. When you engage LVRGWRKS, you're not hiring a vendor who's going to learn your industry on your dime. You're adding a partner who already speaks the language.
-            </p>
-            <p className="text-brand-slate text-lg leading-relaxed mb-6">
-              What we build for your operation belongs to you from day one, and your data and your process are yours without condition. Where we deploy a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us. The engagement can end at any time and your operation keeps running. That's not a risk reversal tactic. It's the only honest way to build what we build.
+              LVRGWRKS is built the other way around. Operations first, tools second. We work with owners and leadership teams of industrial businesses in manufacturing, construction, energy services and distribution across Canada. When you engage LVRGWRKS, you're not hiring a vendor who's going to learn your industry on your dime. You're adding a partner who already speaks the language.
             </p>
             <p className="text-brand-slate text-lg leading-relaxed">
-              There is a second payoff most owners do not price in. A business that runs cleaner is worth more. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. Buyers discount a company that runs on tribal knowledge and spreadsheets, and pay up for one where the work flows without the owner in the middle of it. We turn coordination cost into margin, and margin into a stronger position at sale.
+              What we build for your operation belongs to you from day one, and your data and your process are yours without condition. Where we deploy a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us. The engagement can end at any time and your operation keeps running. That's not a risk reversal tactic. It's the only honest way to build what we build.
             </p>
           </div>
         </div>
@@ -184,15 +185,10 @@ export default function FirmPage() {
             <span className="text-gray-400 italic">between intent and execution?</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
-            Start with a free 60-minute Leverage Audit. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends. No cost. No commitment. No generic presentation.
+            Start with a 30-minute call. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <Link
-              href="/leverage-audit"
-              className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl"
-            >
-              Request Free Leverage Audit
-            </Link>
+            <BookCallButton variant="custom" className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl" arrow={false} />
             <Link
               href="/capabilities"
               className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"
