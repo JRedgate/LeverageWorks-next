@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { BOOKING_URL, isExternalBooking } from '@/lib/booking';
 
 declare global {
   interface Window {
@@ -26,7 +27,10 @@ export function sendWhenReady(event: string, params: Record<string, unknown>) {
 
 // Fires a GA4 conversion event when a visitor clicks through to a money page.
 // Uses a single delegated listener so no per-link wiring is needed.
+// book_call_click is matched first so a booking link is never counted as
+// anything else. The older events keep their names so GA4 history continues.
 const CTA_EVENTS: { match: string; event: string }[] = [
+  { match: BOOKING_URL, event: 'book_call_click' },
   { match: '/leverage-audit', event: 'cta_leverage_audit' },
   { match: '/coordination-tax-calculator', event: 'cta_calculator' },
   { match: '/contact', event: 'cta_contact' },
@@ -44,6 +48,9 @@ export function AnalyticsEvents() {
         window.gtag('event', hit.event, {
           link_url: href,
           link_text: (anchor.textContent ?? '').trim().slice(0, 80),
+          ...(hit.event === 'book_call_click'
+            ? { destination: isExternalBooking ? 'scheduler' : 'call_page', page_path: window.location.pathname }
+            : {}),
         });
       }
     }
