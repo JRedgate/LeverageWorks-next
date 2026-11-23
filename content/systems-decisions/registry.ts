@@ -131,22 +131,20 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
   },
   'funding-systems-automation-alberta-2026': { published: false },
   // Already live before it entered this ledger, so publishing it changes
-  // nothing about its indexability. The label and the column are the ones the
-  // hand-written footer link already carried, per its copy file's build note
-  // that footer placement is unchanged.
+  // nothing about its indexability. Moved from Expertise to Systems decisions
+  // in Release 0, when the Expertise column became How we work.
   'business-process-automation': {
     published: true,
     footerLabel: 'Business Process Automation',
-    footerGroup: 'expertise',
+    footerGroup: 'systems-decisions',
     priority: 0.8,
     changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-process-automation.md',
   },
   // Already live before it entered this ledger, like 4.2a, so publishing it
-  // changes nothing about its indexability. Its footer link is the
-  // hand-written one in the Expertise column, which this entry does not
-  // render and does not move. Its sitemap entry does come from here, and the
-  // hand-written one was removed in the same commit.
+  // changes nothing about its indexability. Release 0 removed its footer
+  // link, and 'hand-written' keeps the registry from rendering one. Its
+  // sitemap entry still comes from here, so the page stays live and indexed.
   'ai-automation-consulting': {
     published: true,
     footerLabel: 'AI Automation Consulting',
@@ -158,7 +156,7 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
   'operations-process-improvement-alberta': {
     published: true,
     footerLabel: 'Process Improvement',
-    footerGroup: 'expertise',
+    footerGroup: 'systems-decisions',
     priority: 0.8,
     changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/operations-process-improvement-alberta.md',
