@@ -25,7 +25,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // change frequency, so it appears exactly once.
     { path: '/capabilities', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/firm', priority: 0.6, changeFrequency: 'monthly' as const },
-    { path: '/impact', priority: 0.6, changeFrequency: 'monthly' as const },
+    // /impact left the sitemap in Release 0. The page stays live and noindex
+    // until it is rebuilt from real, consented results.
     { path: '/contact', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
     { path: '/coordination-tax-calculator', priority: 0.7, changeFrequency: 'monthly' as const },

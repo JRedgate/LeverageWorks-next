@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: { absolute: 'Impact | What Operational Leverage Looks Like | LVRGWRKS' },
   description: 'Modelled scenarios showing what operational leverage looks like inside an owner-led mid-market company. Figures are illustrative, not client results.',
   alternates: { canonical: '/impact' },
+  // Unlisted in Release 0: off the menu, footer and sitemap, and noindex.
+  robots: { index: false, follow: true },
   openGraph: {
     title: 'What operational leverage actually looks like',
     description: 'Modelled scenarios showing where coordination cost hides in an owner-led mid-market operation and what recovering it is worth. Figures are illustrative, not client results.',
