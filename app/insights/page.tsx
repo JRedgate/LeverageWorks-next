@@ -49,7 +49,7 @@ export default function InsightsPage() {
               Thinking on AI, Operations,<br />
               <span className="text-brand-slate italic">and the Mid-Market.</span>
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl font-light">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl">
               Practical frameworks for founders, owners, and COOs navigating technology decisions in Alberta and Western Canada.
             </p>
           </div>

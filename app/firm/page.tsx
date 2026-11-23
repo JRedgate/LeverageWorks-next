@@ -16,7 +16,7 @@ export default function FirmPage() {
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
               Built by operators, <span className="text-brand-slate italic">for operators.</span>
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl font-light">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl">
               LVRGWRKS is an operating partner for industrial businesses, founded in Calgary by Jeremy Redgate, who spent more than 20 years watching smart, growing businesses get strangled by the same problem. Revenue grows, headcount grows faster, and the coordination tax quietly eats the margin that growth was supposed to deliver. We built LVRGWRKS to fix it.
             </p>
           </div>

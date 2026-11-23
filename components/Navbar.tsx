@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
         <Link href="/" className="flex items-center gap-4 group" aria-label="LeverageWorks Home">
           <LwSymbol className="w-10 h-10 transition-transform group-hover:scale-105"
             color={onDark ? '#FFFFFF' : undefined} dotColor={onDark ? '#94A3B8' : undefined} />
-          <span className={`font-display font-bold text-xl tracking-tight transition-opacity duration-300 ${isScrolled ? 'opacity-100 text-brand-navy' : onDark ? 'opacity-100 text-white' : 'opacity-0'}`}>
+          <span className={`font-display font-bold text-xl tracking-tight transition-colors duration-300 ${onDark ? 'text-white' : 'text-brand-navy'}`}>
             LVRGWRKS
           </span>
         </Link>

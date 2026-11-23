@@ -1,52 +1,13 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import { sendWhenReady } from '@/components/AnalyticsEvents';
-import { BookCallButton } from '@/components/BookCallButton';
+import React from 'react';
 import { LwSymbol } from '@/components/Logo';
+import { SixtyDayTest, SIXTY_DAY_ITEMS as ITEMS, SIXTY_DAY_BANDS as BANDS } from '@/components/SixtyDayTest';
 
-// Answers live in component state only. Nothing is posted, stored or sent to
-// analytics, so the privacy line at the foot of the result stays true.
-
-const ITEMS = [
-  'Set prices and sign off quotes',
-  'Take your biggest customer’s call',
-  'Approve spending and hiring',
-  'Know last month’s numbers',
-  'Fix it when a job goes sideways',
-];
-
-const BANDS = [
-  { range: '0 to 1', min: 0, max: 1, heading: 'The business runs without you', line: 'Your time is yours to spend on growth. Worth checking that it holds as you grow.' },
-  { range: '2 to 3', min: 2, max: 3, heading: 'A few hand-offs from running without you', line: 'Two or three decisions still come back to you. Moving them would give you back real time.' },
-  { range: '4 to 5', min: 4, max: 5, heading: 'The business runs through you', line: 'That sets the ceiling on its growth and on your time. It can be changed, one hand-off at a time.' },
-];
-
-type Answer = 'me' | 'else' | null;
-
-const choiceClass = (selected: boolean) =>
-  `px-5 py-2.5 rounded-lg text-sm font-bold border-2 transition-all ${
-    selected ? 'bg-brand-navy text-white border-brand-navy' : 'bg-white text-brand-slate border-gray-200 hover:border-brand-navy/40'
-  }`;
+// Copy, scoring and the GA4 completion event live in components/SixtyDayTest,
+// shared with the homepage hero card.
 
 export default function SixtyDayTestPage() {
-  const [answers, setAnswers] = useState<Answer[]>(ITEMS.map(() => null));
-  const completeSent = useRef(false);
-
-  const done = answers.every((a) => a !== null);
-  const count = answers.filter((a) => a === 'me').length;
-  const band = BANDS.find((b) => count >= b.min && count <= b.max) ?? BANDS[0];
-
-  useEffect(() => {
-    if (done && !completeSent.current) {
-      completeSent.current = true;
-      sendWhenReady('sixty_day_test_complete', {});
-    }
-  }, [done]);
-
-  const setAnswer = (i: number, a: Answer) =>
-    setAnswers((prev) => prev.map((v, j) => (j === i ? a : v)));
-
   return (
     <>
       {/* Print: one page, no navigation or footer. */}
@@ -62,7 +23,7 @@ export default function SixtyDayTestPage() {
         <header className="relative pt-40 pb-16 md:pt-52 md:pb-20 overflow-hidden bg-brand-surface">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="container mx-auto px-6 md:px-16 relative z-10">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto">
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The 60-Day Test</span>
               <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
                 Could your business run for 60 days without you?
@@ -76,40 +37,8 @@ export default function SixtyDayTestPage() {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6 md:px-16">
-            <div className="max-w-3xl">
-              <ol className="space-y-4 mb-12">
-                {ITEMS.map((item, i) => (
-                  <li key={item} className="bg-brand-surface border border-gray-100 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <span className="text-brand-navy font-semibold text-lg">
-                      <span className="text-brand-gold font-display font-bold mr-3">{i + 1}.</span>
-                      {item}
-                    </span>
-                    <div className="flex gap-3 shrink-0" role="group" aria-label={item}>
-                      <button type="button" aria-pressed={answers[i] === 'me'} onClick={() => setAnswer(i, 'me')} className={choiceClass(answers[i] === 'me')}>Me</button>
-                      <button type="button" aria-pressed={answers[i] === 'else'} onClick={() => setAnswer(i, 'else')} className={choiceClass(answers[i] === 'else')}>Someone else</button>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-
-              {done && (
-                <div className="bg-brand-navy text-white rounded-xl p-8 md:p-12" aria-live="polite">
-                  <p className="font-display font-bold text-3xl md:text-4xl mb-6">Your count: {count} of 5</p>
-                  <h2 className="font-display font-bold text-2xl text-brand-gold mb-3">{band.heading}</h2>
-                  <p className="text-gray-300 text-lg leading-relaxed mb-8">{band.line}</p>
-                  <p className="text-gray-400 text-sm mb-8">A rule of thumb, not a study. It tells you where to look, not what it costs.</p>
-                  <p className="text-gray-200 text-lg leading-relaxed mb-8">
-                    <strong className="text-white">Bring your count to a 30-minute call.</strong> We&apos;ll tell you which hand-off we would start with and whether a diagnostic is worth doing.
-                  </p>
-                  <BookCallButton variant="gold" />
-                  <div className="mt-8 flex flex-col gap-2 text-sm">
-                    <button type="button" onClick={() => window.print()} className="self-start text-brand-gold underline underline-offset-4 hover:text-white transition-colors">
-                      Print the test for your leadership team.
-                    </button>
-                    <p className="text-gray-500">Your answers stay on this page. We don&apos;t store them.</p>
-                  </div>
-                </div>
-              )}
+            <div className="max-w-3xl mx-auto">
+              <SixtyDayTest variant="page" />
             </div>
           </div>
         </section>

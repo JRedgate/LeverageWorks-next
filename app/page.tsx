@@ -3,11 +3,18 @@ import Link from 'next/link';
 import { Hero } from '@/components/Hero';
 import { BookCallButton } from '@/components/BookCallButton';
 
-const symptoms = [
-  { title: 'Decisions That Drag', body: 'Decisions that should take hours take weeks. Approvals stack. Context gets lost between handoffs.' },
-  { title: 'Meeting and Reporting Overhead', body: 'Meetings multiply. Reporting layers expand. Your best people burn capacity on manual work instead of driving growth.' },
-  { title: 'Headcount Outrunning Revenue', body: 'You hire people to manage the overhead instead of drive the growth. Fixed costs rise faster than revenue.' },
-  { title: 'Margin That Leaks', body: 'Profit stalls or slips even as the topline grows. The problem is in how the work flows, not how hard the team works.' },
+const stakes = [
+  { title: 'The quote that waits for you.', body: 'It is priced and ready. It goes out when you get to it.' },
+  { title: 'The customer who only calls you.', body: 'Your biggest account has one number, and it is yours.' },
+  { title: 'The purchase nobody else can approve.', body: 'The work stops until you say yes.' },
+  { title: 'The job that goes sideways.', body: 'The phone rings, and it is your phone.' },
+];
+
+const authority = [
+  'Nine years owning an industrial contracting business',
+  'Crews of up to 125',
+  '$100M+ capital portfolio',
+  '40+ operator conversations',
 ];
 
 const steps = [
@@ -21,6 +28,20 @@ export default function HomePage() {
     <>
       <Hero />
 
+      {/* Authority strip */}
+      <section className="bg-white border-y border-gray-100 py-6" aria-label="Background">
+        <div className="container mx-auto px-6 md:px-16">
+          <ul className="flex flex-col md:flex-row md:flex-wrap md:justify-center gap-y-2 gap-x-0 text-sm md:text-base font-semibold text-brand-navy text-center">
+            {authority.map((item, i) => (
+              <li key={item} className="md:flex md:items-center">
+                {i > 0 && <span className="hidden md:inline text-brand-gold mx-4" aria-hidden="true">·</span>}
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Stakes */}
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
@@ -33,10 +54,10 @@ export default function HomePage() {
               As a business grows, more decisions, approvals and problems find their way back to the top. Each one that waits on you or a senior leader slows the work, and the cost shows up in margin. We call it the coordination tax. It rarely appears on a report, and it tends to grow with the business.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {symptoms.map((s) => (
+              {stakes.map((s) => (
                 <div key={s.title} className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                  <div className="text-brand-gold font-display font-bold text-2xl mb-3">{s.title}</div>
-                  <p className="text-gray-400 leading-relaxed">{s.body}</p>
+                  <h3 className="text-brand-gold font-display font-bold text-xl md:text-2xl mb-3">{s.title}</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">{s.body}</p>
                 </div>
               ))}
             </div>
@@ -102,18 +123,6 @@ export default function HomePage() {
               ))}
             </div>
             <BookCallButton variant="navy" />
-          </div>
-        </div>
-      </section>
-
-      {/* Ownership */}
-      <section className="py-20 md:py-28 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-6 md:px-16">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Ownership</span>
-            <p className="text-brand-slate text-lg leading-relaxed">
-              Everything we build for your operation belongs to you from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us. The engagement can end at any time and the operation keeps running.
-            </p>
           </div>
         </div>
       </section>

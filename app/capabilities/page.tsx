@@ -162,14 +162,14 @@ export default function CapabilitiesPage() {
       <section className="py-12 bg-brand-surface border-t border-gray-100">
         <div className="container mx-auto px-6 md:px-16">
           <div className="flex flex-col md:flex-row md:items-center justify-center gap-4 md:gap-8">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Industries:</p>
+            <p className="text-xs font-semibold text-brand-slate uppercase tracking-widest">Industries:</p>
             <div className="flex flex-wrap gap-4 md:gap-6">
               {[
                 { label: 'Construction', href: '/industries/construction' },
                 { label: 'Energy Services', href: '/industries/energy-services' },
                 { label: 'Manufacturing', href: '/industries/manufacturing' },
               ].map((item) => (
-                <Link key={item.label} href={item.href} className="text-sm font-bold text-gray-400 hover:text-brand-navy transition-colors">
+                <Link key={item.label} href={item.href} className="text-sm font-bold text-brand-slate hover:text-brand-navy transition-colors">
                   {item.label.toUpperCase()}
                 </Link>
               ))}
