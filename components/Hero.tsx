@@ -20,8 +20,8 @@ export const Hero: React.FC = () => (
         </p>
         <div className="flex flex-col sm:flex-row sm:items-center gap-6">
           <BookCallButton variant="navy" />
-          <Link href="/coordination-tax-calculator" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">
-            Try the Coordination Tax Calculator
+          <Link href="/60-day-test" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">
+            Take the 60-Day Test
           </Link>
         </div>
         <p className="mt-10 text-sm text-brand-slate">Based in Calgary. Serving industrial businesses across Canada.</p>

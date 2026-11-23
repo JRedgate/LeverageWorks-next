@@ -44,16 +44,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Calculator band */}
+      {/* 60-Day Test band */}
       <section className="py-16 md:py-24 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-3xl mx-auto bg-white border border-gray-100 rounded-xl p-8 md:p-12">
-            <h2 className="font-display font-bold text-2xl md:text-3xl text-brand-navy mb-4 leading-tight">Want to see what the coordination tax costs you?</h2>
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-brand-navy mb-4 leading-tight">Could your business run for 60 days without you?</h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-8">
-              Four inputs, about 60 seconds, no email needed. It estimates hours lost to coordination. That&apos;s capacity you could use differently, not cash in the bank.
+              Five questions, about two minutes, no email needed. Count how many still come back to you.
             </p>
-            <Link href="/coordination-tax-calculator" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
-              Try the Coordination Tax Calculator
+            <Link href="/60-day-test" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
+              Take the 60-Day Test
             </Link>
           </div>
         </div>
