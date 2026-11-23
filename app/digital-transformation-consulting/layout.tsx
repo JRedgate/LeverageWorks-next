@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Digital Transformation Consulting Calgary | LVRGWRKS' },
   description: 'Digital transformation consulting for owner-led mid-market companies in Calgary and Alberta. Most transformations fail on process, not technology.',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

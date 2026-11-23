@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 const TITLE = 'The Real Cost of Manual Data Entry in Your Business';
 const DESCRIPTION = 'Manual data entry costs more than the hours it consumes. Where the cost compounds in a growing Alberta business, and how to size it.';
 const SEO_TITLE = 'The Real Cost of Manual Data Entry | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

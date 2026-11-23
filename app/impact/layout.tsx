@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Impact | What Operational Leverage Looks Like | LVRGWRKS' },
   description: 'Modelled scenarios showing what operational leverage looks like inside an owner-led mid-market company. Figures are illustrative, not client results.',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

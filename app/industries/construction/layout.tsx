@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Construction Operations Automation Alberta | LVRGWRKS' },
   description: 'Project managers should not run jobs and assemble reports at the same time. Operations and automation help for Alberta construction companies.',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

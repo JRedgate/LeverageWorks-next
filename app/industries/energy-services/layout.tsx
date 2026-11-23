@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Energy Services Automation Alberta | LVRGWRKS' },
   description: 'Field operations generate data that never reaches the back office in time to use. Operations and automation help for Alberta energy services firms.',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

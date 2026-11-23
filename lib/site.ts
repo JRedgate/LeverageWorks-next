@@ -2,7 +2,7 @@
 
 export const SITE_URL = 'https://www.lvrgwrks.com';
 
-export const OG_IMAGE = { url: '/og-card-v2.jpg', width: 2400, height: 1260 };
+export const OG_IMAGE = { url: '/og-card.png', width: 1200, height: 630 };
 
 export const POSITIONING = 'Operating partner for industrial businesses';
 

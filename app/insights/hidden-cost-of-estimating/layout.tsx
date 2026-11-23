@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 const TITLE = 'The Hidden Cost of Estimating: What We Found Inside Three Project Files';
 const DESCRIPTION = 'What three project files revealed about estimating overhead, and why the cost hides inside work your team already considers normal.';
 const SEO_TITLE = 'The Hidden Cost of Estimating | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

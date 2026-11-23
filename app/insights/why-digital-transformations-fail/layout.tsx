@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 const TITLE = 'Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)';
 const DESCRIPTION = 'Most transformations fail on process and ownership, not technology. What mid-market companies in Alberta do instead, and where to start.';
 const SEO_TITLE = 'Why Digital Transformations Fail | Mid-Market | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

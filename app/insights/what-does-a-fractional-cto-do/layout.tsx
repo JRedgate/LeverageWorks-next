@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 const TITLE = 'What Does a Fractional CTO Actually Do Inside Your Business?';
 const DESCRIPTION = 'A plain explanation of what a fractional CTO does inside a mid-market business week to week, and when hiring one makes sense in Alberta.';
 const SEO_TITLE = 'What Does a Fractional CTO Actually Do? | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

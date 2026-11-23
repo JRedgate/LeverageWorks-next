@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
   title: { absolute: 'Manufacturing Automation Alberta | LVRGWRKS' },
   description: 'Your production data exists. Your systems do not share it. Automation and operations help for Alberta manufacturers in the mid-market.',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { OG_IMAGE } from '@/lib/site';
 const TITLE = 'The Coordination Tax: Why Mid-Market Companies Grow Revenue Without Growing Margin';
 const DESCRIPTION = 'Mid-market companies add revenue and headcount without adding margin. Here is where the money actually goes, and what it costs an Alberta operation.';
 const SEO_TITLE = 'Why Revenue Grows But Margin Does Not | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

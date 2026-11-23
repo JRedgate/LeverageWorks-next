@@ -4,28 +4,29 @@ import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { ClientLayout } from '@/components/ClientLayout';
 import { Footer } from '@/components/Footer';
 import './globals.css';
+import { OG_IMAGE, SITE_URL } from '@/lib/site';
 
 const GA_MEASUREMENT_ID = 'G-E0H5REX2XK';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Fractional CTO & Operating Partner Calgary | LVRGWRKS',
+    default: 'Operating Partner for Industrial Businesses | Calgary | LVRGWRKS',
     template: '%s | LVRGWRKS',
   },
-  description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta. We recover the margin coordination is quietly costing you.',
-  keywords: ['Fractional CTO Calgary', 'Operating Partner', 'Operating Model Architecture', 'LeverageWorks', 'Property Management Automation', 'Construction Tech', 'Manufacturing AI'],
+  description: 'Too many decisions still land on your desk? LVRGWRKS helps industrial owners and leadership teams move them into the business. Based in Calgary.',
+  keywords: ['Operating Partner', 'LeverageWorks', 'LVRGWRKS'],
   metadataBase: new URL('https://www.lvrgwrks.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'You added the revenue. The margin did not follow.',
-    description: 'The fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin coordination is quietly costing you.',
+    title: 'Too many decisions still land on your desk.',
+    description: 'LVRGWRKS is an operating partner for industrial businesses, based in Calgary and serving Canada. We help owners and leadership teams move decisions and handoffs into the business.',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
     url: 'https://www.lvrgwrks.com',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
   twitter: {
     card: 'summary_large_image',
@@ -43,30 +44,23 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: 'LVRGWRKS (LeverageWorks)',
   alternateName: 'LeverageWorks',
-  description: 'Fractional CTO and operating partner for owner-led mid-market companies in Alberta and Western Canada. We recover the margin lost to the coordination tax by rebuilding how the work flows.',
-  image: 'https://www.lvrgwrks.com/og-card-v2.jpg',
+  description: 'Operating partner for industrial businesses, based in Calgary and serving Canada.',
+  image: `${SITE_URL}${OG_IMAGE.url}`,
   '@id': 'https://www.lvrgwrks.com',
   url: 'https://www.lvrgwrks.com',
-  priceRange: '$$$$',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Calgary',
     addressRegion: 'AB',
     addressCountry: 'CA',
   },
-  areaServed: [
-    { '@type': 'State', name: 'Alberta' },
-    { '@type': 'Place', name: 'Western Canada' },
-  ],
+  areaServed: { '@type': 'Country', name: 'Canada' },
   serviceType: [
-    'Fractional CTO Services',
     'Operating Partner',
-    'Operating Model Architecture',
-    'Workflow Automation',
-    'Property Management Consulting',
-    'Construction Technology Consulting',
+    'Operations Consulting',
     'Manufacturing Operations Consulting',
-    'Energy Services Consulting',
+    'Construction Operations Consulting',
+    'Energy Services Operations Consulting',
   ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
