@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function CoordinationTaxArticle() {
   return (
     <>
@@ -377,7 +378,7 @@ export default function CoordinationTaxArticle() {
               The first step is not a platform decision. It is a measurement decision. Before any tool, any hire, any process initiative, the question to answer is: how much is coordination actually costing us right now, and where is the biggest portion of it sitting.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              That is what the LVRGWRKS Leverage Audit does in sixty minutes. Not a technology audit. An operational one. Where is data moving manually. Where are decisions slowing down because information is not available or not trusted. Where is the team spending time on coordination instead of execution. What is the actual labour cost of the friction.
+              That is what the LVRGWRKS diagnostic looks at. Not a technology audit. An operational one. Where is data moving manually. Where are decisions slowing down because information is not available or not trusted. Where is the team spending time on coordination instead of execution. What is the actual labour cost of the friction.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
               Once the tax is named and quantified, every decision that follows gets clearer. The platform question, the hiring question, the automation question, all of it. The operators who move first on this get a margin advantage that is difficult to reverse. The ones who do not keep paying the tax and keep wondering where the money went.
@@ -390,15 +391,10 @@ export default function CoordinationTaxArticle() {
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
               <h3 className="font-display font-bold text-2xl mb-4">Name the tax. Then stop paying it.</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                The 60-Minute Leverage Audit maps your highest-coordination workflows, quantifies what they are costing you, and gives you a clear picture before any technology or hiring decision is made.
+                Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing. Before any technology or hiring decision is made.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
-                <Link
-                  href="/leverage-audit"
-                  className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
-                >
-                  Request Free Leverage Audit
-                </Link>
+                <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
                 <Link
                   href="/coordination-tax-calculator"
                   className="inline-block text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all"

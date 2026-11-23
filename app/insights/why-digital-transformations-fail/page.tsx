@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function WhyTransformationsFailArticle() {
   return (
     <>
@@ -74,7 +75,7 @@ export default function WhyTransformationsFailArticle() {
               Only once you have answers to those questions does the technology conversation make sense. The platform selection, the integration architecture, the AI strategy, all of that becomes straightforward once the operational problem is defined clearly. The companies that skip this step and go straight to platform selection are the ones who call it a failure eighteen months later.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
-              That operational assessment is what the LVRGWRKS Leverage Audit does in 60 minutes. No platform recommendations. No sales pitch. A diagnostic that gives you the picture of where your operations are actually costing you capacity and margin, so that any technology investment you make after has a clear problem to solve.
+              That operational assessment is what the LVRGWRKS diagnostic does. No platform recommendations. No sales pitch. A diagnostic that gives you the picture of where your operations are actually costing you capacity and margin, so that any technology investment you make after has a clear problem to solve.
             </p>
 
           </article>
@@ -84,14 +85,9 @@ export default function WhyTransformationsFailArticle() {
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
               <h3 className="font-display font-bold text-2xl mb-4">Start with the operational assessment, not the platform selection.</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                The 60-Minute Leverage Audit maps your highest-friction workflows, quantifies what they are costing you, and gives you a clear picture before any technology decision is made.
+                Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.
               </p>
-              <Link
-                href="/leverage-audit"
-                className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
-              >
-                Request Free Leverage Audit
-              </Link>
+              <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
             </div>
           </div>
         </div>

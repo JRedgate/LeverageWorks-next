@@ -44,7 +44,7 @@ export const content: SystemsDecisionContent = {
       "Most companies your size have never written their processes down. The work runs on the people who know how it's done, and for a long time that has been a strength.",
       'Improving it starts with those people, not with a flowchart or a new system. We learn how the work actually moves from the people doing it, change what is worth changing at a pace your team can absorb, and write down only what needs to be written down.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -170,7 +170,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'At the pace your team can absorb, which is usually slower than an owner wants and faster than the team expects. We change one thing at a time, start where the payoff is clear, and avoid your busiest season. We aim to have the first bottleneck solved within 60 days, because people believe in a change once they have seen one work, not when they are told it will.',
+          text: 'At the pace your team can absorb, which is usually slower than an owner wants and faster than the team expects. We change one thing at a time, start where the payoff is clear, and avoid your busiest season.',
         },
       ],
     },
@@ -189,10 +189,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'The free 60-minute Leverage Audit is a conversation, not an inspection. Bring one recent job, order or project, from the moment it came in to the moment it was invoiced. We map how it actually moved, show you where it waited and where the same information was handled more than once, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with you and your team, on site and on paper, talking with the people who do the work as well as the people who manage it. It turns the audit into an analysis of your highest-value targets and a one-year plan your team has had a hand in. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. It is a conversation, not an inspection. Bring one recent job, order or project, from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with you and your team, on site and on paper, talking with the people who do the work as well as the people who manage it. It turns that into an analysis of your highest-value targets and a one-year plan your team has had a hand in. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   sources: {

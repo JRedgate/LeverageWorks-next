@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function ConstructionPage() {
   return (
     <>
@@ -24,13 +25,10 @@ export default function ConstructionPage() {
               Construction is a margin-thin, schedule-critical business. The difference between a profitable project and an overrun is often the quality of information reaching your team, and how quickly it gets there. When your PMs are spending hours each week pulling data from disconnected systems, they are not managing the job. They are managing the reporting.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              LVRGWRKS builds the automation and integration layer that connects your field, finance, and operations data so the right information reaches the right people without anyone having to compile it manually.
+              LVRGWRKS is an operating partner for industrial businesses. We help owners and leadership teams move decisions and handoffs off the top desk and into the business, and bring in technology only where it earns its place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
                 View Capabilities
               </Link>
@@ -86,7 +84,7 @@ export default function ConstructionPage() {
               Systems that give your team the information they need without asking them to compile it.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for construction and general contracting companies across Alberta and Western Canada. We connect your existing tools, your project management platform, your accounting system, your field reporting tools, into a unified operating layer. No rip-and-replace. No new platform your team has to learn. We build the connections between what you already have.
+              Technology work is one of the tools we use. Where it earns its place, we build automation and integration for construction and general contracting companies across Canada. We connect your existing tools, your project management platform, your accounting system, your field reporting tools, into a unified operating layer. No rip-and-replace. No new platform your team has to learn. We build the connections between what you already have.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -130,10 +128,10 @@ export default function ConstructionPage() {
                   Alberta construction operates across extreme weather conditions, complex labour agreements, demanding procurement environments, and regulatory requirements that differ from every other Canadian market. Your operating system needs to reflect that reality, not a generic playbook built for a different context.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with construction companies across Alberta and Western Canada. We understand the operational pressures of this market, the margin compression, the labour availability challenges, the documentation requirements from owners and regulators, because it is the environment our clients operate in every day.
+                  LVRGWRKS was founded in Calgary and works with construction companies across Canada. We understand the operational pressures of this market, the margin compression, the labour availability challenges, the documentation requirements from owners and regulators.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
-                  We work with general contractors, specialty contractors, and civil construction companies ranging from 20 to 250 employees. If your team is busy but the business is not moving as fast as you need it to, that gap is where we work.
+                  We work with general contractors, specialty contractors, and civil construction companies. If your team is busy but the business is not moving as fast as you need it to, that gap is where we work.
                 </p>
               </div>
               <div className="space-y-4">
@@ -180,11 +178,11 @@ export default function ConstructionPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does construction process automation cost?</h3>
-                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost. The retainer is set at roughly a third of the annual value the work creates, so the starting point is what reporting and coordination overhead is costing you across your active projects. The Leverage Audit puts a number on that in 60 minutes, before you commit to anything.</p>
+                <p className="text-brand-slate leading-relaxed">The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We&apos;ll give you real numbers once we understand what you need, usually after the first call.</p>
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">
-              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including how we price against value rather than hours, what happens to what we build if you stop working with us, and what the first 60 days actually look like.
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what it costs, who owns what we build, and what happens to your team.
             </p>
           </div>
         </div>
@@ -195,15 +193,12 @@ export default function ConstructionPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">What would real-time project cost visibility change for your business?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit maps your current workflows, quantifies the cost of your manual reporting and coordination overhead, and gives you a clear picture of where automation investment makes sense.
+            Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.
           </p>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment.
+            Thirty minutes. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>

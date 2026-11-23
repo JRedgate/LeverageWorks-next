@@ -34,7 +34,7 @@ export const content: SystemsDecisionContent = {
       'The go-live date came and went and the partner signed off. Months later your people still keep a spreadsheet open beside the new screen, and month-end takes as long as it did before.',
       'That is rarely a software problem, so new software rarely fixes it. The cause is usually in how the work was set up to move, and that can be found and fixed without starting over.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -188,10 +188,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with the free 60-minute Leverage Audit. Bring the last report you sent to an owner, a client or your board, and one recent job, order or month-end that went through the new system, from start to finish. We follow it through your operation, mark every place it left the system and came back, show you where it waited and where it was retyped, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets and a one-year plan, including which fixes belong to your team, which belong to your implementation partner, and whether the system you have can do the job. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the last report you sent to an owner, a client or your board, and one recent job, order or month-end that went through the new system, from start to finish. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan, including which fixes belong to your team, which belong to your implementation partner, and whether the system you have can do the job. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   relatedReading: [

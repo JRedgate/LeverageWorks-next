@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
+import { BookCallButton } from '@/components/BookCallButton';
 const articles = [
   {
     label: 'OPERATIONS',
@@ -83,14 +84,9 @@ export default function InsightsPage() {
         <div className="container mx-auto px-6 md:px-16 text-center">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 tracking-tight">Ready to move beyond the reading?</h2>
           <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            The Leverage Audit puts these frameworks to work on your actual business in 60 minutes.
+            A 30-minute call puts these frameworks to work on your business. You get a short written note of what we heard and whether a diagnostic is worth doing.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-lg group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-lg group" arrow={true} />
         </div>
       </section>
     </>

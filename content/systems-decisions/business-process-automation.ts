@@ -57,8 +57,9 @@ export const content: SystemsDecisionContent = {
     subhead: [
       'Your team should not be the integration layer between your own systems. Every time someone copies data from one system to another, builds a report by hand, or chases a status update by email and phone, that is money leaving your business through the least visible exit on your P&L.',
       'We find that work, remove the steps that should not exist, and automate what is left, around the systems you already run.',
+      'LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -197,7 +198,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'Before we build, we measure what the manual work costs today, in labour hours and dollars. That baseline is what every build is measured against. Your first build is live within 60 days of the engagement starting, and every 30 days you get a Value Creation Report showing the labour hours recovered, how the automation is performing and the rolling return against what you pay us. You see the numbers, not a claim that it is working.',
+          text: 'Before we build, we measure what the manual work costs today, in labour hours and dollars. That baseline is what every build is measured against. Each month we report what changed against that baseline. You see the numbers, not a claim that it is working.',
         },
       ],
     },
@@ -206,11 +207,11 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'The 60-minute Leverage Audit is free. If it shows a problem worth solving, the Leverage Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+          text: 'The 30-minute call is free. If it shows a problem worth solving, the diagnostic is scoped and agreed in writing after the call, before any work starts.',
         },
         {
           kind: 'p',
-          text: 'Ongoing work runs on a monthly retainer priced against the value it creates, not the hours it takes. Engagements run $4,500 to $8,500 a month, with no upfront fee and no hardware cost, and the minimum term is three months from go-live. If the value we find does not support roughly a three to one return, we say so in writing rather than proceed.',
+          text: 'The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We will give you real numbers once we understand what you need, usually after the first call.',
         },
       ],
     },
@@ -238,10 +239,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with the free 60-minute Leverage Audit. Bring the report someone on your team builds by hand every week, and one recent job from the moment it came in to the moment it was invoiced. We map how the work actually moved, show you where it waited and where the same information was handled more than once, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets and a one-year plan. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the report someone on your team builds by hand every week, and one recent job from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   relatedReading: [

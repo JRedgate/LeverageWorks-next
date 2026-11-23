@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function FractionalCTOCalgaryPage() {
   return (
     <>
@@ -21,12 +22,9 @@ export default function FractionalCTOCalgaryPage() {
               <span className="text-brand-slate italic">the way it is run.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">Revenue grew. Margin did not move with it, and headcount climbed to hold the operation together. Your best people spend their days moving work and information between systems and people that do not line up. That labour never shows up on a report, and it is the biggest single reason a growing company adds revenue without adding margin.</p>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You do not need another software subscription. You need an operating partner embedded inside your business who can see where the work is breaking and rebuild how it flows. That is what LVRGWRKS does, and we stay to run it.</p>
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You do not need another software subscription. LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">View Capabilities</Link>
             </div>
           </div>
@@ -73,7 +71,7 @@ export default function FractionalCTOCalgaryPage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Solution</span>
             <h2 className="font-display font-bold text-4xl mb-6 leading-tight">We do not bolt tools onto a broken process. We rebuild how the work flows, and we stay.</h2>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it and prove the return. The retainer is set against the value the work creates, not the hours it takes or the tools it uses. The same work that lifts your margin lifts what the business is worth when you sell it or bring in a partner. Your data and your builds are yours from day one, with a permanent licence to any LVRGWRKS module the system uses.</p>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it. Your data and your builds are yours from day one, with a permanent licence to any LVRGWRKS module the system uses.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We do not optimize within broken structures</h3>
@@ -84,8 +82,8 @@ export default function FractionalCTOCalgaryPage() {
                 <p className="text-gray-300 leading-relaxed">Single-platform features get absorbed by your software vendors. What they cannot copy is the way your work flows across the whole operation. That is what we rebuild, you own every part of it from day one, and it is the part that holds.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
-                <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We prove it every 30 days</h3>
-                <p className="text-gray-300 leading-relaxed">Every month you receive a Value Creation Report documenting the exact labour hours recovered, automation performance, and your rolling return on investment. We do not guess whether we are saving you money. We document it.</p>
+                <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We report what changed</h3>
+                <p className="text-gray-300 leading-relaxed">Each month we report what changed against the baseline agreed up front. We do not guess whether the work is paying off. We document it.</p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We stay</h3>
@@ -102,7 +100,7 @@ export default function FractionalCTOCalgaryPage() {
             <div className="mb-16 text-center">
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">The Process</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-4">Four moves. One operating cadence.</h2>
-              <p className="text-brand-slate text-lg max-w-2xl mx-auto">Your first bottleneck is solved within 60 days. The work continues from there.</p>
+              <p className="text-brand-slate text-lg max-w-2xl mx-auto">Every engagement starts with a 30-minute call.</p>
             </div>
             <div className="space-y-6">
               <div className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
@@ -111,7 +109,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">01</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Diagnose</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">The 60-Minute Leverage Audit. We map your highest-friction workflows and quantify the exact labour cost of that pain. You leave the call with a written summary of where your operations are bleeding capacity and what it is costing you in real dollars. No cost. No commitment.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">A 30-minute call. Tell us what keeps coming back to you. You get a short written note of what we heard and whether a diagnostic is worth doing.</p></div>
                 </div>
               </div>
               <div className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
@@ -120,7 +118,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">02</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Design</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">This is the paid Leverage Diagnostic. We quantify the coordination tax in your own numbers and design the fix around how your operation actually runs. Sometimes that is automation or AI. Sometimes it is removing a handoff or moving a decision so it stops routing through you. Nothing gets ripped out and no new platform is forced on your team. You see the blueprint, and your own number, before any building begins.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">This is the diagnostic. A fixed-scope look at where decisions and handoffs stall and what that costs your business, and the design of the fix around how your operation actually runs. Sometimes that is automation or AI. Sometimes it is removing a handoff or moving a decision so it stops routing through you. Nothing gets ripped out and no new platform is forced on your team. The findings are yours whether or not you continue.</p></div>
                 </div>
               </div>
               <div className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
@@ -129,7 +127,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">03</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Build</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">Our team executes the builds. You review outputs, not code. Every process change and automation we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on LVRGWRKS to keep the lights on.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">We build the fix with your people. You review outputs, not code. Every process change and automation we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on LVRGWRKS to keep the lights on.</p></div>
                 </div>
               </div>
               <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white">
@@ -138,7 +136,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">04</span></div>
                     <h3 className="font-display font-bold text-xl text-white">Stay</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-gray-300 leading-relaxed text-lg">We manage, monitor, and evolve your systems as your business grows. Every month you receive a Value Creation Report: labour hours recovered, automation performance, rolling ROI against your retainer. If the numbers do not justify the partnership, you will know before we do.</p></div>
+                  <div className="md:w-3/4"><p className="text-gray-300 leading-relaxed text-lg">We manage, monitor, and evolve your systems as your business grows. Each month we report what changed against the baseline agreed up front. If the work does not justify the partnership, you will know.</p></div>
                 </div>
               </div>
             </div>
@@ -153,8 +151,8 @@ export default function FractionalCTOCalgaryPage() {
               <div>
                 <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Who We Partner With</span>
                 <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">Built for Alberta operators, not startup ecosystems</h2>
-                <p className="text-brand-slate text-lg leading-relaxed mb-6">LVRGWRKS partners with founders, owners, and COOs of mid-market companies across Calgary, Alberta, and Western Canada. Typically 20 to 250 employees, $5M to $150M in revenue, operating in industries where the work is complex, the processes are real, and the margin pressure is constant.</p>
-                <p className="text-brand-slate text-lg leading-relaxed mb-6">The Alberta mid-market operates differently from tech-centric markets. You need a partner who understands the operational realities of energy, construction, and industrial services, not someone who learned business in a software startup. LVRGWRKS was founded in Calgary, shaped by 20 years of operational experience across manufacturing, industrial services, and capital programs, and grounded in the executive and financial frameworks of the Haskayne School of Business at the University of Calgary.</p>
+                <p className="text-brand-slate text-lg leading-relaxed mb-6">LVRGWRKS partners with owners and leadership teams of industrial businesses across Canada, in industries where the work is complex, the processes are real, and the margin pressure is constant.</p>
+                <p className="text-brand-slate text-lg leading-relaxed mb-6">The Alberta mid-market operates differently from tech-centric markets. You need a partner who understands the operational realities of energy, construction, and industrial services, not someone who learned business in a software startup. LVRGWRKS was founded in Calgary, shaped by more than 20 years of operational experience across manufacturing, industrial services, and capital programs, and grounded in the executive and financial frameworks of the Haskayne School of Business at the University of Calgary.</p>
                 <p className="text-brand-slate text-lg leading-relaxed">If your team is busy but the business is not moving faster, that gap is exactly where we work.</p>
               </div>
               <div className="space-y-4">
@@ -165,15 +163,6 @@ export default function FractionalCTOCalgaryPage() {
                   <div>
                     <h3 className="font-display font-bold text-brand-navy">Construction and General Contracting</h3>
                     <p className="text-brand-slate text-sm mt-1">Project coordination, subcontractor management, cost tracking across multi-site operations</p>
-                  </div>
-                </div>
-                <div className="bg-brand-surface p-6 rounded-xl border border-gray-100 flex items-center gap-6">
-                  <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-                  </div>
-                  <div>
-                    <h3 className="font-display font-bold text-brand-navy">Property Management</h3>
-                    <p className="text-brand-slate text-sm mt-1">Disconnected billing, maintenance, and tenant systems recovered into a single operating layer</p>
                   </div>
                 </div>
                 <div className="bg-brand-surface p-6 rounded-xl border border-gray-100 flex items-center gap-6">
@@ -200,39 +189,6 @@ export default function FractionalCTOCalgaryPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32 bg-brand-surface">
-        <div className="container mx-auto px-6 md:px-16">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-16 text-center">
-              <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">The Investment</span>
-              <h2 className="font-display font-bold text-4xl text-brand-navy mb-4">Priced to the value it creates. Not the hours. Not the tools.</h2>
-              <p className="text-brand-slate text-lg max-w-2xl mx-auto">The retainer is set against the value an engagement is calculated to create, not the time it takes or the technology it uses. Three tiers, matched to where your constraints actually sit. You see the number that fits your operation in the Diagnostic, before anything is built, and the work is built to return two to three times what it costs.</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Ignite</h3>
-                <p className="text-brand-gold font-bold text-sm uppercase tracking-widest mb-6">Your operational proof point</p>
-                <p className="text-brand-slate text-sm leading-relaxed mb-6">Get more out of the team you already have, starting with your biggest bottleneck.</p>
-                <p className="text-brand-slate text-sm leading-relaxed"><span className="font-bold text-brand-navy">What you get:</span> Your LVRGWRKS operating partner, your first build live within 60 days, and your Monthly Value Creation Report showing the return every 30 days.</p>
-              </div>
-              <div className="bg-brand-navy p-8 rounded-xl relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[10px] font-bold tracking-widest uppercase px-4 py-1.5 rounded-full">Most Chosen</div>
-                <h3 className="font-display font-bold text-2xl text-white mb-2">Build</h3>
-                <p className="text-brand-gold font-bold text-sm uppercase tracking-widest mb-6">An embedded operator</p>
-                <p className="text-gray-300 text-sm leading-relaxed mb-6">Build the operational foundation that lets your business grow without your costs growing with it.</p>
-                <p className="text-gray-300 text-sm leading-relaxed"><span className="font-bold text-white">What you get:</span> Your LVRGWRKS operating partner embedded across departments, multiple builds run and managed as one system, and the return tracked across departments every month.</p>
-              </div>
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <h3 className="font-display font-bold text-2xl text-brand-navy mb-2">Scale</h3>
-                <p className="text-brand-gold font-bold text-sm uppercase tracking-widest mb-6">A named operating partner</p>
-                <p className="text-brand-slate text-sm leading-relaxed mb-6">A permanent operating partner inside your business, managing your systems as you grow.</p>
-                <p className="text-brand-slate text-sm leading-relaxed"><span className="font-bold text-brand-navy">What you get:</span> Your LVRGWRKS operating partner alongside your leadership. Unlimited build scope, no project caps. Executive-level Monthly Value Creation Report every 30 days.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       {/* FAQ */}
       <section className="py-20 md:py-32 bg-brand-surface border-b border-gray-100">
@@ -242,16 +198,16 @@ export default function FractionalCTOCalgaryPage() {
             <h2 className="font-display font-bold text-3xl md:text-4xl text-brand-navy mb-12 leading-tight">Fractional CTO Questions, Answered</h2>
             <div className="space-y-8">
               <div className="border-b border-gray-100 pb-8">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does a fractional CTO cost in Calgary?</h3>
-                <p className="text-brand-slate leading-relaxed">LVRGWRKS engagements run from $4,500 to $8,500 per month. The retainer is set against roughly one third of the value the work creates rather than against hours, and it is capped at $8,500 regardless of how much value the system produces. Above that cap, every further dollar of value is yours.</p>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does it cost?</h3>
+                <p className="text-brand-slate leading-relaxed">The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We&apos;ll give you real numbers once we understand what you need, usually after the first call.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What is the difference between a fractional CTO and an IT consultant?</h3>
-                <p className="text-brand-slate leading-relaxed">An IT consultant delivers a project and leaves. A fractional CTO is <Link href="/insights/what-does-a-fractional-cto-do" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">an operating partner inside the business</Link>. We diagnose where the work is costing you, redesign how it flows, build the fix, and stay to run it and prove the return every 30 days.</p>
+                <p className="text-brand-slate leading-relaxed">An IT consultant delivers a project and leaves. A fractional CTO is <Link href="/insights/what-does-a-fractional-cto-do" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">an operating partner inside the business</Link>. We diagnose where the work is costing you, redesign how it flows, build the fix, and report what changed each month.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How long is a fractional CTO engagement?</h3>
-                <p className="text-brand-slate leading-relaxed">The minimum term is three months from go-live, not from signature. After that it continues month to month at the same rate, with no renegotiation required.</p>
+                <p className="text-brand-slate leading-relaxed">Terms are agreed in writing before any work starts. The diagnostic stands on its own, and you keep the findings whether or not you continue.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we own what a fractional CTO builds for us?</h3>
@@ -259,7 +215,7 @@ export default function FractionalCTOCalgaryPage() {
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">
-              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including how the retainer is set, what happens at the end of an engagement, and how a fractional CTO differs from an agency or a full-time hire.
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what it costs, who owns what we build, and what happens to your team.
             </p>
           </div>
         </div>
@@ -267,13 +223,9 @@ export default function FractionalCTOCalgaryPage() {
 
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a free Leverage Audit.</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">60 minutes. No cost. No commitment. We map your highest-friction workflows, quantify the exact labour cost of that pain, and outline where the fix sits before the call ends.</p>
-          <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">You leave with a clear picture of where your operations are costing you more than they should, regardless of whether we work together.</p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a 30-minute call.</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.</p>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>

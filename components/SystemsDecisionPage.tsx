@@ -4,6 +4,7 @@ import { RelatedReading } from './RelatedReading';
 import { AnswerBody, renderInline } from './RichText';
 import type { ComparisonTable, SystemsDecisionContent } from '@/content/systems-decisions/types';
 
+import { BookCallButton } from '@/components/BookCallButton';
 /**
  * The shared template for the systems-decision pages.
  *
@@ -21,12 +22,9 @@ import type { ComparisonTable, SystemsDecisionContent } from '@/content/systems-
  * renders only for a page whose content object carries one.
  */
 
-/**
- * Fixed, never content-supplied. components/AnalyticsEvents.tsx is a delegated
- * listener matching href.startsWith('/leverage-audit'), so letting a content
- * file override this would silently break the cta_leverage_audit event.
- */
-const AUDIT_HREF = '/leverage-audit';
+// The primary CTAs render through BookCallButton, so the link and the label
+// come from lib/booking.ts and never from a content file. The content
+// objects' ctaLabel values are kept in step with BOOKING_LABEL.
 
 /**
  * The secondary hero CTA. Every service and industry page runs a two-button
@@ -191,13 +189,7 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
               </p>
             ))}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={AUDIT_HREF}
-                className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group"
-              >
-                {hero.ctaLabel}
-                <ArrowIcon />
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow />
               <Link
                 href={SECONDARY_CTA_HREF}
                 className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all"
@@ -265,13 +257,7 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
                 {renderInline(para, `step-${i}`)}
               </p>
             ))}
-            <Link
-              href={AUDIT_HREF}
-              className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group mt-6"
-            >
-              {firstStep.ctaLabel}
-              <ArrowIcon />
-            </Link>
+            <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group mt-6" arrow />
           </div>
         </div>
       </section>

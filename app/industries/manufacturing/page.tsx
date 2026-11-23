@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function ManufacturingPage() {
   return (
     <>
@@ -24,13 +25,10 @@ export default function ManufacturingPage() {
               Manufacturing companies generate more operational data than almost any other industry. Production output, quality results, equipment status, labour hours, material consumption, and supplier lead times, all being captured somewhere. The problem is that somewhere is usually a collection of disconnected systems, manual logs, and spreadsheets that require human effort to reconcile.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              When your production team is spending time on reporting instead of production, and your leadership is making decisions on last week's numbers, the operational drag compounds. LVRGWRKS builds the integration and automation layer that connects your manufacturing systems and eliminates the manual work in between.
+              When your production team is spending time on reporting instead of production, and your leadership is making decisions on last week's numbers, the operational drag compounds. LVRGWRKS is an operating partner for industrial businesses. We help owners and leadership teams move decisions and handoffs off the top desk and into the business, and bring in technology only where it earns its place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
                 View Capabilities
               </Link>
@@ -86,7 +84,7 @@ export default function ManufacturingPage() {
               Systems that connect your production floor to your business systems, without manual entry.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for manufacturing companies across Alberta and Western Canada. We connect your existing tools, your ERP, your MES or production management system, your quality system, your maintenance management platform, into a unified operating layer. No rip-and-replace. We build around what you have and eliminate the manual work between systems.
+              Technology work is one of the tools we use. Where it earns its place, we build automation and integration for manufacturing companies across Canada. We connect your existing tools, your ERP, your MES or production management system, your quality system, your maintenance management platform, into a unified operating layer. No rip-and-replace. We build around what you have and eliminate the manual work between systems.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -130,10 +128,10 @@ export default function ManufacturingPage() {
                   Labour availability, input cost volatility, and the demands of customers in resource-intensive industries mean Alberta manufacturers operate with tighter margins and less tolerance for operational waste than manufacturers in other markets. Getting more out of your current capacity is not a nice-to-have. It is a competitive requirement.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with manufacturing companies across Alberta and Western Canada. We understand the operational constraints of this market, the labour pressure, the input cost exposure, the customer requirements, because it is the context our clients navigate every day.
+                  LVRGWRKS was founded in Calgary and works with manufacturing companies across Canada. We understand the operational constraints of this market, the labour pressure, the input cost exposure, the customer requirements.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
-                  We work with discrete manufacturers, process manufacturers, and industrial fabricators ranging from 20 to 250 employees. If your team is running hard but the operation is not performing at the level the business needs, that gap is where we work.
+                  We work with discrete manufacturers, process manufacturers, and industrial fabricators. If your team is running hard but the operation is not performing at the level the business needs, that gap is where we work.
                 </p>
               </div>
               <div className="space-y-4">
@@ -173,15 +171,15 @@ export default function ManufacturingPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does it cost to connect our ERP to the plant floor?</h3>
-                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost. The retainer is set at roughly a third of the annual value the work creates rather than against a licence count or an implementation estimate, which is what makes the number predictable. Most integration quotes you will see are scoped against the number of connections. Ours is scoped against what the manual work between those systems is costing you now, and the Leverage Audit produces that figure before anything is committed.</p>
+                <p className="text-brand-slate leading-relaxed">The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We&apos;ll give you real numbers once we understand what you need, usually after the first call.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we know the automation actually paid for itself?</h3>
-                <p className="text-brand-slate leading-relaxed">You get a report every 30 days documenting labour hours recovered, how the automation is performing, and rolling return against what you are paying. That is a deliberate choice rather than a courtesy. Most automation return is argued after the fact from a model built before the work started, which is why so few of these projects can prove anything at renewal. Measuring monthly from month one means the number is either there or it is not, and you see it either way.</p>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do we know the work actually paid off?</h3>
+                <p className="text-brand-slate leading-relaxed">We agree a baseline up front and report what changed against it each month. Measuring from the start means the change is either there or it is not, and you see it either way.</p>
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">
-              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what happens to your team when the work is rebuilt, where your data goes, and why the first build is scoped to 60 days.
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what it costs, who owns what we build, and what happens to your team.
             </p>
           </div>
         </div>
@@ -192,15 +190,12 @@ export default function ManufacturingPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">How much capacity is your manual reporting overhead consuming?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit maps your current workflows, identifies where data is moving manually between systems, and quantifies what that overhead is costing you in real dollars.
+            Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.
           </p>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment.
+            Thirty minutes. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>

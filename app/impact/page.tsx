@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { UseCaseCard } from '@/components/UseCaseCard';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function ImpactPage() {
   return (
     <>
@@ -92,9 +93,7 @@ export default function ImpactPage() {
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-8">What could we unlock for you?</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">Every organization has hidden capacity waiting to be unlocked. Let us help you find it.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <Link href="/leverage-audit" className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl">
-              Request Free Leverage Audit
-            </Link>
+            <BookCallButton variant="custom" className="bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl" arrow={false} />
             <Link href="/capabilities" className="text-white text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
               View Capabilities
             </Link>

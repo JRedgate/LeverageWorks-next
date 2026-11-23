@@ -55,8 +55,9 @@ export const content: SystemsDecisionContent = {
     subhead: [
       'Your team is the glue between systems that should talk to each other. Spreadsheets are used as databases, data is moved by hand between platforms every day, and decisions get made on incomplete information because no single tool sees the whole picture.',
       'AI can take some of that work off your people. We use it where the diagnosis shows it will pay, after the work around it has been fixed, and we tell you plainly when a simpler fix will do the job better.',
+      'LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -151,7 +152,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'A feeling that things are faster is not a measurement. Before we build, we measure what the work costs today, in labour hours and dollars, and that baseline is what everything is measured against. Your first build is live within 60 days of the engagement starting, and every 30 days you get a Value Creation Report showing labour hours recovered, how the automation is performing and the rolling return against what you pay us.',
+          text: 'A feeling that things are faster is not a measurement. Before we build, we measure what the work costs today, in labour hours and dollars, and that baseline is what everything is measured against. Each month we report what changed against that baseline.',
         },
       ],
     },
@@ -176,11 +177,11 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'LVRGWRKS prices against the value created, not the hours worked. Engagements run $4,500 to $8,500 per month with no upfront fee and no hardware cost, and the minimum term is three months from go-live. If the identified value does not support roughly a three to one return, we say so in writing rather than proceed.',
+          text: 'The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We will give you real numbers once we understand what you need, usually after the first call.',
         },
         {
           kind: 'p',
-          text: 'The 60-minute Leverage Audit that comes first is free, and the Leverage Diagnostic after it is scoped and quoted in writing before any work starts.',
+          text: 'The 30-minute call that comes first is free, and the diagnostic after it is scoped and agreed in writing before any work starts.',
         },
       ],
     },
@@ -207,7 +208,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'Yes. We are based in Calgary and work across Alberta and Western Canada, Edmonton included. Most of an engagement runs remotely, with time on site where it matters.',
+          text: 'Yes. We are based in Calgary and work with industrial businesses across Canada, Edmonton included. Most of an engagement runs remotely, with time on site where it matters.',
         },
       ],
     },
@@ -216,10 +217,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with the free 60-minute Leverage Audit. Bring the report someone builds by hand every week, and one recent job from the moment it came in to the moment it was invoiced. We map how the work actually moved, show you where AI would help, where simpler automation would do better, and where neither is the answer, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets and a one-year plan. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the report someone builds by hand every week, and one recent job from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   sources: {

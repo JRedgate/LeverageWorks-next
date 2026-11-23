@@ -31,7 +31,7 @@ export const content: SystemsDecisionContent = {
       'Most contractors try to fix change orders in the office: better billing, better software, a stricter project manager. But the money is rarely lost in the office.',
       'It is lost in the first ten minutes, on site, when someone says yes to extra work and no record gets made. Everything after that is the office trying to rebuild a record that never existed.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -180,10 +180,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with the free 60-minute Leverage Audit. Bring the last report you sent to an owner, a client or your board, and one recent change order or T&M ticket, from the moment someone in the field said yes to the moment it was invoiced. We follow that change through your operation, count the handoffs, show you where it waited and where it was retyped, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets and a one-year plan. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring the last report you sent to an owner, a client or your board, and one recent change order or T&M ticket, from the moment someone in the field said yes to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   sources: {

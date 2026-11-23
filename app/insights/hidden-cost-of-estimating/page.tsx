@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function HiddenCostOfEstimatingPage() {
   return (
     <>
@@ -70,11 +71,9 @@ export default function HiddenCostOfEstimatingPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-8 leading-tight">What is estimating costing you?</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            Sixty minutes, no cost, no commitment. We map your highest-coordination workflows, put a real number on the labour cost, and you leave with it in writing.
+            Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl">
-            Request Free Leverage Audit
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl" arrow={false} />
         </div>
       </section>
       <RelatedReading

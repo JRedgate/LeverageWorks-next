@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function EnergyServicesPage() {
   return (
     <>
@@ -24,13 +25,10 @@ export default function EnergyServicesPage() {
               Alberta energy services companies operate in one of the most data-rich environments in the world. Field crews, equipment, dispatch, compliance, procurement, and project cost data are all being captured somewhere. The problem is that somewhere is five different systems, three spreadsheets, and a set of paper tickets sitting in a truck.
             </p>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
-              By the time that data reaches the people who need to make decisions with it, the day is already over. LVRGWRKS builds the integration and automation layer that connects your field and back-office operations so decisions get made on current information, not yesterday's.
+              By the time that data reaches the people who need to make decisions with it, the day is already over. LVRGWRKS is an operating partner for industrial businesses. We help owners and leadership teams move decisions and handoffs off the top desk and into the business, and bring in technology only where it earns its place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
                 View Capabilities
               </Link>
@@ -86,7 +84,7 @@ export default function EnergyServicesPage() {
               One operating layer that connects field, dispatch, compliance, and back office.
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS builds custom automation and integration systems for energy services companies across Alberta and Western Canada. We do not replace your existing tools. We connect them, building the automation layer that sits above your current systems and makes them work together. Every workflow we build for your operation belongs to you from day one, with a permanent licence to any LVRGWRKS module it uses.
+              Technology work is one of the tools we use. Where it earns its place, we build automation and integration for energy services companies across Canada. We do not replace your existing tools. We connect them, building the automation layer that sits above your current systems and makes them work together. Every workflow we build for your operation belongs to you from day one, with a permanent licence to any LVRGWRKS module it uses.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
@@ -130,10 +128,10 @@ export default function EnergyServicesPage() {
                   Commodity price cycles, remote operations, complex regulatory environments, and demanding client requirements make Alberta energy services one of the most operationally challenging industries in the country. A technical partner who has not worked in this context cannot build systems that reflect its realities.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                  LVRGWRKS was founded in Calgary and works with energy services companies across Alberta and Western Canada. We understand the operational pressures of this market, the margin compression, the compliance requirements, the workforce management challenges in remote locations, because it is the context our clients navigate every day.
+                  LVRGWRKS was founded in Calgary and works with energy services companies across Canada. We understand the operational pressures of this market, the margin compression, the compliance requirements, the workforce management challenges in remote locations.
                 </p>
                 <p className="text-brand-slate text-lg leading-relaxed">
-                  We work with oilfield services companies, industrial maintenance contractors, pipeline services providers, and environmental services firms ranging from 20 to 250 employees. If your team is busy but the business is not running as efficiently as it needs to, that gap is where we work.
+                  We work with oilfield services companies, industrial maintenance contractors, pipeline services providers, and environmental services firms. If your team is busy but the business is not running as efficiently as it needs to, that gap is where we work.
                 </p>
               </div>
               <div className="space-y-4">
@@ -177,11 +175,11 @@ export default function EnergyServicesPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How much does field ticket to invoice automation cost?</h3>
-                <p className="text-brand-slate leading-relaxed">Engagements run $4,500 to $8,500 per month, capped at $8,500, with no upfront fee and no hardware cost, and the minimum term is three months from go-live. The retainer is set at roughly a third of the annual value the work creates. For most energy services companies the value is not only labour. It is the hours spent re-entering tickets, chasing approvals and correcting rejected invoices, plus what the payment delay costs in working capital. The Leverage Audit puts a figure on both.</p>
+                <p className="text-brand-slate leading-relaxed">The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We&apos;ll give you real numbers once we understand what you need, usually after the first call.</p>
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">
-              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including who owns what we build, how we price against value rather than hours, and what happens after the first 60 days.
+              More questions answered on the <Link href="/faq" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">LVRGWRKS FAQ</Link>, including what it costs, who owns what we build, and what happens to your team.
             </p>
           </div>
         </div>
@@ -192,15 +190,12 @@ export default function EnergyServicesPage() {
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">What is your field data lag costing you in missed margin?</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit maps your current workflows, identifies where data is moving manually, and quantifies the cost. You leave with a clear picture of where automation investment makes sense for your business specifically.
+            Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.
           </p>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
-            60 minutes. No cost. No commitment.
+            Thirty minutes. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
