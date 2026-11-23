@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { LwSymbol } from '@/components/Logo';
 import { sendWhenReady } from '@/components/AnalyticsEvents';
+import { BookCallButton } from '@/components/BookCallButton';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgvjrrod';
 
@@ -13,6 +14,7 @@ export default function ContactPage() {
     email: '',
     company: '',
     role: '',
+    cityRegion: '',
     message: '',
     referredBy: '',
   });
@@ -29,7 +31,7 @@ export default function ContactPage() {
       });
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', company: '', role: '', message: '', referredBy: '' });
+        setFormData({ name: '', email: '', company: '', role: '', cityRegion: '', message: '', referredBy: '' });
         sendWhenReady('contact_form_submit', { page_path: '/contact' });
       } else {
         setStatus('error');
@@ -56,7 +58,7 @@ export default function ContactPage() {
               Start the <span className="text-gray-400 italic">Conversation.</span>
             </h1>
             <p className="text-gray-400 text-xl leading-relaxed max-w-2xl">
-              Tell us what you are working through. We will schedule a free 60-minute Leverage Audit with a LVRGWRKS strategist to explore what is possible for your organization.
+              Tell us what keeps landing on your desk. Jeremy reads every message and replies within one business day.
             </p>
           </div>
         </div>
@@ -66,6 +68,11 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <div>
+              <div className="bg-brand-navy text-white p-8 rounded-xl mb-8">
+                <h2 className="font-display font-bold text-xl mb-3">Rather talk it through?</h2>
+                <p className="text-gray-400 mb-6">Pick a time that suits you. You get a short written note of what we heard and whether a diagnostic is worth doing.</p>
+                <BookCallButton variant="gold" />
+              </div>
               {status === 'success' ? (
                 <div className="bg-white p-12 rounded-xl border border-gray-100 text-center">
                   <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -75,7 +82,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Message Received</h3>
                   <p className="text-brand-slate leading-relaxed mb-8">
-                    Thanks for writing. We read every message and reply personally. If a Leverage Audit is the right next step, we will suggest a time.
+                    Thanks for writing. Jeremy will reply within one business day. If a 30-minute call is the right next step, he will suggest a time.
                   </p>
                   <Link href="/" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
                     Return Home
@@ -83,7 +90,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
-                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Request Free Leverage Audit</h2>
+                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Send us a note</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
@@ -113,6 +120,10 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="mb-6">
+                    <label htmlFor="contact-city-region" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">City or Region *</label>
+                    <input id="contact-city-region" type="text" name="cityRegion" value={formData.cityRegion} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., Calgary, AB" />
+                  </div>
+                  <div className="mb-6">
                     <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Describe Your Challenge *</label>
                     <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="Tell us about the organizational friction points you are experiencing..." />
                   </div>
@@ -126,8 +137,12 @@ export default function ContactPage() {
                     </div>
                   )}
                   <button type="submit" disabled={status === 'submitting'} className="w-full bg-brand-navy text-white py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all disabled:opacity-50 disabled:cursor-not-allowed">
-                    {status === 'submitting' ? 'Sending...' : 'Submit Request'}
+                    {status === 'submitting' ? 'Sending...' : 'Send'}
                   </button>
+                  <p className="text-brand-slate text-xs mt-4">
+                    We use these details only to reply to you. See our{' '}
+                    <Link href="/privacy" className="underline decoration-brand-gold underline-offset-2 hover:text-brand-navy">privacy notice</Link>.
+                  </p>
                 </form>
               )}
             </div>
@@ -135,9 +150,9 @@ export default function ContactPage() {
               <div className="mb-12">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What to Expect</h3>
                 <ul className="space-y-4 text-brand-slate">
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">01.</span> A LVRGWRKS strategist will review your submission within 24 hours.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">02.</span> We will schedule your free 60-minute Leverage Audit to understand your context.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">03.</span> You will receive an initial assessment of potential engagement pathways.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">01.</span> Jeremy reads your note and replies within one business day.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">02.</span> If it makes sense, we set up a 30-minute call.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">03.</span> After the call you get a short written note of what we heard and whether a diagnostic is worth doing.</li>
                 </ul>
               </div>
               <div className="bg-brand-navy p-8 rounded-xl text-white">

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Free Leverage Audit Calgary | 60-Minute Diagnostic' },
-  description: 'A 60-minute operational diagnostic for owner-led mid-market companies in Alberta. Find where coordination is costing you margin. No cost, no obligation.',
+  title: { absolute: 'Book a 30-Minute Call | LVRGWRKS' },
+  description: 'A free 30-minute call with LVRGWRKS. Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.',
   alternates: { canonical: '/leverage-audit' },
   openGraph: {
-    title: 'The Leverage Audit. 60 minutes, no cost, no commitment.',
-    description: 'We map your highest-coordination workflows, put a real dollar figure on the labour cost, and rank the fixes by return. You keep the written summary either way.',
+    title: 'Book a 30-minute call',
+    description: 'Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing. No obligation.',
     url: '/leverage-audit',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 
