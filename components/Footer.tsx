@@ -60,6 +60,7 @@ export const Footer: React.FC = () => (
             <li><Link href="/insights" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Insights</Link></li>
             <li><Link href="/faq" className="hover:text-white transition-colors hover:translate-x-1 inline-block">FAQ</Link></li>
             <li><Link href="/contact" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Contact</Link></li>
+            <li><Link href="/privacy" className="hover:text-white transition-colors hover:translate-x-1 inline-block">Privacy</Link></li>
             <li>
               <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2 group">
                 LinkedIn
