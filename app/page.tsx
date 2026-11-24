@@ -95,13 +95,14 @@ export default function HomePage() {
                   Jeremy Redgate founded LVRGWRKS after more than 20 years in industrial operations and capital projects. He started on the tools as a Red Seal journeyman electrician, has run projects with crews of up to 125, and has led a project management office responsible for a $100M+ capital portfolio. He holds an Executive MBA in finance from Haskayne.
                 </p>
               </div>
-              <div className="md:col-span-2 md:order-1">
+              {/* Circle, face-centred crop shared with /leverage-audit (STEP-REVIEW-7 9.2). */}
+              <div className="md:col-span-2 md:order-1 flex md:justify-center">
                 <img
-                  src="/jeremy-redgate.jpg"
+                  src="/jeremy-redgate-square.jpg"
                   alt="Jeremy Redgate, founder of LVRGWRKS"
-                  width={1024}
-                  height={1004}
-                  className="w-full max-w-[320px] md:max-w-none h-auto rounded-xl"
+                  width={480}
+                  height={480}
+                  className="w-56 h-56 md:w-[300px] md:h-[300px] shrink-0 rounded-full object-cover"
                 />
               </div>
             </div>

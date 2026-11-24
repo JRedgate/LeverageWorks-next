@@ -53,7 +53,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
             <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">{i.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <BookCallButton variant="navy" />
-              <Link href="/capabilities" className="inline-flex items-center justify-center bg-white border border-gray-200 text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:border-brand-navy/30 hover:bg-gray-50 transition-all text-center">
+              <Link href="/capabilities" className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-navy hover:text-white transition-all text-center">
                 How we work
               </Link>
             </div>

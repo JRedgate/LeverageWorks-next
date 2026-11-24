@@ -31,7 +31,7 @@ export const Hero: React.FC = () => (
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <BookCallButton variant="navy" />
-          <Link href="/60-day-test" className="inline-flex items-center justify-center bg-white border border-gray-200 text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:border-brand-navy/30 hover:bg-gray-50 transition-all text-center">
+          <Link href="/60-day-test" className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-navy hover:text-white transition-all text-center">
             Take the 60-Day Test
           </Link>
         </div>

@@ -144,7 +144,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'In more than forty conversations with operators, one sentence came up again and again, usually said plainly:',
+          text: 'Ask an owner why they stay in every decision and the answer is usually some version of this:',
         },
         {
           // Verbatim, per the copy file's build note. The comma splice and the
