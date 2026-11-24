@@ -19,7 +19,7 @@ const steps = [
 ];
 
 export default function CallPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', company: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', cityRegion: '' });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const bookingViewSent = useRef(false);
 
@@ -50,7 +50,7 @@ export default function CallPage() {
       });
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', company: '' });
+        setFormData({ name: '', email: '', company: '', cityRegion: '' });
         sendWhenReady('audit_fallback_submit', { page_path: '/leverage-audit' });
       } else {
         setStatus('error');
@@ -143,9 +143,13 @@ export default function CallPage() {
                   <label htmlFor="fallback-email" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Work email</label>
                   <input id="fallback-email" type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-brand-gold transition-colors" />
                 </div>
-                <div className="mb-8">
+                <div className="mb-6">
                   <label htmlFor="fallback-company" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Company</label>
                   <input id="fallback-company" type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-brand-gold transition-colors" />
+                </div>
+                <div className="mb-8">
+                  <label htmlFor="fallback-city-region" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">City or region</label>
+                  <input id="fallback-city-region" type="text" name="cityRegion" value={formData.cityRegion} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-brand-gold transition-colors" />
                 </div>
                 {status === 'error' && (
                   <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
