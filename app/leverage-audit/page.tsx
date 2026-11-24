@@ -128,7 +128,7 @@ export default function CallPage() {
                 </div>
                 <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Times are on the way</h3>
                 <p className="text-brand-slate leading-relaxed">
-                  We&apos;ll email you three times that work within one business day. If none of them suit, reply and we&apos;ll find one that does.
+                  We&apos;ll email you three time slots within one business day. If none of them suit, reply and we&apos;ll find one that does.
                 </p>
               </div>
             ) : (
@@ -173,13 +173,13 @@ export default function CallPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <div className="mb-14 text-center">
-              <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">What Happens</span>
+              <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-4 block">What Happens</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-4">Thirty minutes, then a short written note</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {steps.map((s) => (
                 <div key={s.n} className="bg-white p-8 rounded-xl border border-gray-100">
-                  <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6"><span className="text-brand-gold font-display font-bold text-xl">{s.n}</span></div>
+                  <div className="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-6"><span className="text-brand-gold-text font-display font-bold text-xl">{s.n}</span></div>
                   <h3 className="font-display font-bold text-xl text-brand-navy mb-4">{s.title}</h3>
                   <p className="text-brand-slate leading-relaxed text-sm">{s.body}</p>
                 </div>
@@ -192,10 +192,10 @@ export default function CallPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-3xl mx-auto">
-            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">If It Makes Sense</span>
+            <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-4 block">If It Makes Sense</span>
             <h2 className="font-display font-bold text-4xl text-brand-navy mb-6">What comes after the call</h2>
             <p className="text-brand-slate text-lg leading-relaxed mb-6">
-              <strong className="text-brand-navy">Run the diagnostic.</strong> A fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.
+              <strong className="text-brand-navy">Run the diagnostic.</strong> A fixed-scope, fixed-fee look at where decisions and handoffs stall and what that costs your business. You get written findings, a baseline to measure against, and the priorities we would start with. They are yours whether or not you continue.
             </p>
             <p className="text-brand-slate text-lg leading-relaxed">
               <strong className="text-brand-navy">Move it into the business.</strong> A monthly operating partnership that works the agreed priorities with your team and reports what changed each month.

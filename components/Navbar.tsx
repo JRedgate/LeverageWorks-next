@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
             <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${openDropdown === 'services' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
               <div className="bg-white border border-gray-100 rounded-lg shadow-xl py-2 min-w-[240px]">
                 {servicesItems.map((item) => (
-                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
+                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold-text bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
                     {item.label}
                   </Link>
                 ))}
@@ -130,7 +130,7 @@ export const Navbar: React.FC = () => {
             <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${openDropdown === 'industries' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
               <div className="bg-white border border-gray-100 rounded-lg shadow-xl py-2 min-w-[200px]">
                 {industriesItems.map((item) => (
-                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
+                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold-text bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
                     {item.label}
                   </Link>
                 ))}
@@ -178,7 +178,7 @@ export const Navbar: React.FC = () => {
             </button>
             <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-services' ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
               {servicesItems.map((item) => (
-                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>
+                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>
                   {item.label}
                 </Link>
               ))}
@@ -191,15 +191,15 @@ export const Navbar: React.FC = () => {
             </button>
             <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-industries' ? 'max-h-[260px] opacity-100' : 'max-h-0 opacity-0'}`}>
               {industriesItems.map((item) => (
-                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>
+                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
-          <Link href="/firm" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/firm') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>The Firm</Link>
-          <Link href="/insights" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Insights</Link>
-          <Link href="/faq" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/faq') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>FAQ</Link>
+          <Link href="/firm" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/firm') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>The Firm</Link>
+          <Link href="/insights" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>Insights</Link>
+          <Link href="/faq" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/faq') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>FAQ</Link>
           <div className="flex items-center gap-4 pt-4">
             <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="text-brand-slate hover:text-brand-navy transition-all" aria-label="LinkedIn Profile">
               <LinkedInIcon className="w-5 h-5" />

@@ -61,7 +61,7 @@ export default function InsightsPage() {
                 href={article.href}
                 className="group bg-brand-surface p-10 rounded-xl border border-gray-100 hover:border-brand-gold/30 hover:shadow-xl transition-all flex flex-col"
               >
-                <span className="text-brand-gold font-bold tracking-widest text-[10px] uppercase mb-4 block">{article.label}</span>
+                <span className="text-brand-gold-text font-bold tracking-widest text-[10px] uppercase mb-4 block">{article.label}</span>
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4 group-hover:text-brand-gold transition-colors leading-tight">{article.heading}</h3>
                 <p className="text-brand-slate leading-relaxed mb-6 flex-grow">{article.body}</p>
                 <span className="text-brand-navy font-bold text-sm uppercase tracking-widest flex items-center gap-2 group-hover:text-brand-gold transition-colors">

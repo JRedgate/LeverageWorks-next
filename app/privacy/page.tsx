@@ -66,7 +66,7 @@ export default function PrivacyPage() {
       <header className="relative pt-40 pb-16 md:pt-56 md:pb-20 overflow-hidden bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-3xl">
-            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Privacy</span>
+            <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-6 block">Privacy</span>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
               How we handle your information.
             </h1>

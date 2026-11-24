@@ -26,7 +26,6 @@ const figures = [
   { figure: '20+ years', caption: 'In industrial operations and capital projects' },
   { figure: '125', caption: 'Largest crews on projects he ran' },
   { figure: '$100M+', caption: 'Capital portfolio led' },
-  { figure: '40+', caption: 'Operator conversations building this firm' },
 ];
 
 
@@ -39,7 +38,7 @@ export default function HomePage() {
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
-            <Eyebrow>The Problem</Eyebrow>
+            <Eyebrow tone="dark">The Problem</Eyebrow>
             <SectionHeading tone="dark" line1="You added the revenue." line2="The margin did not follow." />
             <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-6">
               As a business grows, more decisions, approvals and problems find their way back to the top. Each one that waits on you or a senior leader slows the work, and the cost shows up in margin. We call it the coordination tax. It rarely appears on a report, and it tends to grow with the business.
@@ -83,16 +82,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Who you work with: dark band, four gold figures */}
+      {/* Who you work with: dark band, photo and text in two columns, then three
+          gold figures (STEP-REVIEW-7 7.2, reverses L21). Text stacks first on mobile. */}
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
-            <Eyebrow>Who You Work With</Eyebrow>
-            <SectionHeading tone="dark" line1="Led by an operator." className="mb-4" />
-            <p className="text-gray-300 text-lg leading-relaxed mb-10">Founded and led by Jeremy Redgate.</p>
-            <FigureBand figures={figures} />
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-16 items-center mb-10">
+              <div className="md:col-span-3 md:order-2">
+                <Eyebrow tone="dark">Who You Work With</Eyebrow>
+                <SectionHeading tone="dark" line1="Led by an operator." className="mb-6" />
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  Jeremy Redgate founded LVRGWRKS after more than 20 years in industrial operations and capital projects. He started on the tools as a Red Seal journeyman electrician, has run projects with crews of up to 125, and has led a project management office responsible for a $100M+ capital portfolio. He holds an Executive MBA in finance from Haskayne.
+                </p>
+              </div>
+              <div className="md:col-span-2 md:order-1">
+                <img
+                  src="/jeremy-redgate.jpg"
+                  alt="Jeremy Redgate, founder of LVRGWRKS"
+                  width={1024}
+                  height={1004}
+                  className="w-full max-w-[320px] md:max-w-none h-auto rounded-xl"
+                />
+              </div>
+            </div>
+            <FigureBand figures={figures} cols={3} />
             <p className="text-gray-300 text-lg leading-relaxed mt-10 mb-6">
-              Red Seal journeyman electrician. Executive MBA in finance, Haskayne. Energy, construction and manufacturing, across Western Canada.
+              Energy, construction and manufacturing, across Western Canada.
             </p>
             <Link href="/firm" className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-white transition-all">
               Meet Jeremy

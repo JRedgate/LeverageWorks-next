@@ -10,7 +10,7 @@ export default function FaqPage() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
-            <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Questions</span>
+            <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-6 block">Questions</span>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
               The questions owners<br />
               <span className="text-brand-slate italic">actually ask.</span>

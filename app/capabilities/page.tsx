@@ -13,7 +13,7 @@ import { SHARED_WORK_CLOSE, sharedWork } from '@/content/industries';
 const moves = [
   {
     name: 'Diagnose',
-    body: 'The diagnostic is a fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.',
+    body: 'The diagnostic is a fixed-scope, fixed-fee look at where decisions and handoffs stall and what that costs your business. You get written findings, a baseline to measure against, and the priorities we would start with. They are yours whether or not you continue.',
   },
   {
     name: 'Agree',
@@ -83,7 +83,7 @@ export default function CapabilitiesPage() {
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
-            <Eyebrow>How It Works</Eyebrow>
+            <Eyebrow tone="dark">How It Works</Eyebrow>
             <SectionHeading tone="dark" line1="What happens after the call." className="mb-12" />
             <div className="space-y-6">
               {moves.map((m, i) => (

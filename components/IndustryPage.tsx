@@ -66,7 +66,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
-            <Eyebrow>The Problem</Eyebrow>
+            <Eyebrow tone="dark">The Problem</Eyebrow>
             <SectionHeading tone="dark" line1="Where it lands on your desk" className="mb-12" />
             <DarkCards items={i.moments} />
             {/* Internal problem (STEP-REVIEW-5 3.3) */}

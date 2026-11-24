@@ -44,6 +44,10 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
 
   const done = answers.every((a) => a !== null);
   const count = answers.filter((a) => a === 'me').length;
+  const answered = answers.filter((a) => a !== null).length;
+  // "Your count" only once all five are answered, so a partial count does not
+  // read as a result (STEP-REVIEW-7 2.5).
+  const countLabel = done ? `Your count: ${count} of 5` : `Answered ${answered} of 5`;
   const band = sixtyDayBand(count);
 
   // sixty_day_test_complete is the page's event (addendum 1, Section 2). The
@@ -70,7 +74,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
           }
         >
           <span className={`text-brand-navy font-semibold ${compact ? 'text-sm' : 'text-lg'}`}>
-            <span className={`text-brand-gold font-display font-bold ${compact ? 'mr-2' : 'mr-3'}`}>{i + 1}.</span>
+            <span className={`text-brand-gold-text font-display font-bold ${compact ? 'mr-2' : 'mr-3'}`}>{i + 1}.</span>
             {item}
           </span>
           <div className="flex gap-2 shrink-0" role="group" aria-label={item}>
@@ -87,7 +91,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
       <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 md:p-8">
         {header && (
           <>
-            <p className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">The 60-Day Test</p>
+            <p className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-2">The 60-Day Test</p>
             <p className="font-display font-semibold text-xl text-brand-navy leading-snug mb-1">Could your business run for 60 days without you?</p>
           </>
         )}
@@ -95,11 +99,11 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
         {list}
         <div className="mt-5 pt-5 border-t border-gray-100" aria-live="polite">
           <p className="font-display font-bold text-lg text-brand-navy">
-            Your count: {count} of 5{!done && <span className="text-brand-slate font-sans font-normal text-sm"> (answer all five)</span>}
+            {countLabel}{!done && <span className="text-brand-slate font-sans font-normal text-sm"> (answer all five)</span>}
           </p>
           {done && (
             <>
-              <p className="font-display font-bold text-brand-gold mt-1">{band.heading}</p>
+              <p className="font-display font-bold text-brand-gold-text mt-1">{band.heading}</p>
               <p className="text-brand-slate text-sm leading-relaxed mt-1">{band.line}</p>
             </>
           )}
@@ -118,7 +122,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
       <div className="lg:col-span-3">{list}</div>
       <div className="lg:col-span-2 lg:sticky lg:top-28 bg-brand-navy text-white rounded-xl p-8 md:p-10" aria-live="polite">
         <p className="font-display font-bold text-3xl mb-6">
-          Your count: {count} of 5{!done && <span className="block text-gray-300 font-sans font-normal text-base mt-2">(answer all five)</span>}
+          {countLabel}{!done && <span className="block text-gray-300 font-sans font-normal text-base mt-2">(answer all five)</span>}
         </p>
         {done && (
           <>

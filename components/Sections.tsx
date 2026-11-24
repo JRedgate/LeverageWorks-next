@@ -8,8 +8,10 @@ import { BookCallButton } from '@/components/BookCallButton';
 
 type Tone = 'light' | 'dark';
 
-export const Eyebrow: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">{children}</span>
+// Gold #CA8A04 fails contrast as small text on white and light grey, so light
+// sections use brand-gold-text (STEP-REVIEW-7 2.1). Navy sections pass tone="dark".
+export const Eyebrow: React.FC<{ children: React.ReactNode; tone?: Tone }> = ({ children, tone = 'light' }) => (
+  <span className={`${tone === 'dark' ? 'text-brand-gold' : 'text-brand-gold-text'} font-bold tracking-widest text-[11px] uppercase mb-6 block`}>{children}</span>
 );
 
 // Line one bold navy (white on dark), line two italic slate (grey on dark).
@@ -58,8 +60,8 @@ export const GoldBarGrid: React.FC<{ items: Item[]; tone?: Tone; cols?: 2 | 3 }>
 );
 
 // `main`: "The Return", four large gold figures on navy.
-export const FigureBand: React.FC<{ figures: { figure: string; caption: string }[] }> = ({ figures }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+export const FigureBand: React.FC<{ figures: { figure: string; caption: string }[]; cols?: 3 | 4 }> = ({ figures, cols = 4 }) => (
+  <div className={`grid gap-6 ${cols === 3 ? 'grid-cols-1 lg:grid-cols-3' : 'grid-cols-2 md:grid-cols-4'}`}>
     {figures.map((f) => (
       <div key={f.figure} className="bg-white/5 border border-white/10 p-6 rounded-xl">
         <div className="text-brand-gold font-display font-bold text-4xl mb-2">{f.figure}</div>
@@ -74,7 +76,7 @@ export const NumberedCards: React.FC<{ items: Item[]; surface?: 'white' | 'grey'
   <div className={`grid grid-cols-1 gap-8 ${items.length === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
     {items.map((s, i) => (
       <div key={s.title} className={`p-8 md:p-10 rounded-xl border border-gray-100 ${surface === 'grey' ? 'bg-brand-surface' : 'bg-white'}`}>
-        <div className="text-brand-gold font-display font-bold text-5xl mb-4">{String(i + 1).padStart(2, '0')}</div>
+        <div className="text-brand-gold-text font-display font-bold text-5xl mb-4">{String(i + 1).padStart(2, '0')}</div>
         <h3 className="font-display font-bold text-xl md:text-2xl text-brand-navy mb-4">{s.title}</h3>
         <p className="text-brand-slate leading-relaxed">{s.body}</p>
       </div>
@@ -115,7 +117,7 @@ export const TestLink: React.FC<{ tone?: Tone; className?: string }> = ({ tone =
 // industry pages, so the three steps read the same everywhere.
 export const HOW_IT_WORKS_STEPS: Item[] = [
   { title: 'Book a 30-minute call.', body: 'Tell us what keeps coming back to you. You get a short written note of what we heard and whether a diagnostic is worth doing.' },
-  { title: 'Run the diagnostic.', body: 'A fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.' },
+  { title: 'Run the diagnostic.', body: 'A fixed-scope, fixed-fee look at where decisions and handoffs stall and what that costs your business. You get written findings, a baseline to measure against, and the priorities we would start with. They are yours whether or not you continue.' },
   { title: 'Move it into the business.', body: 'A monthly operating partnership that works the agreed priorities with your team and reports what changed each month.' },
 ];
 

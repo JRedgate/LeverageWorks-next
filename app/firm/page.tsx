@@ -10,7 +10,7 @@ import { Callout, Eyebrow, NumberedCards, SectionHeading, TestLink } from '@/com
 const principles = [
   { title: 'Structure before speed.', body: 'Most improvement work makes the existing way of working faster. We ask a different question first: does the structure still work as the business grows? If it doesn’t, speeding it up gets you to the wall sooner. We fix the structure first.' },
   { title: 'Operations first, tools second.', body: 'We don’t sell software and we don’t start with AI. We fix how work and decisions move, and bring in technology only where it earns its place. Your leadership team stays accountable for the decisions that matter.' },
-  { title: 'If it doesn’t move the P&L, we don’t do it.', body: 'We don’t measure success in reports, workshops or pilot programs. We agree a baseline up front and report what changed against it each month.' },
+  { title: 'If it doesn’t move the P&L, we don’t do it.', body: 'We don’t measure success in reports, workshops or pilot programs. We agree a baseline up front and report what changed against it each month. Safety, quality and compliance come first and are never traded against it.' },
 ];
 
 const industries = [
@@ -56,13 +56,13 @@ export default function FirmPage() {
                 Jeremy has spent more than 20 years in industrial operations and capital projects across energy, construction and manufacturing. He started on the tools as a Red Seal journeyman electrician, and has led a project management office responsible for a $100M+ capital portfolio.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed mb-6">
-                He has also sat in the owner&apos;s chair. For nine years he owned an electrical contracting business serving Alberta&apos;s oil and gas industry. He carried the payroll, priced the work and ran projects with crews of up to 125.
+                For nine years he also ran his own electrical contracting business, serving Alberta&apos;s oil and gas industry on projects with crews of up to 125. In his leadership roles he has carried the P&amp;L.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed mb-6">
                 He holds an Executive MBA in finance from the Haskayne School of Business, where he was inducted into Beta Gamma Sigma.
               </p>
               <p className="text-brand-slate text-lg leading-relaxed mb-8">
-                What he learned on both sides of the table is the reason LVRGWRKS exists. The answer to a business that has outgrown the desk at the top is rarely more people or more software. It&apos;s a better way to operate, built with the people already there.
+                What he learned in those years is the reason LVRGWRKS exists. The answer to a business that has outgrown the desk at the top is rarely more people or more software. It&apos;s a better way to operate, built with the people already there.
               </p>
               <a
                 href="https://www.linkedin.com/in/jeremyredgate"
@@ -145,11 +145,8 @@ export default function FirmPage() {
           <div className="max-w-5xl mx-auto">
             <Eyebrow>Why It Matters</Eyebrow>
             <SectionHeading line1="Industrial businesses operate differently." line2="We built LVRGWRKS for that." />
-            <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-6">
-              Most firms that sell improvement to industrial businesses come from software or from strategy. They know tools or they know slides. They have not run a crew at 6am, carried a payroll through a slow quarter, or taken the call when a job goes sideways.
-            </p>
             <p className="text-brand-slate text-lg leading-relaxed max-w-3xl mb-12">
-              LVRGWRKS is built the other way around. Operations first, tools second. We work with owners and leadership teams in manufacturing, construction, energy services and distribution.
+              LVRGWRKS starts from the operating side. Jeremy has run a crew at 6am, carried a P&amp;L and taken the call when a job goes sideways. We bring that, with a finance lens, to owners and leadership teams in manufacturing, construction, energy services and distribution.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {industries.map((x) => (

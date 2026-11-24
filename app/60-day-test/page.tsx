@@ -24,7 +24,7 @@ export default function SixtyDayTestPage() {
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="container mx-auto px-6 md:px-16 relative z-10">
             <div className="max-w-6xl mx-auto">
-              <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The 60-Day Test</span>
+              <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-6 block">The 60-Day Test</span>
               <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
                 Could your business run for 60 days without you?
               </h1>
@@ -50,7 +50,7 @@ export default function SixtyDayTestPage() {
           <LwSymbol className="w-10 h-10" />
           <span className="font-display font-bold text-xl tracking-tight">LVRGWRKS</span>
         </div>
-        <p className="text-[10px] font-bold tracking-widest uppercase text-brand-gold mb-2">The 60-Day Test</p>
+        <p className="text-[10px] font-bold tracking-widest uppercase text-brand-gold-text mb-2">The 60-Day Test</p>
         <h1 className="font-display font-bold text-2xl mb-2">Could your business run for 60 days without you?</h1>
         <p className="text-sm mb-5">Picture 60 days away. No calls and no texts. For each of the five below, who would do it?</p>
         <table className="w-full text-sm border-collapse mb-5">

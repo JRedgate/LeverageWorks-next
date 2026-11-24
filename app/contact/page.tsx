@@ -90,7 +90,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
-                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Send us a note</h2>
+                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Your note</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
@@ -149,9 +149,9 @@ export default function ContactPage() {
               <div className="mb-12">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What happens next</h3>
                 <ul className="space-y-4 text-brand-slate">
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">01.</span> Jeremy reads your note and replies within one business day.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">02.</span> If it makes sense, we set up a 30-minute call.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">03.</span> After the call you get a short written note of what we heard and whether a diagnostic is worth doing.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">01.</span> Jeremy reads your note and replies within one business day.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">02.</span> If it makes sense, we set up a 30-minute call.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">03.</span> After the call you get a short written note of what we heard and whether a diagnostic is worth doing.</li>
                 </ul>
               </div>
               <div className="bg-brand-navy p-8 rounded-xl text-white">
