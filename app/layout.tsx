@@ -61,6 +61,7 @@ const jsonLd = {
     'Manufacturing Operations Consulting',
     'Construction Operations Consulting',
     'Energy Services Operations Consulting',
+    'Distribution Operations Consulting',
   ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',

@@ -63,6 +63,7 @@ export const Navbar: React.FC = () => {
     { label: 'Manufacturing', href: '/industries/manufacturing' },
     { label: 'Construction', href: '/industries/construction' },
     { label: 'Energy Services', href: '/industries/energy-services' },
+    { label: 'Distribution', href: '/industries/distribution' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -188,7 +189,7 @@ export const Navbar: React.FC = () => {
               Industries
               <ChevronDownIcon className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-industries' ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-industries' ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-industries' ? 'max-h-[260px] opacity-100' : 'max-h-0 opacity-0'}`}>
               {industriesItems.map((item) => (
                 <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>
                   {item.label}

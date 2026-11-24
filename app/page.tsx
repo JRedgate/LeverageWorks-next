@@ -60,7 +60,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <div>
               <Eyebrow>The 60-Day Test</Eyebrow>
-              <SectionHeading line1="Could your business run" line2="for 60 days without you?" />
+              <SectionHeading size="md" line1="Could your business run" line2="for 60 days without you?" />
               <p className="text-brand-slate text-lg leading-relaxed">
                 Five questions, about two minutes, no email needed. Count how many still come back to you.
               </p>
@@ -89,10 +89,11 @@ export default function HomePage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <Eyebrow>Who You Work With</Eyebrow>
-            <SectionHeading tone="dark" line1="Led by an operator." className="mb-10" />
+            <SectionHeading tone="dark" line1="Led by an operator." className="mb-4" />
+            <p className="text-gray-300 text-lg leading-relaxed mb-10">Founded and led by Jeremy Redgate.</p>
             <FigureBand figures={figures} />
             <p className="text-gray-300 text-lg leading-relaxed mt-10 mb-6">
-              Energy, construction and manufacturing, across Western Canada.
+              Red Seal journeyman electrician. Executive MBA in finance, Haskayne. Energy, construction and manufacturing, across Western Canada.
             </p>
             <Link href="/firm" className="inline-flex items-center gap-2 text-brand-gold font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-white transition-all">
               Meet Jeremy

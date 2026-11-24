@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/industries/energy-services', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/property-management', priority: 0.7, changeFrequency: 'monthly' as const },
     { path: '/industries/construction', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/industries/distribution', priority: 0.7, changeFrequency: 'monthly' as const },
     // Systems-decision pages appear here only once their registry entry is
     // published. See content/systems-decisions/registry.ts.
     ...publishedSystemsDecisions().map((entry) => ({

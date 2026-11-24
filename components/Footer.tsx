@@ -47,6 +47,7 @@ export const Footer: React.FC = () => (
             <li><Link href="/industries/manufacturing" className={linkClass}>Manufacturing</Link></li>
             <li><Link href="/industries/construction" className={linkClass}>Construction</Link></li>
             <li><Link href="/industries/energy-services" className={linkClass}>Energy Services</Link></li>
+            <li><Link href="/industries/distribution" className={linkClass}>Distribution</Link></li>
           </ul>
         </div>
         <div className="md:col-span-2">

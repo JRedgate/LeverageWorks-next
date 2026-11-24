@@ -15,9 +15,10 @@ export const SectionHeading: React.FC<{
   line1: React.ReactNode;
   line2?: React.ReactNode;
   tone?: Tone;
+  size?: 'lg' | 'md';
   className?: string;
-}> = ({ line1, line2, tone = 'light', className = 'mb-8' }) => (
-  <h2 className={`font-display font-bold text-3xl md:text-5xl leading-tight ${tone === 'dark' ? 'text-white' : 'text-brand-navy'} ${className}`}>
+}> = ({ line1, line2, tone = 'light', size = 'lg', className = 'mb-8' }) => (
+  <h2 className={`font-display font-bold ${size === 'md' ? 'text-3xl md:text-4xl' : 'text-3xl md:text-5xl'} leading-tight ${tone === 'dark' ? 'text-white' : 'text-brand-navy'} ${className}`}>
     {line1}
     {line2 && (
       <>
@@ -74,6 +75,18 @@ export const NumberedCards: React.FC<{ items: Item[]; surface?: 'white' | 'grey'
         <div className="text-brand-gold font-display font-bold text-5xl mb-4">{String(i + 1).padStart(2, '0')}</div>
         <h3 className="font-display font-bold text-xl md:text-2xl text-brand-navy mb-4">{s.title}</h3>
         <p className="text-brand-slate leading-relaxed">{s.body}</p>
+      </div>
+    ))}
+  </div>
+);
+
+// `main`: "The Investment" step cards, three across on a light band.
+export const LightCards: React.FC<{ items: Item[]; surface?: 'white' | 'grey' }> = ({ items, surface = 'white' }) => (
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {items.map((s) => (
+      <div key={s.title} className={`border border-gray-100 rounded-xl p-6 ${surface === 'grey' ? 'bg-brand-surface' : 'bg-white'}`}>
+        <h3 className="font-display font-bold text-lg text-brand-navy mb-2">{s.title}</h3>
+        <p className="text-brand-slate text-sm leading-relaxed">{s.body}</p>
       </div>
     ))}
   </div>

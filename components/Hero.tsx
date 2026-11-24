@@ -9,7 +9,7 @@ const serving: { label: string; href?: string }[] = [
   { label: 'Manufacturing', href: '/industries/manufacturing' },
   { label: 'Construction', href: '/industries/construction' },
   { label: 'Energy Services', href: '/industries/energy-services' },
-  { label: 'Distribution' },
+  { label: 'Distribution', href: '/industries/distribution' },
 ];
 
 export const Hero: React.FC = () => (

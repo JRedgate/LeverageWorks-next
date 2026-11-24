@@ -168,6 +168,7 @@ export default function CapabilitiesPage() {
                 { label: 'Construction', href: '/industries/construction' },
                 { label: 'Energy Services', href: '/industries/energy-services' },
                 { label: 'Manufacturing', href: '/industries/manufacturing' },
+                { label: 'Distribution', href: '/industries/distribution' },
               ].map((item) => (
                 <Link key={item.label} href={item.href} className="text-sm font-bold text-brand-slate hover:text-brand-navy transition-colors">
                   {item.label.toUpperCase()}
