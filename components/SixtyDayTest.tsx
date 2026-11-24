@@ -6,7 +6,7 @@ import { sendWhenReady } from '@/components/AnalyticsEvents';
 import { BookCallButton } from '@/components/BookCallButton';
 
 // One source for the 60-Day Test copy and scoring. Used by /60-day-test
-// (variant "page") and the homepage hero card (variant "card").
+// (variant "page") and the homepage test band (variant "card").
 //
 // Answers live in component state only. Nothing is posted, stored or sent to
 // analytics, so the privacy line on the page stays true.
@@ -35,7 +35,9 @@ const choiceClass = (selected: boolean, compact: boolean) =>
     selected ? 'bg-brand-navy text-white border-brand-navy' : 'bg-white text-brand-slate border-gray-200 hover:border-brand-navy/40'
   }`;
 
-export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card' }> = ({ variant = 'page' }) => {
+// `header={false}` drops the card's own eyebrow and headline where the
+// section beside it already carries them (homepage test band).
+export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolean }> = ({ variant = 'page', header = true }) => {
   const compact = variant === 'card';
   const [answers, setAnswers] = useState<Answer[]>(SIXTY_DAY_ITEMS.map(() => null));
   const completeSent = useRef(false);
@@ -45,7 +47,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card' }> = ({ variant 
   const band = sixtyDayBand(count);
 
   // sixty_day_test_complete is the page's event (addendum 1, Section 2). The
-  // hero card does not fire it, so the event keeps counting page completions.
+  // homepage card does not fire it, so the event keeps counting page completions.
   useEffect(() => {
     if (variant === 'page' && done && !completeSent.current) {
       completeSent.current = true;
@@ -83,8 +85,12 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card' }> = ({ variant 
   if (compact) {
     return (
       <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 md:p-8">
-        <p className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">The 60-Day Test</p>
-        <p className="font-display font-semibold text-xl text-brand-navy leading-snug mb-1">Could your business run for 60 days without you?</p>
+        {header && (
+          <>
+            <p className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-2">The 60-Day Test</p>
+            <p className="font-display font-semibold text-xl text-brand-navy leading-snug mb-1">Could your business run for 60 days without you?</p>
+          </>
+        )}
         <p className="text-brand-slate text-sm mb-4">For each of the five below, who would do it?</p>
         {list}
         <div className="mt-5 pt-5 border-t border-gray-100" aria-live="polite">

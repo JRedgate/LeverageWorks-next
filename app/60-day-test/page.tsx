@@ -5,7 +5,7 @@ import { LwSymbol } from '@/components/Logo';
 import { SixtyDayTest, SIXTY_DAY_ITEMS as ITEMS, SIXTY_DAY_BANDS as BANDS } from '@/components/SixtyDayTest';
 
 // Copy, scoring and the GA4 completion event live in components/SixtyDayTest,
-// shared with the homepage hero card.
+// shared with the homepage test band.
 
 export default function SixtyDayTestPage() {
   return (
