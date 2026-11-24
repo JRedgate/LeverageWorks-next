@@ -53,7 +53,7 @@ export default function WhyTransformationsFailArticle() {
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">Where the value leaks out after go-live</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
-              Once the new system is live, the value tends to leak out in three places. Systems that do not talk to each other turn your staff into the link between them, the old workarounds carry on beside the new tool, and nobody inside the business owns the result once the implementer moves on. Our page on <Link href="/digital-transformation-consulting" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">digital transformation consulting</Link> sets out each of those gaps and how we close them.
+              Once the new system is live, the value tends to leak out in three places. Systems that do not talk to each other turn your staff into the link between them, the old workarounds carry on beside the new tool, and nobody inside the business owns the result once the implementer moves on. Our page on digital transformation consulting sets out each of those gaps and how we close them.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">What the companies getting ROI are doing differently</h2>

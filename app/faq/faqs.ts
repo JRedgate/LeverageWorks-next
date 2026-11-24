@@ -43,8 +43,8 @@ export const FAQS: Faq[] = [
     a: ['No. We agree a baseline up front and report what changed against it.'],
   },
   {
-    q: 'Who owns what’s built?',
-    a: ['Everything we build for your operation belongs to you from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on us. The engagement can end at any time and the operation keeps running.'],
+    q: 'Who owns the work?',
+    a: ['You do. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. The engagement can end at any time and the business keeps running.'],
   },
   {
     q: 'Do you work outside Calgary?',

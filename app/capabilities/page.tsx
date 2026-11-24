@@ -5,33 +5,34 @@ import { BookCallButton } from '@/components/BookCallButton';
 import { Eyebrow, GoldBarGrid, SectionHeading, SuccessBand, TestLink } from '@/components/Sections';
 import { SHARED_WORK_CLOSE, sharedWork } from '@/content/industries';
 
-// Copy: addendum 2 Section 4. This is the plan's page (STEP-REVIEW-4 Section
-// 4.3): the client's problem in one line, the shared block, the four moves,
-// what changes, then the call to action. Layout: addendum 3.
+// Copy: addendum 2 Section 4 as amended by STEP-REVIEW-5 (headline, step
+// names, standard CTA). This is the plan's page: the client's problem, the
+// shared block, the four steps, what changes, then the call to action.
+// Step 03 "Move" is a recommendation awaiting Jeremy's confirmation.
 
 const moves = [
   {
     name: 'Diagnose',
-    body: 'It starts with a 30-minute call, and you get a short written note of what we heard and whether a diagnostic is worth doing. The diagnostic is a fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.',
+    body: 'The diagnostic is a fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.',
   },
   {
-    name: 'Design',
+    name: 'Agree',
     body: 'We agree with you and your managers which decisions move, who takes them and how the handoffs will run. You see the plan before anything changes.',
   },
   {
-    name: 'Build',
-    body: 'We put the changes in with your people, one priority at a time. Where a tool or a small build helps, we add it, and it belongs to you.',
+    name: 'Move',
+    body: 'We move the agreed decisions and handoffs to your people, one priority at a time. Where a tool helps, we add it, and it belongs to you.',
   },
   {
     name: 'Stay',
-    body: 'This is not a project with an end date. We monitor, evolve, and expand the system as your business grows, and each month we report what changed against the baseline agreed up front.',
+    body: 'This is not a project with an end date. We stay alongside your team as the business grows, and each month we report what changed against the baseline agreed up front.',
   },
 ];
 
 const industries = [
+  { label: 'Manufacturing', href: '/industries/manufacturing' },
   { label: 'Construction', href: '/industries/construction' },
   { label: 'Energy Services', href: '/industries/energy-services' },
-  { label: 'Manufacturing', href: '/industries/manufacturing' },
   { label: 'Distribution', href: '/industries/distribution' },
 ];
 
@@ -49,10 +50,14 @@ export default function CapabilitiesPage() {
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">How We Work</span>
             </div>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
-              How we work with your business.
+              How the decisions get<br />
+              <span className="text-brand-slate italic">off your desk.</span>
             </h1>
             <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl">
-              Too many decisions still land on your desk. This is how we move them.
+              This is how we move them, with your people.
+            </p>
+            <p className="text-brand-navy text-xl leading-relaxed mb-6 max-w-2xl">
+              Left alone, the list on your desk grows with the business.
             </p>
             <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">
               LVRGWRKS is an operating partner for industrial businesses. We find which decisions and handoffs still run through the top of the business, agree with you which ones move, work the change with your people, and report what changed each month.
@@ -79,8 +84,7 @@ export default function CapabilitiesPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <Eyebrow>How It Works</Eyebrow>
-            <SectionHeading tone="dark" line1="Every engagement follows the same four-move sequence." className="mb-4" />
-            <p className="text-gray-300 text-lg max-w-2xl mb-12">Every engagement starts with a 30-minute call.</p>
+            <SectionHeading tone="dark" line1="What happens after the call." className="mb-12" />
             <div className="space-y-6">
               {moves.map((m, i) => (
                 <div
@@ -127,15 +131,16 @@ export default function CapabilitiesPage() {
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a 30-minute call.</h2>
-          <p className="text-gray-300 max-w-xl mx-auto mb-12 text-lg leading-relaxed">
+          <h2 className="font-display font-bold text-4xl md:text-6xl mb-8 tracking-tight leading-tight">
+            What keeps landing on your desk that shouldn&apos;t?
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
           <BookCallButton variant="gold" />
           <div className="mt-10">
             <TestLink tone="dark" />
           </div>
-          <p className="text-gray-400 text-sm mt-8">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
 

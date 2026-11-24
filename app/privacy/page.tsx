@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LAST_UPDATED = 'November 23, 2026';
+const LAST_UPDATED = 'November 24, 2026';
 
 const sections: { heading: string; body: React.ReactNode }[] = [
   {
@@ -10,8 +10,8 @@ const sections: { heading: string; body: React.ReactNode }[] = [
         <p>We collect what you choose to send us and basic information about how the site is used.</p>
         <ul>
           <li>The contact form and the call page form: your name, work email, company, role, city or region, your message and how you heard about us. Not every form asks for all of these.</li>
-          <li>Booking a call: your name, email and the time you choose, entered on a Google Calendar booking page.</li>
-          <li>Site use: pages viewed, clicks on our main buttons, approximate location, device and browser, collected by Google Analytics. We do not send your name or email to Google Analytics.</li>
+          <li>Booking a call: your name, email and the time you choose, entered on our booking page.</li>
+          <li>Site use: pages viewed, clicks on our main buttons, approximate location, device and browser, collected by our analytics service. We do not send your name or email to it.</li>
         </ul>
       </>
     ),
@@ -27,13 +27,10 @@ const sections: { heading: string; body: React.ReactNode }[] = [
   {
     heading: 'The services that process it for us',
     body: (
-      <ul>
-        <li>Vercel hosts this site and keeps standard server logs.</li>
-        <li>Google Analytics measures site use. It runs only on www.lvrgwrks.com.</li>
-        <li>Formspree receives the forms on this site and passes them to us by email.</li>
-        <li>Google Calendar runs the booking page for the 30-minute call.</li>
-        <li>Google Fonts supplies the fonts on this site, so your browser connects to Google when a page loads.</li>
-      </ul>
+      <p>
+        We use a small number of service providers to host this site, handle enquiry forms and bookings, and measure how the site is used. Some of them store or process information outside Canada. To ask about our policies and practices for those providers, contact Jeremy Redgate at{' '}
+        <a href="mailto:jredgate@lvrgwrks.com" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">jredgate@lvrgwrks.com</a>.
+      </p>
     ),
   },
   {

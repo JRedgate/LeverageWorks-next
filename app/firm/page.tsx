@@ -171,6 +171,9 @@ export default function FirmPage() {
           <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
+          <p className="text-white font-semibold max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
+            The aim is a business that runs without waiting on you.
+          </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 items-center">
             <BookCallButton variant="gold" />
             <Link href="/capabilities" className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:border-brand-gold hover:text-brand-gold transition-all text-center">

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'How LVRGWRKS works with industrial businesses: find which decisions and handoffs still run through the top, agree which ones move, work the change with your people, and report what changed each month.',
   alternates: { canonical: '/capabilities' },
   openGraph: {
-    title: 'How we work with your business',
+    title: 'How the decisions get off your desk',
     description: 'Too many decisions still land on your desk. This is how LVRGWRKS moves them into the business, with your people.',
     url: '/capabilities',
     siteName: 'LVRGWRKS',

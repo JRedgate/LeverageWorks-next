@@ -69,6 +69,10 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
             <Eyebrow>The Problem</Eyebrow>
             <SectionHeading tone="dark" line1="Where it lands on your desk" className="mb-12" />
             <DarkCards items={i.moments} />
+            {/* Internal problem (STEP-REVIEW-5 3.3) */}
+            <p className="text-white font-display font-semibold text-xl md:text-2xl leading-snug mt-12">
+              You have good people. The decision still comes to you.
+            </p>
           </div>
         </div>
       </section>

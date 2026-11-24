@@ -27,7 +27,7 @@ const IDENTITY = 'LVRGWRKS is an operating partner for industrial businesses. We
 // The shared block (addendum 2 Section 3). "The handoffs" names each
 // industry's own handoffs (STEP-REVIEW-4 fix 1). /capabilities keeps the
 // general line.
-export const GENERAL_HANDOFFS = 'Sales to operations, field to office, operations to finance.';
+export const GENERAL_HANDOFFS = 'Between sales, operations and finance.';
 
 export const sharedWork = (handoffs: string = GENERAL_HANDOFFS) => [
   { title: 'Who decides what.', body: 'We map which decisions come to the top and why. Then we agree with you which ones move, to whom, and with what limits.' },
