@@ -3,11 +3,11 @@ import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: { absolute: 'The Firm | Operating Partner for Industrial Businesses | LVRGWRKS' },
-  description: 'Built by operators, for operators. LVRGWRKS is an operating partner for industrial businesses, led by founder Jeremy Redgate and based in Calgary.',
+  description: 'Built by an operator, for operators. LVRGWRKS is an operating partner for industrial businesses, founded in Calgary by Jeremy Redgate.',
   alternates: { canonical: '/firm' },
   openGraph: {
-    title: 'Built by operators, for operators',
-    description: 'An operating partner for industrial businesses, based in Calgary and serving Canada. You are adding a partner who already speaks the language.',
+    title: 'Built by an operator, for operators',
+    description: 'An operating partner for industrial businesses, founded in Calgary by Jeremy Redgate after more than 20 years inside industrial operations.',
     url: '/firm',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',

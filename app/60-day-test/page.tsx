@@ -23,12 +23,12 @@ export default function SixtyDayTestPage() {
         <header className="relative pt-40 pb-16 md:pt-52 md:pb-20 overflow-hidden bg-brand-surface">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="container mx-auto px-6 md:px-16 relative z-10">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The 60-Day Test</span>
               <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
                 Could your business run for 60 days without you?
               </h1>
-              <p className="text-brand-slate text-xl leading-relaxed">
+              <p className="text-brand-navy text-xl leading-relaxed max-w-3xl">
                 Picture 60 days away. No calls and no texts. For each of the five below, who would do it?
               </p>
             </div>
@@ -37,7 +37,7 @@ export default function SixtyDayTestPage() {
 
         <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-6 md:px-16">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <SixtyDayTest variant="page" />
             </div>
           </div>

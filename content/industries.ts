@@ -3,7 +3,7 @@
 // addendum 3 Section 4, rendered by components/IndustryPage.
 //
 // "Who we work with" lines, eyebrows, meta descriptions and the shared cost
-// question were drafted for step 4 and are flagged for review in STEP-LOG.md.
+// question were drafted in step 4 and approved in STEP-REVIEW-4.
 
 import type { RelatedLink } from '@/components/RelatedReading';
 
@@ -18,18 +18,25 @@ export interface Industry {
   description: string;
   moments: { title: string; body: string }[];
   who: { title: string; body: string }[];
-  questionsHeading: string;
+  handoffs: string;
   related: RelatedLink[];
 }
 
 const IDENTITY = 'LVRGWRKS is an operating partner for industrial businesses. We work with owners and leadership teams to move those decisions and handoffs into the business.';
 
-export const SHARED_WORK = [
+// The shared block (addendum 2 Section 3). "The handoffs" names each
+// industry's own handoffs (STEP-REVIEW-4 fix 1). /capabilities keeps the
+// general line.
+export const GENERAL_HANDOFFS = 'Sales to operations, field to office, operations to finance.';
+
+export const sharedWork = (handoffs: string = GENERAL_HANDOFFS) => [
   { title: 'Who decides what.', body: 'We map which decisions come to the top and why. Then we agree with you which ones move, to whom, and with what limits.' },
-  { title: 'The handoffs.', body: 'Sales to operations, field to office, operations to finance. We fix the points where work waits or gets done twice.' },
+  { title: 'The handoffs.', body: `${handoffs} We fix the points where work waits or gets done twice.` },
   { title: 'The weekly rhythm.', body: 'A short, fixed set of meetings and reports that your managers run, so problems surface without you chasing them.' },
   { title: 'The numbers.', body: 'Your leaders see the few figures they need each week to make the call themselves.' },
 ];
+
+export const QUESTIONS_HEADING = 'What owners ask first.';
 
 export const SHARED_WORK_CLOSE = 'Operations first, tools second. We don’t sell software. Technology comes in only where it earns its place.';
 
@@ -63,7 +70,7 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
       { title: 'Process manufacturers.', body: 'Plants where a yield or quality call can’t wait for the next meeting.' },
       { title: 'Industrial fabricators.', body: 'Project-based shops where each job is quoted, built and inspected to the client’s spec.' },
     ],
-    questionsHeading: 'Manufacturing Operations Questions, Answered',
+    handoffs: 'Sales to scheduling, the floor to quality, operations to finance.',
     related: [
       { href: '/erp-selection-alberta-manufacturers', title: 'Choosing an ERP for an Alberta manufacturer', blurb: 'What to settle before you sit through a vendor demo.' },
       { href: '/business-central-acumatica-netsuite', title: 'Business Central, Acumatica or NetSuite', blurb: 'How each one is priced, sold and supported, side by side.' },
@@ -72,7 +79,7 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
   construction: {
     key: 'construction',
     name: 'Construction',
-    pill: 'Industry - Construction and General Contracting',
+    pill: 'Industry - Construction',
     headline: ['Your crews build the job.', 'Too much of it still runs through you.'],
     intro: `In a growing contractor, the estimate, the change order, the sub who is behind and the client who is unhappy tend to land on the same desk. Your project managers run the work, and the calls that protect the margin wait at the top. ${IDENTITY}`,
     description: 'Your crews build the job. Too much of it still runs through you. LVRGWRKS works with construction owners and leadership teams to move decisions and handoffs into the business.',
@@ -87,10 +94,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
       { title: 'Specialty contractors.', body: 'Electrical, mechanical and other trades carrying their own crews and their own margin.' },
       { title: 'Civil and infrastructure contractors.', body: 'Heavy and civil work where crews, equipment and change orders move fast.' },
     ],
-    questionsHeading: 'Construction Operations Questions, Answered',
+    handoffs: 'Estimating to the job, the field to the office, operations to finance.',
     related: [
       { href: '/insights/hidden-cost-of-estimating', title: 'The hidden cost of estimating', blurb: 'What three project files revealed about where estimating time actually goes.' },
-      { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
       { href: '/job-costing-change-orders-contractors', title: 'Job costing and change orders', blurb: 'Why extra work goes unbilled and job cost runs a month behind.' },
     ],
   },
@@ -112,10 +118,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
       { title: 'Industrial maintenance.', body: 'Planned and emergency work for plants and facilities, often on short notice.' },
       { title: 'Environmental and pipeline services.', body: 'Regulated work where the paperwork matters as much as the job.' },
     ],
-    questionsHeading: 'Energy Services Questions, Answered',
+    handoffs: 'Dispatch to the field, the field to the office, operations to finance.',
     related: [
       { href: '/insights/cost-of-manual-data-entry', title: 'The real cost of manual data entry', blurb: 'Why the cost compounds well past the hours it consumes.' },
-      { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
     ],
   },
   distribution: {
@@ -136,7 +141,7 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
       { title: 'Technical sales and service businesses.', body: 'Equipment that takes expertise to quote, and support that carries on after the sale.' },
       { title: 'Parts and supply businesses.', body: 'High order volume, thousands of items, and customers who expect it today.' },
     ],
-    questionsHeading: 'Distribution Questions, Answered',
+    handoffs: 'Sales to purchasing, the warehouse to the counter, operations to finance.',
     related: [],
   },
 };

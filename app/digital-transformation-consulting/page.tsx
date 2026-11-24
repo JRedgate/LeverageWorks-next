@@ -30,7 +30,7 @@ export default function DigitalTransformationPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
-                View Capabilities
+                How we work
               </Link>
             </div>
           </div>

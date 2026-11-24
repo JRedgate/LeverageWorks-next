@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Thinking on operations, decisions and margin for owners and leadership teams of industrial businesses. Written for operators, not vendors.',
   alternates: { canonical: '/insights' },
   openGraph: {
-    title: 'Operations, automation and margin, written for operators',
+    title: 'Thinking on operations and margin for industrial businesses',
     description: 'Thinking on where margin leaks inside industrial businesses. Written for operators, not vendors.',
     url: '/insights',
     siteName: 'LVRGWRKS',

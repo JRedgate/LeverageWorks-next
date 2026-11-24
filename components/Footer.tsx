@@ -2,11 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { LwSymbol } from './Logo';
 import { BookCallButton } from './BookCallButton';
-import { publishedInFooterGroup } from '@/content/systems-decisions/registry';
 import { ONE_LINER } from '@/lib/site';
 import { CALL_PAGE } from '@/lib/booking';
-
-const systemsDecisions = publishedInFooterGroup('systems-decisions');
 
 const linkClass = 'hover:text-white transition-colors hover:translate-x-1 inline-block';
 const headingClass = 'text-[10px] tracking-[0.3em] uppercase mb-6 text-brand-gold font-bold';
@@ -28,18 +25,8 @@ export const Footer: React.FC = () => (
           <ul className="space-y-3 text-sm text-gray-400">
             <li><Link href={CALL_PAGE} className={linkClass}>The 30-minute call</Link></li>
             <li><Link href="/60-day-test" className={linkClass}>The 60-Day Test</Link></li>
-            <li><Link href="/capabilities" className={linkClass}>Capabilities</Link></li>
+            <li><Link href="/capabilities" className={linkClass}>How we work</Link></li>
           </ul>
-          {systemsDecisions.length > 0 && (
-            <>
-              <h4 className={`${headingClass} mt-10`}>Systems decisions</h4>
-              <ul className="space-y-3 text-sm text-gray-400">
-                {systemsDecisions.map((entry) => (
-                  <li key={entry.slug}><Link href={`/${entry.slug}`} className={linkClass}>{entry.footerLabel}</Link></li>
-                ))}
-              </ul>
-            </>
-          )}
         </div>
         <div className="md:col-span-2">
           <h4 className={headingClass}>Industries</h4>

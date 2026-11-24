@@ -3,13 +3,14 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { BookCallButton } from '@/components/BookCallButton';
 import { RelatedReading } from '@/components/RelatedReading';
-import { DarkCards, Eyebrow, GoldBarGrid, LightCards, SectionHeading } from '@/components/Sections';
-import { INDUSTRIES, IndustryKey, SHARED_QUESTIONS, SHARED_WORK, SHARED_WORK_CLOSE, industryTitle } from '@/content/industries';
+import { DarkCards, Eyebrow, GoldBarGrid, HowItWorksBand, LightCards, SectionHeading, TestLink } from '@/components/Sections';
+import { INDUSTRIES, IndustryKey, QUESTIONS_HEADING, SHARED_QUESTIONS, SHARED_WORK_CLOSE, industryTitle, sharedWork } from '@/content/industries';
 import { OG_IMAGE } from '@/lib/site';
 
 // One structure for every industry page (addendum 2 Section 3, addendum 3
 // Section 4): hero as `main`, four moments as dark 2x2 cards, the shared block
-// as the gold-bar grid, "Who we work with" as three cards, two Q&As, final CTA.
+// as the gold-bar grid, "Who we work with" as three cards, the shared "How it
+// works" band, two Q&As, final CTA. StoryBrand additions: STEP-REVIEW-4 4.2.
 
 export const industryMetadata = (key: IndustryKey): Metadata => {
   const i = INDUSTRIES[key];
@@ -39,7 +40,8 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
-          <div className="max-w-4xl">
+          {/* Wider than the homepage hero so no headline runs past three lines at 1440px (STEP-REVIEW-4 fix 2). */}
+          <div className="max-w-6xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">{i.pill}</span>
@@ -55,6 +57,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
                 How we work
               </Link>
             </div>
+            <TestLink className="mt-8" />
           </div>
         </div>
       </header>
@@ -76,7 +79,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
           <div className="max-w-5xl mx-auto">
             <Eyebrow>How We Work</Eyebrow>
             <SectionHeading line1="What we work on with your team" className="mb-12" />
-            <GoldBarGrid items={SHARED_WORK} />
+            <GoldBarGrid items={sharedWork(i.handoffs)} />
             <p className="text-brand-navy text-lg leading-relaxed max-w-3xl mt-12 font-semibold">{SHARED_WORK_CLOSE}</p>
           </div>
         </div>
@@ -93,12 +96,15 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
         </div>
       </section>
 
+      {/* The plan: shared with the homepage */}
+      <HowItWorksBand />
+
       {/* Q&As */}
-      <section className="py-20 md:py-32 bg-white border-b border-gray-100">
+      <section className="py-20 md:py-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <Eyebrow>Common Questions</Eyebrow>
-            <SectionHeading line1={i.questionsHeading} size="md" className="mb-12" />
+            <SectionHeading line1={QUESTIONS_HEADING} size="md" className="mb-12" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {SHARED_QUESTIONS.map((x) => (
                 <div key={x.q} className="border-l-4 border-brand-gold pl-6">
@@ -119,6 +125,9 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
+          </p>
+          <p className="text-white font-semibold max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
+            The aim is a business that runs without waiting on you.
           </p>
           <BookCallButton variant="gold" />
         </div>

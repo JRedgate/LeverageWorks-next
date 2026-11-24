@@ -71,18 +71,4 @@ export const FAQS: Faq[] = [
       'Where the work touches your systems, we ask for access to those specific systems only, granted per system rather than as blanket administrative rights. We work with your IT contact on scoping. Where your own customers impose security requirements, those get disclosed up front and the work gets designed around them.',
     ],
   },
-  {
-    q: 'Does our company data have to stay in Canada if we use AI tools?',
-    a: [
-      'Usually not, and this is a commonly misunderstood point.',
-      'No Canadian federal law requires private-sector commercial data to be stored in Canada. PIPEDA and Alberta’s PIPA are accountability-based rather than location-based. You stay responsible for the data wherever it is processed, and you have to provide comparable protection and be transparent about cross-border transfers. Real residency obligations, when they exist, come from somewhere else. Sector rules such as Alberta’s Health Information Act, a contract with your own customer, or a commitment in your own published privacy policy. Those are worth checking before anyone tells you the law says something it does not.',
-    ],
-  },
-  {
-    q: 'Is there still a government grant that helps pay for this?',
-    a: [
-      'For most industrial businesses, no. Be careful of advice that says otherwise.',
-      'The Canada Digital Adoption Program, which is the grant most people are thinking of, stopped accepting new applicants in February 2024. A lot of content still online treats it as live. Federal AI funding that does exist is aimed largely at companies building AI products rather than adopting them. SR&ED is worth a conversation only in narrow cases. If a firm leads with grant money as the reason to proceed, ask them to name the program and its current intake status.',
-    ],
-  },
 ];

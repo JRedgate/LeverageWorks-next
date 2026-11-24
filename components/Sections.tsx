@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import { BookCallButton } from '@/components/BookCallButton';
 
 // Section parts lifted from the homepage on `main` (addendum 3, Section 2).
 // Every section gets a gold eyebrow, a headline (two-tone where it has two
@@ -44,8 +46,8 @@ export const DarkCards: React.FC<{ items: Item[] }> = ({ items }) => (
 );
 
 // `main`: "The Solution", gold-bar feature grid.
-export const GoldBarGrid: React.FC<{ items: Item[]; tone?: Tone }> = ({ items, tone = 'light' }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+export const GoldBarGrid: React.FC<{ items: Item[]; tone?: Tone; cols?: 2 | 3 }> = ({ items, tone = 'light', cols = 2 }) => (
+  <div className={`grid grid-cols-1 gap-8 ${cols === 3 ? 'md:grid-cols-3' : 'md:grid-cols-2'}`}>
     {items.map((s) => (
       <div key={s.title} className="border-l-4 border-brand-gold pl-6">
         <h3 className={`font-display font-bold text-xl mb-3 ${tone === 'dark' ? 'text-white' : 'text-brand-navy'}`}>{s.title}</h3>
@@ -90,4 +92,67 @@ export const LightCards: React.FC<{ items: Item[]; surface?: 'white' | 'grey' }>
       </div>
     ))}
   </div>
+);
+
+// `main`: the boxed callout on navy ("Free Tool" box under The Problem).
+export const Callout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <div className="bg-brand-navy text-white rounded-xl p-8 md:p-10">
+    <p className="font-display font-bold text-xl md:text-2xl leading-snug">{children}</p>
+  </div>
+);
+
+// Transitional call to action (StoryBrand part 5). Text link to the test.
+export const TestLink: React.FC<{ tone?: Tone; className?: string }> = ({ tone = 'light', className = '' }) => (
+  <Link
+    href="/60-day-test"
+    className={`inline-flex items-center text-sm font-bold uppercase tracking-widest border-b-2 border-brand-gold pb-1 transition-all ${tone === 'dark' ? 'text-white hover:text-brand-gold' : 'text-brand-navy hover:text-brand-gold'} ${className}`}
+  >
+    Or take the 60-Day Test
+  </Link>
+);
+
+// The plan (StoryBrand part 4). One source for the homepage and the
+// industry pages, so the three steps read the same everywhere.
+export const HOW_IT_WORKS_STEPS: Item[] = [
+  { title: 'Book a 30-minute call.', body: 'Tell us what keeps coming back to you. You get a short written note of what we heard and whether a diagnostic is worth doing.' },
+  { title: 'Run the diagnostic.', body: 'A fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.' },
+  { title: 'Move it into the business.', body: 'A monthly operating partnership that works the agreed priorities with your team and reports what changed each month.' },
+];
+
+export const HowItWorksBand: React.FC<{ id?: string }> = ({ id }) => (
+  <section id={id} className="py-20 md:py-32 bg-white scroll-mt-24">
+    <div className="container mx-auto px-6 md:px-16">
+      <div className="max-w-5xl mx-auto">
+        <Eyebrow>How It Works</Eyebrow>
+        <SectionHeading line1="Three steps to get it off your desk." className="mb-12" />
+        <div className="mb-12">
+          <NumberedCards items={HOW_IT_WORKS_STEPS} surface="grey" />
+        </div>
+        <BookCallButton variant="navy" />
+      </div>
+    </div>
+  </section>
+);
+
+// What success looks like (StoryBrand part 7). STEP-REVIEW-4 Section 4.1,
+// proposed copy for review. No figures, no guarantee, nothing on sale value.
+const SUCCESS: Item[] = [
+  { title: 'Decisions get made where the work is.', body: 'Your managers know which calls are theirs, and they make them.' },
+  { title: 'Work moves once.', body: 'Handoffs stop stalling between departments, and less gets done twice.' },
+  { title: 'You get time back to lead.', body: 'More of your week goes to customers, people and growth.' },
+];
+
+export const SuccessBand: React.FC = () => (
+  <section className="py-20 md:py-32 bg-brand-surface">
+    <div className="container mx-auto px-6 md:px-16">
+      <div className="max-w-5xl mx-auto">
+        <Eyebrow>What Changes</Eyebrow>
+        <SectionHeading line1="A business that runs" line2="without waiting on you." className="mb-12" />
+        <GoldBarGrid items={SUCCESS} cols={3} />
+        <p className="text-brand-navy text-lg leading-relaxed max-w-3xl mt-12 font-semibold">
+          That is what we work toward. We agree a baseline first and report what changed against it.
+        </p>
+      </div>
+    </div>
+  </section>
 );

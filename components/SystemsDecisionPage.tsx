@@ -33,7 +33,7 @@ import { BookCallButton } from '@/components/BookCallButton';
  * which is why they are consts here rather than content fields.
  */
 const SECONDARY_CTA_HREF = '/capabilities';
-const SECONDARY_CTA_LABEL = 'View Capabilities';
+const SECONDARY_CTA_LABEL = 'How we work';
 
 const INLINE_LINK =
   'text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors';

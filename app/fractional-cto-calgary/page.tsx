@@ -25,7 +25,7 @@ export default function FractionalCTOCalgaryPage() {
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You do not need another software subscription. LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
-              <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">View Capabilities</Link>
+              <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">How we work</Link>
             </div>
           </div>
         </div>

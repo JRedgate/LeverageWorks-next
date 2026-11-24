@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { RelatedReading } from '@/components/RelatedReading';
 
 import { BookCallButton } from '@/components/BookCallButton';
 export default function CostOfManualDataEntryArticle() {
@@ -136,11 +135,6 @@ export default function CostOfManualDataEntryArticle() {
           </div>
         </div>
       </section>
-      <RelatedReading
-        items={[
-          { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
-        ]}
-      />
     </>
   );
 }

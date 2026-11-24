@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Hero } from '@/components/Hero';
 import { BookCallButton } from '@/components/BookCallButton';
 import { SixtyDayTest } from '@/components/SixtyDayTest';
-import { DarkCards, Eyebrow, FigureBand, GoldBarGrid, NumberedCards, SectionHeading } from '@/components/Sections';
+import { DarkCards, Eyebrow, FigureBand, GoldBarGrid, HowItWorksBand, SectionHeading, SuccessBand } from '@/components/Sections';
 
 // Layout: RELEASE-0-ADDENDUM-3-LAYOUT.md, Section 3. Every section is an
 // eyebrow, a headline and one component from `main` (components/Sections).
@@ -29,11 +29,6 @@ const figures = [
   { figure: '40+', caption: 'Operator conversations building this firm' },
 ];
 
-const steps = [
-  { title: 'Book a 30-minute call.', body: 'Tell us what keeps coming back to you. You get a short written note of what we heard and whether a diagnostic is worth doing.' },
-  { title: 'Run the diagnostic.', body: 'A fixed-scope look at where decisions and handoffs stall and what that costs your business. The findings are yours whether or not you continue.' },
-  { title: 'Move it into the business.', body: 'A monthly operating partnership that works the agreed priorities with your team and reports what changed each month.' },
-];
 
 export default function HomePage() {
   return (
@@ -46,8 +41,12 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <Eyebrow>The Problem</Eyebrow>
             <SectionHeading tone="dark" line1="You added the revenue." line2="The margin did not follow." />
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-6">
               As a business grows, more decisions, approvals and problems find their way back to the top. Each one that waits on you or a senior leader slows the work, and the cost shows up in margin. We call it the coordination tax. It rarely appears on a report, and it tends to grow with the business.
+            </p>
+            {/* Internal and philosophical problem (STEP-REVIEW-4 Section 4.1, proposed copy). */}
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">
+              You have good people and a good business, and you still have to step in constantly. Growing a business shouldn&apos;t make it depend more on you.
             </p>
             <DarkCards items={stakes} />
           </div>
@@ -102,19 +101,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How it works: white band, numbered cards */}
-      <section id="how-we-work" className="py-20 md:py-32 bg-white scroll-mt-24">
-        <div className="container mx-auto px-6 md:px-16">
-          <div className="max-w-5xl mx-auto">
-            <Eyebrow>How It Works</Eyebrow>
-            <SectionHeading line1="Three steps to get it off your desk." className="mb-12" />
-            <div className="mb-12">
-              <NumberedCards items={steps} surface="grey" />
-            </div>
-            <BookCallButton variant="navy" />
-          </div>
-        </div>
-      </section>
+      {/* How it works: white band, numbered cards. #how-we-work kept for old links. */}
+      <HowItWorksBand id="how-we-work" />
+
+      {/* What changes: grey band, gold-bar grid (STEP-REVIEW-4 Section 4.1) */}
+      <SuccessBand />
 
       {/* Final CTA */}
       <section id="cta-section" className="py-20 md:py-32 bg-brand-navy text-white text-center">

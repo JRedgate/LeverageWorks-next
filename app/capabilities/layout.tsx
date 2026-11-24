@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Capabilities | Operating Partner for Industrial Businesses | LVRGWRKS' },
-  description: 'What LVRGWRKS does inside industrial businesses. Systems that let your operation grow without headcount and overhead growing at the same rate.',
+  title: { absolute: 'How We Work | Operating Partner for Industrial Businesses | LVRGWRKS' },
+  description: 'How LVRGWRKS works with industrial businesses: find which decisions and handoffs still run through the top, agree which ones move, work the change with your people, and report what changed each month.',
   alternates: { canonical: '/capabilities' },
   openGraph: {
-    title: 'What we build, and what changes when it runs',
-    description: 'Systems that let your operation grow without headcount and overhead growing at the same rate. Built with your people, for industrial businesses across Canada.',
+    title: 'How we work with your business',
+    description: 'Too many decisions still land on your desk. This is how LVRGWRKS moves them into the business, with your people.',
     url: '/capabilities',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',

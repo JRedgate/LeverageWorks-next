@@ -59,7 +59,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
     setAnswers((prev) => prev.map((v, j) => (j === i ? a : v)));
 
   const list = (
-    <ol className={compact ? 'space-y-2' : 'space-y-4 mb-12'}>
+    <ol className={compact ? 'space-y-2' : 'space-y-4'}>
       {SIXTY_DAY_ITEMS.map((item, i) => (
         <li
           key={item}
@@ -111,27 +111,35 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
     );
   }
 
+  // Page: two columns from 1024px, questions left and the result card right,
+  // so the result shows beside the questions. Stacks questions first below.
   return (
-    <>
-      {list}
-      {done && (
-        <div className="bg-brand-navy text-white rounded-xl p-8 md:p-12" aria-live="polite">
-          <p className="font-display font-bold text-3xl md:text-4xl mb-6">Your count: {count} of 5</p>
-          <h2 className="font-display font-bold text-2xl text-brand-gold mb-3">{band.heading}</h2>
-          <p className="text-gray-300 text-lg leading-relaxed mb-8">{band.line}</p>
-          <p className="text-gray-300 text-sm mb-8">A rule of thumb, not a study. It tells you where to look, not what it costs.</p>
-          <p className="text-gray-200 text-lg leading-relaxed mb-8">
-            <strong className="text-white">Bring your count to a 30-minute call.</strong> We&apos;ll tell you which hand-off we would start with and whether a diagnostic is worth doing.
-          </p>
-          <BookCallButton variant="gold" />
-          <div className="mt-8 flex flex-col gap-2 text-sm">
+    <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-start">
+      <div className="lg:col-span-3">{list}</div>
+      <div className="lg:col-span-2 lg:sticky lg:top-28 bg-brand-navy text-white rounded-xl p-8 md:p-10" aria-live="polite">
+        <p className="font-display font-bold text-3xl mb-6">
+          Your count: {count} of 5{!done && <span className="block text-gray-300 font-sans font-normal text-base mt-2">(answer all five)</span>}
+        </p>
+        {done && (
+          <>
+            <h2 className="font-display font-bold text-2xl text-brand-gold mb-3">{band.heading}</h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">{band.line}</p>
+            <p className="text-gray-300 text-sm mb-6">A rule of thumb, not a study. It tells you where to look, not what it costs.</p>
+            <p className="text-gray-200 text-lg leading-relaxed mb-8">
+              <strong className="text-white">Bring your count to a 30-minute call.</strong> We&apos;ll tell you which hand-off we would start with and whether a diagnostic is worth doing.
+            </p>
+            <BookCallButton variant="gold" />
+          </>
+        )}
+        <div className="mt-8 flex flex-col gap-2 text-sm">
+          {done && (
             <button type="button" onClick={() => window.print()} className="self-start text-brand-gold underline underline-offset-4 hover:text-white transition-colors">
               Print the test for your leadership team.
             </button>
-            <p className="text-gray-400">Your answers stay on this page. We don&apos;t store them.</p>
-          </div>
+          )}
+          <p className="text-gray-400">Your answers stay on this page. We don&apos;t store them.</p>
         </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 };

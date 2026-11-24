@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
 
   const servicesItems: DropdownItem[] = [
     { label: 'The 30-minute call', href: CALL_PAGE },
-    { label: 'Diagnostic and partnership', href: '/#how-we-work' },
+    { label: 'Diagnostic and partnership', href: '/capabilities' },
   ];
 
   const industriesItems: DropdownItem[] = [
