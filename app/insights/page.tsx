@@ -35,7 +35,7 @@ export default function InsightsPage() {
     <>
       <section className="pt-40 pb-20 md:pt-56 md:pb-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
-          <div className="max-w-4xl">
+          <div className="max-w-6xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Insights & Resources</span>
