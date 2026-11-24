@@ -121,11 +121,14 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
         </div>
       </section>
 
+      {/* Related reading sits above the final CTA so the page ends on it (STEP-REVIEW-6, 3.7). */}
+      {i.related.length > 0 && <RelatedReading items={i.related} />}
+
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-6xl mb-8 tracking-tight leading-tight">
-            What keeps landing on your desk that shouldn&apos;t?
+            Get the decisions off your desk.
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
@@ -136,8 +139,6 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
           <BookCallButton variant="gold" />
         </div>
       </section>
-
-      {i.related.length > 0 && <RelatedReading items={i.related} />}
     </>
   );
 };

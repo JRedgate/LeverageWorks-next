@@ -21,8 +21,8 @@ export const SIXTY_DAY_ITEMS = [
 
 export const SIXTY_DAY_BANDS = [
   { range: '0 to 1', min: 0, max: 1, heading: 'The business runs without you', line: 'Your time is yours to spend on growth. Worth checking that it holds as you grow.' },
-  { range: '2 to 3', min: 2, max: 3, heading: 'A few hand-offs from running without you', line: 'Two or three decisions still come back to you. Moving them would give you back real time.' },
-  { range: '4 to 5', min: 4, max: 5, heading: 'The business runs through you', line: 'That sets the ceiling on its growth and on your time. It can be changed, one hand-off at a time.' },
+  { range: '2 to 3', min: 2, max: 3, heading: 'A few handoffs from running without you', line: 'Two or three decisions still come back to you. Moving them would give you back real time.' },
+  { range: '4 to 5', min: 4, max: 5, heading: 'The business runs through you', line: 'That sets the ceiling on its growth and on your time. It can be changed, one handoff at a time.' },
 ];
 
 export const sixtyDayBand = (count: number) =>
@@ -126,7 +126,7 @@ export const SixtyDayTest: React.FC<{ variant?: 'page' | 'card'; header?: boolea
             <p className="text-gray-300 text-lg leading-relaxed mb-6">{band.line}</p>
             <p className="text-gray-300 text-sm mb-6">A rule of thumb, not a study. It tells you where to look, not what it costs.</p>
             <p className="text-gray-200 text-lg leading-relaxed mb-8">
-              <strong className="text-white">Bring your count to a 30-minute call.</strong> We&apos;ll tell you which hand-off we would start with and whether a diagnostic is worth doing.
+              <strong className="text-white">Bring your count to a 30-minute call.</strong> We&apos;ll tell you which handoff we would start with and whether a diagnostic is worth doing.
             </p>
             <BookCallButton variant="gold" />
           </>

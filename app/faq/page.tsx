@@ -1,5 +1,6 @@
 import React from 'react';
 import { BookCallButton } from '@/components/BookCallButton';
+import { TestLink } from '@/components/Sections';
 import { FAQS } from './faqs';
 
 export default function FaqPage() {
@@ -11,7 +12,8 @@ export default function FaqPage() {
           <div className="max-w-4xl">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Questions</span>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
-              The questions owners <span className="text-brand-slate italic">actually ask.</span>
+              The questions owners<br />
+              <span className="text-brand-slate italic">actually ask.</span>
             </h1>
             <p className="text-brand-slate text-xl leading-relaxed max-w-2xl">
               Answered plainly, including the ones where the honest answer is no.
@@ -44,6 +46,9 @@ export default function FaqPage() {
             Ask it on a 30-minute call. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
           </p>
           <BookCallButton variant="gold" />
+          <div className="mt-10">
+            <TestLink tone="dark" />
+          </div>
         </div>
       </section>
     </>

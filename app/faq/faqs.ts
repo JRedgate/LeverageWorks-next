@@ -44,7 +44,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Who owns the work?',
-    a: ['You do. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. The engagement can end at any time and the business keeps running.'],
+    a: ['You do. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.'],
   },
   {
     q: 'Do you work outside Calgary?',
@@ -52,23 +52,14 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'What happens to our team when the work moves into the business?',
-    a: [
-      'They stop doing the parts of their job that nobody would miss.',
-      'The goal is getting more out of the team you already have, not fewer of them. The change itself is real and we do not pretend otherwise. People have opinions about how their work is done and they should. We involve the people doing the work early, because a workflow designed without them fails on contact with reality.',
-    ],
+    a: ['They take on more of the decisions, with clear limits. The goal is getting more out of the team you already have, not fewer of them. We involve the people doing the work early, because a way of working designed without them does not hold.'],
   },
   {
     q: 'How much of our team’s time will this take?',
-    a: [
-      'Less than you think most weeks, more than you think when a change goes live.',
-      'Most of the work needs short working sessions rather than sustained involvement, usually a couple of hours a week from the people closest to the work. The demand rises when a change goes live and in the month after, because that is when it meets real conditions. That time is the single largest driver of whether a change holds, so we would rather ask for it plainly than discover later that nobody had it.',
-    ],
+    a: ['Usually a couple of hours a week from the people closest to the work. It rises for a few weeks when a decision or handoff moves to them, because that is when it meets real conditions. We ask for that time up front.'],
   },
   {
-    q: 'What access do you need to our systems, and how is that controlled?',
-    a: [
-      'Read access first, scoped narrowly, and nothing beyond what the specific work requires.',
-      'Where the work touches your systems, we ask for access to those specific systems only, granted per system rather than as blanket administrative rights. We work with your IT contact on scoping. Where your own customers impose security requirements, those get disclosed up front and the work gets designed around them.',
-    ],
+    q: 'Do you need access to our systems?',
+    a: ['Only where the work calls for it. We start with read access to the specific system, agreed with whoever looks after it for you.'],
   },
 ];

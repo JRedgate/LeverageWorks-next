@@ -71,7 +71,7 @@ export default function FractionalCTOCalgaryPage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Solution</span>
             <h2 className="font-display font-bold text-4xl mb-6 leading-tight">We do not bolt tools onto a broken process. We rebuild how the work flows, and we stay.</h2>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it. Your data and your builds are yours from day one, with a permanent licence to any LVRGWRKS module the system uses.</p>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We do not optimize within broken structures</h3>
@@ -127,7 +127,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">03</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Build</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">We build the fix with your people. You review outputs, not code. Every process change and automation we build for your operation belongs to you from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. No vendor lock-in. No dependency on LVRGWRKS to keep the lights on.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">We build the fix with your people. You review outputs, not code. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p></div>
                 </div>
               </div>
               <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white">
@@ -211,7 +211,7 @@ export default function FractionalCTOCalgaryPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we own what a fractional CTO builds for us?</h3>
-                <p className="text-brand-slate leading-relaxed">Your data, your configuration and anything built specifically for your operation are yours from day one. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it even if the relationship ends.</p>
+                <p className="text-brand-slate leading-relaxed">You do. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p>
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">

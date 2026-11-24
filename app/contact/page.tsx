@@ -55,7 +55,7 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Contact</span>
             <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-white mb-8 tracking-tight">
-              Start the <span className="text-gray-400 italic">Conversation.</span>
+              Send us a note.
             </h1>
             <p className="text-gray-400 text-xl leading-relaxed max-w-2xl">
               Tell us what keeps landing on your desk. Jeremy reads every message and replies within one business day.
@@ -110,11 +110,10 @@ export default function ContactPage() {
                       <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Role</label>
                       <select name="role" value={formData.role} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors bg-white">
                         <option value="">Select role</option>
-                        <option value="C-Suite">C-Suite</option>
-                        <option value="VP / Director">VP / Director</option>
-                        <option value="Manager">Manager</option>
-                        <option value="Individual Contributor">Individual Contributor</option>
-                        <option value="Consultant">Consultant</option>
+                        <option value="Owner">Owner</option>
+                        <option value="President or GM">President or GM</option>
+                        <option value="Operations leader">Operations leader</option>
+                        <option value="Finance leader">Finance leader</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
@@ -124,12 +123,12 @@ export default function ContactPage() {
                     <input id="contact-city-region" type="text" name="cityRegion" value={formData.cityRegion} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., Calgary, AB" />
                   </div>
                   <div className="mb-6">
-                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Describe Your Challenge *</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="Tell us about the organizational friction points you are experiencing..." />
+                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">What keeps landing on your desk? *</label>
+                    <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="A few lines is enough." />
                   </div>
                   <div className="mb-8">
                     <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">How Did You Hear About Us?</label>
-                    <input type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., LinkedIn, referral from John Smith, Google search..." />
+                    <input type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., a referral, LinkedIn, a search" />
                   </div>
                   {status === 'error' && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
@@ -148,7 +147,7 @@ export default function ContactPage() {
             </div>
             <div>
               <div className="mb-12">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What to Expect</h3>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What happens next</h3>
                 <ul className="space-y-4 text-brand-slate">
                   <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">01.</span> Jeremy reads your note and replies within one business day.</li>
                   <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">02.</span> If it makes sense, we set up a 30-minute call.</li>
@@ -156,7 +155,7 @@ export default function ContactPage() {
                 </ul>
               </div>
               <div className="bg-brand-navy p-8 rounded-xl text-white">
-                <h3 className="font-display font-bold text-xl mb-4">Headquarters</h3>
+                <h3 className="font-display font-bold text-xl mb-4">Based in</h3>
                 <p className="text-gray-400 mb-6">Calgary, AB, Canada</p>
                 <div className="pt-6 border-t border-white/10">
                   <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors font-bold text-sm uppercase tracking-widest">

@@ -230,7 +230,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'It keeps running. Everything we build for your operation belongs to you from day one, and your data is yours without condition. Where an engagement uses a LVRGWRKS product module, you hold a permanent licence to keep running it. The engagement can end at any time and the operation keeps running.',
+          text: 'The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.',
         },
       ],
     },

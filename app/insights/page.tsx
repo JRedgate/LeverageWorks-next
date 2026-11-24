@@ -17,7 +17,7 @@ const articles = [
     href: '/insights/hidden-cost-of-estimating',
   },
   {
-    label: 'CHANGE',
+    label: 'SYSTEMS',
     heading: 'Why Most Digital Transformations Fail (And What Mid-Market Companies Do Instead)',
     body: 'Most digital transformations in mid-market companies fail for the same reason, and it is almost never the technology.',
     href: '/insights/why-digital-transformations-fail',
@@ -78,9 +78,9 @@ export default function InsightsPage() {
 
       <section className="py-20 md:py-32 bg-brand-navy text-white">
         <div className="container mx-auto px-6 md:px-16 text-center">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 tracking-tight">Ready to move beyond the reading?</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6 tracking-tight">Seeing some of this in your own business?</h2>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-            A 30-minute call puts these frameworks to work on your business. You get a short written note of what we heard and whether a diagnostic is worth doing.
+            Tell us where on a 30-minute call. You get a short written note of what we heard and whether a diagnostic is worth doing.
           </p>
           <BookCallButton variant="gold" />
           <div className="mt-10">

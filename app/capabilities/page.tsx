@@ -128,11 +128,18 @@ export default function CapabilitiesPage() {
         </div>
       </section>
 
+      {/* Related reading sits above the final CTA so the page ends on it (STEP-REVIEW-6, 3.7). */}
+      <RelatedReading
+        items={[
+          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
+        ]}
+      />
+
       {/* Final CTA */}
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
           <h2 className="font-display font-bold text-4xl md:text-6xl mb-8 tracking-tight leading-tight">
-            What keeps landing on your desk that shouldn&apos;t?
+            Get the decisions off your desk.
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
             Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.
@@ -143,13 +150,6 @@ export default function CapabilitiesPage() {
           </div>
         </div>
       </section>
-
-      {/* Related reading sits last, below the closing CTA (13 Oct 2026 rule). */}
-      <RelatedReading
-        items={[
-          { href: '/operations-process-improvement-alberta', title: 'Process improvement and change', blurb: "How to improve how the work runs when it lives in people's heads, without losing the people." },
-        ]}
-      />
     </>
   );
 }

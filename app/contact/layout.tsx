@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Send LVRGWRKS a note or book a 30-minute call. Jeremy replies within one business day.',
   alternates: { canonical: '/contact' },
   openGraph: {
-    title: 'Start the conversation',
+    title: 'Send us a note',
     description: 'Send us a note or book a 30-minute call. Jeremy replies within one business day.',
     url: '/contact',
     siteName: 'LVRGWRKS',

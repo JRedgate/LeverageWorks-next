@@ -58,7 +58,7 @@ export const Footer: React.FC = () => (
           </ul>
         </div>
         <div className="md:col-span-2">
-          <h4 className={headingClass}>Headquarters</h4>
+          <h4 className={headingClass}>Based in</h4>
           <p className="text-sm text-gray-400">Calgary, AB</p>
           <p className="text-sm text-gray-400">Canada</p>
         </div>

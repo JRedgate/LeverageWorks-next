@@ -134,7 +134,7 @@ export default function CallPage() {
             ) : (
               <form onSubmit={handleSubmit} className="bg-brand-surface p-8 md:p-12 rounded-xl border border-gray-100">
                 <h2 className="font-display font-bold text-2xl text-brand-navy mb-3">Prefer to write?</h2>
-                <p className="text-brand-slate mb-8">Leave your details and we&apos;ll email you three times that work.</p>
+                <p className="text-brand-slate mb-8">Leave your details and we&apos;ll email you three time slots.</p>
                 <div className="mb-6">
                   <label htmlFor="fallback-name" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name</label>
                   <input id="fallback-name" type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-brand-gold transition-colors" />
@@ -206,10 +206,9 @@ export default function CallPage() {
 
       <section className="py-20 md:py-28 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">What keeps landing on your desk that shouldn&apos;t?</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Get the decisions off your desk.</h2>
           <p className="text-gray-400 max-w-xl mx-auto mb-12 text-lg leading-relaxed">Thirty minutes. You leave with a short written note and a straight answer on whether a diagnostic is worth doing. No obligation.</p>
           <BookCallButton variant="gold" />
-          <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>
     </>

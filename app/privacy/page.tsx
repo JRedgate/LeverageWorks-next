@@ -22,7 +22,7 @@ const sections: { heading: string; body: React.ReactNode }[] = [
   },
   {
     heading: 'Who sees it',
-    body: <p>LVRGWRKS only. We do not sell your information or share it with anyone for their own marketing.</p>,
+    body: <p>LVRGWRKS, and the service providers described below, who process it for us. We do not sell your information or share it with anyone for their own marketing.</p>,
   },
   {
     heading: 'The services that process it for us',
