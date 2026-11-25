@@ -199,7 +199,7 @@ export const content: SystemsDecisionContent = {
       answer: [
         {
           kind: 'p',
-          text: 'The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.',
+          text: 'Your data, the findings and the documents we produce for you are yours. Where we put a tool in place, the agreement sets out who owns and licenses it. If the engagement ends, the business keeps running.',
         },
       ],
     },

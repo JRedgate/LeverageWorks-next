@@ -21,7 +21,7 @@ const moves = [
   },
   {
     name: 'Move',
-    body: 'We move the agreed decisions and handoffs to your people, one priority at a time. Where a tool helps, we add it, and it belongs to you.',
+    body: 'We move the agreed decisions and handoffs to your people, one priority at a time. Where a tool helps, we add it.',
   },
   {
     name: 'Stay',
@@ -117,9 +117,10 @@ export default function CapabilitiesPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="flex flex-col md:flex-row md:items-center justify-center gap-4 md:gap-8">
             <p className="text-xs font-semibold text-brand-slate uppercase tracking-widest">Industries:</p>
-            <div className="flex flex-wrap gap-4 md:gap-6">
+            {/* Below 640px: two-column grid, 44px tap height (STEP-REVIEW-8, 10.1). */}
+            <div className="grid grid-cols-2 gap-x-6 sm:flex sm:flex-wrap sm:gap-4 md:gap-6">
               {industries.map((item) => (
-                <Link key={item.label} href={item.href} className="text-sm font-bold text-brand-slate hover:text-brand-navy transition-colors">
+                <Link key={item.label} href={item.href} className="flex items-center min-h-[44px] sm:block sm:min-h-0 text-sm font-bold text-brand-slate hover:text-brand-navy transition-colors">
                   {item.label.toUpperCase()}
                 </Link>
               ))}

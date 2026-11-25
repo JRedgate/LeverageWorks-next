@@ -37,12 +37,13 @@ export const Hero: React.FC = () => (
         </div>
         <div className="mt-16 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
           <p className="text-xs font-semibold text-brand-slate uppercase tracking-widest">Serving:</p>
-          <ul className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold text-brand-slate uppercase">
+          {/* Below 640px: two-column grid, dots hidden, 44px tap height (STEP-REVIEW-8, 10.1). */}
+          <ul className="grid grid-cols-2 gap-x-6 sm:flex sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2 text-sm font-bold text-brand-slate uppercase">
             {serving.map((s, i) => (
-              <li key={s.label} className="inline-flex items-center gap-3">
-                {i > 0 && <span className="text-brand-gold" aria-hidden="true">·</span>}
+              <li key={s.label} className="flex items-center sm:inline-flex sm:gap-3">
+                {i > 0 && <span className="hidden sm:inline text-brand-gold" aria-hidden="true">·</span>}
                 {s.href ? (
-                  <Link href={s.href} className="hover:text-brand-navy transition-colors">{s.label}</Link>
+                  <Link href={s.href} className="flex items-center min-h-[44px] sm:block sm:min-h-0 hover:text-brand-navy transition-colors">{s.label}</Link>
                 ) : (
                   s.label
                 )}

@@ -71,7 +71,7 @@ export default function FractionalCTOCalgaryPage() {
           <div className="max-w-5xl mx-auto">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">The Solution</span>
             <h2 className="font-display font-bold text-4xl mb-6 leading-tight">We do not bolt tools onto a broken process. We rebuild how the work flows, and we stay.</h2>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p>
+            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mb-12">LVRGWRKS comes in as your operating partner. We find where the business spends effort without getting faster, redesign how the work flows, build the fix inside the operation using whatever the diagnosis calls for, and stay to run it. Your data, the findings and the documents we produce for you are yours. Where we put a tool in place, the agreement sets out who owns and licenses it. If the engagement ends, the business keeps running.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">We do not optimize within broken structures</h3>
@@ -127,7 +127,7 @@ export default function FractionalCTOCalgaryPage() {
                     <div className="w-16 h-16 bg-brand-gold/10 rounded-lg flex items-center justify-center mb-4"><span className="text-brand-gold font-display font-bold text-2xl">03</span></div>
                     <h3 className="font-display font-bold text-xl text-brand-navy">Build</h3>
                   </div>
-                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">We build the fix with your people. You review outputs, not code. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p></div>
+                  <div className="md:w-3/4"><p className="text-brand-slate leading-relaxed text-lg">We build the fix with your people. You review outputs, not code. Your data, the findings and the documents we produce for you are yours. Where we put a tool in place, the agreement sets out who owns and licenses it. If the engagement ends, the business keeps running.</p></div>
                 </div>
               </div>
               <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white">
@@ -211,7 +211,7 @@ export default function FractionalCTOCalgaryPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we own what a fractional CTO builds for us?</h3>
-                <p className="text-brand-slate leading-relaxed">You do. The findings, the documents and anything we build for your business belong to you, and your data is yours without condition. If the engagement ends, the business keeps running.</p>
+                <p className="text-brand-slate leading-relaxed">You do. Your data, the findings and the documents we produce for you are yours. Where we put a tool in place, the agreement sets out who owns and licenses it. If the engagement ends, the business keeps running.</p>
               </div>
             </div>
             <p className="text-brand-slate leading-relaxed mt-10">
