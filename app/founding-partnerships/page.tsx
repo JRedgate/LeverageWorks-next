@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { BookCallButton } from '@/components/BookCallButton';
-import { Eyebrow, NumberedCards, SectionHeading, type Item } from '@/components/Sections';
+import { Eyebrow, GoldBarGrid, NumberedCards, SectionHeading, type Item } from '@/components/Sections';
 
 // Addendum 5: Founding Partnerships, unlisted. Copy is word for word from the
 // addendum, Section 3. Layout follows addendum 3: every section has a gold
@@ -15,26 +15,38 @@ const problem: Item[] = [
   { title: 'Growth should not cost you more hours', body: 'You shouldn’t have to work twice the hours to own twice the company.' },
 ];
 
+// Review of Nov 25: steps name what the client receives. No outcome is promised.
 const steps: Item[] = [
-  { title: 'The read', body: 'We look at how the business runs today against where you want it to be. You get it in writing: what holds as you grow and what won’t.' },
-  { title: 'The work', body: 'For the rest of the 60 days we work the top priorities with you and your leadership team. Decisions move to the people who should hold them, one at a time.' },
-  { title: 'Your call', body: 'At day 60 you decide whether we carry on. There is no long term to sign.' },
+  { title: 'The read', body: 'We look at how the business runs today against where you want it to be. You get written findings, an operating baseline and the priorities we agree to work on first.' },
+  { title: 'The work', body: 'For the rest of the 60 days we put those priorities into practice with you and your leadership team, inside the business. We measure progress against the baseline.' },
+  { title: 'Your call', body: 'At day 60 we review with you what has moved, what remains and whether the partnership should carry on. The decision is yours. There is no long term to sign.' },
 ];
 
+// Review of Nov 25, Section 5. Desired outcomes, assessed against the
+// baseline. Not promised inside the first 60 days.
+const success: Item[] = [
+  { title: 'Clearer accountability', body: 'Your managers know which decisions are theirs, and they make them.' },
+  { title: 'Protected margins', body: 'Less margin is lost to work that waits, stalls or gets done twice.' },
+  { title: 'Greater operating capacity', body: 'The business takes on more without every decision coming back to the top.' },
+  { title: 'More time to lead', body: 'More of your week goes to customers, people and growth.' },
+];
+
+// No price, rate or term in months on this page (addendum 5, Section 1).
 const founding: { title: string; points: string[] }[] = [
   {
     title: 'What you get',
     points: [
-      'Founding terms that later clients will not be offered.',
-      'A fixed fee agreed before we start. No hourly billing and no success fees.',
-      'A way out at day 60 if it is not working for you.',
+      'Preferred commercial terms, reserved for founding partners.',
+      'A clearly defined scope, agreed before we start.',
+      'A fixed monthly fee. No hourly billing and no success fees.',
+      'The choice at day 60 is yours: carry on, or keep what we have built together and stop there.',
     ],
   },
   {
     title: 'What we ask',
     points: [
-      'A case study you approve before anyone else sees it.',
-      'An introduction, if you are happy with the work.',
+      'A case study based on agreed, documented outcomes, which you approve before anyone else sees it.',
+      'An introduction to another suitable business, if we have earned your confidence.',
     ],
   },
 ];
@@ -43,6 +55,7 @@ const fit: Item[] = [
   { title: 'You own or run the business', body: 'You can say yes to moving a decision, and mean it.' },
   { title: 'Someone can take the decisions on', body: 'A leadership team, even a thin one.' },
   { title: 'You will give it time each week', body: 'The work is done with you, not for you in a back room.' },
+  { title: 'There is a constraint worth fixing', body: 'Something in how the business runs is costing you margin, capacity or time.' },
 ];
 
 export default function FoundingPartnershipsPage() {
@@ -62,8 +75,14 @@ export default function FoundingPartnershipsPage() {
               Sixty days to get the first decisions<br />
               <span className="text-brand-slate italic">off your desk.</span>
             </h1>
+            {/* Review of Nov 25, Section 1. "Direct, founder-led operating
+                support." is held back: addendum 5, 3.3 rules out wording like
+                "leads every engagement personally". Jeremy to decide. */}
+            <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl">
+              Three businesses. Preferred commercial terms.
+            </p>
             <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">
-              We are taking on three founding partnerships. Each one starts with 60 days of work on the decisions that still come back to you. At day 60 you decide whether we carry on.
+              We work alongside you and your leadership team to address the operating constraints costing you margin, capacity and time. At day 60, you decide whether we carry on.
             </p>
             <BookCallButton variant="navy" />
           </div>
@@ -129,15 +148,29 @@ export default function FoundingPartnershipsPage() {
         </div>
       </section>
 
-      {/* 3.5 What founding means: two cards side by side, one line beneath */}
+      {/* Success (review of Nov 25, Section 5): white band, gold-bar grid, 2x2 */}
       <section className="py-20 md:py-32 bg-white">
+        <div className="container mx-auto px-6 md:px-16">
+          <div className="max-w-5xl mx-auto">
+            <Eyebrow>What Success Looks Like</Eyebrow>
+            <SectionHeading line1="A business that moves forward" line2="without waiting on you." className="mb-12" />
+            <GoldBarGrid items={success} />
+            <p className="text-brand-navy text-lg leading-relaxed max-w-3xl mt-12 font-semibold">
+              That is what we work toward. We agree a baseline at the start and assess progress against it. We do not promise these results inside the first 60 days.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3.5 What founding means: grey band, two cards side by side, one line beneath */}
+      <section className="py-20 md:py-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <Eyebrow>Why Founding</Eyebrow>
             <SectionHeading line1="What you get." line2="What we ask." className="mb-12" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {founding.map((card) => (
-                <div key={card.title} className="p-8 md:p-10 rounded-xl border border-gray-100 bg-brand-surface">
+                <div key={card.title} className="p-8 md:p-10 rounded-xl border border-gray-100 bg-white">
                   <h3 className="font-display font-bold text-xl md:text-2xl text-brand-navy mb-6">{card.title}</h3>
                   <ul className="space-y-4">
                     {card.points.map((point) => (
@@ -156,20 +189,23 @@ export default function FoundingPartnershipsPage() {
         </div>
       </section>
 
-      {/* 3.6 Fit: grey band, three cards (LightCards classes) */}
-      <section className="py-20 md:py-32 bg-brand-surface">
+      {/* 3.6 Fit: white band, four cards 2x2 (LightCards classes) */}
+      <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-5xl mx-auto">
             <Eyebrow>Is It a Fit</Eyebrow>
-            <SectionHeading line1="Three things" line2="make this work." className="mb-12" />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <SectionHeading line1="Four things" line2="make this work." className="mb-12" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {fit.map((s) => (
-                <div key={s.title} className="border border-gray-100 rounded-xl p-8 bg-white">
+                <div key={s.title} className="border border-gray-100 rounded-xl p-8 bg-brand-surface">
                   <h3 className="font-display font-bold text-xl text-brand-navy mb-3">{s.title}</h3>
                   <p className="text-brand-slate leading-relaxed">{s.body}</p>
                 </div>
               ))}
             </div>
+            <p className="text-brand-navy text-lg leading-relaxed max-w-3xl mt-12 font-semibold">
+              We take on a founding partnership only where both sides see a fit and we can see the value we would add. If we can’t, we will say so on the call.
+            </p>
           </div>
         </div>
       </section>
