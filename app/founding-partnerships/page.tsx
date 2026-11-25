@@ -38,7 +38,7 @@ const founding: { title: string; points: string[] }[] = [
     points: [
       'Preferred commercial terms, reserved for founding partners.',
       'A clearly defined scope, agreed before we start.',
-      'A fixed monthly fee. No hourly billing and no success fees.',
+      'One fixed monthly fee, agreed before we start. No hourly billing and no success fees. Your fee and scope are set out in your proposal.',
       'The choice at day 60 is yours: carry on, or keep what we have built together and stop there.',
     ],
   },
@@ -75,11 +75,10 @@ export default function FoundingPartnershipsPage() {
               Sixty days to get the first decisions<br />
               <span className="text-brand-slate italic">off your desk.</span>
             </h1>
-            {/* Review of Nov 25, Section 1. "Direct, founder-led operating
-                support." is held back: addendum 5, 3.3 rules out wording like
-                "leads every engagement personally". Jeremy to decide. */}
+            {/* Review of Nov 25, Section 1, as written. "founder-led" kept on
+                Jeremy's word, Nov 25 (overrides addendum 5, 3.3 for this line). */}
             <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl">
-              Three businesses. Preferred commercial terms.
+              Three businesses. Direct, founder-led operating support. Preferred commercial terms.
             </p>
             <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">
               We work alongside you and your leadership team to address the operating constraints costing you margin, capacity and time. At day 60, you decide whether we carry on.
