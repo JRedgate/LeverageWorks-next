@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
+import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact LVRGWRKS | Fractional CTO Calgary, Alberta' },
-  description: 'Start the conversation. Request a free Leverage Audit for your owner-led mid-market company in Calgary, Alberta, or Western Canada.',
+  title: { absolute: 'Contact LVRGWRKS | Calgary, Alberta' },
+  description: 'Send LVRGWRKS a note or book a 30-minute call. Jeremy replies within one business day. Based in Calgary, serving industrial businesses across Canada.',
   alternates: { canonical: '/contact' },
   openGraph: {
-    title: 'Start the conversation',
-    description: 'Request a free Leverage Audit for your owner-led mid-market company in Calgary, Alberta, or Western Canada.',
+    title: 'Send us a note',
+    description: 'Send us a note or book a 30-minute call. Jeremy replies within one business day.',
     url: '/contact',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 

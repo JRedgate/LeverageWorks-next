@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function WhatFractionalCTODoesArticle() {
   return (
     <>
@@ -78,7 +79,7 @@ export default function WhatFractionalCTODoesArticle() {
               The most common failure mode in fractional arrangements is that the engagement produces a strategy deck and a recommendation, and then the fractional executive disappears. The company is left to implement something they do not fully understand, and within six months the organization drifts back to what it knew.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
-              A properly structured fractional CTO engagement does not work that way. The fractional CTO attends leadership meetings as a full participant. They sit inside operational decisions that have a technology dimension. And they produce a monthly Value Creation Report that shows exactly what was built, what it cost, and what it returned. Not a summary of activities. An accounting of outcomes.
+              A properly structured fractional CTO engagement does not work that way. The fractional CTO attends leadership meetings as a full participant. They sit inside operational decisions that have a technology dimension. And they produce a monthly report that shows exactly what was built, what it cost, and what changed. Not a summary of activities. An accounting of outcomes.
             </p>
             <p className="text-brand-slate leading-relaxed mb-6">
               That accountability structure is what separates an embedded operating partner from a consultant. A consultant tells you what to do. An operating partner stays until the value is proven.
@@ -92,7 +93,7 @@ export default function WhatFractionalCTODoesArticle() {
               It is probably not the right move if your primary challenge is software development capacity rather than strategic direction, or if your organization is still small enough that the operational complexity has not yet created meaningful drag.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
-              The best way to find out which situation you are in is a clear-eyed look at where your operations are actually losing capacity. That is what the Leverage Audit does, and it costs nothing to find out.
+              The best way to find out which situation you are in is a clear-eyed look at where your operations are actually losing capacity. A 30-minute call is a good place to start, and it costs nothing.
             </p>
 
           </article>
@@ -102,14 +103,9 @@ export default function WhatFractionalCTODoesArticle() {
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
               <h3 className="font-display font-bold text-2xl mb-4">Not sure if a fractional CTO is the right move for your business?</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                The 60-Minute Leverage Audit maps your highest-friction workflows and gives you a clear picture of where your operations are costing you more than they should. No cost. No commitment.
+                Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing. No obligation.
               </p>
-              <Link
-                href="/leverage-audit"
-                className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
-              >
-                Request Free Leverage Audit
-              </Link>
+              <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
             </div>
           </div>
         </div>

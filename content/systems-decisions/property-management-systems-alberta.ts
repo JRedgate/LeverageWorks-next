@@ -31,7 +31,7 @@ export const content: SystemsDecisionContent = {
       'Most property managers looking at new software are fighting one of three things: more enquiries than anyone can answer, maintenance jobs nobody follows up on, and owners asking questions the system should already answer.',
       'New software can help with all three, or bury them in a new set of screens. The difference is knowing which one is costing you before you choose.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -177,10 +177,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      "Start with the free 60-minute Leverage Audit. Bring the last report you sent to an owner, and either your most recent vacancy from listing to signed lease, or one maintenance job from the tenant's first call to the paid bill. We follow it through your operation, count the handoffs, show you where it waited and where it was retyped, and rank what is worth fixing by what it returns. You keep a written summary either way.",
-      'If the audit shows a bigger problem worth solving, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets and a one-year plan, including what the system you own can already do and what it cannot. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      "Start with a 30-minute call. Tell us what keeps coming back to you, and bring the last report you sent to an owner, and either your most recent vacancy from listing to signed lease, or one maintenance job from the tenant's first call to the paid bill. You get a short written note of what we heard and whether a diagnostic is worth doing.",
+      'If the call shows a bigger problem worth solving, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets and a one-year plan, including what the system you own can already do and what it cannot. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   sources: {
@@ -213,11 +213,6 @@ export const content: SystemsDecisionContent = {
       href: '/system-went-live-nothing-got-faster',
       title: 'The system went live and nothing got faster',
       blurb: 'How to find out why, and fix it without starting over.',
-    },
-    {
-      href: '/coordination-tax-calculator',
-      title: 'Coordination Tax Calculator',
-      blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.',
     },
   ],
 };

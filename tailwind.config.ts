@@ -12,6 +12,8 @@ const config: Config = {
           navy: '#0F172A',
           slate: '#334155',
           gold: '#CA8A04',
+          // Small gold text on white or light grey only (STEP-REVIEW-7 2.1). WCAG AA.
+          'gold-text': '#A16207',
           surface: '#F8FAFC',
           text: '#020617',
           graphite: '#0F172A',

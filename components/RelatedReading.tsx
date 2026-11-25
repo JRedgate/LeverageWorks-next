@@ -16,7 +16,7 @@ export const RelatedReading: React.FC<RelatedReadingProps> = ({ items, heading =
   <section className="py-16 md:py-20 bg-brand-surface border-t border-gray-100">
     <div className="container mx-auto px-6 md:px-16">
       <div className="max-w-5xl mx-auto">
-        <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">{heading}</span>
+        <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-6 block">{heading}</span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {items.map((item) => (
             <Link

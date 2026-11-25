@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LwSymbol } from './Logo';
+import { BookCallButton } from './BookCallButton';
+import { CALL_PAGE } from '@/lib/booking';
 
 const LinkedInIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -53,17 +55,15 @@ export const Navbar: React.FC = () => {
   }, [pathname]);
 
   const servicesItems: DropdownItem[] = [
-    { label: 'Fractional CTO Calgary', href: '/fractional-cto-calgary' },
-    { label: 'AI Automation Consulting', href: '/ai-automation-consulting' },
-    { label: 'Digital Transformation Consulting', href: '/digital-transformation-consulting' },
-    { label: 'Business Process Automation', href: '/business-process-automation' },
+    { label: 'The 30-minute call', href: CALL_PAGE },
+    { label: 'Diagnostic and partnership', href: '/capabilities' },
   ];
 
   const industriesItems: DropdownItem[] = [
     { label: 'Manufacturing', href: '/industries/manufacturing' },
-    { label: 'Energy Services', href: '/industries/energy-services' },
-    { label: 'Property Management', href: '/industries/property-management' },
     { label: 'Construction', href: '/industries/construction' },
+    { label: 'Energy Services', href: '/industries/energy-services' },
+    { label: 'Distribution', href: '/industries/distribution' },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
         <Link href="/" className="flex items-center gap-4 group" aria-label="LeverageWorks Home">
           <LwSymbol className="w-10 h-10 transition-transform group-hover:scale-105"
             color={onDark ? '#FFFFFF' : undefined} dotColor={onDark ? '#94A3B8' : undefined} />
-          <span className={`font-display font-bold text-xl tracking-tight transition-opacity duration-300 ${isScrolled ? 'opacity-100 text-brand-navy' : onDark ? 'opacity-100 text-white' : 'opacity-0'}`}>
+          <span className={`font-display font-bold text-xl tracking-tight transition-colors duration-300 ${onDark ? 'text-white' : 'text-brand-navy'}`}>
             LVRGWRKS
           </span>
         </Link>
@@ -105,14 +105,14 @@ export const Navbar: React.FC = () => {
           {/* Services Dropdown */}
           <div className="relative" onMouseEnter={() => handleMouseEnter('services')} onMouseLeave={handleMouseLeave}>
             <button className={`text-sm font-medium transition-colors relative group flex items-center gap-1 ${isDropdownActive(servicesItems) ? linkOn : linkIdle}`}>
-              Services
+              How we work
               <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''}`} />
               <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isDropdownActive(servicesItems) ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
             </button>
             <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${openDropdown === 'services' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
               <div className="bg-white border border-gray-100 rounded-lg shadow-xl py-2 min-w-[240px]">
                 {servicesItems.map((item) => (
-                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
+                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold-text bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
                     {item.label}
                   </Link>
                 ))}
@@ -130,7 +130,7 @@ export const Navbar: React.FC = () => {
             <div className={`absolute top-full left-0 pt-2 transition-all duration-200 ${openDropdown === 'industries' ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
               <div className="bg-white border border-gray-100 rounded-lg shadow-xl py-2 min-w-[200px]">
                 {industriesItems.map((item) => (
-                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
+                  <Link key={item.href} href={item.href} className={`block px-4 py-2.5 text-sm transition-colors ${isActive(item.href) ? 'text-brand-gold-text bg-brand-surface' : 'text-brand-slate hover:text-brand-navy hover:bg-brand-surface'}`}>
                     {item.label}
                   </Link>
                 ))}
@@ -139,20 +139,8 @@ export const Navbar: React.FC = () => {
           </div>
 
           <Link href="/firm" className={`text-sm font-medium transition-colors relative group ${isActive('/firm') ? linkOn : linkIdle}`}>
-            Firm
+            The Firm
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/firm') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
-          <Link href="/capabilities" className={`text-sm font-medium transition-colors relative group ${isActive('/capabilities') ? linkOn : linkIdle}`}>
-            Capabilities
-            <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/capabilities') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
-          <Link href="/impact" className={`text-sm font-medium transition-colors relative group ${isActive('/impact') ? linkOn : linkIdle}`}>
-            Impact
-            <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/impact') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-          </Link>
-          <Link href="/coordination-tax-calculator" className={`text-sm font-medium transition-colors relative group ${isActive('/coordination-tax-calculator') ? linkOn : linkIdle}`}>
-            Calculator
-            <span className={`absolute -bottom-1 left-0 h-0.5 bg-brand-gold transition-all duration-300 ${isActive('/coordination-tax-calculator') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
           </Link>
           <Link href="/insights" className={`text-sm font-medium transition-colors relative group ${isActive('/insights') || pathname.startsWith('/insights/') ? linkOn : linkIdle}`}>
             Insights
@@ -169,9 +157,7 @@ export const Navbar: React.FC = () => {
             <LinkedInIcon className="w-5 h-5" />
           </a>
 
-          <Link href="/contact" className={`ml-2 px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wide transition-all shadow-md hover:shadow-lg ${isActive('/contact') ? 'bg-brand-gold text-brand-navy' : onDark ? 'bg-white text-brand-navy hover:bg-brand-gold' : 'bg-brand-navy text-white hover:bg-brand-slate'}`}>
-            Contact
-          </Link>
+          <BookCallButton variant="nav" className={`ml-2 ${onDark ? 'bg-white text-brand-navy hover:bg-brand-gold' : 'bg-brand-navy text-white hover:bg-brand-slate'}`} />
         </div>
 
         {/* Mobile Hamburger */}
@@ -187,12 +173,12 @@ export const Navbar: React.FC = () => {
         <div className="bg-white border-t border-gray-100 shadow-lg px-6 py-6 flex flex-col gap-2">
           <div className="border-b border-gray-50 pb-3">
             <button onClick={() => setOpenDropdown(openDropdown === 'mobile-services' ? null : 'mobile-services')} className="w-full flex items-center justify-between text-left text-base font-medium text-brand-slate py-2">
-              Services
+              How we work
               <ChevronDownIcon className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-services' ? 'rotate-180' : ''}`} />
             </button>
             <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-services' ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
               {servicesItems.map((item) => (
-                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>
+                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>
                   {item.label}
                 </Link>
               ))}
@@ -203,27 +189,22 @@ export const Navbar: React.FC = () => {
               Industries
               <ChevronDownIcon className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-industries' ? 'rotate-180' : ''}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-industries' ? 'max-h-[200px] opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`overflow-hidden transition-all duration-200 ${openDropdown === 'mobile-industries' ? 'max-h-[260px] opacity-100' : 'max-h-0 opacity-0'}`}>
               {industriesItems.map((item) => (
-                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>
+                <Link key={item.href} href={item.href} className={`block pl-4 py-2 text-sm ${isActive(item.href) ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>
                   {item.label}
                 </Link>
               ))}
             </div>
           </div>
-          <Link href="/firm" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/firm') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Firm</Link>
-          <Link href="/capabilities" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/capabilities') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Capabilities</Link>
-          <Link href="/impact" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/impact') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Impact</Link>
-          <Link href="/coordination-tax-calculator" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/coordination-tax-calculator') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Calculator</Link>
-          <Link href="/insights" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>Insights</Link>
-          <Link href="/faq" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/faq') ? 'text-brand-gold' : 'text-brand-slate hover:text-brand-navy'}`}>FAQ</Link>
+          <Link href="/firm" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/firm') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>The Firm</Link>
+          <Link href="/insights" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/insights') || pathname.startsWith('/insights/') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>Insights</Link>
+          <Link href="/faq" className={`text-left text-base font-medium transition-colors py-2 border-b border-gray-50 ${isActive('/faq') ? 'text-brand-gold-text' : 'text-brand-slate hover:text-brand-navy'}`}>FAQ</Link>
           <div className="flex items-center gap-4 pt-4">
             <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="text-brand-slate hover:text-brand-navy transition-all" aria-label="LinkedIn Profile">
               <LinkedInIcon className="w-5 h-5" />
             </a>
-            <Link href="/contact" className="bg-brand-navy text-white px-5 py-2.5 rounded-md text-xs font-bold uppercase tracking-wide hover:bg-brand-slate transition-all shadow-md">
-              Contact
-            </Link>
+            <BookCallButton variant="nav" className="bg-brand-navy text-white hover:bg-brand-slate" />
           </div>
         </div>
       </div>

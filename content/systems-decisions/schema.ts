@@ -1,12 +1,13 @@
+import { ORG_ID as SHARED_ORG_ID } from '@/lib/site';
 import { heroH1Text, type SystemsDecisionContent } from './types';
 
 const SITE = 'https://www.lvrgwrks.com';
 
 /**
- * The @id of the site-wide ProfessionalService node in app/layout.tsx. That
- * node stays exactly as it is. These pages reference it, they do not restate it.
+ * The @id of the site-wide ProfessionalService node in app/layout.tsx, from
+ * lib/site.ts. These pages reference it, they do not restate it.
  */
-const ORG_ID = 'https://www.lvrgwrks.com';
+const ORG_ID = SHARED_ORG_ID;
 
 /**
  * One script per page carrying an @graph, rather than two separate scripts.

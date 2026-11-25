@@ -1,20 +1,37 @@
 import type { Metadata } from 'next';
+import { JsonLd } from '@/components/JsonLd';
+import { OG_IMAGE, serviceGraph } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Capabilities | Fractional CTO Services Alberta | LVRGWRKS' },
-  description: 'What we build for owner-led mid-market companies in Alberta. Systems that let your operation scale without scaling headcount at the same rate.',
+  title: { absolute: 'How We Work: Diagnostic and Operating Partnership | LVRGWRKS' },
+  description: 'How we work: find which decisions and handoffs still run through the top, agree which ones move, report what changed. Based in Calgary, serving Canada.',
   alternates: { canonical: '/capabilities' },
   openGraph: {
-    title: 'What we build, and what changes when it runs',
-    description: 'Systems that let your operation scale without scaling headcount at the same rate. Built for owner-led mid-market companies in Alberta and Western Canada.',
+    title: 'How the decisions get off your desk',
+    description: 'Too many decisions still land on your desk. This is how LVRGWRKS moves them into the business, with your people.',
     url: '/capabilities',
     siteName: 'LVRGWRKS',
     locale: 'en_CA',
     type: 'website',
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 
+// Service and BreadcrumbList (STEP-REVIEW-9 7.6). The service name is
+// descriptive, not an offer name, until the December decisions.
+const schema = serviceGraph({
+  path: '/capabilities',
+  serviceName: 'Operations diagnostic and operating partnership for industrial businesses',
+  description: 'We find which decisions and handoffs still run through the top, agree which ones move, work the change with your people, and report what changed each month.',
+  areaServed: { '@type': 'Country', name: 'Canada' },
+  crumbs: [{ name: 'How we work', path: '/capabilities' }],
+});
+
 export default function CapabilitiesLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={schema} />
+      {children}
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { LOGO_URL, OG_IMAGE, ORG_REF, PERSON_REF, SITE_URL } from '@/lib/site';
 const TITLE = 'The Real Cost of Manual Data Entry in Your Business';
 const DESCRIPTION = 'Manual data entry costs more than the hours it consumes. Where the cost compounds in a growing Alberta business, and how to size it.';
 const SEO_TITLE = 'The Real Cost of Manual Data Entry | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 
@@ -31,18 +32,9 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: {
-    '@type': 'Person',
-    name: 'Jeremy Redgate',
-    jobTitle: 'Founder',
-    worksFor: { '@type': 'Organization', name: 'LVRGWRKS Inc.' },
-    url: 'https://www.lvrgwrks.com/firm',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'LVRGWRKS Inc.',
-    url: 'https://www.lvrgwrks.com',
-  },
+  // One @id each for Jeremy and the business (STEP-REVIEW-9 7.6).
+  author: { ...PERSON_REF, url: 'https://www.lvrgwrks.com/firm' },
+  publisher: { ...ORG_REF, url: SITE_URL, logo: { '@type': 'ImageObject', url: LOGO_URL } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.lvrgwrks.com${SLUG}` },
 };
 

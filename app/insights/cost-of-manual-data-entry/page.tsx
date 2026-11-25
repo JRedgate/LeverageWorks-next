@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function CostOfManualDataEntryArticle() {
   return (
     <>
@@ -118,7 +118,7 @@ export default function CostOfManualDataEntryArticle() {
               The second thing the number does is prioritize. Once you have quantified the cost of every manual process, you can rank automation opportunities by annual labour recovery, build complexity, and operational risk. The highest-value, lowest-risk opportunities get built first. Every subsequent build has a clear business case before work begins.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
-              This is the diagnostic work we do in the first 30 minutes of every Leverage Audit. We run the manual work calculation with you, across your actual processes, using your actual people and costs. You leave the conversation with a number you can act on, and a clear picture of where automation investment makes the most sense for your business specifically.
+              This is the kind of work the diagnostic does. We run the manual work calculation with you, across your actual processes, using your actual people and costs. You leave with a number you can act on, and a clear picture of where automation investment makes the most sense for your business specifically.
             </p>
 
           </article>
@@ -128,24 +128,13 @@ export default function CostOfManualDataEntryArticle() {
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
               <h3 className="font-display font-bold text-2xl mb-4">We run this calculation with you in the first 30 minutes. At no cost.</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                The Leverage Audit maps your manual workflows, quantifies the exact labour cost, and gives you a clear picture of where automation investment makes sense for your business. 60 minutes. No commitment.
+                Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing. Thirty minutes. No obligation.
               </p>
-              <Link
-                href="/leverage-audit"
-                className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
-              >
-                Request Free Leverage Audit
-              </Link>
+              <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
             </div>
           </div>
         </div>
       </section>
-      <RelatedReading
-        items={[
-          { href: '/business-process-automation', title: 'Business process automation', blurb: 'Removing the handoffs first, then automating what is left.' },
-          { href: '/coordination-tax-calculator', title: 'Coordination Tax Calculator', blurb: 'Four inputs, sixty seconds, a first number on what coordination is costing you.' },
-        ]}
-      />
     </>
   );
 }

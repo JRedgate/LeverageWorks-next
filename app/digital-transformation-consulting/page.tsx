@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function DigitalTransformationPage() {
   return (
     <>
@@ -27,12 +28,9 @@ export default function DigitalTransformationPage() {
               LVRGWRKS approaches digital transformation as an operating model problem, not a technology problem. We start with the workflows and the structural friction, then determine what technology serves the solution, not the other way around.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/leverage-audit" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group">
-                Request Free Leverage Audit
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-              </Link>
+              <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">
-                View Capabilities
+                How we work
               </Link>
             </div>
           </div>
@@ -125,13 +123,13 @@ export default function DigitalTransformationPage() {
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Embedded accountability post go-live</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  LVRGWRKS stays embedded as your fractional CTO and operating partner after the initial build. We attend leadership meetings, monitor system performance, iterate on what is not working, and produce a monthly Value Creation Report that documents what changed in the operation, not just what was installed in the system.
+                  LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use. We stay after the initial build, attend leadership meetings, monitor how the work is running, iterate on what is not working, and report each month what changed in the operation, not just what was installed in the system.
                 </p>
               </div>
               <div className="bg-white/5 border border-white/10 p-8 rounded-xl">
                 <h3 className="font-display font-bold text-xl text-brand-gold mb-4">Outcomes measured, not assumed</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Every transformation engagement starts with a baseline, the specific operational costs and constraints that the transformation is designed to address. Every month, progress against that baseline is documented and reported. You are not asked to assume the transformation is working. You see the evidence every 30 days.
+                  Every transformation engagement starts with a baseline, the specific operational costs and constraints that the transformation is designed to address. Every month, progress against that baseline is documented and reported. You are not asked to assume the transformation is working. You see the evidence each month.
                 </p>
               </div>
             </div>
@@ -146,7 +144,7 @@ export default function DigitalTransformationPage() {
             <div className="mb-16 text-center">
               <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-4 block">Scope of Work</span>
               <h2 className="font-display font-bold text-4xl text-brand-navy mb-4">What a transformation engagement covers</h2>
-              <p className="text-brand-slate text-lg max-w-2xl mx-auto">The specific scope depends on where your operational constraints actually live. The Leverage Audit determines what applies to your business.</p>
+              <p className="text-brand-slate text-lg max-w-2xl mx-auto">The specific scope depends on where your operational constraints actually live. The diagnostic determines what applies to your business.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white p-8 rounded-xl border border-gray-100">
@@ -185,11 +183,11 @@ export default function DigitalTransformationPage() {
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">What does digital transformation cost for a mid-market company?</h3>
-                <p className="text-brand-slate leading-relaxed">LVRGWRKS runs as a monthly partnership from $4,500 to $8,500, priced against the value created rather than the hours worked, with no upfront fee. The retainer is capped, so a system that produces far more value does not cost you more.</p>
+                <p className="text-brand-slate leading-relaxed">The diagnostic is a fixed fee agreed before we start. The monthly partnership is priced on the scope you need. We&apos;ll give you real numbers once we understand what you need, usually after the first call.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">How do you measure the return?</h3>
-                <p className="text-brand-slate leading-relaxed">Every 30 days you receive a Value Creation Report documenting labour hours recovered against the pre-implementation baseline, in hours and in dollars, tracked against the business case agreed at the start.</p>
+                <p className="text-brand-slate leading-relaxed">We agree a baseline up front and report what changed against it each month.</p>
               </div>
               <div className="border-b border-gray-100 pb-8">
                 <h3 className="font-display font-bold text-xl text-brand-navy mb-3">Do we need to buy new software?</h3>
@@ -205,17 +203,14 @@ export default function DigitalTransformationPage() {
 
       <section className="py-20 md:py-32 bg-brand-navy text-white text-center">
         <div className="container mx-auto px-6 md:px-16">
-          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with the operational assessment.</h2>
+          <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">Start with a 30-minute call.</h2>
           <p className="text-gray-400 max-w-2xl mx-auto mb-4 text-lg leading-relaxed">
-            The Leverage Audit maps your current state, identifies the structural friction, and gives you a clear picture of what a transformation needs to address before any platform gets selected or any budget gets committed.
+            Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing, before any platform gets selected or any budget gets committed.
           </p>
           <p className="text-gray-500 max-w-xl mx-auto mb-12 text-base leading-relaxed">
-            60 minutes. No cost. No commitment.
+            Thirty minutes. No obligation.
           </p>
-          <Link href="/leverage-audit" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group">
-            Request Free Leverage Audit
-            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-          </Link>
+          <BookCallButton variant="custom" className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-12 py-5 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all shadow-xl group" arrow={true} />
           <p className="text-gray-500 text-sm mt-6">Or email directly: jredgate@lvrgwrks.com</p>
         </div>
       </section>

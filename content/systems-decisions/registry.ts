@@ -37,8 +37,6 @@ export const SYSTEMS_DECISION_SLUGS = [
 
 export type SystemsDecisionSlug = (typeof SYSTEMS_DECISION_SLUGS)[number];
 
-export type SitemapFrequency = 'weekly' | 'monthly' | 'yearly';
-
 /**
  * Which footer column a published page is listed under.
  *
@@ -65,7 +63,7 @@ export type SitemapFrequency = 'weekly' | 'monthly' | 'yearly';
 export type FooterGroup = 'expertise' | 'systems-decisions' | 'hand-written';
 
 /**
- * Setting published: true requires the footer label, the sitemap values and
+ * Setting published: true requires the footer label and
  * the path of the approved copy file. TypeScript will not let you publish a
  * page without them, which is the brief's "never publish a template with
  * placeholder text" enforced by the compiler instead of by review.
@@ -78,8 +76,12 @@ export type RegistryEntry =
       footerLabel: string;
       /** Which footer column the link sits in. */
       footerGroup: FooterGroup;
-      priority: number;
-      changeFrequency: SitemapFrequency;
+      /**
+       * Sitemap lastmod (YYYY-MM-DD): the date of the last material copy
+       * change. Leave it out when no real date is known. The sitemap carries
+       * no priority or changefreq (STEP-REVIEW-9 7.5).
+       */
+      lastModified?: string;
       /** Absolute path of the approved copy file this page was built from. */
       copySource: string;
     };
@@ -93,74 +95,58 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     published: true,
     footerLabel: 'ERP for Manufacturers',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/erp-selection-alberta-manufacturers.md',
   },
   'job-costing-change-orders-contractors': {
     published: true,
     footerLabel: 'Contractor Job Costing',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/job-costing-change-orders-contractors.md',
   },
   'system-went-live-nothing-got-faster': {
     published: true,
     footerLabel: 'ERP Implementation Rescue',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/system-went-live-nothing-got-faster.md',
   },
   'business-central-acumatica-netsuite': {
     published: true,
     footerLabel: 'Comparing ERP Systems',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-central-acumatica-netsuite.md',
   },
   'property-management-systems-alberta': {
     published: true,
     footerLabel: 'Property Management Systems',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/property-management-systems-alberta.md',
   },
   'funding-systems-automation-alberta-2026': { published: false },
   // Already live before it entered this ledger, so publishing it changes
-  // nothing about its indexability. The label and the column are the ones the
-  // hand-written footer link already carried, per its copy file's build note
-  // that footer placement is unchanged.
+  // nothing about its indexability. Moved from Expertise to Systems decisions
+  // in Release 0, when the Expertise column became How we work.
   'business-process-automation': {
     published: true,
     footerLabel: 'Business Process Automation',
-    footerGroup: 'expertise',
-    priority: 0.8,
-    changeFrequency: 'monthly',
+    footerGroup: 'systems-decisions',
+    lastModified: '2026-11-25',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-process-automation.md',
   },
   // Already live before it entered this ledger, like 4.2a, so publishing it
-  // changes nothing about its indexability. Its footer link is the
-  // hand-written one in the Expertise column, which this entry does not
-  // render and does not move. Its sitemap entry does come from here, and the
-  // hand-written one was removed in the same commit.
+  // changes nothing about its indexability. Release 0 removed its footer
+  // link, and 'hand-written' keeps the registry from rendering one. Its
+  // sitemap entry still comes from here, so the page stays live and indexed.
   'ai-automation-consulting': {
     published: true,
     footerLabel: 'AI Automation Consulting',
     footerGroup: 'hand-written',
-    priority: 0.8,
-    changeFrequency: 'monthly',
+    lastModified: '2026-11-25',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/ai-automation-consulting.md',
   },
   'operations-process-improvement-alberta': {
     published: true,
     footerLabel: 'Process Improvement',
-    footerGroup: 'expertise',
-    priority: 0.8,
-    changeFrequency: 'monthly',
+    footerGroup: 'systems-decisions',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/operations-process-improvement-alberta.md',
   },
 };

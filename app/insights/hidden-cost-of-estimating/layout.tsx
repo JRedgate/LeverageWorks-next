@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 
+import { LOGO_URL, OG_IMAGE, ORG_REF, PERSON_REF, SITE_URL } from '@/lib/site';
 const TITLE = 'The Hidden Cost of Estimating: What We Found Inside Three Project Files';
 const DESCRIPTION = 'What three project files revealed about estimating overhead, and why the cost hides inside work your team already considers normal.';
 const SEO_TITLE = 'The Hidden Cost of Estimating | LVRGWRKS';
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: PUBLISHED,
     modifiedTime: MODIFIED,
-    images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+    images: [OG_IMAGE],
   },
 };
 
@@ -31,18 +32,9 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: {
-    '@type': 'Person',
-    name: 'Jeremy Redgate',
-    jobTitle: 'Founder',
-    worksFor: { '@type': 'Organization', name: 'LVRGWRKS Inc.' },
-    url: 'https://www.lvrgwrks.com/firm',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'LVRGWRKS Inc.',
-    url: 'https://www.lvrgwrks.com',
-  },
+  // One @id each for Jeremy and the business (STEP-REVIEW-9 7.6).
+  author: { ...PERSON_REF, url: 'https://www.lvrgwrks.com/firm' },
+  publisher: { ...ORG_REF, url: SITE_URL, logo: { '@type': 'ImageObject', url: LOGO_URL } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.lvrgwrks.com${SLUG}` },
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { RelatedReading } from '@/components/RelatedReading';
 
+import { BookCallButton } from '@/components/BookCallButton';
 export default function WhyTransformationsFailArticle() {
   return (
     <>
@@ -52,7 +53,7 @@ export default function WhyTransformationsFailArticle() {
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">Where the value leaks out after go-live</h2>
             <p className="text-brand-slate leading-relaxed mb-6">
-              Once the new system is live, the value tends to leak out in three places. Systems that do not talk to each other turn your staff into the link between them, the old workarounds carry on beside the new tool, and nobody inside the business owns the result once the implementer moves on. Our page on <Link href="/digital-transformation-consulting" className="text-brand-navy font-semibold underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold transition-colors">digital transformation consulting</Link> sets out each of those gaps and how we close them.
+              Once the new system is live, the value tends to leak out in three places. Systems that do not talk to each other turn your staff into the link between them, the old workarounds carry on beside the new tool, and nobody inside the business owns the result once the implementer moves on. Our page on digital transformation consulting sets out each of those gaps and how we close them.
             </p>
 
             <h2 className="font-display font-bold text-2xl text-brand-navy mt-12 mb-6">What the companies getting ROI are doing differently</h2>
@@ -74,7 +75,7 @@ export default function WhyTransformationsFailArticle() {
               Only once you have answers to those questions does the technology conversation make sense. The platform selection, the integration architecture, the AI strategy, all of that becomes straightforward once the operational problem is defined clearly. The companies that skip this step and go straight to platform selection are the ones who call it a failure eighteen months later.
             </p>
             <p className="text-brand-slate leading-relaxed mb-8">
-              That operational assessment is what the LVRGWRKS Leverage Audit does in 60 minutes. No platform recommendations. No sales pitch. A diagnostic that gives you the picture of where your operations are actually costing you capacity and margin, so that any technology investment you make after has a clear problem to solve.
+              That operational assessment is what the LVRGWRKS diagnostic does. No platform recommendations. No sales pitch. A diagnostic that gives you the picture of where your operations are actually costing you capacity and margin, so that any technology investment you make after has a clear problem to solve.
             </p>
 
           </article>
@@ -84,21 +85,15 @@ export default function WhyTransformationsFailArticle() {
             <div className="bg-brand-navy p-8 md:p-12 rounded-xl text-white text-center">
               <h3 className="font-display font-bold text-2xl mb-4">Start with the operational assessment, not the platform selection.</h3>
               <p className="text-gray-400 leading-relaxed mb-8">
-                The 60-Minute Leverage Audit maps your highest-friction workflows, quantifies what they are costing you, and gives you a clear picture before any technology decision is made.
+                Tell us what keeps landing on your desk. You get a short written note of what we heard and whether a diagnostic is worth doing.
               </p>
-              <Link
-                href="/leverage-audit"
-                className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all"
-              >
-                Request Free Leverage Audit
-              </Link>
+              <BookCallButton variant="custom" className="inline-block bg-brand-gold text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-white transition-all" arrow={false} />
             </div>
           </div>
         </div>
       </section>
       <RelatedReading
         items={[
-          { href: '/digital-transformation-consulting', title: 'Digital transformation consulting', blurb: 'How we approach transformation when the operating model is the real constraint.' },
           { href: '/insights/coordination-tax-mid-market', title: 'Why revenue grows but margin does not', blurb: 'The coordination tax, where it hides in a mid-market operation, and what it costs.' },
           { href: '/system-went-live-nothing-got-faster', title: 'The system went live and nothing got faster', blurb: 'How to find out why, and fix it without starting over.' },
         ]}

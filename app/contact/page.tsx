@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { LwSymbol } from '@/components/Logo';
 import { sendWhenReady } from '@/components/AnalyticsEvents';
+import { BookCallButton } from '@/components/BookCallButton';
 
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgvjrrod';
 
@@ -13,6 +14,7 @@ export default function ContactPage() {
     email: '',
     company: '',
     role: '',
+    cityRegion: '',
     message: '',
     referredBy: '',
   });
@@ -25,11 +27,11 @@ export default function ContactPage() {
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ _subject: 'Contact form: new note', ...formData }),
       });
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', company: '', role: '', message: '', referredBy: '' });
+        setFormData({ name: '', email: '', company: '', role: '', cityRegion: '', message: '', referredBy: '' });
         sendWhenReady('contact_form_submit', { page_path: '/contact' });
       } else {
         setStatus('error');
@@ -45,18 +47,18 @@ export default function ContactPage() {
 
   return (
     <>
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-navy">
+      <header className="relative pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-navy">
         <div className="absolute top-0 right-0 p-8 opacity-5">
           <LwSymbol className="w-96 h-96" color="#FFFFFF" />
         </div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Contact</span>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-white mb-8 tracking-tight">
-              Start the <span className="text-gray-400 italic">Conversation.</span>
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-white mb-8 tracking-tight">
+              Send us a note.
             </h1>
             <p className="text-gray-400 text-xl leading-relaxed max-w-2xl">
-              Tell us what you are working through. We will schedule a free 60-minute Leverage Audit with a LVRGWRKS strategist to explore what is possible for your organization.
+              Tell us what keeps landing on your desk. Jeremy reads every message and replies within one business day.
             </p>
           </div>
         </div>
@@ -66,6 +68,11 @@ export default function ContactPage() {
         <div className="container mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <div>
+              <div className="bg-brand-navy text-white p-8 rounded-xl mb-8">
+                <h2 className="font-display font-bold text-xl mb-3">Rather talk it through?</h2>
+                <p className="text-gray-400 mb-6">Pick a time that suits you. You get a short written note of what we heard and whether a diagnostic is worth doing.</p>
+                <BookCallButton variant="gold" />
+              </div>
               {status === 'success' ? (
                 <div className="bg-white p-12 rounded-xl border border-gray-100 text-center">
                   <div className="w-16 h-16 bg-brand-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -75,7 +82,7 @@ export default function ContactPage() {
                   </div>
                   <h3 className="font-display font-bold text-2xl text-brand-navy mb-4">Message Received</h3>
                   <p className="text-brand-slate leading-relaxed mb-8">
-                    Thanks for writing. We read every message and reply personally. If a Leverage Audit is the right next step, we will suggest a time.
+                    Thanks for writing. Jeremy will reply within one business day. If a 30-minute call is the right next step, he will suggest a time.
                   </p>
                   <Link href="/" className="inline-flex items-center gap-2 text-brand-navy font-bold text-sm uppercase tracking-widest border-b-2 border-brand-gold pb-1 hover:text-brand-gold transition-all">
                     Return Home
@@ -83,42 +90,45 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="bg-white p-8 md:p-12 rounded-xl border border-gray-100">
-                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Request Free Leverage Audit</h2>
+                  <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Your note</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Your name" />
+                      <label htmlFor="contact-name" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
+                      <input id="contact-name" type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Your name" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Work Email *</label>
-                      <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="you@company.com" />
+                      <label htmlFor="contact-email" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Work Email *</label>
+                      <input id="contact-email" type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="you@company.com" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Company *</label>
-                      <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Company name" />
+                      <label htmlFor="contact-company" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Company *</label>
+                      <input id="contact-company" type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Company name" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Role</label>
-                      <select name="role" value={formData.role} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors bg-white">
+                      <label htmlFor="contact-role" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Role</label>
+                      <select id="contact-role" name="role" value={formData.role} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors bg-white">
                         <option value="">Select role</option>
-                        <option value="C-Suite">C-Suite</option>
-                        <option value="VP / Director">VP / Director</option>
-                        <option value="Manager">Manager</option>
-                        <option value="Individual Contributor">Individual Contributor</option>
-                        <option value="Consultant">Consultant</option>
+                        <option value="Owner">Owner</option>
+                        <option value="President or GM">President or GM</option>
+                        <option value="Operations leader">Operations leader</option>
+                        <option value="Finance leader">Finance leader</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
                   </div>
                   <div className="mb-6">
-                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Describe Your Challenge *</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="Tell us about the organizational friction points you are experiencing..." />
+                    <label htmlFor="contact-city-region" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">City or Region *</label>
+                    <input id="contact-city-region" type="text" name="cityRegion" value={formData.cityRegion} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., Calgary, AB" />
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="contact-message" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">What keeps landing on your desk? *</label>
+                    <textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="A few lines is enough." />
                   </div>
                   <div className="mb-8">
-                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">How Did You Hear About Us?</label>
-                    <input type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., LinkedIn, referral from John Smith, Google search..." />
+                    <label htmlFor="contact-referred-by" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">How Did You Hear About Us?</label>
+                    <input id="contact-referred-by" type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., a referral, LinkedIn, a search" />
                   </div>
                   {status === 'error' && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
@@ -126,22 +136,26 @@ export default function ContactPage() {
                     </div>
                   )}
                   <button type="submit" disabled={status === 'submitting'} className="w-full bg-brand-navy text-white py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-gold transition-all disabled:opacity-50 disabled:cursor-not-allowed">
-                    {status === 'submitting' ? 'Sending...' : 'Submit Request'}
+                    {status === 'submitting' ? 'Sending...' : 'Send'}
                   </button>
+                  <p className="text-brand-slate text-xs mt-4">
+                    We use these details only to reply to you. See our{' '}
+                    <Link href="/privacy" className="underline decoration-brand-gold underline-offset-2 hover:text-brand-navy">privacy notice</Link>.
+                  </p>
                 </form>
               )}
             </div>
             <div>
               <div className="mb-12">
-                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What to Expect</h3>
+                <h3 className="font-display font-bold text-xl text-brand-navy mb-4">What happens next</h3>
                 <ul className="space-y-4 text-brand-slate">
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">01.</span> A LVRGWRKS strategist will review your submission within 24 hours.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">02.</span> We will schedule your free 60-minute Leverage Audit to understand your context.</li>
-                  <li className="flex items-start gap-3"><span className="text-brand-gold font-bold">03.</span> You will receive an initial assessment of potential engagement pathways.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">01.</span> Jeremy reads your note and replies within one business day.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">02.</span> If it makes sense, we set up a 30-minute call.</li>
+                  <li className="flex items-start gap-3"><span className="text-brand-gold-text font-bold">03.</span> After the call you get a short written note of what we heard and whether a diagnostic is worth doing.</li>
                 </ul>
               </div>
               <div className="bg-brand-navy p-8 rounded-xl text-white">
-                <h3 className="font-display font-bold text-xl mb-4">Headquarters</h3>
+                <h3 className="font-display font-bold text-xl mb-4">Based in</h3>
                 <p className="text-gray-400 mb-6">Calgary, AB, Canada</p>
                 <div className="pt-6 border-t border-white/10">
                   <a href="https://www.linkedin.com/company/lvrgwrks/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-brand-gold hover:text-white transition-colors font-bold text-sm uppercase tracking-widest">

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { heroH1Text, type SystemsDecisionContent } from './types';
 import { isPublished } from './registry';
 
+import { OG_IMAGE } from '@/lib/site';
 /**
  * Builds the page metadata from the content object, matching the convention in
  * app/ai-automation-consulting/layout.tsx: an absolute title, a relative
@@ -25,7 +26,7 @@ export function buildSystemsDecisionMetadata(content: SystemsDecisionContent): M
       siteName: 'LVRGWRKS',
       locale: 'en_CA',
       type: 'website',
-      images: [{ url: '/og-card-v2.jpg', width: 2400, height: 1260 }],
+      images: [OG_IMAGE],
     },
   };
 

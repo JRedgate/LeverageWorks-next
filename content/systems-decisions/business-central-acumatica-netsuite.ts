@@ -43,7 +43,7 @@ export const content: SystemsDecisionContent = {
       'All three are credible cloud ERP systems for a mid-sized Alberta company. The demos will all look good, and every partner will tell you why theirs fits.',
       'The differences that matter are how each one is priced, how it is sold and supported, and how it handles your hardest job. That is what this page compares. We do not sell or resell any of them.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   whoThisIsFor: {
@@ -275,10 +275,10 @@ export const content: SystemsDecisionContent = {
   firstStep: {
     heading: 'What the first step looks like',
     body: [
-      'Start with the free 60-minute Leverage Audit. Bring your shortlist if you have one, the last report you sent to an owner, a client or your board, and one recent job from the moment it came in to the moment it was invoiced. We map how that job actually moved, show you where the same information was handled more than once, and rank what is worth fixing by what it returns. You keep a written summary either way.',
-      'If an ERP decision is in front of you, the next step is the Leverage Diagnostic. It is a few days of work with your team, on site and on paper, and it turns the audit into an analysis of your highest-value targets, a one-year plan, and a clear picture of what the system has to do. You can hand that to all three vendors and compare their answers on the same terms. The Diagnostic is scoped and quoted in writing after the audit, before any work starts.',
+      'Start with a 30-minute call. Tell us what keeps coming back to you, and bring your shortlist if you have one, the last report you sent to an owner, a client or your board, and one recent job from the moment it came in to the moment it was invoiced. You get a short written note of what we heard and whether a diagnostic is worth doing.',
+      'If an ERP decision is in front of you, the next step is the diagnostic. It is a few days of work with your team, on site and on paper, and it turns that into an analysis of your highest-value targets, a one-year plan, and a clear picture of what the system has to do. You can hand that to all three vendors and compare their answers on the same terms. The diagnostic is scoped and agreed in writing after the call, before any work starts.',
     ],
-    ctaLabel: 'Request Free Leverage Audit',
+    ctaLabel: 'Book a 30-minute call',
   },
 
   sources: {
