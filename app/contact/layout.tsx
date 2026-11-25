@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Contact LVRGWRKS | Calgary' },
-  description: 'Send LVRGWRKS a note or book a 30-minute call. Jeremy replies within one business day.',
+  title: { absolute: 'Contact LVRGWRKS | Calgary, Alberta' },
+  description: 'Send LVRGWRKS a note or book a 30-minute call. Jeremy replies within one business day. Based in Calgary, serving industrial businesses across Canada.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: 'Send us a note',

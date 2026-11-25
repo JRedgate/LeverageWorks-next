@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { OG_IMAGE } from '@/lib/site';
+import { LOGO_URL, OG_IMAGE, ORG_REF, PERSON_REF, SITE_URL } from '@/lib/site';
 const TITLE = 'What Does a Fractional CTO Actually Do Inside Your Business?';
 const DESCRIPTION = 'A plain explanation of what a fractional CTO does inside a mid-market business week to week, and when hiring one makes sense in Alberta.';
 const SEO_TITLE = 'What Does a Fractional CTO Actually Do? | LVRGWRKS';
@@ -32,18 +32,9 @@ const articleSchema = {
   description: DESCRIPTION,
   datePublished: PUBLISHED,
   dateModified: MODIFIED,
-  author: {
-    '@type': 'Person',
-    name: 'Jeremy Redgate',
-    jobTitle: 'Founder',
-    worksFor: { '@type': 'Organization', name: 'LVRGWRKS Inc.' },
-    url: 'https://www.lvrgwrks.com/firm',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'LVRGWRKS Inc.',
-    url: 'https://www.lvrgwrks.com',
-  },
+  // One @id each for Jeremy and the business (STEP-REVIEW-9 7.6).
+  author: { ...PERSON_REF, url: 'https://www.lvrgwrks.com/firm' },
+  publisher: { ...ORG_REF, url: SITE_URL, logo: { '@type': 'ImageObject', url: LOGO_URL } },
   mainEntityOfPage: { '@type': 'WebPage', '@id': `https://www.lvrgwrks.com${SLUG}` },
 };
 

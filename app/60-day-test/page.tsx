@@ -44,14 +44,15 @@ export default function SixtyDayTestPage() {
         </section>
       </div>
 
-      {/* Print sheet: blank boxes, the three bands, lockup and contact. */}
+      {/* Print sheet: blank boxes, the three bands, lockup and contact. The heading
+          is a p, not an h1, so the page keeps one h1 (STEP-REVIEW-9 7.7). */}
       <div className="hidden print:block text-brand-navy bg-white">
         <div className="flex items-center gap-3 mb-6">
           <LwSymbol className="w-10 h-10" />
           <span className="font-display font-bold text-xl tracking-tight">LVRGWRKS</span>
         </div>
         <p className="text-[10px] font-bold tracking-widest uppercase text-brand-gold-text mb-2">The 60-Day Test</p>
-        <h1 className="font-display font-bold text-2xl mb-2">Could your business run for 60 days without you?</h1>
+        <p className="font-display font-bold text-2xl mb-2">Could your business run for 60 days without you?</p>
         <p className="text-sm mb-5">Picture 60 days away. No calls and no texts. For each of the five below, who would do it?</p>
         <table className="w-full text-sm border-collapse mb-5">
           <thead>

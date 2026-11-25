@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Privacy | LVRGWRKS' },
+  title: { absolute: 'Privacy Policy | LVRGWRKS' },
   description: 'What LVRGWRKS collects through this site, why, who sees it, how long we keep it and how to ask for access, correction or deletion.',
   alternates: { canonical: '/privacy' },
   openGraph: {

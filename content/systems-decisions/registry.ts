@@ -37,8 +37,6 @@ export const SYSTEMS_DECISION_SLUGS = [
 
 export type SystemsDecisionSlug = (typeof SYSTEMS_DECISION_SLUGS)[number];
 
-export type SitemapFrequency = 'weekly' | 'monthly' | 'yearly';
-
 /**
  * Which footer column a published page is listed under.
  *
@@ -65,7 +63,7 @@ export type SitemapFrequency = 'weekly' | 'monthly' | 'yearly';
 export type FooterGroup = 'expertise' | 'systems-decisions' | 'hand-written';
 
 /**
- * Setting published: true requires the footer label, the sitemap values and
+ * Setting published: true requires the footer label and
  * the path of the approved copy file. TypeScript will not let you publish a
  * page without them, which is the brief's "never publish a template with
  * placeholder text" enforced by the compiler instead of by review.
@@ -78,8 +76,12 @@ export type RegistryEntry =
       footerLabel: string;
       /** Which footer column the link sits in. */
       footerGroup: FooterGroup;
-      priority: number;
-      changeFrequency: SitemapFrequency;
+      /**
+       * Sitemap lastmod (YYYY-MM-DD): the date of the last material copy
+       * change. Leave it out when no real date is known. The sitemap carries
+       * no priority or changefreq (STEP-REVIEW-9 7.5).
+       */
+      lastModified?: string;
       /** Absolute path of the approved copy file this page was built from. */
       copySource: string;
     };
@@ -93,40 +95,30 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     published: true,
     footerLabel: 'ERP for Manufacturers',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/erp-selection-alberta-manufacturers.md',
   },
   'job-costing-change-orders-contractors': {
     published: true,
     footerLabel: 'Contractor Job Costing',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/job-costing-change-orders-contractors.md',
   },
   'system-went-live-nothing-got-faster': {
     published: true,
     footerLabel: 'ERP Implementation Rescue',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/system-went-live-nothing-got-faster.md',
   },
   'business-central-acumatica-netsuite': {
     published: true,
     footerLabel: 'Comparing ERP Systems',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-central-acumatica-netsuite.md',
   },
   'property-management-systems-alberta': {
     published: true,
     footerLabel: 'Property Management Systems',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/property-management-systems-alberta.md',
   },
   'funding-systems-automation-alberta-2026': { published: false },
@@ -137,8 +129,7 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     published: true,
     footerLabel: 'Business Process Automation',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
+    lastModified: '2026-11-25',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-process-automation.md',
   },
   // Already live before it entered this ledger, like 4.2a, so publishing it
@@ -149,16 +140,13 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     published: true,
     footerLabel: 'AI Automation Consulting',
     footerGroup: 'hand-written',
-    priority: 0.8,
-    changeFrequency: 'monthly',
+    lastModified: '2026-11-25',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/ai-automation-consulting.md',
   },
   'operations-process-improvement-alberta': {
     published: true,
     footerLabel: 'Process Improvement',
     footerGroup: 'systems-decisions',
-    priority: 0.8,
-    changeFrequency: 'monthly',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/operations-process-improvement-alberta.md',
   },
 };

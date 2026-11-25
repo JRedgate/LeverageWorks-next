@@ -6,6 +6,11 @@ const nextConfig = {
       // /about was a 404. statusCode 301 rather than permanent: true, which
       // would send 308.
       { source: '/about', destination: '/firm', statusCode: 301 },
+      // Retired before launch (STEP-REVIEW-9 7.1 and 7.2). permanent: true
+      // sends 308. /impact described modelled work as client results, and the
+      // calculator was replaced by the 60-Day Test.
+      { source: '/impact', destination: '/capabilities', permanent: true },
+      { source: '/coordination-tax-calculator', destination: '/60-day-test', permanent: true },
     ];
   },
   // Headers for SEO and security

@@ -4,7 +4,7 @@ import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { ClientLayout } from '@/components/ClientLayout';
 import { Footer } from '@/components/Footer';
 import './globals.css';
-import { OG_IMAGE, SITE_URL } from '@/lib/site';
+import { CONTACT_EMAIL, LOGO_URL, OG_IMAGE, ORG_ID, ORG_NAME, PERSON_REF, SITE_URL } from '@/lib/site';
 
 const GA_MEASUREMENT_ID = 'G-E0H5REX2XK';
 
@@ -39,15 +39,22 @@ export const metadata: Metadata = {
   },
 };
 
+// The business node. Its @id (ORG_ID) is the one every author, publisher,
+// provider and worksFor reference uses (STEP-REVIEW-9 7.6). No phone number
+// (ruling O11, Nov 25, 2026). No ratings, prices or testimonials. Hours match
+// the Google Business Profile.
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'LVRGWRKS (LeverageWorks)',
+  '@id': ORG_ID,
+  name: ORG_NAME,
   alternateName: 'LeverageWorks',
+  legalName: 'LVRGWRKS Inc.',
   description: 'Operating partner for industrial businesses, based in Calgary and serving Canada.',
+  url: SITE_URL,
+  logo: { '@type': 'ImageObject', url: LOGO_URL, width: 512, height: 512 },
   image: `${SITE_URL}${OG_IMAGE.url}`,
-  '@id': 'https://www.lvrgwrks.com',
-  url: 'https://www.lvrgwrks.com',
+  email: CONTACT_EMAIL,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Calgary',
@@ -63,14 +70,26 @@ const jsonLd = {
     'Energy Services Operations Consulting',
     'Distribution Operations Consulting',
   ],
+  knowsAbout: [
+    'Industrial operations',
+    'Operations management',
+    'Decision rights and delegation',
+    'Manufacturing operations',
+    'Construction operations',
+    'Energy services operations',
+    'Industrial distribution operations',
+  ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '17:00',
+    opens: '08:00',
+    closes: '16:00',
   },
-  sameAs: ['https://www.linkedin.com/company/lvrgwrks/'],
-  founder: { '@id': 'https://www.lvrgwrks.com/firm#jeremy-redgate', '@type': 'Person', name: 'Jeremy Redgate' },
+  sameAs: [
+    'https://www.linkedin.com/company/lvrgwrks/',
+    'https://clutch.co/profile/lvrgwrks-leverageworks',
+  ],
+  founder: PERSON_REF,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

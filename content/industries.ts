@@ -15,7 +15,14 @@ export interface Industry {
   pill: string;
   headline: [string, string];
   intro: string;
+  /** Open Graph (share) description. Keeps the positioning. */
   description: string;
+  /** Search title (STEP-REVIEW-9 7.3). */
+  seoTitle: string;
+  /** Meta description: 155 characters or fewer, "Alberta" once (STEP-REVIEW-9 7.4). */
+  metaDescription: string;
+  /** Service name for the Service structured data node. */
+  serviceName: string;
   moments: { title: string; body: string }[];
   who: { title: string; body: string }[];
   handoffs: string;
@@ -59,6 +66,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
     headline: ['Your plant can make it.', 'The decision still waits on you.'],
     intro: `In a growing manufacturer, the quote, the schedule change, the rush order and the quality call tend to find their way to the same two or three people. The floor keeps moving, and the answers it needs queue at the top. ${IDENTITY}`,
     description: 'Your plant can make it. The decision still waits on you. LVRGWRKS works with manufacturing owners and leadership teams to move decisions and handoffs into the business.',
+    seoTitle: 'Manufacturing Operations Consulting Alberta | LVRGWRKS',
+    metaDescription: 'Operations consulting for manufacturers where the quote, the schedule and the quality call wait on the owner. Based in Calgary, Alberta, serving Canada.',
+    serviceName: 'Manufacturing operations consulting',
     moments: [
       { title: 'The rush order.', body: 'Sales says yes, the schedule says no, and both wait for you to settle it.' },
       { title: 'The quote that needs your eye.', body: 'Estimating has the number. It goes out when you have looked at it.' },
@@ -83,6 +93,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
     headline: ['Your crews build the job.', 'Too much of it still runs through you.'],
     intro: `In a growing contractor, the estimate, the change order, the sub who is behind and the client who is unhappy tend to land on the same desk. Your project managers run the work, and the calls that protect the margin wait at the top. ${IDENTITY}`,
     description: 'Your crews build the job. Too much of it still runs through you. LVRGWRKS works with construction owners and leadership teams to move decisions and handoffs into the business.',
+    seoTitle: 'Operations Consulting for Contractors | LVRGWRKS',
+    metaDescription: 'Operations consulting for contractors where estimates, change orders and job cost still run through the owner. Based in Calgary, Alberta, serving Canada.',
+    serviceName: 'Construction operations consulting',
     moments: [
       { title: 'The change order nobody priced.', body: 'The extra work is done. It gets billed when someone at the top gets to it.' },
       { title: 'The estimate that waits for sign-off.', body: 'The bid is ready. The deadline is tomorrow. It is on your desk.' },
@@ -107,6 +120,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
     headline: ['Your crews are in the field.', 'The decisions are still on your desk.'],
     intro: `In a growing service company, the re-dispatch, the rate on extra work, the ticket dispute and the client complaint tend to come back to the same few people. The field keeps working, and the calls that decide the margin wait at the top. ${IDENTITY}`,
     description: 'Your crews are in the field. The decisions are still on your desk. LVRGWRKS works with energy services owners and leadership teams to move decisions and handoffs into the business.',
+    seoTitle: 'Energy Services Operations Consulting | LVRGWRKS',
+    metaDescription: 'Operations consulting for energy services firms where dispatch, field tickets and rate calls wait on the owner. Based in Calgary, Alberta, serving Canada.',
+    serviceName: 'Energy services operations consulting',
     moments: [
       { title: 'The re-dispatch.', body: 'Equipment goes down or the client changes the plan, and the call comes to you.' },
       { title: 'The ticket that isn’t billed.', body: 'Signed in the field, sitting in a truck, a week away from an invoice.' },
@@ -130,6 +146,9 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
     headline: ['Your team can quote it and ship it.', 'The exception still waits on you.'],
     intro: `In a growing distributor, the price exception, the stock decision, the supplier call and the credit question tend to find their way to the same two or three people. Orders keep coming, and the answers they need queue at the top. ${IDENTITY}`,
     description: 'Your team can quote it and ship it. The exception still waits on you. LVRGWRKS works with distribution owners and leadership teams to move decisions and handoffs into the business.',
+    seoTitle: 'Industrial Distribution Operations Consulting | LVRGWRKS',
+    metaDescription: 'Operations consulting for industrial distributors where price exceptions and stock calls wait on the owner. Based in Calgary, Alberta, serving Canada.',
+    serviceName: 'Industrial distribution operations consulting',
     moments: [
       { title: 'The price exception.', body: 'A good customer asks for a better number, and the order waits for your yes.' },
       { title: 'The price list one person keeps.', body: 'Supplier prices change, and one person knows how they reach your quotes.' },
@@ -146,4 +165,4 @@ export const INDUSTRIES: Record<IndustryKey, Industry> = {
   },
 };
 
-export const industryTitle = (i: Industry) => `${i.name} | Operating Partner for Industrial Businesses | LVRGWRKS`;
+export const industryTitle = (i: Industry) => i.seoTitle;

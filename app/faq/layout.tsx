@@ -3,7 +3,7 @@ import { OG_IMAGE } from '@/lib/site';
 import { FAQS } from './faqs';
 
 export const metadata: Metadata = {
-  title: { absolute: 'FAQ | Operating Partner for Industrial Businesses | LVRGWRKS' },
+  title: { absolute: 'Industrial Operations Consulting FAQs | LVRGWRKS' },
   description: 'The questions owners actually ask about working with LVRGWRKS: what we do, the 30-minute call, the diagnostic, cost, commitment and ownership.',
   alternates: { canonical: '/faq' },
   openGraph: {

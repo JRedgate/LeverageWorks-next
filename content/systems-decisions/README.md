@@ -196,8 +196,6 @@ One edit, in `registry.ts`. Flip the slug's entry from `{ published: false }` to
 'erp-selection-alberta-manufacturers': {
   published: true,
   footerLabel: 'ERP for Manufacturers',
-  priority: 0.8,
-  changeFrequency: 'monthly',
   copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/erp-selection-alberta-manufacturers.md',
 },
 ```

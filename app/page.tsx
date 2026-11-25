@@ -1,5 +1,8 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { JsonLd } from '@/components/JsonLd';
+import { ORG_REF, SITE_URL, WEBSITE_ID } from '@/lib/site';
 import { Hero } from '@/components/Hero';
 import { BookCallButton } from '@/components/BookCallButton';
 import { SixtyDayTest } from '@/components/SixtyDayTest';
@@ -29,9 +32,30 @@ const figures = [
 ];
 
 
+// Search title and description (STEP-REVIEW-9 7.3 and 7.4). The share title
+// and description stay in app/layout.tsx openGraph and keep the positioning.
+export const metadata: Metadata = {
+  title: { absolute: 'Industrial Operations Consulting Calgary | LVRGWRKS' },
+  description: "Too many decisions still land on the owner's desk? LVRGWRKS helps industrial businesses across Canada move them into the business. Based in Calgary.",
+};
+
+// WebSite node, homepage only (STEP-REVIEW-9 7.6). No SearchAction: the site
+// has no search.
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': WEBSITE_ID,
+  url: SITE_URL,
+  name: 'LVRGWRKS',
+  alternateName: 'LeverageWorks',
+  inLanguage: 'en-CA',
+  publisher: ORG_REF,
+};
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={websiteSchema} />
       <Hero />
 
       {/* The problem: dark band, 2x2 cards */}

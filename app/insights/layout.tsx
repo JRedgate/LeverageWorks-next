@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { OG_IMAGE } from '@/lib/site';
 export const metadata: Metadata = {
-  title: { absolute: 'Insights | Operations and Margin for Industrial Businesses | LVRGWRKS' },
+  title: { absolute: 'Industrial Operations & Profitability Insights | LVRGWRKS' },
   description: 'Thinking on operations, decisions and margin for owners and leadership teams of industrial businesses. Written for operators, not vendors.',
   alternates: { canonical: '/insights' },
   openGraph: {

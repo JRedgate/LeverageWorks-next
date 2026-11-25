@@ -32,7 +32,6 @@ export function sendWhenReady(event: string, params: Record<string, unknown>) {
 const CTA_EVENTS: { match: string; event: string }[] = [
   { match: BOOKING_URL, event: 'book_call_click' },
   { match: '/leverage-audit', event: 'cta_leverage_audit' },
-  { match: '/coordination-tax-calculator', event: 'cta_calculator' },
   { match: '/contact', event: 'cta_contact' },
 ];
 

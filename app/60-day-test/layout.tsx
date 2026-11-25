@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { OG_IMAGE } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: { absolute: 'The 60-Day Test | LVRGWRKS' },
+  title: { absolute: 'Could Your Business Run Without You? | The 60-Day Test' },
   description: 'Could your business run for 60 days without you? Five questions, two minutes, no email needed.',
   alternates: { canonical: '/60-day-test' },
   openGraph: {

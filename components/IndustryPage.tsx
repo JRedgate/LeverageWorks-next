@@ -5,7 +5,8 @@ import { BookCallButton } from '@/components/BookCallButton';
 import { RelatedReading } from '@/components/RelatedReading';
 import { DarkCards, Eyebrow, GoldBarGrid, HowItWorksBand, LightCards, SectionHeading, TestLink } from '@/components/Sections';
 import { INDUSTRIES, IndustryKey, QUESTIONS_HEADING, SHARED_QUESTIONS, SHARED_WORK_CLOSE, industryTitle, sharedWork } from '@/content/industries';
-import { OG_IMAGE } from '@/lib/site';
+import { JsonLd } from '@/components/JsonLd';
+import { OG_IMAGE, serviceGraph } from '@/lib/site';
 
 // One structure for every industry page (addendum 2 Section 3, addendum 3
 // Section 4): hero as `main`, four moments as dark 2x2 cards, the shared block
@@ -17,7 +18,7 @@ export const industryMetadata = (key: IndustryKey): Metadata => {
   const path = `/industries/${key}`;
   return {
     title: { absolute: industryTitle(i) },
-    description: i.description,
+    description: i.metaDescription,
     alternates: { canonical: path },
     openGraph: {
       title: `${i.headline[0]} ${i.headline[1]}`,
@@ -33,8 +34,20 @@ export const industryMetadata = (key: IndustryKey): Metadata => {
 
 export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) => {
   const i = INDUSTRIES[industry];
+  const path = `/industries/${industry}`;
   return (
     <>
+      {/* Service and BreadcrumbList, as the answer pages carry (STEP-REVIEW-9 7.6).
+          Two crumbs: there is no /industries page to link as a middle level. */}
+      <JsonLd
+        data={serviceGraph({
+          path,
+          serviceName: i.serviceName,
+          description: i.metaDescription,
+          areaServed: { '@type': 'Country', name: 'Canada' },
+          crumbs: [{ name: i.name, path }],
+        })}
+      />
       {/* Hero: `main` layout */}
       <header className="relative pt-24 sm:pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
