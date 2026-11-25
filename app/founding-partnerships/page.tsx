@@ -62,7 +62,7 @@ export default function FoundingPartnershipsPage() {
   return (
     <>
       {/* 3.1 Hero: `main` layout, one focal point, no secondary link */}
-      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-32 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -71,16 +71,16 @@ export default function FoundingPartnershipsPage() {
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Founding Partnerships</span>
             </div>
-            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 md:mb-6 tracking-tight">
               Sixty days to get the first decisions<br />
               <span className="text-brand-slate italic">off your desk.</span>
             </h1>
             {/* Review of Nov 25, Section 1, as written. "founder-led" kept on
                 Jeremy's word, Nov 25 (overrides addendum 5, 3.3 for this line). */}
-            <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl">
+            <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl lg:max-w-3xl">
               Three businesses. Direct, founder-led operating support. Preferred commercial terms.
             </p>
-            <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">
+            <p className="text-brand-navy text-xl leading-relaxed mb-10 md:mb-8 max-w-2xl lg:max-w-3xl">
               We work alongside you and your leadership team to address the operating constraints costing you margin, capacity and time. At day 60, you decide whether we carry on.
             </p>
             <BookCallButton variant="navy" />
@@ -155,7 +155,7 @@ export default function FoundingPartnershipsPage() {
             <SectionHeading line1="A business that moves forward" line2="without waiting on you." className="mb-12" />
             <GoldBarGrid items={success} />
             <p className="text-brand-navy text-lg leading-relaxed max-w-3xl mt-12 font-semibold">
-              That is what we work toward. We agree a baseline at the start and assess progress against it. We do not promise these results inside the first 60 days.
+              That is what we work toward. We agree a baseline at the start and assess progress against it. At day 60, we review the progress made toward these outcomes against your starting baseline.
             </p>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function FoundingPartnershipsPage() {
             <Eyebrow tone="dark">The Next Step</Eyebrow>
             <SectionHeading tone="dark" line1="Get the decisions" line2="off your desk." />
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Left alone, the business stays as big as your week. With the right hand-offs it runs without waiting on you.
+              When too many decisions depend on you, your time becomes a constraint on the business. With the right hand-offs it runs without waiting on you.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-12">
               Book a 30-minute call. We’ll tell you where we would start and whether a founding partnership fits.
