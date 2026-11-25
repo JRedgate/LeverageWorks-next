@@ -27,7 +27,7 @@ export default function ContactPage() {
       const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ _subject: 'Contact form: new note', ...formData }),
       });
       if (response.ok) {
         setStatus('success');
@@ -47,14 +47,14 @@ export default function ContactPage() {
 
   return (
     <>
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-navy">
+      <header className="relative pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-navy">
         <div className="absolute top-0 right-0 p-8 opacity-5">
           <LwSymbol className="w-96 h-96" color="#FFFFFF" />
         </div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
             <span className="text-brand-gold font-bold tracking-widest text-[11px] uppercase mb-6 block">Contact</span>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-white mb-8 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-white mb-8 tracking-tight">
               Send us a note.
             </h1>
             <p className="text-gray-400 text-xl leading-relaxed max-w-2xl">
@@ -93,22 +93,22 @@ export default function ContactPage() {
                   <h2 className="font-display font-bold text-2xl text-brand-navy mb-8">Your note</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
-                      <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Your name" />
+                      <label htmlFor="contact-name" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Name *</label>
+                      <input id="contact-name" type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Your name" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Work Email *</label>
-                      <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="you@company.com" />
+                      <label htmlFor="contact-email" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Work Email *</label>
+                      <input id="contact-email" type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="you@company.com" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Company *</label>
-                      <input type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Company name" />
+                      <label htmlFor="contact-company" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Company *</label>
+                      <input id="contact-company" type="text" name="company" value={formData.company} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="Company name" />
                     </div>
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Role</label>
-                      <select name="role" value={formData.role} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors bg-white">
+                      <label htmlFor="contact-role" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">Role</label>
+                      <select id="contact-role" name="role" value={formData.role} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors bg-white">
                         <option value="">Select role</option>
                         <option value="Owner">Owner</option>
                         <option value="President or GM">President or GM</option>
@@ -123,12 +123,12 @@ export default function ContactPage() {
                     <input id="contact-city-region" type="text" name="cityRegion" value={formData.cityRegion} onChange={handleChange} required className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., Calgary, AB" />
                   </div>
                   <div className="mb-6">
-                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">What keeps landing on your desk? *</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="A few lines is enough." />
+                    <label htmlFor="contact-message" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">What keeps landing on your desk? *</label>
+                    <textarea id="contact-message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors resize-none" placeholder="A few lines is enough." />
                   </div>
                   <div className="mb-8">
-                    <label className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">How Did You Hear About Us?</label>
-                    <input type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., a referral, LinkedIn, a search" />
+                    <label htmlFor="contact-referred-by" className="block text-xs font-bold uppercase tracking-widest text-brand-slate mb-2">How Did You Hear About Us?</label>
+                    <input id="contact-referred-by" type="text" name="referredBy" value={formData.referredBy} onChange={handleChange} className="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:border-brand-gold transition-colors" placeholder="e.g., a referral, LinkedIn, a search" />
                   </div>
                   {status === 'error' && (
                     <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">

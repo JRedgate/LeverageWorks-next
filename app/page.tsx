@@ -95,15 +95,19 @@ export default function HomePage() {
                   Jeremy Redgate founded LVRGWRKS after more than 20 years in industrial operations and capital projects. He started on the tools as a Red Seal journeyman electrician, has run projects with crews of up to 125, and has led a project management office responsible for a $100M+ capital portfolio. He holds an Executive MBA in finance from Haskayne.
                 </p>
               </div>
-              {/* Circle, face-centred crop shared with /leverage-audit (STEP-REVIEW-7 9.2). */}
+              {/* Circle, head and shoulders from the full /firm photo (STEP-REVIEW-8 3.5).
+                  Shows a 760px square from x 125, y 0 of the 1024 x 1004 source:
+                  width 1024/760 = 134.74%, left -125/760 = -16.45%. */}
               <div className="md:col-span-2 md:order-1 flex md:justify-center">
-                <img
-                  src="/jeremy-redgate-square.jpg"
-                  alt="Jeremy Redgate, founder of LVRGWRKS"
-                  width={480}
-                  height={480}
-                  className="w-56 h-56 md:w-[300px] md:h-[300px] shrink-0 rounded-full object-cover"
-                />
+                <div className="relative w-56 h-56 md:w-[300px] md:h-[300px] shrink-0 rounded-full overflow-hidden">
+                  <img
+                    src="/jeremy-redgate.jpg"
+                    alt="Jeremy Redgate, founder of LVRGWRKS"
+                    width={1024}
+                    height={1004}
+                    className="absolute top-0 left-[-16.45%] w-[134.74%] max-w-none h-auto"
+                  />
+                </div>
               </div>
             </div>
             <FigureBand figures={figures} cols={3} />

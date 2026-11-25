@@ -33,14 +33,14 @@ const articles = [
 export default function InsightsPage() {
   return (
     <>
-      <section className="pt-40 pb-20 md:pt-56 md:pb-32 bg-brand-surface">
+      <section className="pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-6xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Insights & Resources</span>
             </div>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               Thinking on operations and margin<br />
               <span className="text-brand-slate italic">for industrial businesses.</span>
             </h1>

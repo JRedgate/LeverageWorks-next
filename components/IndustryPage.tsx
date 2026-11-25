@@ -36,7 +36,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
   return (
     <>
       {/* Hero: `main` layout */}
-      <header className="relative pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -46,7 +46,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">{i.pill}</span>
             </div>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
               {i.headline[0]}<br />
               <span className="text-brand-slate italic">{i.headline[1]}</span>
             </h1>
