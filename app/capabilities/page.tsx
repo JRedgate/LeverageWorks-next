@@ -40,7 +40,7 @@ export default function CapabilitiesPage() {
   return (
     <>
       {/* Hero: `main` layout */}
-      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-32 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -49,17 +49,17 @@ export default function CapabilitiesPage() {
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">How We Work</span>
             </div>
-            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 md:mb-6 tracking-tight">
               How the decisions get<br />
               <span className="text-brand-slate italic">off your desk.</span>
             </h1>
-            <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl">
+            <p className="text-brand-navy text-xl font-semibold leading-relaxed mb-6 max-w-2xl lg:max-w-3xl">
               This is how we move them, with your people.
             </p>
-            <p className="text-brand-navy text-xl leading-relaxed mb-6 max-w-2xl">
+            <p className="text-brand-navy text-xl leading-relaxed mb-6 max-w-2xl lg:max-w-3xl">
               Left alone, the list on your desk grows with the business.
             </p>
-            <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">
+            <p className="text-brand-navy text-xl leading-relaxed mb-10 md:mb-8 max-w-2xl lg:max-w-3xl">
               LVRGWRKS is an operating partner for industrial businesses. We find which decisions and handoffs still run through the top of the business, agree with you which ones move, work the change with your people, and report what changed each month.
             </p>
             <BookCallButton variant="navy" />
