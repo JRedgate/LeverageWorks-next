@@ -20,7 +20,7 @@ export default function SixtyDayTestPage() {
       `}</style>
 
       <div className="print:hidden">
-        <header className="relative pt-24 sm:pt-40 pb-16 md:pt-52 md:pb-20 overflow-hidden bg-brand-surface">
+        <header className="relative pt-24 sm:pt-32 pb-16 md:pt-32 md:pb-20 overflow-hidden bg-brand-surface">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
           <div className="container mx-auto px-6 md:px-16 relative z-10">
             <div className="max-w-6xl mx-auto">

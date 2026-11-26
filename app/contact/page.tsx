@@ -47,7 +47,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <header className="relative pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-navy">
+      <header className="relative pt-24 sm:pt-32 pb-16 md:pt-32 md:pb-20 overflow-hidden bg-brand-navy">
         <div className="absolute top-0 right-0 p-8 opacity-5">
           <LwSymbol className="w-96 h-96" color="#FFFFFF" />
         </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
         </div>
       </header>
 
-      <section className="py-20 md:py-32 bg-brand-surface">
+      <section className="pt-12 pb-20 md:pt-16 md:pb-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             <div>

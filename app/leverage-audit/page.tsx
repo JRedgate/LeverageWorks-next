@@ -62,7 +62,7 @@ export default function CallPage() {
 
   return (
     <>
-      <header className="relative pt-24 sm:pt-40 pb-20 md:pt-44 md:pb-20 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-20 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">

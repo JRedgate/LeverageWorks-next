@@ -33,7 +33,7 @@ const articles = [
 export default function InsightsPage() {
   return (
     <>
-      <section className="pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 bg-brand-surface">
+      <section className="pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-6xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">
@@ -44,9 +44,17 @@ export default function InsightsPage() {
               Thinking on operations and margin<br />
               <span className="text-brand-slate italic">for industrial businesses.</span>
             </h1>
-            <p className="text-brand-navy text-xl leading-relaxed max-w-2xl">
+            <p className="text-brand-navy text-xl leading-relaxed mb-10 md:mb-8 max-w-2xl">
               Practical reading for owners, presidents and operating leaders.
             </p>
+            {/* Hero calls to action, as on the homepage hero: book a call, or
+                the 60-Day Test as the transitional one for readers. */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <BookCallButton variant="navy" />
+              <Link href="/60-day-test" className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-navy hover:text-white transition-all text-center">
+                Take the 60-Day Test
+              </Link>
+            </div>
           </div>
         </div>
       </section>

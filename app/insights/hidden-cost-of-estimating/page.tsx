@@ -6,7 +6,7 @@ import { BookCallButton } from '@/components/BookCallButton';
 export default function HiddenCostOfEstimatingPage() {
   return (
     <>
-      <article className="pt-40 pb-20 md:pt-52 md:pb-28 bg-white">
+      <article className="pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-28 bg-white">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-3xl mx-auto">
             <div className="mb-10">

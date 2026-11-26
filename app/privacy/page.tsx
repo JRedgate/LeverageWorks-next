@@ -63,7 +63,7 @@ const sections: { heading: string; body: React.ReactNode }[] = [
 export default function PrivacyPage() {
   return (
     <>
-      <header className="relative pt-24 sm:pt-40 pb-16 md:pt-56 md:pb-20 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-16 md:pt-32 md:pb-20 overflow-hidden bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-3xl">
             <span className="text-brand-gold-text font-bold tracking-widest text-[11px] uppercase mb-6 block">Privacy</span>
