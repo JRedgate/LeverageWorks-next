@@ -49,7 +49,7 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
         })}
       />
       {/* Hero: `main` layout */}
-      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-56 md:pb-36 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-24 md:pt-32 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -59,11 +59,11 @@ export const IndustryPage: React.FC<{ industry: IndustryKey }> = ({ industry }) 
               <div className="w-2 h-2 rounded-full bg-brand-gold"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">{i.pill}</span>
             </div>
-            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-8 md:mb-6 tracking-tight">
               {i.headline[0]}<br />
               <span className="text-brand-slate italic">{i.headline[1]}</span>
             </h1>
-            <p className="text-brand-navy text-xl leading-relaxed mb-10 max-w-2xl">{i.intro}</p>
+            <p className="text-brand-navy text-xl leading-relaxed mb-10 md:mb-8 max-w-2xl lg:max-w-3xl">{i.intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <BookCallButton variant="navy" />
               <Link href="/capabilities" className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-navy hover:text-white transition-all text-center">

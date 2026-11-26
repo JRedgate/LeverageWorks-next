@@ -7,7 +7,7 @@ export default function WhatFractionalCTODoesArticle() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-brand-surface">
+      <section className="pt-24 sm:pt-32 pb-12 md:pt-32 md:pb-16 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">

@@ -33,7 +33,7 @@ const articles = [
 export default function InsightsPage() {
   return (
     <>
-      <section className="pt-24 sm:pt-40 pb-20 md:pt-56 md:pb-32 bg-brand-surface">
+      <section className="pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 bg-brand-surface">
         <div className="container mx-auto px-6 md:px-16">
           <div className="max-w-6xl">
             <div className="inline-flex items-center gap-2 bg-white border border-gray-100 px-4 py-1.5 rounded-full mb-8 shadow-sm">

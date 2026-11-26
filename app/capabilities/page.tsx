@@ -40,7 +40,7 @@ export default function CapabilitiesPage() {
   return (
     <>
       {/* Hero: `main` layout */}
-      <header className="relative pt-24 sm:pt-40 pb-24 md:pt-32 md:pb-36 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-24 md:pt-32 md:pb-36 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-navy/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">

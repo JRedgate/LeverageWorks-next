@@ -146,7 +146,7 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
   return (
     <>
       {/* Section 1. Hero */}
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
@@ -162,7 +162,7 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
               The break is presentational, the h1's text content is still the
               whole phrase.
             */}
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               {hero.h1Lines.map((line, i) =>
                 i === 0 ? (
                   // The trailing space is deliberate and invisible. These h1s
@@ -181,8 +181,8 @@ export function SystemsDecisionPage({ content }: { content: SystemsDecisionConte
             {hero.subhead.map((para, i) => (
               <p
                 key={i}
-                className={`text-brand-slate text-xl leading-relaxed max-w-2xl ${
-                  i === hero.subhead.length - 1 ? 'mb-10' : 'mb-6'
+                className={`text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl ${
+                  i === hero.subhead.length - 1 ? 'mb-10 md:mb-8' : 'mb-6'
                 }`}
               >
                 {renderInline(para, `hero-sub-${i}`)}

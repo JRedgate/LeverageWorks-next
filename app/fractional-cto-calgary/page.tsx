@@ -9,7 +9,7 @@ import { BookCallButton } from '@/components/BookCallButton';
 export default function FractionalCTOCalgaryPage() {
   return (
     <>
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
@@ -17,12 +17,12 @@ export default function FractionalCTOCalgaryPage() {
               <div className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Fractional CTO Services - Calgary, AB</span>
             </div>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               Your operation has outgrown<br />
               <span className="text-brand-slate italic">the way it is run.</span>
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">Revenue grew. Margin did not move with it, and headcount climbed to hold the operation together. Your best people spend their days moving work and information between systems and people that do not line up. That labour never shows up on a report, and it is the biggest single reason a growing company adds revenue without adding margin.</p>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">You do not need another software subscription. LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.</p>
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-6">Revenue grew. Margin did not move with it, and headcount climbed to hold the operation together. Your best people spend their days moving work and information between systems and people that do not line up. That labour never shows up on a report, and it is the biggest single reason a growing company adds revenue without adding margin.</p>
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 md:mb-8">You do not need another software subscription. LVRGWRKS is an operating partner for industrial businesses. Technology work is one of the tools we use.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <BookCallButton variant="custom" className="bg-brand-navy text-white px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg group" arrow={true} />
               <Link href="/capabilities" className="border-2 border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-3 hover:bg-brand-navy hover:text-white transition-all">How we work</Link>

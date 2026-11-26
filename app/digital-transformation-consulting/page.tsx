@@ -9,7 +9,7 @@ export default function DigitalTransformationPage() {
   return (
     <>
       {/* Hero */}
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
@@ -17,14 +17,14 @@ export default function DigitalTransformationPage() {
               <div className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Digital Transformation Consulting - Calgary, AB</span>
             </div>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               Your last transformation<br />
               <span className="text-brand-slate italic">probably did not fail because of the technology.</span>
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-6">
               Most digital transformation failures in mid-market companies trace back to the same structural problem: new tools deployed on top of old workflows. The platform gets implemented. The process does not change. The team fills the gap with the same manual work they were doing before, just with more expensive software in the middle.
             </p>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 md:mb-8">
               LVRGWRKS approaches digital transformation as an operating model problem, not a technology problem. We start with the workflows and the structural friction, then determine what technology serves the solution, not the other way around.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

@@ -9,7 +9,7 @@ export default function PropertyManagementPage() {
   return (
     <>
       {/* Hero */}
-      <header className="relative pt-40 pb-20 md:pt-56 md:pb-32 overflow-hidden bg-brand-surface">
+      <header className="relative pt-24 sm:pt-32 pb-20 md:pt-32 md:pb-32 overflow-hidden bg-brand-surface">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-gold/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
         <div className="container mx-auto px-6 md:px-16 relative z-10">
           <div className="max-w-4xl">
@@ -17,14 +17,14 @@ export default function PropertyManagementPage() {
               <div className="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></div>
               <span className="text-[10px] font-bold tracking-[0.1em] text-brand-navy uppercase">Industry - Property Management</span>
             </div>
-            <h1 className="font-display font-semibold text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            <h1 className="font-display font-semibold text-[40px] sm:text-5xl md:text-6xl leading-[1.1] text-brand-navy mb-6 tracking-tight">
               Your portfolio is growing.<br />
               <span className="text-brand-slate italic">Your administrative overhead is growing faster.</span>
             </h1>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-6">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-6">
               Property management is fundamentally a coordination business. Tenants, owners, maintenance vendors, inspectors, leasing agents, and accountants all generating requests, documentation, and data that needs to flow between disconnected systems. At small portfolio sizes this is manageable. As you add doors, the coordination overhead compounds faster than the revenue does.
             </p>
-            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl mb-10">
+            <p className="text-brand-slate text-xl leading-relaxed max-w-2xl lg:max-w-3xl mb-10 md:mb-8">
               LVRGWRKS is an operating partner for industrial businesses. We help owners and leadership teams move decisions and handoffs off the top desk and into the business, and bring in technology only where it earns its place.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
