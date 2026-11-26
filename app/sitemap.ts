@@ -13,14 +13,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: { path: string; lastModified?: string }[] = [
     { path: '/', lastModified: '2026-11-24' },
     { path: '/leverage-audit', lastModified: '2026-11-24' },
-    { path: '/fractional-cto-calgary', lastModified: '2026-11-25' },
     // /ai-automation-consulting and /business-process-automation come from
     // the registry below, so each appears exactly once.
     { path: '/digital-transformation-consulting', lastModified: '2026-11-24' },
     { path: '/capabilities', lastModified: '2026-11-25' },
     { path: '/firm', lastModified: '2026-11-24' },
     // /impact and /coordination-tax-calculator were removed from the build
-    // and 308 to /capabilities and /60-day-test (next.config.js).
+    // and 308 to /capabilities and /60-day-test (next.config.js). Retired
+    // Nov 26, 2026 and 308 in next.config.js: /fractional-cto-calgary,
+    // /insights/what-does-a-fractional-cto-do, /industries/property-management
+    // and /property-management-systems-alberta (unpublished in the registry).
     { path: '/contact', lastModified: '2026-11-24' },
     { path: '/privacy', lastModified: '2026-11-24' },
     { path: '/60-day-test', lastModified: '2026-11-24' },
@@ -29,11 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/insights/coordination-tax-mid-market', lastModified: '2026-04-20' },
     { path: '/insights/hidden-cost-of-estimating', lastModified: '2026-08-05' },
     { path: '/insights/why-digital-transformations-fail', lastModified: '2026-10-22' },
-    { path: '/insights/what-does-a-fractional-cto-do', lastModified: '2026-06-26' },
     { path: '/insights/cost-of-manual-data-entry', lastModified: '2026-06-26' },
     { path: '/industries/manufacturing', lastModified: '2026-11-24' },
     { path: '/industries/energy-services', lastModified: '2026-11-24' },
-    { path: '/industries/property-management', lastModified: '2026-11-25' },
     { path: '/industries/construction', lastModified: '2026-11-24' },
     { path: '/industries/distribution', lastModified: '2026-11-24' },
     // Systems-decision pages appear here only once their registry entry is

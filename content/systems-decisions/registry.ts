@@ -115,12 +115,10 @@ export const SYSTEMS_DECISION_REGISTRY: Record<SystemsDecisionSlug, RegistryEntr
     footerGroup: 'systems-decisions',
     copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/business-central-acumatica-netsuite.md',
   },
-  'property-management-systems-alberta': {
-    published: true,
-    footerLabel: 'Property Management Systems',
-    footerGroup: 'systems-decisions',
-    copySource: 'C:/LVRGWRKS-marketing/site-copy-2026-10/property-management-systems-alberta.md',
-  },
+  // Retired Nov 26, 2026 on Jeremy's word: the route is removed from the
+  // build and 308s to / (next.config.js). Unpublished here so the sitemap
+  // drops it. The content file is kept for the record.
+  'property-management-systems-alberta': { published: false },
   'funding-systems-automation-alberta-2026': { published: false },
   // Already live before it entered this ledger, so publishing it changes
   // nothing about its indexability. Moved from Expertise to Systems decisions

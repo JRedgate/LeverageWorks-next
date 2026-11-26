@@ -11,6 +11,12 @@ const nextConfig = {
       // calculator was replaced by the 60-Day Test.
       { source: '/impact', destination: '/capabilities', permanent: true },
       { source: '/coordination-tax-calculator', destination: '/60-day-test', permanent: true },
+      // Retired Nov 26, 2026 on Jeremy's word. Pages removed from the build
+      // and from the sitemap. permanent: true sends 308.
+      { source: '/fractional-cto-calgary', destination: '/', permanent: true },
+      { source: '/insights/what-does-a-fractional-cto-do', destination: '/insights', permanent: true },
+      { source: '/industries/property-management', destination: '/', permanent: true },
+      { source: '/property-management-systems-alberta', destination: '/', permanent: true },
     ];
   },
   // Headers for SEO and security
