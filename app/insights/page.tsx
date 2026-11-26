@@ -44,9 +44,17 @@ export default function InsightsPage() {
               Thinking on operations and margin<br />
               <span className="text-brand-slate italic">for industrial businesses.</span>
             </h1>
-            <p className="text-brand-navy text-xl leading-relaxed max-w-2xl">
+            <p className="text-brand-navy text-xl leading-relaxed mb-10 md:mb-8 max-w-2xl">
               Practical reading for owners, presidents and operating leaders.
             </p>
+            {/* Hero calls to action, as on the homepage hero: book a call, or
+                the 60-Day Test as the transitional one for readers. */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <BookCallButton variant="navy" />
+              <Link href="/60-day-test" className="inline-flex items-center justify-center bg-transparent border-[1.5px] border-brand-navy text-brand-navy px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-widest hover:bg-brand-navy hover:text-white transition-all text-center">
+                Take the 60-Day Test
+              </Link>
+            </div>
           </div>
         </div>
       </section>
